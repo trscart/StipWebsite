@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="561" height="418.391" viewBox="0 0 561 418.391">
+  <defs>
+    <filter id="Ellipse_18" x="0" y="0" width="200.288" height="200.288" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_19" x="136.342" y="218.103" width="200.288" height="200.288" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_20" x="360.712" y="83.498" width="200.288" height="200.288" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_52" data-name="Group 52" transform="translate(22.5 22.5)">
+    <g transform="matrix(1, 0, 0, 1, -22.5, -22.5)" filter="url(#Ellipse_18)">
+      <ellipse id="Ellipse_18-2" data-name="Ellipse 18" cx="77.644" cy="77.644" rx="77.644" ry="77.644" transform="translate(22.5 22.5)" fill="#fff"/>
+    </g>
+    <g id="Group_51" data-name="Group 51" transform="translate(62.459 45.105)">
+      <path id="Facebook" d="M433.815,218.641v8.96h-6.564v10.956h6.564v32.559H447.3V238.558h9.049s.846-5.253,1.258-11H447.35V220.07a3.183,3.183,0,0,1,2.924-2.626h7.347V206.038h-9.99C433.481,206.036,433.815,217,433.815,218.641Z" transform="translate(-427.251 -206.038)" fill="#3c5a99"/>
+    </g>
+  </g>
+  <g id="Group_54" data-name="Group 54" transform="translate(158.842 240.603)">
+    <g transform="matrix(1, 0, 0, 1, -158.84, -240.6)" filter="url(#Ellipse_19)">
+      <ellipse id="Ellipse_19-2" data-name="Ellipse 19" cx="77.644" cy="77.644" rx="77.644" ry="77.644" transform="translate(158.84 240.6)" fill="#fff"/>
+    </g>
+    <g id="Group_53" data-name="Group 53" transform="translate(30.41 45.105)">
+      <path id="Twitter_alt_" data-name="Twitter (alt)" d="M649.4,234.97c5.306-.438,8.906-2.85,10.291-6.121-1.915,1.176-7.856,2.457-11.137,1.236-.16-.77-.34-1.5-.515-2.165-2.5-9.179-11.061-16.575-20.029-15.683.725-.292,1.461-.565,2.194-.811.988-.352,6.78-1.3,5.868-3.34-.769-1.8-7.847,1.359-9.179,1.772,1.759-.661,4.668-1.8,4.98-3.82a14.046,14.046,0,0,0-7.384,3.5,5.081,5.081,0,0,0,1.416-2.8c-7.188,4.592-11.386,13.85-14.785,22.829a35.214,35.214,0,0,0-7.154-5.752,186.44,186.44,0,0,0-24.237-10.668c-.343,3.7,1.828,8.611,8.083,11.878a19.753,19.753,0,0,0-5.816.7c.807,4.233,3.443,7.721,10.58,9.407-3.261.216-4.947.958-6.474,2.558,1.484,2.944,5.109,6.41,11.63,5.7-7.249,3.124-2.955,8.91,2.943,8.047a25.046,25.046,0,0,1-35.037.936c23.787,32.412,75.492,19.169,83.2-12.05,5.774.05,9.167-2,11.271-4.258A22.981,22.981,0,0,1,649.4,234.97Z" transform="translate(-565.637 -206.038)" fill="#1da1f2"/>
+    </g>
+  </g>
+  <g id="Group_56" data-name="Group 56" transform="translate(383.212 105.998)">
+    <g transform="matrix(1, 0, 0, 1, -383.21, -106)" filter="url(#Ellipse_20)">
+      <ellipse id="Ellipse_20-2" data-name="Ellipse 20" cx="77.644" cy="77.644" rx="77.644" ry="77.644" transform="translate(383.21 106)" fill="#fff"/>
+    </g>
+    <g id="Group_55" data-name="Group 55" transform="translate(45.105 45.105)">
+      <path id="LinkedIn_alt_" data-name="LinkedIn (alt)" d="M794.4,206.038H738.933a4.735,4.735,0,0,0-4.808,4.662v55.751a4.739,4.739,0,0,0,4.808,4.665H794.4a4.738,4.738,0,0,0,4.806-4.665V210.7A4.735,4.735,0,0,0,794.4,206.038Zm-40.542,54.475h-9.833V231.131h9.833Zm-4.915-33.4h-.067a5.078,5.078,0,0,1-5.435-5.079c0-2.879,2.2-5.073,5.564-5.073s5.432,2.193,5.5,5.073C754.5,224.862,752.365,227.117,748.939,227.117Zm40.359,33.4h-9.83V244.792c0-3.949-1.424-6.645-4.978-6.645a5.37,5.37,0,0,0-5.042,3.573,6.58,6.58,0,0,0-.328,2.381v16.411h-9.828s.129-26.626,0-29.382h9.83V235.3a9.759,9.759,0,0,1,8.856-4.857c6.469,0,11.32,4.2,11.32,13.226v16.849Zm-20.24-25.124a1.119,1.119,0,0,1,.064-.093v.093Z" transform="translate(-734.125 -206.038)" fill="#0077b5"/>
+    </g>
+  </g>
+</svg>

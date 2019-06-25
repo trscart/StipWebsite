@@ -1,0 +1,532 @@
+@import "platform.scss";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+$stcolor: #4384f1;
+$ndcolor: #FD6B15;
+$h1size: 24px;
+$h2size: 21px;
+$h3size: 16px;
+$txtsize: 14px;
+
+.stip-h1 {
+    font-size: $h1size;
+    font-weight: 800;
+}
+
+.stip-h2 {
+    font-size: $h2size;
+    font-weight: 600;
+}
+
+.stip-h3 {
+    font-size: $h3size;
+    font-weight: 600;
+}
+
+.stip-txt {
+    font-size: $txtsize;
+    font-weight: 400;
+}
+
+.stip-colorTxt {
+    color: $stcolor;
+}
+
+.stip-hideMe {
+    opacity: 0;
+}
+
+.stip-navScrolled {
+    background-color: white !important;
+    padding: 0 10rem !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stip-nav {
+    padding: 2.5rem 10rem;
+    transition: 0.3s;
+    position: absolute;
+    z-index: 1030;
+    width: 100%;
+
+    .stip-cta {
+        font-weight: bold;
+        font-size: $h3size;
+        background-color: $ndcolor;
+        border-color: transparent;
+        border-radius: 50px;
+        padding: 10px 30px;
+
+        &:hover {
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+        }
+    }
+}
+
+.stip-navModalAppear {
+    background-color: white !important;
+    right: 0 !important;
+}
+
+.stip-navModal {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    right: -1500px;
+    transition: 0.5s;
+    background-color: transparent;
+
+    .stip-active {
+        color: $ndcolor !important;
+    }
+
+    li {
+        font-weight: bold;
+        font-size: $h2size;
+        margin: 0 20px;
+
+        .stip-navItem {
+            transition: 0.3s;
+            color: $stcolor;
+
+            &:hover {
+                color: $ndcolor !important;
+            }
+        }
+    }
+
+
+    ul {
+        text-align: right;
+        list-style: none;
+    }
+}
+
+.stip-menuIconScrolled {
+    background-color: $stcolor !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.stip-menuIcon {
+    outline: transparent;
+    border: 0;
+    background-color: transparent;
+    z-index: 1;
+    position: fixed;
+    right: 10%;
+
+    .stip-hamburgerIcon {
+        display: block;
+        height: 20px;
+        position: relative;
+        width: 30px;
+    }
+
+    .line {
+        background-color: white;
+        display: block;
+        height: 2.5px;
+        left: 0;
+        position: absolute;
+        -webkit-transition: all 320ms ease-in;
+        transition: all 320ms ease-in;
+        width: 100%;
+    }
+
+    .stip-lineColor {
+        background-color: $stcolor !important;
+    }
+
+    .line-top {
+        top: 0;
+    }
+
+    .line-middle {
+        top: 50%;
+    }
+
+    .line-bottom {
+        top: 100%;
+    }
+
+    .stip-hamburgerIcon.active .line-top {
+        -webkit-transform: translateY(10px) translateX(0) rotate(225deg);
+        transform: translateY(10px) translateX(0) rotate(225deg);
+        background-color: $stcolor;
+    }
+
+    .stip-hamburgerIcon.active .line-middle {
+        opacity: 0;
+    }
+
+    .stip-hamburgerIcon.active .line-bottom {
+        -webkit-transform: translateY(-10px) translateX(0) rotate(-225deg);
+        transform: translateY(-10px) translateX(0) rotate(-225deg);
+        background-color: $stcolor;
+    }
+}
+
+.stip-heroContainer {
+    height: 100vh;
+    padding: 10%;
+    background: $stcolor;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    .stip-heroIllustration {
+        width: 400px;
+        height: 400px;
+    }
+
+    .stip-btnHero {
+        button:first-child {
+            font-weight: bold;
+            font-size: $h3size;
+            color: white;
+            background-color: $ndcolor;
+            border-color: transparent;
+            border-radius: 50px;
+            padding: 10px 30px;
+
+            &:hover {
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+            }
+        }
+
+        button:nth-child(2) {
+            font-weight: bold;
+            font-size: $h3size;
+            color: white;
+            background-color: transparent;
+            border: 3px solid white;
+            border-radius: 50px;
+            padding: 10px 30px;
+            margin-left: 20px;
+
+            &:hover {
+                border-color: $ndcolor;
+                color: $ndcolor;
+            }
+        }
+    }
+}
+
+.waves {
+    position: absolute;
+    bottom: -135px;
+    width: 100%;
+}
+
+.wave {
+    width: 2402px;
+    height: 427px;
+    background: url("https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png") no-repeat center bottom;
+    position: absolute;
+    animation: wave 5s ease-in-out alternate infinite;
+    left: -180px;
+    bottom: 0px;
+}
+
+.wave.a {
+    background-position: 0 -854px;
+}
+
+.wave.b {
+    animation-delay: 6s;
+    background-position: 0 -427px;
+}
+
+.wave.c {
+    animation-delay: 1.2s;
+    background-position: 0 0;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(-80px, 30px);
+    }
+
+    100% {
+        transform: translate(160px, -60px);
+    }
+}
+
+.stip-sectionTitle {
+    padding: 0 25%;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.stip-sectionBody {
+    margin: 100px 10% 0 10%;
+}
+
+.stip-titleNum {
+    font-size: 42px;
+    font-weight: 700;
+    color: $stcolor;
+}
+
+.stipIconDim {
+    height: 120px;
+    width: 120px;
+}
+
+.stip-clientSection {
+    margin-top: 15%;
+}
+
+.stip-clientLogoDim {
+    height: 150px;
+    width: 200px;
+}
+
+.stip-agosLogo {
+    background: url("src/img/agos.png") no-repeat center center;
+    background-size: contain;
+}
+
+.stip-iblLogo {
+    background: url("src/img/ibl.png") no-repeat center center;
+    background-size: contain;
+}
+
+.stip-esseLogo {
+    background: url("src/img/esselunga.png") no-repeat center center;
+    background-size: contain;
+}
+
+.stip-footerImg {
+    margin-top: 200px;
+    position: absolute;
+    max-width: 100%;
+}
+
+.stip-footer {
+    margin-top: 15%;
+    color: white;
+    background: url("src/img/footerWave.svg") no-repeat;
+    background-size: cover;
+
+    .stip-footerCta {
+        padding-top: 20%;
+
+        .stip-footerBtn {
+            margin-top: 25px;
+
+            button:first-child {
+                font-weight: bold;
+                font-size: $h3size;
+                color: white;
+                background-color: $ndcolor;
+                border-color: transparent;
+                border-radius: 50px;
+                padding: 10px 30px;
+
+                &:hover {
+                    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+                }
+            }
+
+            button:nth-child(2) {
+                font-weight: bold;
+                font-size: $h3size;
+                color: white;
+                background-color: transparent;
+                border: 3px solid white;
+                border-radius: 50px;
+                padding: 10px 30px;
+                margin-left: 20px;
+
+                &:hover {
+                    border-color: $ndcolor;
+                    color: $ndcolor;
+                }
+            }
+        }
+    }
+
+    .stip-footerTxt {
+        .stip-socialIcon {
+            width: 100px;
+
+            path {
+                &:hover {
+                    fill: $ndcolor;
+                }
+            }
+        }
+
+        .stip-policy {
+            color: white;
+        }
+    }
+}
+
+
+//media query
+
+@media (max-width: 576px) {
+    .stip-h1 {
+        font-size: 18px !important;
+    }
+
+    .stip-h2 {
+        font-size: 16px !important;
+    }
+
+    .stip-h3 {
+        font-size: 14px !important;
+    }
+
+    .stip-txt {
+        font-size: 12px !important;
+    }
+
+    body .stip-nav {
+        padding: 2.5rem 2rem;
+    }
+
+    .stip-btnHero {
+        button {
+            font-size: 12px !important;
+        }
+    }
+
+    .stip-sectionTitle {
+        padding: 0 5% !important;
+        margin-top: 100px !important;
+    }
+
+    .stip-sectionBody {
+        margin: 100px 0 0 0 !important;
+    }
+
+    .stip-btnHero {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+        button:first-child {
+            margin: 0 0 10px 0 !important;
+        }
+
+        button:nth-child(2) {
+            margin: 0 !important;
+        }
+
+    }
+
+    .stip-heroIllustration {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .stipIconDim {
+        height: 80px !important;
+        width: 80px !important;
+    }
+
+    .stipCaringIconDim {
+        height: 80px !important;
+        width: 150px !important;
+    }
+
+    .stip-footerBtn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        button:first-child {
+            margin: 0 0 10px 0 !important;
+        }
+
+        button:nth-child(2) {
+            margin: 0 !important;
+        }
+    }
+
+    .stip-footerBtn {
+        button {
+            font-size: 12px !important;
+        }
+    }
+
+    .stip-footerTxt {
+        padding: 5% !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+    .stip-h1 {
+        font-size: 21px !important;
+    }
+
+    .stip-h2 {
+        font-size: 18px !important;
+    }
+
+    .stip-h3 {
+        font-size: 14px !important;
+    }
+
+    .stip-txt {
+        font-size: 12px !important;
+    }
+
+    .stip-btnHero {
+        button {
+            font-size: 14px !important;
+        }
+    }
+
+    .stip-heroIllustration {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .stip-sectionTitle {
+        padding: 0 10% !important;
+        margin-top: 100px !important;
+    }
+
+    .stip-sectionBody {
+        margin: 100px 5% 0 5% !important;
+    }
+
+    .stipIconDim {
+        height: 80px !important;
+        width: 80px !important;
+    }
+
+    .stipCaringIconDim {
+        height: 80px !important;
+        width: 150px !important;
+    }
+
+    .stip-footerBtn {
+        button {
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .stip-clientLogoDim {
+        height: 100px !important;
+        width: 250px !important;
+    }
+}

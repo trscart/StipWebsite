@@ -1,0 +1,32 @@
+.pf-bg {
+  background: url("src/img/heroWave.svg") no-repeat;
+  overflow-x: hidden;
+}
+
+.stip-heroPF {
+  margin-top: -30%;
+}
+
+.stip-heroPF .stip-heroScreen {
+  max-width: 100%;
+}
+
+.stip-heroPF h1 {
+  color: white;
+  margin-bottom: 100px;
+}
+
+.stip-functionImg {
+  width: 250%;
+}
+
+.leftOffset {
+  position: relative;
+  left: -400px;
+}
+
+.rightOffset {
+  position: relative;
+  right: -200px;
+}
+/*# sourceMappingURL=platform.css.map */
