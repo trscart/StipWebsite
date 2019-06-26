@@ -39,6 +39,26 @@ $txtsize: 14px;
     opacity: 0;
 }
 
+.stip-loadLogo {
+    height: 30%;
+    transform-box: fill-box;
+    opacity: 1;
+
+    .stip-char {
+        transform-origin: center;
+    }
+
+    .stip-spunta {
+        transform-origin: 35%;
+        transform-box: fill-box;
+    }
+
+    .stip-rect {
+        transform-origin: bottom;
+        transform-box: fill-box;
+    }
+}
+
 .stip-navScrolled {
     background-color: white !important;
     padding: 0 10rem !important;
@@ -295,17 +315,17 @@ $txtsize: 14px;
 }
 
 .stip-agosLogo {
-    background: url("src/img/agos.png") no-repeat center center;
+    background: url("../img/agos.png") no-repeat center center;
     background-size: contain;
 }
 
 .stip-iblLogo {
-    background: url("src/img/ibl.png") no-repeat center center;
+    background: url("../img/ibl.png") no-repeat center center;
     background-size: contain;
 }
 
 .stip-esseLogo {
-    background: url("src/img/esselunga.png") no-repeat center center;
+    background: url("../img/esselunga.png") no-repeat center center;
     background-size: contain;
 }
 
@@ -318,7 +338,7 @@ $txtsize: 14px;
 .stip-footer {
     margin-top: 15%;
     color: white;
-    background: url("src/img/footerWave.svg") no-repeat;
+    background: url("../img/footerWave.svg") no-repeat;
     background-size: cover;
 
     .stip-footerCta {

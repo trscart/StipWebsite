@@ -16,37 +16,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- style -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/style/index.css">
 </head>
 
 <body class="pf-bg">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top stip-nav">
-            <a class="navbar-brand flex-grow-1" href="#">
-                <img id="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
+        <a class="navbar-brand flex-grow-1" href="#">
+            <img id="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
+        </a>
+        <button class="p-3 stip-menuIcon">
+            <a href="#" class="stip-hamburgerIcon">
+                <span class="line line-top"></span>
+                <span class="line line-middle"></span>
+                <span class="line line-bottom"></span>
             </a>
-            <button class="p-3 stip-menuIcon">
-                <a href="#" class="stip-hamburgerIcon">
-                    <span class="line line-top"></span>
-                    <span class="line line-middle"></span>
-                    <span class="line line-bottom"></span>
-                </a>
-            </button>
-            <div class="stip-navModal">
-                <ul class="m-5">
-                    <li class="nav-item">
-                        <a class="nav-link stip-navItem" href="/index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link stip-navItem stip-active" href="/platform.html">PIATTAFORMA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link stip-navItem" href="#">BLOG</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- end navbar -->
+        </button>
+        <div class="stip-navModal">
+            <ul class="m-5">
+                <li class="nav-item">
+                    <a class="nav-link stip-navItem" href="/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link stip-navItem stip-active" href="/platform.html">PIATTAFORMA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link stip-navItem" href="#">BLOG</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navbar -->
 
     <!-- heroBanner -->
     <div class="container-fluid d-flex stip-heroContainer"></div>
@@ -245,7 +245,7 @@
     </footer>
     <!-- end footer -->
 
-    <script src="index.js"></script>
+    <script src="src/js/index.js"></script>
 </body>
 
 </html>
