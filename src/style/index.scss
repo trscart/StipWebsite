@@ -314,6 +314,12 @@ $txtsize: 14px;
     width: 200px;
 }
 
+.stip-waveBody {
+    background: url("../img/bodyWave.svg") no-repeat;
+    background-size: auto;
+    background-position-y: 80%;
+}
+
 .stip-agosLogo {
     background: url("../img/agos.png") no-repeat center center;
     background-size: contain;
@@ -487,6 +493,12 @@ $txtsize: 14px;
 
     .stip-footerTxt {
         padding: 5% !important;
+    }
+}
+
+@media (max-width: 768px){
+    .stip-waveBody {
+        background-position-y: 60% !important;
     }
 }
 
