@@ -1,4 +1,5 @@
 @import "platform.scss";
+@import "blog.scss";
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -129,10 +130,7 @@ $txtsize: 14px;
     }
 }
 
-.stip-menuIconScrolled {
-    background-color: $stcolor !important;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
-}
+
 
 .stip-menuIcon {
     outline: transparent;
@@ -191,6 +189,11 @@ $txtsize: 14px;
         transform: translateY(-10px) translateX(0) rotate(-225deg);
         background-color: $stcolor;
     }
+}
+
+.stip-menuIconScrolled {
+    background-color: $stcolor !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
 }
 
 .stip-heroContainer {

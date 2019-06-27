@@ -1,13 +1,19 @@
 $(document).ready(function () {
+    let click = 0
     $(".stip-menuIcon").click(function (e) { //hambuger icon animation
+        click += 1
         e.preventDefault();
         $(".stip-hamburgerIcon").toggleClass('active');
         $(".stip-navModal").toggleClass('stip-navModalAppear')
-        $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
+        if (click % 2) {
+            $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
+            console.log("here")
+        } else {
+            $('.stip-menuIcon').addClass('stip-menuIconScrolled');
+        }
     });
 
     $(window).scroll(function () {
-        console.log($(window).scrollTop() + " / " + $(".stip-heroTitle").offset().top)
         if ($(window).scrollTop() > $(".stip-heroTitle").offset().top) { // nav-item change on scroll
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
         } else {
@@ -59,5 +65,20 @@ $(document).ready(function () {
         loop: true,
         delay: 600,
         duration: 1200
+    })
+
+    let cardTitle = "ciaone"
+    let cardTxt = "eo"
+
+    // blog card compile
+    $("#prova").click(function () {
+        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
+        var source = document.getElementById("stip-blogCard").innerHTML;
+        var template = Handlebars.compile(source);
+        $('#stip-blogCards').append(template(context))
+
+        $(".stip-cardBtn").click(function () {
+            console.log("go somewhere")
+        })
     })
 });

@@ -30,6 +30,16 @@
   right: -200px;
 }
 
+.stip-blogHero {
+  background: url("../img/heroBlog.jpg") no-repeat !important;
+  background-position: top center !important;
+}
+
+.stip-card {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
 }
@@ -165,12 +175,6 @@
   list-style: none;
 }
 
-.stip-menuIconScrolled {
-  background-color: #4384f1 !important;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
-}
-
 .stip-menuIcon {
   outline: transparent;
   border: 0;
@@ -228,6 +232,12 @@
   -webkit-transform: translateY(-10px) translateX(0) rotate(-225deg);
   transform: translateY(-10px) translateX(0) rotate(-225deg);
   background-color: #4384f1;
+}
+
+.stip-menuIconScrolled {
+  background-color: #4384f1 !important;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
 }
 
 .stip-heroContainer {
