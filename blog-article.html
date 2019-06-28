@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
@@ -21,9 +23,12 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top stip-nav">
+    <nav class="navbar navbar-expand-lg navbar-light stip-articleNav">
+        <a class="material-icons mt-2 mr-4 stip-backIcon" href="blog.html">
+            arrow_back
+        </a>
         <a class="navbar-brand flex-grow-1" href="#">
-            <img id="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
+            <img id="logo" src="src/img/logoColor.svg" width="80" height="80" alt="">
         </a>
         <button class="p-3 stip-menuIcon">
             <a href="#" class="stip-hamburgerIcon">
@@ -48,37 +53,38 @@
     </nav>
     <!-- end navbar -->
 
-    <!-- heroBanner -->
-    <div class="container-fluid d-flex align-items-end stip-heroContainer stip-blogHero">
-        <div class="row">
-            <div class="col-md-8 col-lg-7 d-flex flex-grow-1 flex-column">
-                <h1 class="text-white stip-h1" id="stip-scrollDetect">La piattaforma che automatizza tutte le attività del social & email customer care</h1>
-                <p class="text-white stip-txt">Stip utilizza l’Intelligenza Artificiale per automatizzare tutti i processi di assistenza clienti, permettendo
-                    agli operatori di rispondere agli utenti in maniera rapida e personalizzata</p>
-                <div class="stip-btnHero">
-                    <button class="stip-demoRequest">RICHIEDI DEMO</button>
-                    <button class="stip-contactUs">CONTATTACI</button>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-5 d-none d-md-flex flex-grow-1 flex-column justify-content-center align-items-center">
-
-            </div>
-        </div>
-    </div>
-    <!-- end heroBanner -->
-
-    <button id="prova">prova</button>
-
+    <!-- article -->
     <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col" id="stip-hashtag">
+        <div class="row rounded-sm mb-5 shadow-lg d-flex flex-column justify-content-end stip-articleImg" id="stip-scrollDetect">
+            <div class="m-5 stip-articleBoxTitle">
+                <h1 class="text-white stip-h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <h1 class="text-white stip-txt">22 gen 2019</h1>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <h3 class="stip-h3">#stip</h3>
+                <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nulla sit amet leo aliquam cursus.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                    vehicula sapien quis dui sagittis, non volutpat elit malesuada. Nullam at quam ornare, tincidunt elit
+                    non, venenatis nunc. Cras sodales nec quam sit amet accumsan. Fusce commodo dui at ligula ullamcorper
+                    luctus. Morbi sed orci eu turpis ultrices fringilla sed at enim. Aenean tristique eget purus et tempor.
+                    Fusce a egestas mauris. Donec rhoncus dignissim lacinia. Curabitur eget mattis odio. Quisque semper faucibus
+                    augue, quis vehicula tellus convallis quis. Proin gravida ullamcorper euismod. Vestibulum ullamcorper
+                    tincidunt turpis nec porttitor.</p>
+            </div>
+            <div class="col-sm-4">
 
             </div>
         </div>
-        <div class="row d-flex justify-content-center mt-5" id="stip-blogCards">
-
+        <div class="row mt-5">
+            <div class="d-flex align-items-center stip-articleAuthorBox">
+                <div class="stip-articleAuthorImg"></div>
+                <h3 class="ml-3 stip-h3 stip-articleAuthorName">Maria Rossi</h3>
+            </div>
         </div>
     </div>
+    <!-- end article -->
 
     <!-- footer -->
     <footer class="container-fluid stip-articleFooter">
@@ -110,17 +116,6 @@
         </div>
     </footer>
     <!-- end footer -->
-
-    <script id="stip-blogCard" type="text/x-handlebars-template">
-        <div class="m-3 stip-card" style="width: 18rem;">
-            <img src="http://www.nationalgeographic.it/images/2016/12/06/164441083-abc66e5b-8d1b-46d7-a0aa-024b9dea5edb.jpg" class="card-img-top">
-            <div class="card-body">
-                <h2 class="card-title stip-h2">{{cardTitle}}</h2>
-                <p class="card-text stip-txt">{{cardTxt}}</p>
-                <button class="btn btn-primary stip-txt stip-cardBtn">leggi di più</button>
-            </div>
-        </div>
-    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="src/js/anime.min.js"></script>

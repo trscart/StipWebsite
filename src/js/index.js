@@ -7,14 +7,16 @@ $(document).ready(function () {
         $(".stip-navModal").toggleClass('stip-navModalAppear')
         if (click % 2) {
             $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
+            $('body').css('overflow', 'hidden');
             console.log("here")
         } else {
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
+            $('body').css('overflow', 'auto');
         }
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > $(".stip-heroTitle").offset().top) { // nav-item change on scroll
+        if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
         } else {
             $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
@@ -80,5 +82,11 @@ $(document).ready(function () {
         $(".stip-cardBtn").click(function () {
             console.log("go somewhere")
         })
+    })
+
+    // hashtag button append
+    let hashtag = ["#CustomerCare", "#CustomerSuccess", "#AssistenzaClienti", "#CustomerSatisfaction", "#IntelligenzaArtificiale", "#DeepLearning", "#SocialCustomerCare", "#CRM", "#IA"]
+    hashtag.forEach(function (item, index) {
+        $('#stip-hashtag').append("<button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button>")
     })
 });

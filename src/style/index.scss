@@ -88,6 +88,7 @@ $txtsize: 14px;
 }
 
 .stip-navModalAppear {
+    z-index: 1;
     background-color: white !important;
     right: 0 !important;
 }
@@ -136,7 +137,7 @@ $txtsize: 14px;
     outline: transparent;
     border: 0;
     background-color: transparent;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     right: 10%;
 
@@ -387,21 +388,21 @@ $txtsize: 14px;
             }
         }
     }
+}
 
-    .stip-footerTxt {
-        .stip-socialIcon {
-            width: 100px;
+.stip-footerTxt {
+    .stip-socialIcon {
+        width: 100px;
 
-            path {
-                &:hover {
-                    fill: $ndcolor;
-                }
+        path {
+            &:hover {
+                fill: $ndcolor;
             }
         }
+    }
 
-        .stip-policy {
-            color: white;
-        }
+    .stip-policy {
+        color: white;
     }
 }
 
@@ -499,7 +500,7 @@ $txtsize: 14px;
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .stip-waveBody {
         background-position-y: 65% !important;
     }

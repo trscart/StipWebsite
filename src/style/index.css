@@ -1,6 +1,6 @@
-.pf-bg {
-  background: url("src/img/heroWave.svg") no-repeat;
-  overflow-x: hidden;
+.stip-heroBgPlatform {
+  background: url("../img/heroWave.svg") no-repeat;
+  background-size: cover;
 }
 
 .stip-heroPF {
@@ -8,7 +8,7 @@
 }
 
 .stip-heroPF .stip-heroScreen {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .stip-heroPF h1 {
@@ -17,27 +17,90 @@
 }
 
 .stip-functionImg {
-  width: 250%;
+  max-width: 100%;
 }
 
-.leftOffset {
-  position: relative;
-  left: -400px;
+.stip-function {
+  background: url("../img/bodyWave.svg") no-repeat;
+  background-position: center center;
 }
 
-.rightOffset {
-  position: relative;
-  right: -200px;
+@media (max-width: 768px) {
+  .stip-heroPF {
+    margin-top: -70%;
+  }
+  .stip-heroPF .stip-heroScreen {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .stip-heroPF {
+    margin-top: -60%;
+  }
+  .stip-heroPF .stip-heroScreen {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .stip-heroPF {
+    margin-top: -50%;
+  }
 }
 
 .stip-blogHero {
-  background: url("../img/heroBlog.jpg") no-repeat !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
   background-position: top center !important;
 }
 
 .stip-card {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.stip-articleNav {
+  padding: 2rem 10rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.stip-backIcon {
+  font-size: 35px;
+}
+
+.stip-backIcon:hover {
+  text-decoration: none;
+}
+
+.stip-articleImg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 35em;
+}
+
+.stip-articleAuthorImg {
+  background: url("https://timedotcom.files.wordpress.com/2018/01/stephanie-schriock-motto.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+}
+
+.stip-articleFooter {
+  background-color: #4384f1;
+  margin-top: 10em;
+}
+
+@media (max-width: 576px) {
+  .stip-articleNav {
+    padding: 1rem 2rem;
+  }
 }
 
 * {
@@ -126,6 +189,7 @@
 }
 
 .stip-navModalAppear {
+  z-index: 1;
   background-color: white !important;
   right: 0 !important;
 }
@@ -179,7 +243,7 @@
   outline: transparent;
   border: 0;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   right: 10%;
 }
@@ -456,15 +520,15 @@
   color: #FD6B15;
 }
 
-.stip-footer .stip-footerTxt .stip-socialIcon {
+.stip-footerTxt .stip-socialIcon {
   width: 100px;
 }
 
-.stip-footer .stip-footerTxt .stip-socialIcon path:hover {
+.stip-footerTxt .stip-socialIcon path:hover {
   fill: #FD6B15;
 }
 
-.stip-footer .stip-footerTxt .stip-policy {
+.stip-footerTxt .stip-policy {
   color: white;
 }
 
