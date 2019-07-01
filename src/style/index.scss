@@ -40,6 +40,10 @@ $txtsize: 14px;
     opacity: 0;
 }
 
+.z-index-low{
+    z-index: -2 !important;
+}
+
 .stip-loadLogo {
     height: 30%;
     transform-box: fill-box;

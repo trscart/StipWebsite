@@ -1,3 +1,7 @@
+//loading animation
+$(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
+setTimeout(function(){ $(".stip-loading").addClass('z-index-low') }, 3500);
+
 $(document).ready(function () {
     let click = 0
     $(".stip-menuIcon").click(function (e) { //hambuger icon animation
@@ -37,9 +41,6 @@ $(document).ready(function () {
     $(".stip-demoRequest").click(function () {
 
     });
-
-    //load animation
-    $(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
 
     anime({
         targets: '.stip-loadLogo',
