@@ -71,12 +71,28 @@ $(document).ready(function () {
         var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
         var source = document.getElementById("stip-blogCard").innerHTML;
         var template = Handlebars.compile(source);
-        $('#stip-blogCards').append(template(context))
+        for (let index = 0; index < 3; index++) {
+            $('#stip-blogCards').append(template(context))
 
-        $(".stip-cardBtn").click(function () {
-            console.log("go somewhere")
-        })
+        }
     })
+
+    $("#stip-loadMore").click(function () {
+        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
+        var source = document.getElementById("stip-blogCard").innerHTML;
+        var template = Handlebars.compile(source);
+        for (let index = 0; index < 3; index++) {
+            $('#stip-blogCards').append(template(context))
+        }
+
+        console.log($("#stip-blogCards").offset())
+
+        $('html,body').animate({
+            scrollTop: $("#stip-blogCards").offset().top + $("#stip-blogCards").outerHeight()
+        },
+            1500);
+    })
+
 
     // hashtag button append
     let hashtag = ["#CustomerCare", "#CustomerSuccess", "#AssistenzaClienti", "#CustomerSatisfaction", "#IntelligenzaArtificiale", "#DeepLearning", "#SocialCustomerCare", "#CRM", "#IA"]

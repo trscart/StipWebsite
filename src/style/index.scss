@@ -142,7 +142,7 @@ $txtsize: 14px;
 
 
 .stip-menuIcon {
-    outline: none !important;
+    outline: none !important; 
     border: 0;
     background-color: transparent;
     z-index: 2;
@@ -401,8 +401,10 @@ $txtsize: 14px;
 .stip-footerTxt {
     .stip-socialIcon {
         width: 100px;
+        cursor: pointer;
 
         path {
+            transition: 0.2s;
             &:hover {
                 fill: $ndcolor;
             }

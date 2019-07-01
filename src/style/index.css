@@ -32,6 +32,9 @@
   .stip-heroPF .stip-heroScreen {
     max-width: 90%;
   }
+  .stip-function {
+    background-position: center 45% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -530,6 +533,12 @@
 
 .stip-footerTxt .stip-socialIcon {
   width: 100px;
+  cursor: pointer;
+}
+
+.stip-footerTxt .stip-socialIcon path {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .stip-footerTxt .stip-socialIcon path:hover {

@@ -32,6 +32,9 @@
   .stip-heroPF .stip-heroScreen {
     max-width: 90%;
   }
+  .stip-function {
+    background-position: center 45% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
