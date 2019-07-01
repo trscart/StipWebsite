@@ -18,10 +18,12 @@ $(document).ready(function () {
         });
     });
 
+    let click = 1
     $(".stip-menuIcon").click(function (e) { //hambuger icon animation
         e.preventDefault();
         $(".stip-hamburgerIcon").toggleClass('active');
         $(".stip-navModal").toggleClass('stip-navModalAppear')
+        $('body').toggleClass('overflow-body');
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) {
             $('.stip-menuIcon').toggleClass('stip-menuIconScrolled');
         }
@@ -63,8 +65,6 @@ $(document).ready(function () {
         duration: 1200
     })
 
-    let cardTitle = "ciaone"
-    let cardTxt = "eo"
 
     // blog card compile
     $("#prova").click(function () {

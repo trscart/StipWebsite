@@ -131,6 +131,10 @@
   color: #4384f1;
 }
 
+.overflow-body {
+  overflow: hidden;
+}
+
 .stip-hideMe {
   opacity: 0;
 }
@@ -244,7 +248,7 @@
 }
 
 .stip-menuIcon {
-  outline: transparent;
+  outline: none !important;
   border: 0;
   background-color: transparent;
   z-index: 2;
