@@ -46,6 +46,59 @@
     </div>
     <!-- loading -->
 
+    <!-- demo modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="stip-h2" id="exampleModalLabel">Lasciaci i tuoi dati e ti invieremo l'accesso alla demo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Nome</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Nome">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Cognome</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Cognome">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Azienda</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Nome azienda">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Email*</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Telefono*</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Telefono" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary">Invia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end demo modal -->
+
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light stip-nav">
         <a class="navbar-brand flex-grow-1" href="#">
@@ -87,7 +140,7 @@
                 <p class="text-white stip-txt">Stip utilizza l’Intelligenza Artificiale per automatizzare tutti i processi di assistenza clienti, permettendo
                     agli operatori di rispondere agli utenti in maniera rapida e personalizzata</p>
                 <div class="stip-btnHero">
-                    <button class="stip-demoRequest">RICHIEDI DEMO</button>
+                    <button class="stip-demoRequest" type="button" data-toggle="modal" data-target="#exampleModal">RICHIEDI DEMO</button>
                     <button class="stip-contactUs">CONTATTACI</button>
                 </div>
             </div>
@@ -376,7 +429,7 @@
                 <h2 class="stip-h3">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer
                     care è il nostro forte!</h2>
                 <div class="stip-footerBtn stip-hideMe">
-                    <button class="stip-demoRequest">RICHIEDI DEMO</button>
+                    <button class="stip-demoRequest" type="button" data-toggle="modal" data-target="#exampleModal">RICHIEDI DEMO</button>
                     <button class="stip-contactUs">CONTATTACI</button>
                 </div>
 
@@ -405,7 +458,7 @@
                     <br> P.IVA/C.F. 14409831006 </p>
             </div>
             <div class="col d-flex align-items-end">
-                <a href="#" class="stip-txt stip-policy" style="margin-bottom: 16px;">Privacy Policy</a>
+                <a href="privacy-policy.html" class="stip-txt stip-policy" style="margin-bottom: 16px;">Privacy Policy</a>
             </div>
             <div class="col d-flex align-items-end justify-content-end">
                 <p class="stip-txt">Copyright © 2019 Stip</p>

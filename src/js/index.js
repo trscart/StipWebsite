@@ -1,23 +1,8 @@
 //loading animation
 $(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
-setTimeout(function(){ $(".stip-loading").addClass('z-index-low') }, 3500);
+setTimeout(function () { $(".stip-loading").addClass('z-index-low') }, 3500);
 
 $(document).ready(function () {
-    let click = 0
-    $(".stip-menuIcon").click(function (e) { //hambuger icon animation
-        click += 1
-        e.preventDefault();
-        $(".stip-hamburgerIcon").toggleClass('active');
-        $(".stip-navModal").toggleClass('stip-navModalAppear')
-        if (click % 2) {
-            $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
-            $('body').css('overflow', 'hidden');
-            console.log("here")
-        } else {
-            $('.stip-menuIcon').addClass('stip-menuIconScrolled');
-            $('body').css('overflow', 'auto');
-        }
-    });
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
@@ -31,7 +16,15 @@ $(document).ready(function () {
                 $(this).animate({ 'opacity': '1' }, 500);
             }
         });
+    });
 
+    $(".stip-menuIcon").click(function (e) { //hambuger icon animation
+        e.preventDefault();
+        $(".stip-hamburgerIcon").toggleClass('active');
+        $(".stip-navModal").toggleClass('stip-navModalAppear')
+        if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) {
+            $('.stip-menuIcon').toggleClass('stip-menuIconScrolled');
+        }
     });
 
     $(".stip-contactUs").click(function () {
