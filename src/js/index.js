@@ -18,7 +18,6 @@ $(document).ready(function () {
         });
     });
 
-    let click = 1
     $(".stip-menuIcon").click(function (e) { //hambuger icon animation
         e.preventDefault();
         $(".stip-hamburgerIcon").toggleClass('active');

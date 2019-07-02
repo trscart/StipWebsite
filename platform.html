@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="src/style/index.css">
 </head>
 
-<body>
+<body class="stip-heroBgPlatform">
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top stip-nav">
@@ -34,7 +34,7 @@
             </a>
         </button>
         <div class="stip-navModal">
-            <ul class="m-5">
+            <ul class="m-md-5 mb-4">
                 <li class="nav-item">
                     <a class="nav-link stip-navItem" href="./index.html">HOME</a>
                 </li>
@@ -45,26 +45,21 @@
                     <a class="nav-link stip-navItem" href="./blog.html">BLOG</a>
                 </li>
             </ul>
+            <img src="src/img/stip-logoBig.svg" class="stip-navModalImg" alt="">
         </div>
     </nav>
     <!-- end navbar -->
 
-    <div class="stip-heroBgPlatform">
-
-        <!-- heroBanner -->
-        <div class="container-fluid d-flex bg-transparent stip-heroContainer"></div>
-        <div class="container stip-heroPF">
-            <div class="row">
-                <div class="col d-flex flex-column">
-                    <h1 class="stip-h1" id="stip-scrollDetect">La piattaforma che automatizza tutte le attività
-                        <br> del social & email customer care</h1>
-                    <img class="shadow-lg align-self-center stip-heroScreen" src="src/img/heroScreen.png" alt="">
-                </div>
+    <!-- heroBanner -->
+    <div class="container-fluid d-flex bg-transparent stip-heroContainer">
+        <div class="row">
+            <div class="col d-flex flex-column stip-platformHero">
+                <h1 class="stip-h1" id="stip-scrollDetect">La piattaforma che automatizza tutte le attività del Social ed Email Customer Care</h1>
+                <img class="shadow-lg align-self-center stip-heroScreen" src="src/img/heroScreen.png" alt="">
             </div>
         </div>
-        <!-- end heroBanner -->
-
     </div>
+    <!-- end heroBanner -->
 
     <!-- "come funziona stip" section -->
     <div class="container-fluid stip-function">
@@ -82,15 +77,16 @@
                     <h2 class="stip-h1">Tieni tutto sotto controllo</h2>
                     <p class="stip-txt">Stip individua e monitora ogni contenuto prodotto dagli utenti che riguardi il tuo brand, sia all’interno
                         che all’esterno dei canali ufficiali dell’azienda. La piattaforma definisce quali siano i contenuti
-                        degli utenti da gestire e quali quelli da ignorare.</p>
+                        degli utenti da gestire e quali quelli da ignorare.
+                    </p>
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col-md-6 d-flex flex-column justify-content-center">
                     <h2 class="text-white stip-h1">Un ticket come per magia</h2>
-                    <p class="text-white stip-txt">Una volta individuate le segnalazioni da gestire, Stip richiede direttamente al cliente tutte le informazioni
-                        necessarie per risolvere al meglio quella determinata casistica. Ottenuti i dati, la piattaforma
-                        crea automaticamente un ticket pronto per essere amministrato.
+                    <p class="text-white stip-txt">Una volta individuate le segnalazioni da amministrare, Stip richiede direttamente al cliente tutte le
+                        informazioni necessarie per risolvere al meglio quella determinata casistica. Ottenuti i dati di
+                        interesse, la piattaforma crea un ticket pronto per essere gestito da un operatore.
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -103,9 +99,8 @@
                 </div>
                 <div class="col-md-6 order-md-last order-first d-flex flex-column justify-content-center">
                     <h2 class="stip-h1">Il ticket giusto all’operatore giusto!</h2>
-                    <p class="stip-txt">Il terzo layer di AI di Stip permette di indirizzare i ticket creati automaticamente all’operatore e
-                        al dipartimento competente, a seconda della richiesta del cliente. Il tutto rispettando il workflow
-                        e gli step autorizzativi aziendali.
+                    <p class="stip-txt">Stip indirizza i ticket creati automaticamente all’operatore più competente, dipendentemente dalla tipologia
+                        di richiesta del cliente. Il processo avviene rispettando il workflow e gli step autorizzativi aziendali.
                     </p>
                 </div>
             </div>
@@ -117,7 +112,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center stip-sectionTitle stip-hideMe">
             <p class="stip-h2">Stip soddisfa le esigenze di ogni azienda integrandosi con qualsiasi CRM e offrendo una vasta possibilità di
-                personalizzazione della piattaforma </p>
+                customizzazione della piattaforma</p>
         </div>
         <div class="row text-center shadow-lg rounded stip-sectionBody">
             <div class="col-md d-flex flex-column align-items-center p-4 stip-hideMe">
@@ -141,7 +136,7 @@
                 </div>
                 <h2 class="stip-h2">Integrazione con i CRM</h2>
                 <p class="text-center stip-txt">Si integra con estrema facilità con ogni CRM aziendale, evitando di stravolgere le routine dell’azienda e
-                    mantenendo i vantaggi dell’automazione del processo di customer care e le performance della piattaforma</p>
+                    mantenendo i vantaggi dell’automatizzazione dei processi e le performance della piattaforma</p>
             </div>
             <div class="col-md d-flex flex-column align-items-center p-4 stip-hideMe">
                 <div class="mb-4 stipIconDim">
@@ -151,9 +146,9 @@
                         <rect id="Rectangle_46" data-name="Rectangle 46" width="219" height="219" fill="none" />
                     </svg>
                 </div>
-                <h2 class="stip-h2">Dati e metriche</h2>
+                <h2 class="stip-h2">Dati e statistiche</h2>
                 <p class="text-center stip-txt">Monitora, traccia e analizza ogni attività per fornire alle aziende tutti i dati e le metriche significative
-                    affinché possano migliorare e ottimizzare i propri processi di social ed email customer care</p>
+                    perché possano migliorare e ottimizzare tecniche e procedure nell’ambito dell’assistenza ai clienti</p>
             </div>
             <div class="col-md d-flex flex-column align-items-center p-4 stip-hideMe">
                 <div class="mb-4 stipIconDim">
@@ -164,8 +159,8 @@
                     </svg>
                 </div>
                 <h2 class="stip-h2">Personalizzazione</h2>
-                <p class="text-center stip-txt">Consente una vastissima possibilità di personalizzazione della piattaforma: dall’AI al chatbot, fino alla
-                    struttura aziendale e alla destinazione dell’indirizzamento dei ticket automatici</p>
+                <p class="text-center stip-txt">Consente una vastissima possibilità di personalizzazione della piattaforma: dall’IA al chatbot, fino alla
+                    destinazione dell’indirizzamento dei ticket automatici e alla gestione delle singole richieste</p>
             </div>
         </div>
     </div>
@@ -175,27 +170,29 @@
     <div class="container-fluid">
         <div class="row justify-content-center stip-sectionTitle stip-hideMe">
             <h2 class="stip-h2">Dare una risposta accurata, rapida ed efficiente ai tuoi clienti è l’unica cosa che conta</h2>
-            <p class="stip-txt">Automatizzando tutte le attività e i processi dell’assistenza clienti via social ed email, Stip permette agli
-                operatori di concentrarsi sull’unica cosa davvero importante: soddisfare i tuoi clienti</p>
+            <p class="stip-txt">Automatizzando tutte le attività di customer care via social ed email, Stip permette agli operatori di concentrarsi
+                sull’unica cosa davvero importante: spianare la strada verso la Customer Satisfaction</p>
         </div>
         <div class="row stip-sectionBody">
             <div class="col-sm-8 text-left mb-5">
                 <h2 class="stip-h2 stip-colorTxt">Miglioramento performance</h2>
-                <p class="stip-txt">Con Stip, le performance degli operatori aumentano del 167%. Discriminando i contenuti da gestire, creando
-                    automaticamente i ticket e reindirizzandoli agli operatori competenti, la piattaforma permette di ottimizzare
-                    i tempi e rendere il lavoro più agile ed efficiente</p>
+                <p class="stip-txt">Le performance degli agenti aumentano del 167%. Gestendo in maniera automatica le richieste più semplici,
+                    discriminando tra i contenuti degli utenti, creando i ticket e reindirizzandoli agli operatori competenti,
+                    Stip permette di ottimizzare i tempi di gestione e rendere il lavoro più agile ed efficiente</p>
             </div>
             <div class="col-sm-8 offset-sm-4 mb-5 text-right">
                 <h2 class="stip-h2 stip-colorTxt">Alta personalizzazione</h2>
-                <p class="stip-txt">Lasciamo ai tuoi operatori il compito di rispondere. I clienti richiedono un’interazione personalizzata con
-                    un operatore, non un chatbot standardizzato che non comprenda le loro reali esigenze. Stip permette agli
-                    operatori di gestire le segnalazioni in un’unica interazione con il cliente, sia in pubblico che in privato</p>
+                <p class="stip-txt">Stip lascia ai tuoi operatori il compito di rispondere. I clienti vogliono instaurare con il brand una relazione
+                    unica e personalizzata, evitando di interagire con chatbot standardizzati che non comprendono le loro
+                    reali esigenze. Per questo, Stip permette agli operatori di gestire le richieste più complesse e interagire
+                    con i tuoi clienti</p>
             </div>
             <div class="col-sm-8 text-left">
                 <h2 class="stip-h2 stip-colorTxt">Customer Satisfaction</h2>
                 <p class="stip-txt">La customer satisfaction diventa realtà. Stip ha piena cura dei tuoi clienti e li aggiorna in automatico
                     sullo stato della loro segnalazione, proprio come fosse un pacco Amazon! Questo permette una riduzione
-                    sostanziale dei solleciti e dell’attesa percepita dai tuoi clienti e migliora la loro esperienza</p>
+                    sostanziale dei solleciti e dell’attesa percepita dai tuoi clienti e migliora la loro esperienza con
+                    il brand</p>
             </div>
         </div>
     </div>
@@ -208,7 +205,7 @@
 
             </div>
             <div class="col-md-12 col-lg-8 px-5">
-                <h1 class="stip-h1">Provalo, non tornerai più indietro!</h1>
+                <h1 class="stip-h1">Vuoi saperne di più?</h1>
                 <h2 class="stip-h3">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer
                     care è il nostro forte!</h2>
                 <div class="stip-footerBtn stip-hideMe">

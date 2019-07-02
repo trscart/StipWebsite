@@ -1,19 +1,20 @@
 .stip-heroBgPlatform {
   background: url("../img/heroWave.svg") no-repeat;
   background-size: cover;
+  background-position: top center;
 }
 
-.stip-heroPF {
-  margin-top: -30%;
+.stip-platformHero {
+  margin-top: 10em;
 }
 
-.stip-heroPF .stip-heroScreen {
+.stip-platformHero .stip-heroScreen {
   max-width: 80%;
 }
 
-.stip-heroPF h1 {
+.stip-platformHero h1 {
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 2em;
 }
 
 .stip-functionImg {
@@ -26,29 +27,11 @@
 }
 
 @media (max-width: 768px) {
-  .stip-heroPF {
-    margin-top: -70%;
-  }
-  .stip-heroPF .stip-heroScreen {
-    max-width: 90%;
+  .stip-heroScreen {
+    max-width: 90% !important;
   }
   .stip-function {
     background-position: center 45% !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .stip-heroPF {
-    margin-top: -60%;
-  }
-  .stip-heroPF .stip-heroScreen {
-    max-width: 90%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .stip-heroPF {
-    margin-top: -50%;
   }
 }
 /*# sourceMappingURL=platform.css.map */

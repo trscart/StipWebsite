@@ -10,7 +10,7 @@ $ndcolor: #FD6B15;
 $h1size: 24px;
 $h2size: 21px;
 $h3size: 16px;
-$txtsize: 14px;
+$txtsize: 16spx;
 
 .stip-h1 {
     font-size: $h1size;
@@ -36,7 +36,7 @@ $txtsize: 14px;
     color: $stcolor;
 }
 
-.overflow-body{
+.overflow-body {
     overflow: hidden;
 }
 
@@ -107,11 +107,17 @@ $txtsize: 14px;
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     right: -1500px;
     transition: 0.5s;
-    background-color: transparent;
+
+    .stip-navModalImg {
+        position: absolute;
+        right: -10em;
+        top: 10em;
+        max-width: 70%;
+    }
 
     .stip-active {
         color: $ndcolor !important;
@@ -120,7 +126,6 @@ $txtsize: 14px;
     li {
         font-weight: bold;
         font-size: $h2size;
-        margin: 0 20px;
 
         .stip-navItem {
             transition: 0.3s;
@@ -134,7 +139,7 @@ $txtsize: 14px;
 
 
     ul {
-        text-align: right;
+        text-align: left;
         list-style: none;
     }
 }
@@ -142,7 +147,7 @@ $txtsize: 14px;
 
 
 .stip-menuIcon {
-    outline: none !important; 
+    outline: none !important;
     border: 0;
     background-color: transparent;
     z-index: 2;
@@ -215,8 +220,8 @@ $txtsize: 14px;
     justify-content: center;
 
     .stip-heroIllustration {
-        width: 400px;
-        height: 400px;
+        width: 15em;
+        height: 15em;
     }
 
     .stip-btnHero {
@@ -299,11 +304,11 @@ $txtsize: 14px;
 .stip-sectionTitle {
     padding: 0 25%;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .stip-sectionBody {
-    margin: 100px 10% 0 10%;
+    margin: 10px 10% 0 10%;
 }
 
 .stip-titleNum {
@@ -318,7 +323,7 @@ $txtsize: 14px;
 }
 
 .stip-clientSection {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .stip-clientLogoDim {
@@ -354,7 +359,7 @@ $txtsize: 14px;
 }
 
 .stip-footer {
-    margin-top: 15%;
+    margin-top: 5em;
     color: white;
     background: url("../img/footerWave.svg") no-repeat;
     background-size: cover;
@@ -405,6 +410,7 @@ $txtsize: 14px;
 
         path {
             transition: 0.2s;
+
             &:hover {
                 fill: $ndcolor;
             }
@@ -514,6 +520,12 @@ $txtsize: 14px;
     .stip-waveBody {
         background-position-y: 65% !important;
     }
+
+    .stip-navModalImg{
+        right: -5em !important;
+        top: 20em !important;
+        max-width: 75% !important;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 1200px) {
@@ -539,10 +551,10 @@ $txtsize: 14px;
         }
     }
 
-    .stip-heroIllustration {
+    /*.stip-heroIllustration {
         width: 300px !important;
         height: 300px !important;
-    }
+    }*/
 
     .stip-sectionTitle {
         padding: 0 10% !important;

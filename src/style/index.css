@@ -1,19 +1,20 @@
 .stip-heroBgPlatform {
   background: url("../img/heroWave.svg") no-repeat;
   background-size: cover;
+  background-position: top center;
 }
 
-.stip-heroPF {
-  margin-top: -30%;
+.stip-platformHero {
+  margin-top: 10em;
 }
 
-.stip-heroPF .stip-heroScreen {
+.stip-platformHero .stip-heroScreen {
   max-width: 80%;
 }
 
-.stip-heroPF h1 {
+.stip-platformHero h1 {
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 2em;
 }
 
 .stip-functionImg {
@@ -26,29 +27,11 @@
 }
 
 @media (max-width: 768px) {
-  .stip-heroPF {
-    margin-top: -70%;
-  }
-  .stip-heroPF .stip-heroScreen {
-    max-width: 90%;
+  .stip-heroScreen {
+    max-width: 90% !important;
   }
   .stip-function {
     background-position: center 45% !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .stip-heroPF {
-    margin-top: -60%;
-  }
-  .stip-heroPF .stip-heroScreen {
-    max-width: 90%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .stip-heroPF {
-    margin-top: -50%;
   }
 }
 
@@ -126,7 +109,7 @@
 }
 
 .stip-txt {
-  font-size: 14px;
+  font-size: 16spx;
   font-weight: 400;
 }
 
@@ -213,16 +196,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   right: -1500px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: transparent;
+}
+
+.stip-navModal .stip-navModalImg {
+  position: absolute;
+  right: -10em;
+  top: 10em;
+  max-width: 70%;
 }
 
 .stip-navModal .stip-active {
@@ -232,7 +221,6 @@
 .stip-navModal li {
   font-weight: bold;
   font-size: 21px;
-  margin: 0 20px;
 }
 
 .stip-navModal li .stip-navItem {
@@ -246,7 +234,7 @@
 }
 
 .stip-navModal ul {
-  text-align: right;
+  text-align: left;
   list-style: none;
 }
 
@@ -330,8 +318,8 @@
 }
 
 .stip-heroContainer .stip-heroIllustration {
-  width: 400px;
-  height: 400px;
+  width: 15em;
+  height: 15em;
 }
 
 .stip-heroContainer .stip-btnHero button:first-child {
@@ -431,11 +419,11 @@
 .stip-sectionTitle {
   padding: 0 25%;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .stip-sectionBody {
-  margin: 100px 10% 0 10%;
+  margin: 10px 10% 0 10%;
 }
 
 .stip-titleNum {
@@ -450,7 +438,7 @@
 }
 
 .stip-clientSection {
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 .stip-clientLogoDim {
@@ -486,7 +474,7 @@
 }
 
 .stip-footer {
-  margin-top: 15%;
+  margin-top: 5em;
   color: white;
   background: url("../img/footerWave.svg") no-repeat;
   background-size: cover;
@@ -635,6 +623,11 @@
   .stip-waveBody {
     background-position-y: 65% !important;
   }
+  .stip-navModalImg {
+    right: -5em !important;
+    top: 20em !important;
+    max-width: 75% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 1200px) {
@@ -653,10 +646,10 @@
   .stip-btnHero button {
     font-size: 14px !important;
   }
-  .stip-heroIllustration {
-    width: 300px !important;
-    height: 300px !important;
-  }
+  /*.stip-heroIllustration {
+        width: 300px !important;
+        height: 300px !important;
+    }*/
   .stip-sectionTitle {
     padding: 0 10% !important;
     margin-top: 100px !important;
