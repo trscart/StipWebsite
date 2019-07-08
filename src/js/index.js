@@ -2,8 +2,20 @@
 $(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
 setTimeout(function () { $(".stip-loading").addClass('z-index-low') }, 3500);
 
-$(document).ready(function () {
+/*console.log(Cookies.get())
 
+console.log(window.location.href.indexOf("index"))
+
+if (window.location.href.indexOf("index") <= -1) {
+    Cookies.set('loadingAnimation', 1);
+    if (Cookies.get('loadingAnimation')) {
+        $(".stip-loading").remove()
+    }
+}
+
+console.log(Cookies.get())*/
+
+$(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
@@ -28,12 +40,47 @@ $(document).ready(function () {
         }
     });
 
-    $(".stip-contactUs").click(function () {
-
+    // ajax call for demo request
+    $("#stip-demoRequest").click(function () {
+        let data = {
+            "company_name": $('#stip-companyName-demo').val(),
+            "firstname": $('#stip-firstName-demo').val(),
+            "lastname": $('#stip-lastName-demo').val(),
+            "phone": $('#stip-phone-demo').val(),
+            "email": $('#stip-email-demo').val(),
+            "captcha": "..."
+        }
+        console.log(data)
+        fetch('https://stip.io/app/stip_rest/api/company/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(function (res) { console.log(res) })
+            .catch(function (err) { console.log(err) })
     });
 
-    $(".stip-demoRequest").click(function () {
-
+    // ajax call for contact request
+    $("#stip-contactUs").click(function () {
+        let data = {
+            "fullname": $('#stip-fullName-contact').val(),
+            "phone": $('#stip-phone-contact').val(),
+            "email": $('#stip-email-contact').val(),
+            "question": $('#stip-msg-contact').val(),
+            "captcha": "..."
+        }
+        console.log(data)
+        fetch('https://stip.io/app/stip_rest/api/companyQuestion/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(function (res) { console.log(res) })
+            .catch(function (err) { console.log(err) })
     });
 
     anime({
@@ -83,13 +130,10 @@ $(document).ready(function () {
         for (let index = 0; index < 3; index++) {
             $('#stip-blogCards').append(template(context))
         }
-
-        console.log($("#stip-blogCards").offset())
-
-        $('html,body').animate({
+        /*$('html,body').animate({
             scrollTop: $("#stip-blogCards").offset().top + $("#stip-blogCards").outerHeight()
         },
-            1500);
+            1500);*/
     })
 
 
@@ -98,4 +142,12 @@ $(document).ready(function () {
     hashtag.forEach(function (item, index) {
         $('#stip-hashtag').append("<button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button>")
     })
+
+
+});
+
+
+// clear coockie on unload
+$(window).on("unload", function (e) {
+    Cookies.remove('loadingAnimation');
 });

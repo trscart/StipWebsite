@@ -519,22 +519,22 @@
   color: #FD6B15;
 }
 
-.stip-footerTxt .stip-socialIcon {
+.stip-footerTxt .stip-policy {
+  color: white;
+}
+
+.stip-socialIcon {
   width: 100px;
   cursor: pointer;
 }
 
-.stip-footerTxt .stip-socialIcon path {
+.stip-socialIcon path {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.stip-footerTxt .stip-socialIcon path:hover {
+.stip-socialIcon path:hover {
   fill: #FD6B15;
-}
-
-.stip-footerTxt .stip-policy {
-  color: white;
 }
 
 @media (max-width: 576px) {
@@ -625,8 +625,8 @@
   }
   .stip-navModalImg {
     right: -5em !important;
-    top: 20em !important;
-    max-width: 75% !important;
+    top: 25em !important;
+    max-width: 85% !important;
   }
 }
 

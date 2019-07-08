@@ -404,21 +404,21 @@ $txtsize: 16spx;
 }
 
 .stip-footerTxt {
-    .stip-socialIcon {
-        width: 100px;
-        cursor: pointer;
-
-        path {
-            transition: 0.2s;
-
-            &:hover {
-                fill: $ndcolor;
-            }
-        }
-    }
-
     .stip-policy {
         color: white;
+    }
+}
+
+.stip-socialIcon {
+    width: 100px;
+    cursor: pointer;
+
+    path {
+        transition: 0.2s;
+
+        &:hover {
+            fill: $ndcolor;
+        }
     }
 }
 
@@ -521,10 +521,10 @@ $txtsize: 16spx;
         background-position-y: 65% !important;
     }
 
-    .stip-navModalImg{
+    .stip-navModalImg {
         right: -5em !important;
-        top: 20em !important;
-        max-width: 75% !important;
+        top: 25em !important;
+        max-width: 85% !important;
     }
 }
 
