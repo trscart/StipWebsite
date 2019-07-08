@@ -109,7 +109,7 @@
 }
 
 .stip-txt {
-  font-size: 16spx;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -238,6 +238,27 @@
   list-style: none;
 }
 
+.stip-reprompt-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.stip-reprompt-container .stip-reprompt {
+  position: fixed;
+  top: 50%;
+  z-index: 1050;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .stip-menuIcon {
   outline: none !important;
   border: 0;
@@ -318,11 +339,11 @@
 }
 
 .stip-heroContainer .stip-heroIllustration {
-  width: 15em;
-  height: 15em;
+  width: 14em;
+  height: 14em;
 }
 
-.stip-heroContainer .stip-btnHero button:first-child {
+.stip-demoRequest {
   font-weight: bold;
   font-size: 16px;
   color: white;
@@ -332,12 +353,12 @@
   padding: 10px 30px;
 }
 
-.stip-heroContainer .stip-btnHero button:first-child:hover {
+.stip-demoRequest:hover {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
 }
 
-.stip-heroContainer .stip-btnHero button:nth-child(2) {
+.stip-contactUs {
   font-weight: bold;
   font-size: 16px;
   color: white;
@@ -348,7 +369,7 @@
   margin-left: 20px;
 }
 
-.stip-heroContainer .stip-btnHero button:nth-child(2):hover {
+.stip-contactUs:hover {
   border-color: #FD6B15;
   color: #FD6B15;
 }
@@ -517,6 +538,12 @@
 .stip-footer .stip-footerCta .stip-footerBtn button:nth-child(2):hover {
   border-color: #FD6B15;
   color: #FD6B15;
+}
+
+.stip-footerLink a {
+  display: block;
+  color: white;
+  margin: 0.5em 0;
 }
 
 .stip-footerTxt .stip-policy {

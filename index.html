@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
@@ -369,20 +371,20 @@
         <div class="container-fluid stip-clientSection">
             <div class="row stip-sectionBody">
                 <div class="col d-flex flex-column align-items-center justify-content-center stip-hideMe">
-                    <div class="stip-agosLogo stip-clientLogoDim"></div>
+                    <a class="stip-agosLogo stip-clientLogoDim" href="https://www.agos.it/"></a>
                 </div>
                 <div class="col d-flex flex-column align-items-center justify-content-center stip-hideMe">
-                    <div class="stip-iblLogo stip-clientLogoDim"></div>
+                    <a class="stip-iblLogo stip-clientLogoDim" href="https://www.iblbanca.it/"></a>
                 </div>
                 <div class="col d-flex flex-column align-items-center justify-content-center stip-hideMe">
-                    <div class="stip-esseLogo stip-clientLogoDim"></div>
+                    <a class="stip-esseLogo stip-clientLogoDim" href="https://www.esselunga.it/cms/homepage.html"></a>
                 </div>
             </div>
         </div>
         <!-- end stip client section -->
 
         <!-- "i vantaggi di stip" section -->
-        <div class="container-fluid">
+        <div class="container-fluid" id="stip-vantaggi">
             <div class="row justify-content-center stip-sectionTitle stip-hideMe">
                 <h1 class="text-white stip-h1">I vantaggi di Stip</h1>
                 <p class="text-white stip-h3">Stip automatizza le attività del Social e Customer Care permettendo agli operatori di concentrarsi nella
@@ -417,7 +419,7 @@
 
 
     <!-- "stip ottimizza" section -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="stip-ai">
         <div class="row justify-content-center stip-sectionTitle stip-hideMe">
             <h1 class="stip-h1">Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale</h1>
         </div>
@@ -510,7 +512,33 @@
 
             </div>
         </div>
-        <div class="row p-5 stip-footerTxt">
+        <div class="row p-5 mt-5 d-none d-sm-flex stip-footerLink">
+            <div class="col">
+                <a href="#" class="stip-h2">HOME</a>
+                <a href="#stip-lineControl" class="stip-txt stip-linkToSection">Cosa fa Stip</a>
+                <a href="#stip-vantaggi" class="stip-txt stip-linkToSection">I vantaggi di Stip</a>
+                <a href="#stip-ai" class="stip-txt stip-linkToSection">Stip AI</a>
+            </div>
+            <div class="col">
+                <a href="./platform.html" class="stip-h2">PIATTAFORMA</a>
+                <a href="platform.html#stip-function" class="stip-txt stip-linkToSection">Come funziona Stip</a>
+                <a href="platform.html#stip-integrazioni" class="stip-txt stip-linkToSection">Integrazioni</a>
+                <a href="platform.html#stip-risposta" class="stip-txt stip-linkToSection">Risposta accurata</a>
+            </div>
+            <div class="col">
+                <a href="./blog.html" class="stip-h2">BLOG</a>
+                <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                <div class="d-flex mt-3 align-items-center">
+                    <a href="#">Scopri tutti gli articoli</a>
+                    <a href="#" class="material-icons ml-2">
+                        arrow_right_alt
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row px-5 stip-footerTxt">
             <div class="col">
                 <svg xmlns="http://www.w3.org/2000/svg" class="stip-socialIcon" width="183.564" height="36.084" viewBox="0 0 183.564 36.084">
                     <g id="Group_43" data-name="Group 43" transform="translate(-848 -5608)">
@@ -538,7 +566,7 @@
                     <br> Via Quirino Majorana, 203 Roma, RM 00152
                     <br> P.IVA/C.F. 14409831006 </p>
             </div>
-            <div class="col d-flex align-items-end">
+            <div class="col d-flex align-items-end justify-content-center">
                 <a href="./privacy-policy.html" class="stip-txt stip-policy" style="margin-bottom: 16px;">Privacy Policy</a>
             </div>
             <div class="col d-flex align-items-end justify-content-end">
@@ -547,7 +575,7 @@
         </div>
     </footer>
     <!-- end footer -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>
     <script src="src/js/index.js"></script>
