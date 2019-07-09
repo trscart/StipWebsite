@@ -153,33 +153,47 @@ $(document).ready(function () {
         $('#stip-hashtag').append("<button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button>")
     })
 
-    setTimeout(function () { //reprompt demo request after 2 min
-        $(
-            [
-                '<div class="container-fluid h-100 fixed-top stip-reprompt-container">',
-                '<div class="row flex-grow-1">',
-                '<div class="col">',
-                '<div class="card stip-reprompt">',
-                '<div class="card-body">',
-                '<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="stip-closeReprompt">',
-                '<span aria-hidden="true">&times;</span>',
-                '</button>',
-                '<h5 class="card-title">Richiedi una demo</h5>',
-                '<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at purus ut enim tempor cursus ac ut neque.</p>',
-                '<button class="float-right stip-demoRequest" type="button" data-toggle="modal" data-target="#demoModal">RICHIEDI DEMO</button>',
-                '</div>',
-                '</div>',
-                '</div>',
-                '</div>',
-                '</div>'
-            ].join("\n")
-        ).appendTo($("body"));
+    if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
+        setTimeout(function () {
+            $(
+                [
+                    '<div class="container-fluid text-center h-100 fixed-top stip-reprompt-container">',
+                    '<div class="row flex-grow-1">',
+                    '<div class="col">',
+                    '<div class="card stip-reprompt">',
+                    '<div class="card-body">',
+                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="stip-closeReprompt">',
+                    '<span aria-hidden="true">&times;</span>',
+                    '</button>',
+                    '<h1 class="stip-h1">Vuoi saperne di più?</h1>',
+                    '<h2 class="stip-h3">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer care è il nostro forte!</h2>',
+                    '<div class="input-group mt-4">',
+                    '<input type="text" class="form-control stip-txt" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">',
+                    '<div class="input-group-append">',
+                    '<button class="btn btn-outline-secondary stip-emailSectionBtn" type="button" id="button-addon2">Invia</button>',
+                    '</div>',
+                    '</div>',
+                    '</div>',
+                    '</div>',
+                    '</div>',
+                    '</div>',
+                    '</div>'
+                ].join("\n")
+            ).appendTo($("body"));
 
-        $("#stip-closeReprompt").click(function () {
-            console.log("here")
-            $(".stip-reprompt-container").css("display", "none")
-        })
-    }, 120000);
+            $("#stip-closeReprompt").click(function () {
+                console.log("here")
+                $(".stip-reprompt-container").css("display", "none")
+            })
+        }, 1800);
+    }
+
+
+    // maps
+    var place = { lat: 41.901610, lng: 12.503200 };
+    var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 13, center: place });
+    var marker = new google.maps.Marker({ position: place, map: map });
 });
 
 
