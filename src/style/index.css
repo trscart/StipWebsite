@@ -93,10 +93,6 @@
   }
 }
 
-.stip-contactContainer {
-  height: 100vh;
-}
-
 .stip-contactForm {
   background-color: #4384f1;
 }
@@ -107,8 +103,14 @@
 
 #map {
   width: 100%;
-  height: 400px;
+  height: 20em;
   background-color: grey;
+}
+
+@media (max-width: 576px) {
+  .stip-contactForm form {
+    margin-top: 2em;
+  }
 }
 
 .stip-h1 {

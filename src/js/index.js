@@ -64,23 +64,52 @@ $(document).ready(function () {
 
     // ajax call for contact request
     $("#stip-contactUs").click(function () {
-        let data = {
-            "fullname": $('#stip-fullName-contact').val(),
-            "phone": $('#stip-phone-contact').val(),
-            "email": $('#stip-email-contact').val(),
-            "question": $('#stip-msg-contact').val(),
-            "captcha": "..."
+        if ($('#stip-fullName-contact').val() && $('#stip-email-contact').val() && $('#stip-msg-contact').val()) {
+            console.log("here")
+            $('.stip-inputRequired').css("border-color", "transparent")
+            $('.stip-labelRequired').css("color", "white")
+
+            let data = {
+                "fullname": $('#stip-fullName-contact').val(),
+                "phone": $('#stip-phone-contact').val(),
+                "email": $('#stip-email-contact').val(),
+                "question": $('#stip-msg-contact').val(),
+                "captcha": "..."
+            }
+            fetch('https://stip.io/app/stip_rest/api/companyQuestion/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(function (res) {
+                    if (res.status == 201) { //if status 201
+                        $('.stip-messageSend').css("background-color", "#16B72E")
+                        $('.stip-messageSend').css("color", "white")
+                        $('.stip-messageSend').text("Messaggio inviato");
+                        setTimeout(function () {
+                            $('.stip-messageSend').css("background-color", "#f8f9fa")
+                            $('.stip-messageSend').css("color", "black")
+                            $('.stip-messageSend').text("Invia");
+                        }, 1300);
+                    }
+                })
+                .catch(function (err) {
+                    $('.stip-messageSend').css("background-color", "#FF2828")
+                    $('.stip-messageSend').css("color", "white")
+                    $('.stip-messageSend').text("Errore, riprova");
+                    setTimeout(function () {
+                        $('.stip-messageSend').css("background-color", "#f8f9fa")
+                        $('.stip-messageSend').css("color", "black")
+                        $('.stip-messageSend').text("Invia");
+                    }, 1300);
+                })
+
+        } else {
+            $('.stip-inputRequired').css("border-color", "#FF2828")
+            $('.stip-labelRequired').css("color", "#FF2828")
         }
-        console.log(data)
-        fetch('https://stip.io/app/stip_rest/api/companyQuestion/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(function (res) { console.log(res) })
-            .catch(function (err) { console.log(err) })
     });
 
     anime({
@@ -185,15 +214,25 @@ $(document).ready(function () {
                 console.log("here")
                 $(".stip-reprompt-container").css("display", "none")
             })
-        }, 1800);
+        }, 180000);
     }
 
 
     // maps
     var place = { lat: 41.901610, lng: 12.503200 };
     var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 13, center: place });
+        document.getElementById('map'), { zoom: 15, center: place });
     var marker = new google.maps.Marker({ position: place, map: map });
+    var contentString = '<div id="content">' +
+        '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
+        '<p class="stip-txt">Roma Termini, Via Marsala, 29/h, 00185 Roma RM</p>' +
+        '</div>';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+    });
 });
 
 
