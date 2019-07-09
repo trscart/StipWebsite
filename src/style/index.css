@@ -565,6 +565,15 @@
   fill: #FD6B15;
 }
 
+.stip-demoContainer {
+  height: 100vh;
+  background-color: white;
+}
+
+.stip-demoContainer .stip-demoCol {
+  background-color: #4384f1;
+}
+
 @media (max-width: 576px) {
   .stip-h1 {
     font-size: 18px !important;

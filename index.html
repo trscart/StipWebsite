@@ -48,59 +48,6 @@
     </div>
     <!-- loading -->
 
-    <!-- demo modal -->
-    <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="stip-h2" id="exampleModalLabel">Lasciaci i tuoi dati e ti invieremo l'accesso alla demo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Nome</label>
-                            <div class="col-9">
-                                <input type="text" class="form-control" placeholder="Nome" id="stip-firstName-demo">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Cognome</label>
-                            <div class="col-9">
-                                <input type="text" class="form-control" placeholder="Cognome" id="stip-lastName-demo">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Azienda</label>
-                            <div class="col-9">
-                                <input type="text" class="form-control" placeholder="Nome azienda" id="stip-companyName-demo">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Email*</label>
-                            <div class="col-9">
-                                <input type="text" class="form-control" placeholder="Email" required id="stip-email-demo">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-3 col-form-label stip-h3">Telefono*</label>
-                            <div class="col-9">
-                                <input type="text" class="form-control" placeholder="Telefono" required id="stip-phone-demo">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                    <button type="button" class="btn btn-primary" id="stip-demoRequest">Invia</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end demo modal -->
-
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light stip-nav">
         <a class="navbar-brand flex-grow-1" href="./index.html">
@@ -454,14 +401,14 @@
     <div class="container text-center mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8 m-2 p-4 p-sm-5 bg-white rounded shadow-lg stip-emailSection">
-                <h1 class="stip-h1">Vuoi saperne di più?</h1>
-                <h2 class="stip-h3">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer
-                    care è il nostro forte!
+                <h1 class="stip-h1">Non perderti nulla!</h1>
+                <h2 class="stip-h3">Se vuoi essere sempre aggiornato sul mondo Stip o vuoi avere maggiori informazioni sulla piattaforma, lasciaci
+                    la tua mail.
                 </h2>
                 <div class="input-group mt-4">
-                    <input type="text" class="form-control stip-txt" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">
+                    <input type="text" class="form-control stip-txt" placeholder="Email aziendale" aria-label="Email aziendale" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary stip-emailSectionBtn" type="button" id="button-addon2">Invia</button>
+                        <button class="btn btn-outline-secondary stip-emailSectionBtn" type="button" id="button-addon2">Registrati</button>
                     </div>
                 </div>
             </div>
@@ -531,7 +478,9 @@
                 </h2>
                 <div class="stip-footerBtn stip-hideMe">
                     <button class="stip-demoRequest" type="button" data-toggle="modal" data-target="#demoModal">RICHIEDI DEMO</button>
-                    <a href="./contacts.html"><button class="stip-contactUs" type="button">CONTATTACI</button></a>
+                    <a href="./contacts.html">
+                        <button class="stip-contactUs" type="button">CONTATTACI</button>
+                    </a>
                 </div>
 
             </div>
@@ -600,6 +549,67 @@
     </footer>
     <!-- end footer -->
 
+    <!-- demo section -->
+    <script id="stip-demoSection" type="text/x-handlebars-template">
+        <div class="container-fluid d-flex fixed-top stip-demoContainer">
+                <div class="row flex-grow-1">
+                    <div class="col-sm-6 p-5 d-flex flex-column justify-content-center">
+                        <img id="logo" class="align-self-center" src="src/img/logoColor.svg" width="80" height="80" alt="">
+                        <h1 class="stip-h2">Scopri come Stip può migliorare il tuo Customer Care e la Customer Experience dei tuoi clienti:</h1>
+                        <ul>
+                            <li>
+                                <h3 class="stip-h3">Ottimizza i tuoi tempi di risposta e rende più efficiente il lavoro dei tuoi operatori:</h3>
+                                <p class="stip-txt">Stip permette di ridurre il tempo medio di risposta da 5 ore a 3 minuti. Grazie al monitoraggio dei
+                                    contenuti prodotti dagli utenti e all’individuazione delle segnalazioni da gestire, raccoglie
+                                    le informazioni e permette agli operatori di risolvere qualsiasi casistica in maniera altamente
+                                    personalizzata e in una sola interazione con l’utente.</p>
+                            </li>
+                            <li>
+                                <h3 class="stip-h3">Permette di ridurre i costi dell’assistenza clienti e utilizza un bot personalizzato:</h3>
+                                <p class="stip-txt">è prevista una riduzione totale dei costi del 67%. Il chatbot integrato di Stip interagisce direttamente
+                                    con i clienti e permette di raccogliere tutte le informazioni necessarie per una risoluzione
+                                    ottimale di ogni casistica, mantenendo alto il livello di customizzazione.</p>
+                            </li>
+                            <li>
+                                <h3 class="stip-h3">Fornisce statistiche e KPIs riguardanti l’intero processo:</h3>
+                                <p class="stip-txt">monitora, traccia e analizza ogni attività relativa al Customer Service, disponibile real-time sulla
+                                    piattaforma. I dati sono esportabili in qualsiasi formato e permettono di monitorare l’operatività
+                                    del team e la qualità della relazione con i tuoi clienti.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 p-5 d-flex justify-content-center align-items-center stip-demoCol">
+                        <form class="p-5 flex-grow-1">
+                            <h1 class="text-white mb-4 stip-h1">Richiedi una Demo e prova subito Stip</h1>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="text-white stip-h3">Nome</label>
+                                <input type="text" class="form-control" placeholder="Nome" id="stip-firstName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="text-white stip-h3">Cognome</label>
+                                <input type="text" class="form-control" placeholder="Cognome" id="stip-lastName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="text-white stip-h3">Azienda</label>
+                                <input type="text" class="form-control" placeholder="Nome azienda" id="stip-companyName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="text-white stip-h3">Email*</label>
+                                <input type="text" class="form-control" placeholder="Email" required id="stip-email-demo">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="text-white stip-h3">Telefono*</label>
+                                <input type="text" class="form-control" placeholder="Telefono" required id="stip-phone-demo">
+                            </div>
+                            <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-contactUs">Richiedi demo</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </script>
+    <!-- end demo section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>
     <script src="src/js/index.js"></script>

@@ -40,27 +40,33 @@ $(document).ready(function () {
         }
     });
 
-    // ajax call for demo request
-    $("#stip-demoRequest").click(function () {
-        let data = {
-            "company_name": $('#stip-companyName-demo').val(),
-            "firstname": $('#stip-firstName-demo').val(),
-            "lastname": $('#stip-lastName-demo').val(),
-            "phone": $('#stip-phone-demo').val(),
-            "email": $('#stip-email-demo').val(),
-            "captcha": "..."
-        }
-        console.log(data)
-        fetch('https://stip.io/app/stip_rest/api/company/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(function (res) { console.log(res) })
-            .catch(function (err) { console.log(err) })
-    });
+    $(".stip-demoRequest").click(function () { // append demo section
+        var source = document.getElementById("stip-demoSection").innerHTML;
+        var template = Handlebars.compile(source);
+        $('body').append(template(template))
+
+        // ajax call for demo request
+        $("#stip-demoRequest").click(function () {
+            let data = {
+                "company_name": $('#stip-companyName-demo').val(),
+                "firstname": $('#stip-firstName-demo').val(),
+                "lastname": $('#stip-lastName-demo').val(),
+                "phone": $('#stip-phone-demo').val(),
+                "email": $('#stip-email-demo').val(),
+                "captcha": "..."
+            }
+            console.log(data)
+            fetch('https://stip.io/app/stip_rest/api/company/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(function (res) { console.log(res) })
+                .catch(function (err) { console.log(err) })
+        });
+    })
 
     // ajax call for contact request
     $("#stip-contactUs").click(function () {
@@ -95,7 +101,7 @@ $(document).ready(function () {
                         }, 1300);
                     }
                 })
-                .catch(function (err) {
+                .catch(function (err) { //if error
                     $('.stip-messageSend').css("background-color", "#FF2828")
                     $('.stip-messageSend').css("color", "white")
                     $('.stip-messageSend').text("Errore, riprova");
@@ -141,7 +147,7 @@ $(document).ready(function () {
     })
 
 
-    // blog card compile
+    // blog card compile PROVA
     $("#prova").click(function () {
         var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
         var source = document.getElementById("stip-blogCard").innerHTML;
@@ -194,10 +200,10 @@ $(document).ready(function () {
                     '<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="stip-closeReprompt">',
                     '<span aria-hidden="true">&times;</span>',
                     '</button>',
-                    '<h1 class="stip-h1">Vuoi saperne di più?</h1>',
-                    '<h2 class="stip-h3">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer care è il nostro forte!</h2>',
+                    '<h1 class="stip-h1">Vuoi migliorare la CX dei tuoi clienti?</h1>',
+                    '<h2 class="stip-h3">Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.</h2>',
                     '<div class="input-group mt-4">',
-                    '<input type="text" class="form-control stip-txt" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">',
+                    '<input type="text" class="form-control stip-txt" placeholder="Email aziendale" aria-label="Email aziendale" aria-describedby="button-addon2">',
                     '<div class="input-group-append">',
                     '<button class="btn btn-outline-secondary stip-emailSectionBtn" type="button" id="button-addon2">Invia</button>',
                     '</div>',
@@ -216,7 +222,6 @@ $(document).ready(function () {
             })
         }, 180000);
     }
-
 
     // maps
     var place = { lat: 41.901610, lng: 12.503200 };

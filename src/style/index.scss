@@ -424,6 +424,15 @@ $txtsize: 15px;
     }
 }
 
+.stip-demoContainer{
+    height: 100vh;
+    background-color: white;
+
+    .stip-demoCol{
+        background-color: $stcolor;
+    }
+}
+
 
 //media query
 
