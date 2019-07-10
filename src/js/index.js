@@ -16,6 +16,7 @@ if (window.location.href.indexOf("index") <= -1) {
 console.log(Cookies.get())*/
 
 $(document).ready(function () {
+
     // change menu icon color in blog section
     if ($(location).attr('href').includes("blog")) {
         $(".line").css("background-color", "#4384f1")
@@ -24,10 +25,14 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
-            $(".line").css("background-color", "#ffffff")
+            if ($(location).attr('href').includes("blog")) {
+                $(".line").css("background-color", "#ffffff")
+            }
         } else {
             $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
-            $(".line").css("background-color", "#4384f1")
+            if ($(location).attr('href').includes("blog")) {
+                $(".line").css("background-color", "#4384f1")
+            }
         }
 
         $('.stip-hideMe').each(function (i) { // appear effect on scrool
