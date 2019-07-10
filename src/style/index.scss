@@ -433,6 +433,17 @@ $txtsize: 15px;
     }
 }
 
+.stip-demoCloseIcon{
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    z-index: 1;
+    i{
+        font-size: 2em;
+        color: white;
+    }
+}
+
 
 //media query
 
@@ -544,6 +555,12 @@ $txtsize: 15px;
         right: -5em !important;
         top: 25em !important;
         max-width: 85% !important;
+    }
+  
+    .stip-demoCloseIcon{
+        i{
+            color: $stcolor !important;
+        }
     }
 }
 

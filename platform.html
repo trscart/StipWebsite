@@ -363,8 +363,9 @@
     <!-- demo section -->
     <script id="stip-demoSection" type="text/x-handlebars-template">
         <div class="container-fluid d-flex fixed-top stip-demoContainer">
-                <div class="row flex-grow-1">
-                    <div class="col-sm-6 p-5 d-flex flex-column justify-content-center">
+                <a href="" class="stip-demoCloseIcon"><i class="material-icons float-right">close</i></a>
+                <div class="row flex-grow-1" style="overflow: auto">
+                    <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
                         <img id="logo" class="align-self-center" src="src/img/logoColor.svg" width="80" height="80" alt="">
                         <h1 class="stip-h2">Scopri come Stip può migliorare il tuo Customer Care e la Customer Experience dei tuoi clienti:</h1>
                         <ul>
@@ -389,30 +390,30 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-6 p-5 d-flex justify-content-center align-items-center stip-demoCol">
-                        <form class="p-5 flex-grow-1">
-                            <h1 class="text-white mb-4 stip-h1">Richiedi una Demo e prova subito Stip</h1>
+                    <div class="col-md-6 p-4 p-sm-5 d-flex justify-content-center align-items-center stip-demoCol">
+                        <form class="p-4 p-sm-5 flex-grow-1 text-white">
+                            <h1 class="mb-4 stip-h1">Richiedi una Demo e prova subito Stip</h1>
                             <div class="form-group">
-                                <label for="inputEmail3" class="text-white stip-h3">Nome</label>
+                                <label for="inputEmail3" class="stip-h3">Nome</label>
                                 <input type="text" class="form-control" placeholder="Nome" id="stip-firstName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="text-white stip-h3">Cognome</label>
+                                <label for="inputEmail3" class="stip-h3">Cognome</label>
                                 <input type="text" class="form-control" placeholder="Cognome" id="stip-lastName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="text-white stip-h3">Azienda</label>
+                                <label for="inputEmail3" class="stip-h3">Azienda</label>
                                 <input type="text" class="form-control" placeholder="Nome azienda" id="stip-companyName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="text-white stip-h3">Email*</label>
-                                <input type="text" class="form-control" placeholder="Email" required id="stip-email-demo">
+                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Email*</label>
+                                <input type="text" class="form-control stip-inputRequired" placeholder="Email" required id="stip-email-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="text-white stip-h3">Telefono*</label>
-                                <input type="text" class="form-control" placeholder="Telefono" required id="stip-phone-demo">
+                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Telefono*</label>
+                                <input type="text" class="form-control stip-inputRequired" placeholder="Telefono" required id="stip-phone-demo">
                             </div>
-                            <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-contactUs">Richiedi demo</button>
+                            <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Richiedi demo</button>
                         </form>
                     </div>
                 </div>
