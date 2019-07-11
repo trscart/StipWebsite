@@ -259,6 +259,16 @@
   list-style: none;
 }
 
+.stip-languageBtnBox {
+  position: absolute;
+  top: 4em;
+  left: 2.5em;
+}
+
+.stip-languageBtnBox .stip-languageBtn {
+  color: #303030;
+}
+
 .stip-reprompt-container {
   display: -webkit-box;
   display: -ms-flexbox;

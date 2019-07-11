@@ -1,6 +1,83 @@
 let languages = {
+    "it-IT": {
+
+        // generic
+        "nav-item1": "HOME",
+        "nav-item2": "PIATTAFORMA",
+        "nav-item3": "BLOG",
+        "nav-item4": "CONTATTI",
+        "heroTitle": "La piattaforma che automatizza tutte le attività del Social ed Email Customer Care",
+        "demoBtn": "RICHIEDI DEMO",
+        "contactBtn": "CONTATTACI",
+        "footerHome": "HOME",
+        "footerHomeWhat": "Cosa facciamo",
+        "footerHomeBenefit": "Scopri i vantaggi",
+        "footerHomeAi": "Intelligenza Artificiale",
+        "footerPlatform": "PIATTAFORMA",
+        "footerPlatformHow": "Come funziona",
+        "footerPlatformIntegration": "Integrazioni",
+        "footerPlatformCustomer": "Customer experience",
+        "footerBlog": "BLOG",
+        "footerBlogMore": "Scopri tutti gli articoli",
+
+        // home page
+        "heroSubtitle": "Stip utilizza la sua Intelligenza Artificiale proprietaria per automatizzare il servizio di assistenza clienti, riducendo costi, tempi di gestione dei ticket e migliorando le performance degli operatori, consentendogli di concentrarsi sull’unica cosa che conta: rendere felici i propri clienti!",
+        "whatTitle": "Cosa fa Stip",
+        "whatSubtitle": "Attraverso la sua IA su tre livelli, Stip permette di rendere completamente automatiche ed efficienti tutte le azioni e i processi nell’ambito del Customer Care",
+        "whatCaringTitle": "Caring/No Caring + Hidden",
+        "whatCaringTxt": "Discerne la necessità di gestione di tutti i contenuti prodotti dagli utenti relazionati con il brand, sia all’interno che all’esterno delle pagine ufficiali. Stabilita l’esigenza di gestione di una segnalazione, interagisce direttamente con il cliente in tempo reale, seguendo un flusso di conversazione altamente personalizzato",
+        "whatTicketTitle": "Ticket Creation",
+        "whatTicketTxt": "Richiede al cliente tutte le informazioni necessarie per una gestione ottimale della sua segnalazione. Nell’eventualità sia stabilita la necessità d’intervento di un operatore, permette la creazione di un ticket, includendo tutte i dati rilevanti, in maniera completamente automatica",
+        "whatRedirectTitle": "Redirect",
+        "whatRedirectTxt": "Il ticket viene automaticamente reindirizzato all’operatore più competente, nel rispetto dei workflow e degli step autorizzativi aziendali. La categorizzazione e l’invio del ticket contenente tutte le informazioni del caso, permette all’operatore di risolvere la segnalazione in maniera efficace e in una sola interazione con il cliente",
+        "benefitTitle": "Vantaggi",
+        "benefitSubtitle": "Stip automatizza le attività del Social e Customer Care permettendo agli operatori di concentrarsi nella gestione delle richieste più complesse",
+        "benefitTimeTitle": "Tempi",
+        "benefitTimeTxt": "Stip riduce dell’80% i tempi di gestione delle segnalazioni dei tuoi clienti",
+        "benefitCostTitle": "Costi",
+        "benefitCostTxt": "Stip consente un risparmio di oltre il 67% rispetto ai costi del customer care tradizionale",
+        "benefitPerformanceTitle": "Performance",
+        "benefitPerformanceTxt": "Stip permette un aumento delle performance degli operatori pari al 167%",
+        "benefitRevenueTitle": "Ricavi",
+        "benefitRevenueTxt": "Stip, applicato al Social Customer Care, aumenta del 27% la retention dei clienti dell’azienda",
+        "optimizeTitle": "Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale",
+        "optimizeSetupTitle": "Easy Setup",
+        "optimizeSetupTxt": "L’architettura proprietaria a layer di Stip permette di avere la vostra AI personalizzata in pochissimo tempo",
+        "optimizeSocialTitle": "Social Listening",
+        "optimizeSocialTxt": "Le sonde di Stip presidiano tutti i canali e consentono di monitorare tutti gli UGC che facciano riferimento al tuo brand anche al di fuori delle tue pagine aziendali",
+        "optimizeAiTitle": "Artificial Intelligence",
+        "optimizeAiTxt": "Stip utilizza la sua Intelligenza Artificiale in maniera completamente automatica, real-time e senza intervento umano",
+        "optimizeMetricTitle": "Metric Measurement",
+        "optimizeMetricTxt": "Con Stip hai a disposizione una piattaforma di gestione smart, un set puntuale di KPI e statistiche e metriche uniche. L’integrazione della piattaforma è possibile con qualsiasi CRM aziendale",
+        "learnMoreTitle": "Vuoi saperne di più?",
+        "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer care è il nostro forte!",
+
+        // platform page
+        "howTitle": "Come funziona Stip",
+        "howHoldTitle": "Tieni tutto sotto controllo",
+        "howHoldTxt": "Stip individua e monitora ogni contenuto prodotto dagli utenti che riguardi il tuo brand, sia all’interno che all’esterno dei canali ufficiali dell’azienda. La piattaforma definisce quali siano i contenuti degli utenti da gestire e quali quelli da ignorare.",
+        "howTicketTitle": "Un ticket come per magia",
+        "howTicketTxt": "Una volta individuate le segnalazioni da amministrare, Stip richiede direttamente al cliente tutte le informazioni necessarie per risolvere al meglio quella determinata casistica. Ottenuti i dati di interesse, la piattaforma crea un ticket pronto per essere gestito da un operatore.",
+        "howOperatorTitle": "Il ticket giusto all’operatore giusto!",
+        "howOperatorTxt": "Stip indirizza i ticket creati automaticamente all’operatore più competente, dipendentemente dalla tipologia di richiesta del cliente. Il processo avviene rispettando il workflow e gli step autorizzativi aziendali.",
+        "satisfyTitle": "Stip soddisfa le esigenze di ogni azienda integrandosi con qualsiasi CRM e offrendo una vasta possibilità di customizzazione della piattaforma",
+        "satisfyCrmTitle": "Integrazione con i CRM",
+        "satisfyCrmTxt": "Si integra con estrema facilità con ogni CRM aziendale, evitando di stravolgere le routine dell’azienda e mantenendo i vantaggi dell’automatizzazione dei processi e le performance della piattaforma",
+        "satisfyStatisticsTitle": "Dati e statistiche",
+        "satisfyStatisticsTxt": "Monitora, traccia e analizza ogni attività per fornire alle aziende tutti i dati e le metriche significative perché possano migliorare e ottimizzare tecniche e procedure nell’ambito dell’assistenza ai clienti",
+        "satisfyPersonalisationTitle": "Personalizzazione",
+        "satisfyPersonalisationTxt": "Consente una vastissima possibilità di personalizzazione della piattaforma: dall’IA al chatbot, fino alla destinazione dell’indirizzamento dei ticket automatici e alla gestione delle singole richieste",
+        "accurateTitle": "Dare una risposta accurata, rapida ed efficiente ai tuoi clienti è l’unica cosa che conta",
+        "accurateSubtitle": "Automatizzando tutte le attività di customer care via social ed email, Stip permette agli operatori di concentrarsi sull’unica cosa davvero importante: spianare la strada verso la Customer Satisfaction",
+        "accuratePerformanceTitle": "Miglioramento performance",
+        "accuratePerformanceTxt": "Le performance degli agenti aumentano del 167%. Gestendo in maniera automatica le richieste più semplici, discriminando tra i contenuti degli utenti, creando i ticket e reindirizzandoli agli operatori competenti, Stip permette di ottimizzare i tempi di gestione e rendere il lavoro più agile ed efficiente",
+        "accuratePersonalisationTitle": "Alta personalizzazione",
+        "accuratePersonalisationTxt": "Stip lascia ai tuoi operatori il compito di rispondere. I clienti vogliono instaurare con il brand una relazione unica e personalizzata, evitando di interagire con chatbot standardizzati che non comprendono le loro reali esigenze. Per questo, Stip permette agli operatori di gestire le richieste più complesse e interagire con i tuoi clienti",
+        "accurateSatisfactionTitle": "Customer Satisfaction",
+        "accurateSatisfactionTxt": "La customer satisfaction diventa realtà. Stip ha piena cura dei tuoi clienti e li aggiorna in automatico sullo stato della loro segnalazione, proprio come fosse un pacco Amazon! Questo permette una riduzione sostanziale dei solleciti e dell’attesa percepita dai tuoi clienti e migliora la loro esperienza con il brand"
+    },
     "en-EN": {
-        
+
         // generic
         "nav-item1": "HOME",
         "nav-item2": "PLATFORM",
@@ -56,7 +133,7 @@ let languages = {
         "howTitle": "How It works",
         "howHoldTitle": "Hold down your fort",
         "howHoldTxt": "Stip monitors and identifies all user generated contents related with your brand both inside and outside company’s official platforms and channels. The platform automatically defines which content has to be managed and which ones can be ignored.",
-        "howTicketTitle": " A ticket as if by magic",
+        "howTicketTitle": "A ticket as if by magic",
         "howTicketTxt": "Once Stip has detected that a certain request needs to be handled, the bot starts interacting directly with the customer, asking all needed information in order to best solve that peculiar case. After getting all relevant piece of information, the platform creates a ticket ready to be managed by an operator.",
         "howOperatorTitle": "You are my man!",
         "howOperatorTxt": "Stip’s third AI layer makes it possible to redirect the automatically-generated ticket to the most accurate operator with all the information the agent may need. All the process takes place in compliance with each company’s internal workflow and policies.",
@@ -81,6 +158,7 @@ let languages = {
 
 $(document).ready(function () {
     let language = navigator.language; // get current language
+    console.log(language)
 
     // change text language
     if (language != "it-IT") {
@@ -88,4 +166,18 @@ $(document).ready(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
         });
     }
+
+    $("#stip-itBtn").click(function (e) {
+        console.log("it")
+        $(".lang").each(function () {
+            $(this).text(languages["it-IT"][$(this).attr("key")]);
+        });
+    });
+
+    $("#stip-enBtn").click(function (e) {
+        console.log("en")
+        $(".lang").each(function () {
+            $(this).text(languages["en-EN"][$(this).attr("key")]);
+        });
+    });
 })

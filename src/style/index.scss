@@ -145,6 +145,16 @@ $txtsize: 15px;
     }
 }
 
+.stip-languageBtnBox{
+    position: absolute;
+    top: 4em;
+    left: 2.5em;
+    .stip-languageBtn{
+        color: #303030;
+    
+    }
+}
+
 .stip-reprompt-container {
     display: flex;
     transition: 0.5s;
