@@ -24,7 +24,7 @@
 <body class="stip-heroBgPlatform">
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top stip-nav">
+    <nav class="navbar navbar-expand-lg navbar-light stip-nav">
         <a class="navbar-brand flex-grow-1" href="./index.html">
             <img id="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
         </a>
@@ -38,16 +38,16 @@
         <div class="stip-navModal">
             <ul class="m-md-5 mb-4">
                 <li class="nav-item">
-                    <a class="nav-link stip-navItem" href="./index.html">HOME</a>
+                    <a class="nav-link stip-navItem lang" key="nav-item1" href="./index.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link stip-navItem stip-active" href="./platform.html">PIATTAFORMA</a>
+                    <a class="nav-link stip-navItem stip-active lang" key="nav-item2" href="./platform.html">PIATTAFORMA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link stip-navItem" href="./blog.html">BLOG</a>
+                    <a class="nav-link stip-navItem lang" key="nav-item3" href="./blog.html">BLOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link stip-navItem" href="./contacts.html">CONTATTI</a>
+                    <a class="nav-link stip-navItem lang" key="nav-item4" href="./contacts.html">CONTATTI</a>
                 </li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 stip-socialIcon" width="183.564" height="36.084" viewBox="0 0 183.564 36.084">
@@ -83,7 +83,7 @@
     <div class="container-fluid d-flex bg-transparent stip-heroContainer">
         <div class="row">
             <div class="col d-flex flex-column stip-platformHero">
-                <h1 class="stip-h1" id="stip-scrollDetect">La piattaforma che automatizza tutte le attività del Social ed Email Customer Care</h1>
+                <h1 class="stip-h1 lang" key="heroTitle" id="stip-scrollDetect">La piattaforma che automatizza tutte le attività del Social ed Email Customer Care</h1>
                 <img class="shadow-lg align-self-center stip-heroScreen" src="src/img/heroScreen.png" alt="">
             </div>
         </div>
@@ -93,9 +93,7 @@
     <!-- "come funziona stip" section -->
     <div class="container-fluid stip-function" id="stip-function">
         <div class="row justify-content-center stip-sectionTitle stip-hideMe">
-            <h1 class="stip-h1">Come funziona
-                <span class="stip-colorTxt">Stip</span>
-            </h1>
+            <h1 class="stip-h1 lang" key="howTitle">Come funziona Stip</h1>
         </div>
         <div class="row stip-sectionBody">
             <div class="row mb-5">
@@ -103,8 +101,8 @@
                     <img src="src/img/caring.png" class="stip-functionImg" alt="">
                 </div>
                 <div class="col-md-6 order-md-last order-first d-flex flex-column justify-content-center">
-                    <h2 class="stip-h1">Tieni tutto sotto controllo</h2>
-                    <p class="stip-txt">Stip individua e monitora ogni contenuto prodotto dagli utenti che riguardi il tuo brand, sia all’interno
+                    <h2 class="stip-h1 lang" key="howHoldTitle">Tieni tutto sotto controllo</h2>
+                    <p class="stip-txt lang" key="howHoldTxt">Stip individua e monitora ogni contenuto prodotto dagli utenti che riguardi il tuo brand, sia all’interno
                         che all’esterno dei canali ufficiali dell’azienda. La piattaforma definisce quali siano i contenuti
                         degli utenti da gestire e quali quelli da ignorare.
                     </p>
@@ -112,8 +110,8 @@
             </div>
             <div class="row mb-5">
                 <div class="col-md-6 d-flex flex-column justify-content-center">
-                    <h2 class="text-white stip-h1">Un ticket come per magia</h2>
-                    <p class="text-white stip-txt">Una volta individuate le segnalazioni da amministrare, Stip richiede direttamente al cliente tutte le
+                    <h2 class="text-white stip-h1 lang" key="howTicketTitle">Un ticket come per magia</h2>
+                    <p class="text-white stip-txt lang" key="howTicketTxt">Una volta individuate le segnalazioni da amministrare, Stip richiede direttamente al cliente tutte le
                         informazioni necessarie per risolvere al meglio quella determinata casistica. Ottenuti i dati di
                         interesse, la piattaforma crea un ticket pronto per essere gestito da un operatore.
                     </p>
@@ -127,8 +125,8 @@
                     <img src="src/img/ticket.png" class="stip-functionImg" alt="">
                 </div>
                 <div class="col-md-6 order-md-last order-first d-flex flex-column justify-content-center">
-                    <h2 class="stip-h1">Il ticket giusto all’operatore giusto!</h2>
-                    <p class="stip-txt">Stip indirizza i ticket creati automaticamente all’operatore più competente, dipendentemente dalla tipologia
+                    <h2 class="stip-h1 lang" key="howOperatorTitle">Il ticket giusto all’operatore giusto!</h2>
+                    <p class="stip-txt lang" key="howOperatorTxt">Stip indirizza i ticket creati automaticamente all’operatore più competente, dipendentemente dalla tipologia
                         di richiesta del cliente. Il processo avviene rispettando il workflow e gli step autorizzativi aziendali.
                     </p>
                 </div>
@@ -140,7 +138,7 @@
     <!-- "stip soddisfa" section -->
     <div class="container-fluid" id="stip-integrazioni">
         <div class="row justify-content-center stip-sectionTitle stip-hideMe">
-            <p class="stip-h2">Stip soddisfa le esigenze di ogni azienda integrandosi con qualsiasi CRM e offrendo una vasta possibilità di
+            <p class="stip-h2 lang" key="satisfyTitle">Stip soddisfa le esigenze di ogni azienda integrandosi con qualsiasi CRM e offrendo una vasta possibilità di
                 customizzazione della piattaforma</p>
         </div>
         <div class="row text-center shadow-lg rounded stip-sectionBody">
@@ -163,8 +161,8 @@
                         <rect id="Rectangle_49" data-name="Rectangle 49" width="219" height="219" fill="none" />
                     </svg>
                 </div>
-                <h2 class="stip-h2">Integrazione con i CRM</h2>
-                <p class="text-center stip-txt">Si integra con estrema facilità con ogni CRM aziendale, evitando di stravolgere le routine dell’azienda e
+                <h2 class="stip-h2 lang" key="satisfyCrmTitle">Integrazione con i CRM</h2>
+                <p class="text-center stip-txt lang" key="satisfyCrmTxt">Si integra con estrema facilità con ogni CRM aziendale, evitando di stravolgere le routine dell’azienda e
                     mantenendo i vantaggi dell’automatizzazione dei processi e le performance della piattaforma</p>
             </div>
             <div class="col-md d-flex flex-column align-items-center p-4 stip-hideMe">
@@ -175,8 +173,8 @@
                         <rect id="Rectangle_46" data-name="Rectangle 46" width="219" height="219" fill="none" />
                     </svg>
                 </div>
-                <h2 class="stip-h2">Dati e statistiche</h2>
-                <p class="text-center stip-txt">Monitora, traccia e analizza ogni attività per fornire alle aziende tutti i dati e le metriche significative
+                <h2 class="stip-h2 lang" key="satisfyStatisticsTitle">Dati e statistiche</h2>
+                <p class="text-center stip-txt lang" key="satisfyStatisticsTxt">Monitora, traccia e analizza ogni attività per fornire alle aziende tutti i dati e le metriche significative
                     perché possano migliorare e ottimizzare tecniche e procedure nell’ambito dell’assistenza ai clienti</p>
             </div>
             <div class="col-md d-flex flex-column align-items-center p-4 stip-hideMe">
@@ -187,8 +185,8 @@
                         <rect id="Rectangle_48" data-name="Rectangle 48" width="219" height="219" fill="none" />
                     </svg>
                 </div>
-                <h2 class="stip-h2">Personalizzazione</h2>
-                <p class="text-center stip-txt">Consente una vastissima possibilità di personalizzazione della piattaforma: dall’IA al chatbot, fino alla
+                <h2 class="stip-h2 lang" key="satisfyPersonalisationTitle">Personalizzazione</h2>
+                <p class="text-center stip-txt lang" key="satisfyPersonalisationTxt">Consente una vastissima possibilità di personalizzazione della piattaforma: dall’IA al chatbot, fino alla
                     destinazione dell’indirizzamento dei ticket automatici e alla gestione delle singole richieste</p>
             </div>
         </div>
@@ -198,27 +196,27 @@
     <!-- "risposta accurata" section -->
     <div class="container-fluid" id="stip-risposta">
         <div class="row justify-content-center stip-sectionTitle stip-hideMe">
-            <h2 class="stip-h2">Dare una risposta accurata, rapida ed efficiente ai tuoi clienti è l’unica cosa che conta</h2>
-            <p class="stip-txt">Automatizzando tutte le attività di customer care via social ed email, Stip permette agli operatori di concentrarsi
+            <h2 class="stip-h2 lang" key="accurateTitle">Dare una risposta accurata, rapida ed efficiente ai tuoi clienti è l’unica cosa che conta</h2>
+            <p class="stip-txt lang" key="accurateSubtitle">Automatizzando tutte le attività di customer care via social ed email, Stip permette agli operatori di concentrarsi
                 sull’unica cosa davvero importante: spianare la strada verso la Customer Satisfaction</p>
         </div>
         <div class="row stip-sectionBody">
             <div class="col-sm-8 text-left mb-5">
-                <h2 class="stip-h2 stip-colorTxt">Miglioramento performance</h2>
-                <p class="stip-txt">Le performance degli agenti aumentano del 167%. Gestendo in maniera automatica le richieste più semplici,
+                <h2 class="stip-h2 stip-colorTxt lang" key="accuratePerformanceTitle">Miglioramento performance</h2>
+                <p class="stip-txt lang" key="accuratePerformanceTxt">Le performance degli agenti aumentano del 167%. Gestendo in maniera automatica le richieste più semplici,
                     discriminando tra i contenuti degli utenti, creando i ticket e reindirizzandoli agli operatori competenti,
                     Stip permette di ottimizzare i tempi di gestione e rendere il lavoro più agile ed efficiente</p>
             </div>
             <div class="col-sm-8 offset-sm-4 mb-5 text-right">
-                <h2 class="stip-h2 stip-colorTxt">Alta personalizzazione</h2>
-                <p class="stip-txt">Stip lascia ai tuoi operatori il compito di rispondere. I clienti vogliono instaurare con il brand una relazione
+                <h2 class="stip-h2 stip-colorTxt lang" key="accuratePersonalisationTitle">Alta personalizzazione</h2>
+                <p class="stip-txt lang" key="accuratePersonalisationTxt">Stip lascia ai tuoi operatori il compito di rispondere. I clienti vogliono instaurare con il brand una relazione
                     unica e personalizzata, evitando di interagire con chatbot standardizzati che non comprendono le loro
                     reali esigenze. Per questo, Stip permette agli operatori di gestire le richieste più complesse e interagire
                     con i tuoi clienti</p>
             </div>
             <div class="col-sm-8 text-left">
-                <h2 class="stip-h2 stip-colorTxt">Customer Satisfaction</h2>
-                <p class="stip-txt">La customer satisfaction diventa realtà. Stip ha piena cura dei tuoi clienti e li aggiorna in automatico
+                <h2 class="stip-h2 stip-colorTxt lang" key="accurateSatisfactionTitle">Customer Satisfaction</h2>
+                <p class="stip-txt lang" key="accurateSatisfactionTxt">La customer satisfaction diventa realtà. Stip ha piena cura dei tuoi clienti e li aggiorna in automatico
                     sullo stato della loro segnalazione, proprio come fosse un pacco Amazon! Questo permette una riduzione
                     sostanziale dei solleciti e dell’attesa percepita dai tuoi clienti e migliora la loro esperienza con
                     il brand</p>
@@ -283,14 +281,14 @@
                 </svg>
             </div>
             <div class="col-md-12 col-lg-8 px-5">
-                <h1 class="stip-h1">Vuoi saperne di più?</h1>
-                <h2 class="stip-h3">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer
+                <h1 class="stip-h1 lang" key="learnMoreTitle">Vuoi saperne di più?</h1>
+                <h2 class="stip-h3 lang" key="learnMoreSubtitle">Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer
                     care è il nostro forte!
                 </h2>
                 <div class="stip-footerBtn stip-hideMe">
-                    <button class="stip-demoRequest" type="button" data-toggle="modal" data-target="#demoModal">RICHIEDI DEMO</button>
+                    <button class="stip-demoRequest lang" key="demoBtn" type="button" data-toggle="modal" data-target="#demoModal">RICHIEDI DEMO</button>
                     <a href="./contacts.html">
-                        <button class="stip-contactUs" type="button">CONTATTACI</button>
+                        <button class="stip-contactUs lang" key="contactBtn" type="button">CONTATTACI</button>
                     </a>
                 </div>
 
@@ -298,24 +296,24 @@
         </div>
         <div class="row p-5 mt-5 d-none d-md-flex stip-footerLink">
             <div class="col">
-                <a href="#" class="stip-h2">HOME</a>
-                <a href="index.html#stip-lineControl" class="stip-txt stip-linkToSection">Cosa fa Stip</a>
-                <a href="index.html#stip-vantaggi" class="stip-txt stip-linkToSection">I vantaggi di Stip</a>
-                <a href="index.html#stip-ai" class="stip-txt stip-linkToSection">Stip AI</a>
+                <a href="index.html" class="stip-h2 lang" key="footerHome">HOME</a>
+                <a href="index.html#stip-lineControl" class="stip-txt stip-linkToSection lang" key="footerHomeWhat">Cosa facciamo</a>
+                <a href="index.html#stip-vantaggi" class="stip-txt stip-linkToSection lang" key="footerHomeBenefit">Scopri i vantaggi</a>
+                <a href="index.html#stip-ai" class="stip-txt stip-linkToSection lang" key="footerHomeAi">Intelligenza Artificiale</a>
             </div>
             <div class="col">
-                <a href="./platform.html" class="stip-h2">PIATTAFORMA</a>
-                <a href="#stip-function" class="stip-txt stip-linkToSection">Come funziona Stip</a>
-                <a href="#stip-integrazioni" class="stip-txt stip-linkToSection">Integrazioni</a>
-                <a href="#stip-risposta" class="stip-txt stip-linkToSection">Customer Experience</a>
+                <a href="#" class="stip-h2 lang" key="footerPlatform">PIATTAFORMA</a>
+                <a href="#stip-function" class="stip-txt stip-linkToSection lang" key="footerPlatformHow">Come funziona</a>
+                <a href="#stip-integrazioni" class="stip-txt stip-linkToSection lang" key="footerPlatformIntegration">Integrazioni</a>
+                <a href="#stip-risposta" class="stip-txt stip-linkToSection lang" key="footerPlatformCustomer">Customer Experience</a>
             </div>
             <div class="col">
-                <a href="./blog.html" class="stip-h2">BLOG</a>
+                <a href="./blog.html" class="stip-h2 lang" key="footerBlog">BLOG</a>
                 <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                 <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                 <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                 <div class="d-flex mt-3 align-items-center">
-                    <a href="#">Scopri tutti gli articoli</a>
+                    <a href="#" class="lang" key="footerBlogMore">Scopri tutti gli articoli</a>
                     <a href="#" class="material-icons ml-2">
                         arrow_right_alt
                     </a>
@@ -424,6 +422,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>
+    <script src="src/js/languages.js"></script>
     <script src="src/js/index.js"></script>
 </body>
 
