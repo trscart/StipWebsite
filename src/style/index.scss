@@ -7,7 +7,7 @@ $ndcolor: #FD6B15;
 $h1size: 24px;
 $h2size: 21px;
 $h3size: 16px;
-$txtsize: 15px; 
+$txtsize: 14px; 
 
 @import "platform.scss";
 @import "blog.scss";
@@ -114,8 +114,8 @@ $txtsize: 15px;
     display: flex; 
     justify-content: flex-start;
     align-items: flex-end;
-    right: -1500px;
-    transition: 0.5s;
+    right: -2000px;
+    transition: 0.6s ease-in-out;
 
     .stip-navModalImg {
         position: absolute;

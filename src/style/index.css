@@ -130,7 +130,7 @@
 }
 
 .stip-txt {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -229,9 +229,9 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  right: -1500px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  right: -2000px;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 .stip-navModal .stip-navModalImg {
