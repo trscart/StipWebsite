@@ -173,6 +173,12 @@
   transform-box: fill-box;
 }
 
+.stip-loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .stip-navScrolled {
   background-color: white !important;
   padding: 0 10rem !important;

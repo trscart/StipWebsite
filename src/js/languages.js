@@ -158,26 +158,34 @@ let languages = {
 
 $(document).ready(function () {
     let language = navigator.language; // get current language
-    console.log(language)
 
-    // change text language
-    if (language != "it-IT") {
+    // change text language on load
+    if (language != "it-IT" || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
         });
-    }
-
-    $("#stip-itBtn").click(function (e) {
-        console.log("it")
+    } else {
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
         });
+    }
+
+    // change text language on click
+    $("#stip-itBtn").click(function (e) { // click for it-IT language
+        sessionStorage.setItem('language', "it-IT"); // set language in session storage item
+        $(".lang").each(function () {
+            $(this).text(languages["it-IT"][$(this).attr("key")]);
+        });
+        $("#stip-itBtn").css("color", "#4384f1")
+        $("#stip-enBtn").css("color", "black")
     });
 
-    $("#stip-enBtn").click(function (e) {
-        console.log("en")
+    $("#stip-enBtn").click(function (e) { // click for en-EN language
+        sessionStorage.setItem('language', "en-EN"); // set language in session storage item
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
         });
+        $("#stip-enBtn").css("color", "#4384f1")
+        $("#stip-itBtn").css("color", "black")
     });
 })

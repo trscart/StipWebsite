@@ -1,19 +1,12 @@
 //loading animation
-$(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
-setTimeout(function () { $(".stip-loading").addClass('z-index-low') }, 3500);
-
-/*console.log(Cookies.get())
-
-console.log(window.location.href.indexOf("index"))
-
-if (window.location.href.indexOf("index") <= -1) {
-    Cookies.set('loadingAnimation', 1);
-    if (Cookies.get('loadingAnimation')) {
-        $(".stip-loading").remove()
-    }
+console.log(sessionStorage)
+if (sessionStorage.getItem('dontLoad') == null) { // do loading animation only one time 
+    $(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
+    setTimeout(function () { $(".stip-loading").addClass('z-index-low') }, 3500);
+    sessionStorage.setItem('dontLoad', 'true');
+} else {
+    $(".stip-loading").hide()
 }
-
-console.log(Cookies.get())*/
 
 $(document).ready(function () {
 
@@ -286,10 +279,4 @@ $(document).ready(function () {
     marker.addListener('click', function () {
         infowindow.open(map, marker);
     });
-});
-
-
-// clear coockie on unload
-$(window).on("unload", function (e) {
-    Cookies.remove('loadingAnimation');
 });
