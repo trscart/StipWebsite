@@ -98,6 +98,10 @@
   background-color: #4384f1;
 }
 
+.stip-contactContainer {
+  height: 100%;
+}
+
 .stip-contactCol {
   margin-top: 7em;
 }
