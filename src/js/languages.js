@@ -1,14 +1,22 @@
 let languages = {
     "it-IT": {
 
-        // generic
+        // GENERIC
+        //nav
         "nav-item1": "HOME",
         "nav-item2": "PIATTAFORMA",
         "nav-item3": "BLOG",
         "nav-item4": "CONTATTI",
+        // hero
         "heroTitle": "La piattaforma che automatizza tutte le attività del Social ed Email Customer Care",
+        // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
+        //email section
+        "emailTitle": "Non perderti nulla!",
+        "emailSubtitle": "Se vuoi essere sempre aggiornato sul mondo Stip o vuoi avere maggiori informazioni sulla piattaforma, lasciaci la tua mail.",
+        "emailBtn": "Registrati",
+        // footer
         "footerHome": "HOME",
         "footerHomeWhat": "Cosa facciamo",
         "footerHomeBenefit": "Scopri i vantaggi",
@@ -74,18 +82,38 @@ let languages = {
         "accuratePersonalisationTitle": "Alta personalizzazione",
         "accuratePersonalisationTxt": "Stip lascia ai tuoi operatori il compito di rispondere. I clienti vogliono instaurare con il brand una relazione unica e personalizzata, evitando di interagire con chatbot standardizzati che non comprendono le loro reali esigenze. Per questo, Stip permette agli operatori di gestire le richieste più complesse e interagire con i tuoi clienti",
         "accurateSatisfactionTitle": "Customer Satisfaction",
-        "accurateSatisfactionTxt": "La customer satisfaction diventa realtà. Stip ha piena cura dei tuoi clienti e li aggiorna in automatico sullo stato della loro segnalazione, proprio come fosse un pacco Amazon! Questo permette una riduzione sostanziale dei solleciti e dell’attesa percepita dai tuoi clienti e migliora la loro esperienza con il brand"
+        "accurateSatisfactionTxt": "La customer satisfaction diventa realtà. Stip ha piena cura dei tuoi clienti e li aggiorna in automatico sullo stato della loro segnalazione, proprio come fosse un pacco Amazon! Questo permette una riduzione sostanziale dei solleciti e dell’attesa percepita dai tuoi clienti e migliora la loro esperienza con il brand",
+
+        // contact page
+        "contactTitle": "SIAMO QUI PER TE!",
+        "contactSubtitle": "Contatta Stip su uno dei nostri canali o compila il form per farci sapere come possiamo esserti utili.",
+        "contactMapTitle": "Vieni a trovarci",
+        "contactSocialTitle": "Trovaci sui nostri canali",
+        "contactFormTitle": "Mettiti in contatto con Stip!",
+        "contactFormName": "Nome completo*",
+        "contactFormEmail": "Email*",
+        "contactFormPhone": "Telefono",
+        "contactFormMessage": "Messaggio*",
+        "contactFormSend": "Invia"
     },
     "en-EN": {
 
-        // generic
+        // GENERIC
+        // nav
         "nav-item1": "HOME",
         "nav-item2": "PLATFORM",
         "nav-item3": "BLOG",
         "nav-item4": "CONTACTS",
+        // hero
         "heroTitle": "The platform that automates all Social & Email Customer Care activities thanks to AI",
+        // btn
         "demoBtn": "DEMO REQUEST",
         "contactBtn": "CONTACT US",
+        //email section
+        "emailTitle": "Don't miss anything!",
+        "emailSubtitle": "If you want to be updated on Stip or want more information on the platform, leave us your email.",
+        "emailBtn": "sign in",
+        // footer
         "footerHome": "HOME",
         "footerHomeWhat": "What we do",
         "footerHomeBenefit": "Discover the benefits",
@@ -151,7 +179,19 @@ let languages = {
         "accuratePersonalisationTitle": "Build relationships",
         "accuratePersonalisationTxt": "To answer the customers is an agent’s job! Your customers expect to have a proper conversation with your brand by interacting with someone who gets their emotions and requests with sympathy. We all know that most chatbots cannot achieve that. This is why Stip allows your agents to manage complex requests and to interact directly with your customers, building a long-lasting relationship",
         "accurateSatisfactionTitle": "Customer Satisfaction",
-        "accurateSatisfactionTxt": "Customer satisfaction becomes reality. Stip has full care of your clients and real-time updates them about their request, just like it was a package from Amazon! That allows a substantial reduction of solicitous and of the perceived waiting, that enhance their experience with your brand"
+        "accurateSatisfactionTxt": "Customer satisfaction becomes reality. Stip has full care of your clients and real-time updates them about their request, just like it was a package from Amazon! That allows a substantial reduction of solicitous and of the perceived waiting, that enhance their experience with your brand",
+
+        // contact page
+        "contactTitle": "WE ARE HERE FOR YOU!",
+        "contactSubtitle": "Contact Stip on one of our channels or fill out the form to let us know how we can help you.",
+        "contactMapTitle": "Come visit us",
+        "contactSocialTitle": "Find us on our social media channels",
+        "contactFormTitle": "Get in touch with Stip!",
+        "contactFormName": "Full name*",
+        "contactFormEmail": "Email*",
+        "contactFormPhone": "Phone",
+        "contactFormMessage": "Message*",
+        "contactFormSend": "Send"
     }
 }
 

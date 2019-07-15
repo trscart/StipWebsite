@@ -86,19 +86,19 @@
     <div class="container-fluid d-flex stip-contactContainer" id="stip-scrollDetect">
         <div class="row flex-grow-1">
             <div class="col-md-7 p-5 stip-contactCol">
-                <h1 class="text-center stip-h1">SIAMO QUI PER TE!</h1>
-                <p class="text-center stip-txt">Contatta Stip su uno dei nostri canali o compila il form per farci sapere come possiamo esserti utili.</p>
+                <h1 class="text-center stip-h1 lang" key="contactTitle">SIAMO QUI PER TE!</h1>
+                <p class="text-center stip-txt lang" key="contactSubtitle">Contatta Stip su uno dei nostri canali o compila il form per farci sapere come possiamo esserti utili.</p>
                 <div id="map"></div>
                 <div class="row mt-5">
                     <div class="col-sm">
-                        <h2 class="stip-h2">Vieni a trovarci</h2>
+                        <h2 class="stip-h2 lang" key="contactMapTitle">Vieni a trovarci</h2>
                         <p class="stip-txt">Hub di LVenture Group e LUISS EnLabs
                             <br> Via Marsala 29h, 00185, Roma
                             <br> (+39) 06 4547 3124
                         </p>
                     </div>
                     <div class="col-sm">
-                        <p class="stip-h2">Trovaci sui nostri canali</p>
+                        <p class="stip-h2 lang" key="contactSocialTitle">Trovaci sui nostri canali</p>
                         <svg xmlns="http://www.w3.org/2000/svg" class="stip-socialIcon" width="183.564" height="36.084" viewBox="0 0 183.564 36.084">
                             <g id="Group_43" data-name="Group 43" transform="translate(-848 -5608)">
                                 <a href="https://www.facebook.com/stipapp/">
@@ -126,24 +126,24 @@
             </div>
             <div class="col-md-5 p-5 text-white stip-contactForm">
                 <form class="stip-contactCol">
-                    <h1 class="mb-4 stip-h1">Mettiti in contatto con Stip!</h1>
+                    <h1 class="mb-4 stip-h1 lang" key="contactFormTitle">Mettiti in contatto con Stip!</h1>
                     <div class="form-group">
-                        <label for="inputEmail3" class="stip-h3 stip-labelRequired">Nome completo*</label>
-                        <input type="text" class="form-control stip-inputRequired" placeholder="Nome" required id="stip-fullName-contact">
+                        <label for="inputEmail3" class="stip-h3 stip-labelRequired lang" key="contactFormName">Nome completo*</label>
+                        <input type="text" class="form-control stip-inputRequired" placeholder="Name" required id="stip-fullName-contact">
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail3" class="stip-h3 stip-labelRequired">Email*</label>
+                        <label for="inputEmail3" class="stip-h3 stip-labelRequired lang" key="contactFormEmail">Email*</label>
                         <input type="text" class="form-control stip-inputRequired" placeholder="Email" required id="stip-email-contact">
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail3" class="stip-h3">Telefono</label>
-                        <input type="text" class="form-control" placeholder="Telefono" id="stip-phone-contact">
+                        <label for="inputEmail3" class="stip-h3 lang" key="contactFormPhone">Telefono</label>
+                        <input type="text" class="form-control" placeholder="Phone" id="stip-phone-contact">
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail3" class="stip-h3 stip-labelRequired">Messaggio*</label>
-                        <textarea type="text" class="form-control stip-inputRequired" placeholder="Scrivi qui il tuo messaggio ..." required id="stip-msg-contact"></textarea>
+                        <label for="inputEmail3" class="stip-h3 stip-labelRequired lang" key="contactFormMessage">Messaggio*</label>
+                        <textarea type="text" class="form-control stip-inputRequired" placeholder="Your messagge ..." required id="stip-msg-contact"></textarea>
                     </div>
-                    <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-contactUs">Invia</button>
+                    <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend lang" key="contactFormSend" id="stip-contactUs">Invia</button>
                 </form>
             </div>
         </div>
@@ -191,6 +191,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>
+    <script src="src/js/languages.js"></script>
     <script src="src/js/index.js"></script>
 </body>
 

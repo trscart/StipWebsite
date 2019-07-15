@@ -1,5 +1,4 @@
 //loading animation
-console.log(sessionStorage)
 if (sessionStorage.getItem('dontLoad') == null) { // do loading animation only one time 
     $(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
     setTimeout(function () { $(".stip-loading").addClass('z-index-low') }, 3500);
@@ -28,7 +27,7 @@ $(document).ready(function () {
             }
         }
 
-        $('.stip-hideMe').each(function (i) { // appear effect on scrool
+        $('.stip-hideMe').each(function (i) { // appear effect on scroll
             if ($(window).scrollTop() + $(window).height() > $(this).offset().top + $(this).outerHeight() - 30) {
                 $(this).animate({ 'opacity': '1' }, 500);
             }
@@ -46,16 +45,20 @@ $(document).ready(function () {
     });
 
     $(".stip-demoRequest").click(function () { // append demo section
-        var source = document.getElementById("stip-demoSection").innerHTML;
-        var template = Handlebars.compile(source);
-        $('body').append(template(template))
+        let source
+        if (sessionStorage.getItem('language') == "en-EN") { // source en-EN demo section
+            source = document.getElementById("stip-demoSection-en").innerHTML;
+        } else { // source it-IT demo section
+            source = document.getElementById("stip-demoSection-it").innerHTML;
+        }
+        let template = Handlebars.compile(source);
+        $('body').append(template)
 
         $('body').css("overflow", "hidden")
 
         // ajax call for demo request
         $("#stip-demoSend").click(function () {
             if ($('#stip-phone-demo').val() && $('#stip-email-demo').val()) {
-                console.log("here")
                 $('.stip-inputRequired').css("border-color", "transparent")
                 $('.stip-labelRequired').css("color", "white")
 
@@ -78,22 +81,38 @@ $(document).ready(function () {
                         if (res.status == 201) { //if status 201
                             $('.stip-messageSend').css("background-color", "#16B72E")
                             $('.stip-messageSend').css("color", "white")
-                            $('.stip-messageSend').text("Messaggio inviato");
+                            if (sessionStorage.getItem('language') == "en-EN") {
+                                $('.stip-messageSend').text("Sent");
+                            } else {
+                                $('.stip-messageSend').text("Inviata");
+                            }
                             setTimeout(function () {
                                 $('.stip-messageSend').css("background-color", "#f8f9fa")
                                 $('.stip-messageSend').css("color", "black")
-                                $('.stip-messageSend').text("Invia");
+                                if (sessionStorage.getItem('language') == "en-EN") {
+                                    $('.stip-messageSend').text("Demo request");
+                                } else {
+                                    $('.stip-messageSend').text("Richiedi demo");
+                                }
                             }, 1300);
                         }
                     })
                     .catch(function (err) { //if error
                         $('.stip-messageSend').css("background-color", "#FF2828")
                         $('.stip-messageSend').css("color", "white")
-                        $('.stip-messageSend').text("Errore, riprova");
+                        if (sessionStorage.getItem('language') == "en-EN") {
+                            $('.stip-messageSend').text("Error, try again");
+                        } else {
+                            $('.stip-messageSend').text("Errore, riprova");
+                        }
                         setTimeout(function () {
                             $('.stip-messageSend').css("background-color", "#f8f9fa")
                             $('.stip-messageSend').css("color", "black")
-                            $('.stip-messageSend').text("Invia");
+                            if (sessionStorage.getItem('language') == "en-EN") {
+                                $('.stip-messageSend').text("Demo request");
+                            } else {
+                                $('.stip-messageSend').text("Richiedi demo");
+                            }
                         }, 1300);
                     })
 
@@ -113,7 +132,6 @@ $(document).ready(function () {
     // ajax call for contact request
     $("#stip-contactUs").click(function () {
         if ($('#stip-fullName-contact').val() && $('#stip-email-contact').val() && $('#stip-msg-contact').val()) {
-            console.log("here")
             $('.stip-inputRequired').css("border-color", "transparent")
             $('.stip-labelRequired').css("color", "white")
 
@@ -135,22 +153,38 @@ $(document).ready(function () {
                     if (res.status == 201) { //if status 201
                         $('.stip-messageSend').css("background-color", "#16B72E")
                         $('.stip-messageSend').css("color", "white")
-                        $('.stip-messageSend').text("Messaggio inviato");
+                        if (sessionStorage.getItem('language') == "en-EN") {
+                            $('.stip-messageSend').text("Message sent");
+                        } else {
+                            $('.stip-messageSend').text("Messaggio inviato");
+                        }
                         setTimeout(function () {
                             $('.stip-messageSend').css("background-color", "#f8f9fa")
                             $('.stip-messageSend').css("color", "black")
-                            $('.stip-messageSend').text("Invia");
+                            if (sessionStorage.getItem('language') == "en-EN") {
+                                $('.stip-messageSend').text("Send");
+                            } else {
+                                $('.stip-messageSend').text("Invia");
+                            }
                         }, 1300);
                     }
                 })
                 .catch(function (err) { //if error
                     $('.stip-messageSend').css("background-color", "#FF2828")
                     $('.stip-messageSend').css("color", "white")
-                    $('.stip-messageSend').text("Errore, riprova");
+                    if (sessionStorage.getItem('language') == "en-EN") {
+                        $('.stip-messageSend').text("Error, try again");
+                    } else {
+                        $('.stip-messageSend').text("Errore, riprova");
+                    }
                     setTimeout(function () {
                         $('.stip-messageSend').css("background-color", "#f8f9fa")
                         $('.stip-messageSend').css("color", "black")
-                        $('.stip-messageSend').text("Invia");
+                        if (sessionStorage.getItem('language') == "en-EN") {
+                            $('.stip-messageSend').text("Send");
+                        } else {
+                            $('.stip-messageSend').text("Invia");
+                        }
                     }, 1300);
                 })
 
@@ -231,52 +265,37 @@ $(document).ready(function () {
 
     if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
         setTimeout(function () {
-            $(
-                [
-                    '<div class="container-fluid text-center h-100 fixed-top stip-reprompt-container">',
-                    '<div class="row flex-grow-1">',
-                    '<div class="col">',
-                    '<div class="card stip-reprompt">',
-                    '<div class="card-body">',
-                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="stip-closeReprompt">',
-                    '<span aria-hidden="true">&times;</span>',
-                    '</button>',
-                    '<h1 class="stip-h1">Vuoi migliorare la CX dei tuoi clienti?</h1>',
-                    '<h2 class="stip-h3">Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.</h2>',
-                    '<div class="input-group mt-4">',
-                    '<input type="text" class="form-control stip-txt" placeholder="Email aziendale" aria-label="Email aziendale" aria-describedby="button-addon2">',
-                    '<div class="input-group-append">',
-                    '<button class="btn btn-outline-secondary stip-emailSectionBtn" type="button" id="button-addon2">Invia</button>',
-                    '</div>',
-                    '</div>',
-                    '</div>',
-                    '</div>',
-                    '</div>',
-                    '</div>',
-                    '</div>'
-                ].join("\n")
-            ).appendTo($("body"));
+            let context
+            if (sessionStorage.getItem('language') == "en-EN") {
+                context = { popupTitle: "Want to improve your customers' CX?", popupSubtitle: "Improve your Social & Email Customer Care with Stip! Write here your email and you will get our information material in a jiffy!", popupBtn: "Send" };
+            } else {
+                context = { popupTitle: "Vuoi migliorare la CX dei tuoi clienti?", popupSubtitle: "Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.", popupBtn: "Invia" };
+            }
+            let source = document.getElementById("stip-popup").innerHTML;
+            let template = Handlebars.compile(source);
+            $('body').append(template(context))
 
             $("#stip-closeReprompt").click(function () {
-                console.log("here")
                 $(".stip-reprompt-container").css("display", "none")
             })
         }, 180000);
     }
 
     // maps
-    var place = { lat: 41.901610, lng: 12.503200 };
-    var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 15, center: place });
-    var marker = new google.maps.Marker({ position: place, map: map });
-    var contentString = '<div id="content">' +
-        '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
-        '<p class="stip-txt">Roma Termini, Via Marsala, 29/h, 00185 Roma RM</p>' +
-        '</div>';
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
-    marker.addListener('click', function () {
-        infowindow.open(map, marker);
-    });
+    if ($(location).attr('href').includes("contacts")) {
+        var place = { lat: 41.901610, lng: 12.503200 };
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 15, center: place });
+        var marker = new google.maps.Marker({ position: place, map: map });
+        var contentString = '<div id="content">' +
+            '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
+            '<p class="stip-txt">Roma Termini, Via Marsala, 29/h, 00185 Roma RM</p>' +
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+    }
 });

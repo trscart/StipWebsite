@@ -499,6 +499,11 @@
   width: 120px;
 }
 
+.stipIllustrationDim {
+  height: 15em;
+  width: 20em;
+}
+
 .stip-clientSection {
   margin-top: 5%;
 }
