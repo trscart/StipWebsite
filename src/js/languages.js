@@ -46,7 +46,7 @@ let languages = {
         "benefitCostTxt": "Stip consente un risparmio di oltre il 67% rispetto ai costi del customer care tradizionale",
         "benefitPerformanceTitle": "Performance",
         "benefitPerformanceTxt": "Stip permette un aumento delle performance degli operatori pari al 167%",
-        "benefitRevenueTitle": "Ricavi",
+        "benefitRevenueTitle": "Retention",
         "benefitRevenueTxt": "Stip, applicato al Social Customer Care, aumenta del 27% la retention dei clienti dell’azienda",
         "optimizeTitle": "Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale",
         "optimizeSetupTitle": "Easy Setup",
