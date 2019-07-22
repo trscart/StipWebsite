@@ -222,6 +222,9 @@ $(document).ready(function () {
         });
         $(".stip-itBtn").css("color", "#FD6B15")
         $(".stip-enBtn").css("color", "#4384f1")
+        $(".stip-hamburgerIcon").toggleClass('active');
+        $(".stip-navModal").toggleClass('stip-navModalAppear')
+        $('body').toggleClass('overflow-body');
     });
 
     $(".stip-enBtn").click(function (e) { // click for en-EN language
@@ -231,5 +234,8 @@ $(document).ready(function () {
         });
         $(".stip-itBtn").css("color", "#4384f1")
         $(".stip-enBtn").css("color", "#FD6B15")
+        $(".stip-hamburgerIcon").toggleClass('active');
+        $(".stip-navModal").toggleClass('stip-navModalAppear')
+        $('body').toggleClass('overflow-body');
     });
 })
