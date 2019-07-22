@@ -48,7 +48,7 @@ let languages = {
         "benefitPerformanceTitle": "Performance",
         "benefitPerformanceTxt": "Stip permette un aumento delle performance degli operatori pari al 167%",
         "benefitPositiveTitle": "Richieste in entrata",
-        "benefitPositiveTxt": "Aumenta il numero di richieste degli utenti sui canali social del 100%",
+        "benefitPositiveTxt": "Aumento del numero di richieste degli utenti sui canali social del 100%",
         "optimizeTitle": "Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale",
         "optimizeSetupTitle": "Easy Setup",
         "optimizeSetupTxt": "L’architettura proprietaria a layer di Stip permette di avere la vostra AI personalizzata in pochissimo tempo",
