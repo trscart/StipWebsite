@@ -194,7 +194,12 @@
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) !important;
 }
 
-.stip-nav {
+.stip-active {
+  color: #FD6B15 !important;
+}
+
+.stip-navMobile {
+  visibility: hidden;
   padding: 2.5rem 10rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -203,18 +208,29 @@
   width: 100%;
 }
 
-.stip-nav .stip-cta {
-  font-weight: bold;
-  font-size: 16px;
-  background-color: #FD6B15;
-  border-color: transparent;
-  border-radius: 50px;
-  padding: 10px 30px;
+.stip-navDesktop {
+  visibility: visible;
+  padding: 2.5rem 10rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1000;
 }
 
-.stip-nav .stip-cta:hover {
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+.stip-navDesktop li {
+  font-weight: 600;
+  font-size: 21px;
+  margin: 0 0.5em;
+}
+
+.stip-navDesktop li .stip-navDesktopItem {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+.stip-navDesktop li .stip-navDesktopItem:hover {
+  color: #FD6B15 !important;
 }
 
 .stip-navModalAppear {
@@ -225,12 +241,12 @@
 
 .stip-navModal {
   position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -247,10 +263,6 @@
   right: -10em;
   top: 10em;
   max-width: 70%;
-}
-
-.stip-navModal .stip-active {
-  color: #FD6B15 !important;
 }
 
 .stip-navModal li {
@@ -280,7 +292,29 @@
 }
 
 .stip-languageBtnBox .stip-languageBtn {
-  color: #303030;
+  color: #4384f1;
+}
+
+.stip-languageBtnBox .stip-languageBtn:hover {
+  text-decoration: none;
+}
+
+.stip-languageDropBox .stip-languageDrop {
+  color: white;
+  padding: 0;
+}
+
+.stip-languageDropBox .stip-languageDrop:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.stip-languageDropBox .stip-languageDrop:hover {
+  color: white;
+}
+
+.stip-languageDropBox a {
+  cursor: pointer;
 }
 
 .stip-reprompt-container {
@@ -629,7 +663,10 @@
   .stip-txt {
     font-size: 12px !important;
   }
-  body .stip-nav {
+  body .stip-navMobile {
+    padding: 2.5rem 2rem;
+  }
+  body .stip-navDesktop {
     padding: 2.5rem 2rem;
   }
   .stip-btnHero button {
@@ -716,6 +753,15 @@
   }
   .stip-demoCloseIcon i {
     color: #4384f1 !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .stip-navDesktop {
+    visibility: hidden;
+  }
+  .stip-navMobile {
+    visibility: visible;
   }
 }
 

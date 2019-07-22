@@ -48,10 +48,10 @@
     </div>
     <!-- loading -->
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light stip-nav">
+    <!-- navbar mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light stip-navMobile">
         <a class="navbar-brand flex-grow-1" href="./index.html">
-            <img id="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
+            <img class="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
         </a>
         <button class="p-3 stip-menuIcon">
             <a href="#" class="stip-hamburgerIcon">
@@ -100,13 +100,53 @@
                 </li>
             </ul>
             <div class="stip-languageBtnBox ml-md-5 ml-2">
-                <button type="button" class="btn btn-link stip-h3 stip-languageBtn" id="stip-itBtn">IT</button>
-                <button type="button" class="btn btn-link p-0 stip-h3 stip-languageBtn" id="stip-enBtn">ENG</button>
+                <button type="button" class="btn btn-link stip-h3 stip-languageBtn stip-itBtn">IT</button>
+                <button type="button" class="btn btn-link p-0 stip-h3 stip-languageBtn stip-enBtn">ENG</button>
             </div>
             <img src="src/img/stip-logoBig.svg" class="stip-navModalImg" alt="">
         </div>
     </nav>
-    <!-- end navbar -->
+    <!-- end navbar mobile -->
+
+    <!-- navbar desktop -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top stip-navDesktop">
+        <a class="navbar-brand flex-grow-1" href="./index.html">
+            <img class="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="stip-navDesktopItem stip-active lang" key="nav-item1" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="stip-navDesktopItem lang" key="nav-item2" href="./platform.html">Piattaforma</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="stip-navOpenItem lang" key="nav-item3" href="./blog.html">Blog</a>
+                </li>-->
+                <li class="nav-item">
+                    <a class="stip-navDesktopItem lang" key="nav-item4" href="./contacts.html">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group stip-languageDropBox">
+                        <a class="btn dropdown-toggle stip-languageDrop stip-h3" data-toggle="dropdown" href="#">
+                            IT
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="stip-h3 stip-itBtn">IT</a>
+                            </li>
+                            <li>
+                                <a class="stip-h3 stip-enBtn">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navbar desktop -->
 
     <!-- heroBanner -->
     <div class="container-fluid d-flex stip-heroContainer">
@@ -317,9 +357,9 @@
                     <p class="stip-txt lang" key="benefitPerformanceTxt">Stip permette un aumento delle performance degli operatori pari al 167%</p>
                 </div>
                 <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
-                    <h1 class="stip-titleNum">+10%</h1>
-                    <h2 class="stip-h2 lang" key="benefitPositiveTitle">Positive Sentiment</h2>
-                    <p class="stip-txt lang" key="benefitPositiveTxt">Stip migliora le sensazioni del cliente osservato sui social media</p>
+                    <h1 class="stip-titleNum">+100%</h1>
+                    <h2 class="stip-h2 lang" key="benefitPositiveTitle">Richieste in entrata</h2>
+                    <p class="stip-txt lang" key="benefitPositiveTxt">Aumenta il numero di richieste degli utenti sui canali social del 100%</p>
                 </div>
             </div>
         </div>

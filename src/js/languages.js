@@ -3,10 +3,10 @@ let languages = {
 
         // GENERIC
         //nav
-        "nav-item1": "HOME",
-        "nav-item2": "PIATTAFORMA",
-        "nav-item3": "BLOG",
-        "nav-item4": "CONTATTI",
+        "nav-item1": "Home",
+        "nav-item2": "Piattaforma",
+        "nav-item3": "Blog",
+        "nav-item4": "Contatti",
         // hero
         "heroTitle": "La piattaforma che automatizza tutte le attività del Social ed Email Customer Care",
         // btn
@@ -47,8 +47,8 @@ let languages = {
         "benefitCostTxt": "Stip consente un risparmio di oltre il 67% rispetto ai costi del customer care tradizionale",
         "benefitPerformanceTitle": "Performance",
         "benefitPerformanceTxt": "Stip permette un aumento delle performance degli operatori pari al 167%",
-        "benefitPositiveTitle": "Positive Sentiment",
-        "benefitPositiveTxt": "Stip migliora le sensazioni del cliente osservato sui social media",
+        "benefitPositiveTitle": "Richieste in entrata",
+        "benefitPositiveTxt": "Aumenta il numero di richieste degli utenti sui canali social del 100%",
         "optimizeTitle": "Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale",
         "optimizeSetupTitle": "Easy Setup",
         "optimizeSetupTxt": "L’architettura proprietaria a layer di Stip permette di avere la vostra AI personalizzata in pochissimo tempo",
@@ -101,10 +101,10 @@ let languages = {
 
         // GENERIC
         // nav
-        "nav-item1": "HOME",
-        "nav-item2": "PLATFORM",
-        "nav-item3": "BLOG",
-        "nav-item4": "CONTACTS",
+        "nav-item1": "Home",
+        "nav-item2": "Platform",
+        "nav-item3": "Blog",
+        "nav-item4": "Contacts",
         // hero
         "heroTitle": "The platform that automates all Social & Email Customer Care activities",
         // btn
@@ -129,13 +129,13 @@ let languages = {
         // home page
         "heroSubtitle": "Stip reduces customer care costs, decreases ticket management time and enables customer service staffto become more productive by automating all social and email customer care processes. Our artificial intelligence allows agents to focus on the one thing that truly matters: making customers happy.",
         "whatTitle": "Streamline All Your Customer Care Interactions",
-        "whatSubtitle": "Stip applies 3 layers of AI to your customer care interactions, making your service team more efficient.",
+        "whatSubtitle": "Stip applies 3 layers AI to your Customer Care interactions, making your service team more efficient.",
         "whatCaringTitle": "Spot the Clients in Need of Care",
         "whatCaringTxt": "Stip automatically scans all user-generated content related to your brand, both inside and outside your official social channels. It screens the content that doesn’t require a reply from your company so your staff will only focus on the requests that matter.",
         "whatTicketTitle": "Give your Service Staff the Information They Need",
         "whatTicketTxt": "Stip proactively engages with your customers in real-time and asks for all the information needed by your service staff to manage their request efficiently. Your staff can work on your existing CRM platform use our friendly ticketing system.",
         "whatRedirectTitle": "Engage the Best Agent for the Job",
-        "whatRedirectTxt": "Stip understands your customers needs. We redirect the requests to the most relevant staff member ordepartment, so that no re-routing or escalation is needed.",
+        "whatRedirectTxt": "Stip understands your customers needs. We redirect the requests to the most relevant staff member or department, so that no re-routing or escalation is needed.",
         "clientTitle": "Some of the companies we’ve worked with:",
         "benefitTitle": "See the benefits for yourself",
         "benefitSubtitle": "Here are the results from our previous clients:",
@@ -144,16 +144,16 @@ let languages = {
         "benefitCostTitle": "Cutting costs",
         "benefitCostTxt": "Stip provides savings of more than 67% compared to traditional social customer care",
         "benefitPerformanceTitle": "Performance Growth",
-        "benefitPerformanceTxt": "Stip increases your staff’s performance by 167%",
-        "benefitPositiveTitle": "Positive Sentiment",
-        "benefitPositiveTxt": "Stip improves the customer’s sentiment observed on social media",
-        "optimizeTitle": "Stip uses Artificial Intelligence to make your Company’s Customer Care efficient",
+        "benefitPerformanceTxt": "Stip increases your Customer Service operators' performance by 167%",
+        "benefitPositiveTitle": "Incoming requests",
+        "benefitPositiveTxt": "Increase of users' requests on social media by 100%",
+        "optimizeTitle": "Stip is born to make your Company’s Customer Care efficient",
         "optimizeSetupTitle": "Easy Setup",
-        "optimizeSetupTxt": "Stip’s proprietary AI makes it easy to have your own personalized AI in no time",
+        "optimizeSetupTxt": "Stip’s proprietary AI makes it easy to have your own personalised Artificial Intelligence in no time",
         "optimizeSocialTitle": "Social Listening",
         "optimizeSocialTxt": "Stip constantly scans all social channels to help you track down all mentions of your company, both inside and outside your official pages",
         "optimizeAiTitle": "Artificial Intelligence",
-        "optimizeAiTxt": "Stip operates in real-time and without any human interaction thanks to its three layer of AI",
+        "optimizeAiTxt": "Stip operates in real-time and without any human interaction thanks to its three layers AI",
         "optimizeMetricTitle": "Full-Featured Platform",
         "optimizeMetricTxt": "Stip provides a smart platform to manage all your social CRM, including reporting on a detailed set of KPIs, and  it can integrate with your preferred CRM system too.",
         "learnMoreTitle": "Contact us!",
@@ -205,29 +205,31 @@ $(document).ready(function () {
     if (language != "it-IT" || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
+            $(".stip-languageDrop").text("EN");
         });
     } else {
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
+            $(".stip-languageDrop").text("IT");
         });
     }
 
     // change text language on click
-    $("#stip-itBtn").click(function (e) { // click for it-IT language
+    $(".stip-itBtn").click(function (e) { // click for it-IT language
         sessionStorage.setItem('language', "it-IT"); // set language in session storage item
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
         });
-        $("#stip-itBtn").css("color", "#4384f1")
-        $("#stip-enBtn").css("color", "black")
+        $(".stip-itBtn").css("color", "#FD6B15")
+        $(".stip-enBtn").css("color", "#4384f1")
     });
 
-    $("#stip-enBtn").click(function (e) { // click for en-EN language
+    $(".stip-enBtn").click(function (e) { // click for en-EN language
         sessionStorage.setItem('language', "en-EN"); // set language in session storage item
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
         });
-        $("#stip-enBtn").css("color", "#4384f1")
-        $("#stip-itBtn").css("color", "black")
+        $(".stip-itBtn").css("color", "#4384f1")
+        $(".stip-enBtn").css("color", "#FD6B15")
     });
 })

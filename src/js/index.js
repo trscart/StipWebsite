@@ -14,13 +14,36 @@ $(document).ready(function () {
         $(".line").css("background-color", "#4384f1")
     }
 
+    if ($(location).attr('href').includes("contacts")) {
+        $('.stip-navDesktop').css("background-color", "white")
+        $('.stip-navDesktop').css("padding", "0.5em 10em")
+        $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
+        $('.logo').attr("src", "src/img/logoColor.svg")
+        $(".stip-navDesktopItem").css("color", "#4384f1")
+        $(".stip-languageDrop").css("color", "#4384f1")
+    }
+
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
+            $('.stip-navDesktop').css("background-color", "white")
+            $('.stip-navDesktop').css("padding", "0.5em 10em")
+            $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
+            $('.logo').attr("src", "src/img/logoColor.svg")
+            $(".stip-navDesktopItem").css("color", "#4384f1")
+            $(".stip-languageDrop").css("color", "#4384f1")
+
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
             if ($(location).attr('href').includes("blog")) {
                 $(".line").css("background-color", "#ffffff")
             }
-        } else {
+        } else if (!$(location).attr('href').includes("contacts")) {
+            $('.stip-navDesktop').css("background-color", "transparent")
+            $('.stip-navDesktop').css("padding", "2.5em 10em")
+            $('.stip-navDesktop').css("box-shadow", "none")
+            $('.logo').attr("src", "src/img/logoWhite.svg")
+            $(".stip-navDesktopItem").css("color", "#ffffff")
+            $(".stip-languageDrop").css("color", "#ffffff")
+
             $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
             if ($(location).attr('href').includes("blog")) {
                 $(".line").css("background-color", "#4384f1")
@@ -42,6 +65,10 @@ $(document).ready(function () {
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) {
             $('.stip-menuIcon').toggleClass('stip-menuIconScrolled');
         }
+    });
+
+    $(".dropdown-menu li a").click(function () {
+        $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
     });
 
     $(".stip-demoRequest").click(function () { // append demo section

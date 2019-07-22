@@ -49,7 +49,7 @@ $txtsize: 14px;
     z-index: -2 !important;
 }
 
-.stip-rounded{
+.stip-rounded {
     border-radius: 1.25rem;
 }
 
@@ -83,23 +83,38 @@ $txtsize: 14px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) !important;
 }
 
-.stip-nav {
+.stip-active {
+    color: $ndcolor !important;
+}
+
+.stip-navMobile {
+    visibility: hidden;
     padding: 2.5rem 10rem;
     transition: 0.3s;
     position: absolute;
     z-index: 1030;
     width: 100%;
+}
 
-    .stip-cta {
-        font-weight: bold;
-        font-size: $h3size;
-        background-color: $ndcolor;
-        border-color: transparent;
-        border-radius: 50px;
-        padding: 10px 30px;
+.stip-navDesktop {
+    visibility: visible;
+    padding: 2.5rem 10rem;
+    transition: 0.3s;
+    z-index: 1000;
 
-        &:hover {
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+    li {
+        font-weight: 600;
+        font-size: $h2size;
+        margin: 0 0.5em;
+
+        .stip-navDesktopItem {
+            transition: 0.3s;
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: $ndcolor !important;
+            }
         }
     }
 }
@@ -112,10 +127,10 @@ $txtsize: 14px;
 
 .stip-navModal {
     position: fixed;
+    display: flex;
     top: 0;
     height: 100vh;
     width: 100%;
-    display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     right: -2000px;
@@ -126,10 +141,6 @@ $txtsize: 14px;
         right: -10em;
         top: 10em;
         max-width: 70%;
-    }
-
-    .stip-active {
-        color: $ndcolor !important;
     }
 
     li {
@@ -159,8 +170,30 @@ $txtsize: 14px;
     left: 2.5em;
 
     .stip-languageBtn {
-        color: #303030;
+        color: #4384f1;
 
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.stip-languageDropBox {
+    .stip-languageDrop {
+        color: white;
+        padding: 0;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    a {
+        cursor: pointer;
     }
 }
 
@@ -489,7 +522,11 @@ $txtsize: 14px;
         font-size: 12px !important;
     }
 
-    body .stip-nav {
+    body .stip-navMobile {
+        padding: 2.5rem 2rem;
+    }
+
+    body .stip-navDesktop {
         padding: 2.5rem 2rem;
     }
 
@@ -586,6 +623,16 @@ $txtsize: 14px;
         i {
             color: $stcolor !important;
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .stip-navDesktop {
+        visibility: hidden;
+    }
+
+    .stip-navMobile {
+        visibility: visible;
     }
 }
 
