@@ -154,6 +154,10 @@
   z-index: -2 !important;
 }
 
+.stip-rounded {
+  border-radius: 1.25rem;
+}
+
 .stip-loadLogo {
   height: 30%;
   transform-box: fill-box;
@@ -516,7 +520,7 @@
 .stip-waveBody {
   background: url("../img/bodyWave.svg") no-repeat;
   background-size: auto;
-  background-position-y: 80%;
+  background-position-y: 30%;
 }
 
 .stip-agosLogo {
@@ -703,7 +707,7 @@
 
 @media (max-width: 768px) {
   .stip-waveBody {
-    background-position-y: 65% !important;
+    background-position-y: 25% !important;
   }
   .stip-navModalImg {
     right: -5em !important;
@@ -755,10 +759,19 @@
   }
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+  .stip-waveBody {
+    background-position-y: 25% !important;
+  }
+}
+
 @media (min-width: 1200px) {
   .stip-clientLogoDim {
     height: 100px !important;
     width: 250px !important;
+  }
+  .stip-waveBody {
+    background-position-y: 10% !important;
   }
 }
 /*# sourceMappingURL=index.css.map */

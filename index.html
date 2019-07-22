@@ -68,9 +68,9 @@
                 <li class="nav-item">
                     <a class="nav-link stip-navItem lang" key="nav-item2" href="./platform.html">PIATTAFORMA</a>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link stip-navItem lang" key="nav-item3" href="./blog.html">BLOG</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link stip-navItem lang" key="nav-item4" href="./contacts.html">CONTATTI</a>
                 </li>
@@ -195,7 +195,7 @@
                 <p class="stip-h3 lang" key="whatSubtitle">Attraverso la sua IA su tre livelli, Stip permette di rendere completamente automatiche ed efficienti tutte
                     le azioni e i processi nell’ambito del Customer Care</p>
             </div>
-            <div class="row text-center shadow-lg rounded bg-white stip-sectionBody">
+            <div class="row text-center shadow-lg stip-rounded bg-white stip-sectionBody">
                 <div class="col-lg d-flex flex-column align-items-center stip-hideMe">
                     <div class="mb-3 stipIconDim">
                         <svg class="stipIconDim" xmlns="http://www.w3.org/2000/svg" width="219" height="219" viewBox="0 0 219 219">
@@ -273,9 +273,11 @@
         </div>
         <!-- end "cosa fa stip" section -->
 
-
         <!-- stip client section -->
         <div class="container-fluid stip-clientSection">
+            <div class="row justify-content-center stip-sectionTitle stip-hideMe">
+                <h1 class="stip-h1 text-white lang" key="clientTitle">Alcuni dei clienti con cui lavoriamo</h1>
+            </div>
             <div class="row stip-sectionBody">
                 <div class="col d-flex flex-column align-items-center justify-content-center stip-hideMe">
                     <a class="stip-agosLogo stip-clientLogoDim" href="https://www.agos.it/"></a>
@@ -291,86 +293,88 @@
         <!-- end stip client section -->
 
         <!-- "i vantaggi di stip" section -->
-        <div class="container" id="stip-vantaggi">
-            <div class="row flex-column justify-content-center stip-sectionTitle stip-hideMe">
-                <h1 class="text-white stip-h1 lang" key="benefitTitle">Vantaggi</h1>
-                <p class="text-white stip-h3 lang" key="benefitSubtitle">Stip automatizza le attività del Social e Customer Care permettendo agli operatori di concentrarsi nella
-                    gestione delle richieste più complesse</p>
-            </div>
-            <div class="row text-center shadow-lg rounded bg-white stip-sectionBody">
-                <div class="col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
+        <div class="container-fluid mt-5" id="stip-vantaggi">
+            <div class="row text-center shadow-lg stip-rounded bg-white stip-sectionBody">
+                <div class="col-12 flex-column justify-content-center mt-5 stip-hideMe">
+                    <h1 class="stip-h1 lang" key="benefitTitle">Vantaggi</h1>
+                    <p class="stip-h3 lang" key="benefitSubtitle">Stip automatizza le attività del Social e Customer Care permettendo agli operatori di concentrarsi nella
+                        gestione delle richieste più complesse</p>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
                     <h1 class="stip-titleNum">-80%</h1>
                     <h2 class="stip-h2 lang" key="benefitTimeTitle">Tempi</h2>
                     <p class="stip-txt lang" key="benefitTimeTxt">Stip riduce dell’80% i tempi di gestione delle segnalazioni dei tuoi clienti</p>
                 </div>
-                <div class="col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
                     <h1 class="stip-titleNum">-67%</h1>
                     <h2 class="stip-h2 lang" key="benefitCostTitle">Costi</h2>
                     <p class="stip-txt lang" key="benefitCostTxt">Stip consente un risparmio di oltre il 67% rispetto ai costi del customer care tradizionale
                     </p>
                 </div>
-                <div class="col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
                     <h1 class="stip-titleNum">+167%</h1>
                     <h2 class="stip-h2 lang" key="benefitPerformanceTitle">Performance</h2>
                     <p class="stip-txt lang" key="benefitPerformanceTxt">Stip permette un aumento delle performance degli operatori pari al 167%</p>
                 </div>
-                <div class="col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
-                    <h1 class="stip-titleNum">+27%</h1>
-                    <h2 class="stip-h2 lang" key="benefitRevenueTitle">Retention</h2>
-                    <p class="stip-txt lang" key="benefitRevenueTxt">Stip, applicato al Social Customer Care, aumenta del 27% la retention dei clienti dell’azienda</p>
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center p-4 stip-hideMe">
+                    <h1 class="stip-titleNum">+10%</h1>
+                    <h2 class="stip-h2 lang" key="benefitPositiveTitle">Positive Sentiment</h2>
+                    <p class="stip-txt lang" key="benefitPositiveTxt">Stip migliora le sensazioni del cliente osservato sui social media</p>
                 </div>
             </div>
         </div>
         <!-- end "i vantaggi di stip" section -->
-    </div>
 
-    <!-- "stip ottimizza" section -->
-    <div class="container-fluid" id="stip-ai">
-        <div class="row justify-content-center stip-sectionTitle stip-hideMe">
-            <h1 class="stip-h1 lang" key="optimizeTitle">Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale</h1>
+
+        <!-- "stip ottimizza" section -->
+        <div class="container-fluid" id="stip-ai">
+            <div class="row justify-content-center stip-sectionTitle stip-hideMe">
+                <h1 class="stip-h1 lang" key="optimizeTitle">Stip rende efficiente il Customer Care della tua azienda grazie all’Intelligenza Artificiale</h1>
+            </div>
+            <div class="row text-center justify-content-center stip-sectionBody">
+                <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
+                    <div class="mb-5 stipIllustrationDim">
+                        <img src="./src/img/easySetup.png" style="max-width: 100%;" alt="">
+                    </div>
+                    <h2 class="stip-h2 lang" key="optimizeSetupTitle">Easy Setup</h2>
+                    <p class="stip-txt lang" key="optimizeSetupTxt">L’architettura proprietaria a layer di Stip permette di avere la vostra AI personalizzata in pochissimo
+                        tempo
+                    </p>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
+                    <div class="mb-5 stipIllustrationDim">
+                        <img src="./src/img/socialListening.png" style="max-width: 100%;" alt="">
+                    </div>
+                    <h2 class="stip-h2 lang" key="optimizeSocialTitle">Social Listening</h2>
+                    <p class="stip-txt lang" key="optimizeSocialTxt">Le sonde di Stip presidiano tutti i canali e consentono di monitorare tutti gli UGC che facciano riferimento
+                        al tuo brand anche al di fuori delle tue pagine aziendali</p>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
+                    <div class="mb-5 stipIllustrationDim">
+                        <img src="./src/img/AI.png" style="max-width: 100%;" alt="">
+                    </div>
+                    <h2 class="stip-h2 lang" key="optimizeAiTitle">Intellingenza Artificiale</h2>
+                    <p class="stip-txt lang" key="optimizeAiTxt">Stip utilizza la sua Intelligenza Artificiale in maniera completamente automatica, real-time e senza
+                        intervento umano
+                    </p>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
+                    <div class="mb-5 stipIllustrationDim">
+                        <img src="./src/img/metricMesurement.png" style="max-width: 100%;" alt="">
+                    </div>
+                    <h2 class="stip-h2 lang" key="optimizeMetricTitle">Metric Measurement</h2>
+                    <p class="stip-txt lang" key="optimizeMetricTxt">Con Stip hai a disposizione una piattaforma di gestione smart, un set puntuale di KPI e statistiche e
+                        metriche uniche. L’integrazione della piattaforma è possibile con qualsiasi CRM aziendale</p>
+                </div>
+            </div>
         </div>
-        <div class="row text-center justify-content-center stip-sectionBody">
-            <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
-                <div class="mb-5 stipIllustrationDim">
-                    <img src="./src/img/easySetup.png" style="max-width: 100%;" alt="">
-                </div>
-                <h2 class="stip-h2 lang" key="optimizeSetupTitle">Easy Setup</h2>
-                <p class="stip-txt lang" key="optimizeSetupTxt">L’architettura proprietaria a layer di Stip permette di avere la vostra AI personalizzata in pochissimo tempo
-                </p>
-            </div>
-            <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
-                <div class="mb-5 stipIllustrationDim">
-                    <img src="./src/img/socialListening.png" style="max-width: 100%;" alt="">
-                </div>
-                <h2 class="stip-h2 lang" key="optimizeSocialTitle">Social Listening</h2>
-                <p class="stip-txt lang" key="optimizeSocialTxt">Le sonde di Stip presidiano tutti i canali e consentono di monitorare tutti gli UGC che facciano riferimento
-                    al tuo brand anche al di fuori delle tue pagine aziendali</p>
-            </div>
-            <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
-                <div class="mb-5 stipIllustrationDim">
-                    <img src="./src/img/AI.png" style="max-width: 100%;" alt="">
-                </div>
-                <h2 class="stip-h2 lang" key="optimizeAiTitle">Intellingenza Artificiale</h2>
-                <p class="stip-txt lang" key="optimizeAiTxt">Stip utilizza la sua Intelligenza Artificiale in maniera completamente automatica, real-time e senza intervento
-                    umano
-                </p>
-            </div>
-            <div class="col-md-6 d-flex flex-column align-items-center px-5 mb-5 stip-hideMe">
-                <div class="mb-5 stipIllustrationDim">
-                    <img src="./src/img/metricMesurement.png" style="max-width: 100%;" alt="">
-                </div>
-                <h2 class="stip-h2 lang" key="optimizeMetricTitle">Metric Measurement</h2>
-                <p class="stip-txt lang" key="optimizeMetricTxt">Con Stip hai a disposizione una piattaforma di gestione smart, un set puntuale di KPI e statistiche e metriche
-                    uniche. L’integrazione della piattaforma è possibile con qualsiasi CRM aziendale</p>
-            </div>
-        </div>
+        <!-- "stip ottimizza" section -->
     </div>
-    <!-- "stip ottimizza" section -->
 
     <!-- "email" section -->
     <div class="container text-center mt-5">
         <div class="row justify-content-center">
-            <div class="col-md-8 m-2 p-4 p-sm-5 bg-white rounded shadow-lg stip-emailSection">
+            <div class="col-md-8 m-2 p-4 p-sm-5 bg-white stip-rounded shadow-lg stip-emailSection">
                 <h1 class="stip-h1 lang" key="emailTitle">Non perderti nulla!</h1>
                 <h2 class="stip-h3 lang" key="emailSubtitle">Se vuoi essere sempre aggiornato sul mondo Stip o vuoi avere maggiori informazioni sulla piattaforma, lasciaci
                     la tua mail.
@@ -468,7 +472,7 @@
                 <a href="platform.html#stip-integrazioni" class="stip-txt stip-linkToSection lang" key="footerPlatformIntegration">Integrazioni</a>
                 <a href="platform.html#stip-risposta" class="stip-txt stip-linkToSection lang" key="footerPlatformCustomer">Customer Experience</a>
             </div>
-            <div class="col">
+            <!--<div class="col">
                 <a href="./blog.html" class="stip-h2 lang" key="footerBlog">BLOG</a>
                 <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                 <a href="" class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
@@ -479,7 +483,7 @@
                         arrow_right_alt
                     </a>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="row px-5 stip-footerTxt">
             <div class="col">
