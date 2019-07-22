@@ -99,11 +99,7 @@
 }
 
 .stip-contactContainer {
-  height: 100%;
-}
-
-.stip-contactCol {
-  margin-top: 7em;
+  height: 100vh;
 }
 
 #map {
@@ -115,6 +111,12 @@
 @media (max-width: 576px) {
   .stip-contactForm form {
     margin-top: 2em;
+  }
+}
+
+@media (max-width: 992px) {
+  .stip-contactContainer {
+    height: auto;
   }
 }
 

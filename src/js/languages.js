@@ -147,7 +147,7 @@ let languages = {
         "benefitPerformanceTxt": "Stip increases your Customer Service operators' performance by 167%",
         "benefitPositiveTitle": "Incoming requests",
         "benefitPositiveTxt": "Increase of users' requests on social media by 100%",
-        "optimizeTitle": "Stip is born to make your Company’s Customer Care efficient",
+        "optimizeTitle": "Stip uses Artificial Intelligence to make your Company's Customer Care efficient",
         "optimizeSetupTitle": "Easy Setup",
         "optimizeSetupTxt": "Stip’s proprietary AI makes it easy to have your own personalised Artificial Intelligence in no time",
         "optimizeSocialTitle": "Social Listening",
@@ -222,9 +222,9 @@ $(document).ready(function () {
         });
         $(".stip-itBtn").css("color", "#FD6B15")
         $(".stip-enBtn").css("color", "#4384f1")
-        $(".stip-hamburgerIcon").toggleClass('active');
-        $(".stip-navModal").toggleClass('stip-navModalAppear')
-        $('body').toggleClass('overflow-body');
+        $(".stip-hamburgerIcon").removeClass('active');
+        $(".stip-navModal").removeClass('stip-navModalAppear')
+        $('body').removeClass('overflow-body');
     });
 
     $(".stip-enBtn").click(function (e) { // click for en-EN language
@@ -234,8 +234,8 @@ $(document).ready(function () {
         });
         $(".stip-itBtn").css("color", "#4384f1")
         $(".stip-enBtn").css("color", "#FD6B15")
-        $(".stip-hamburgerIcon").toggleClass('active');
-        $(".stip-navModal").toggleClass('stip-navModalAppear')
-        $('body').toggleClass('overflow-body');
+        $(".stip-hamburgerIcon").removeClass('active');
+        $(".stip-navModal").removeClass('stip-navModalAppear')
+        $('body').removeClass('overflow-body');
     });
 })

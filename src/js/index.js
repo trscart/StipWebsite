@@ -106,6 +106,22 @@ $(document).ready(function () {
                 })
                     .then(function (res) {
                         if (res.status == 201) { //if status 201
+
+                            // append thank you message
+                            let context
+                            if (sessionStorage.getItem('language') == "en-EN") {
+                                context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
+                            } else {
+                                context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+                            }
+                            let source = document.getElementById("stip-thanks").innerHTML;
+                            let template = Handlebars.compile(source);
+                            $('body').append(template(context))
+
+                            $(".stip-closeReprompt").click(function () {
+                                $(".stip-reprompt-container").css("display", "none")
+                            })
+
                             $('.stip-messageSend').css("background-color", "#16B72E")
                             $('.stip-messageSend').css("color", "white")
                             if (sessionStorage.getItem('language') == "en-EN") {
@@ -178,6 +194,22 @@ $(document).ready(function () {
             })
                 .then(function (res) {
                     if (res.status == 201) { //if status 201
+
+                        // append thank you message
+                        let context
+                        if (sessionStorage.getItem('language') == "en-EN") {
+                            context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
+                        } else {
+                            context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+                        }
+                        let source = document.getElementById("stip-thanks").innerHTML;
+                        let template = Handlebars.compile(source);
+                        $('body').append(template(context))
+
+                        $(".stip-closeReprompt").click(function () {
+                            $(".stip-reprompt-container").css("display", "none")
+                        })
+
                         $('.stip-messageSend').css("background-color", "#16B72E")
                         $('.stip-messageSend').css("color", "white")
                         if (sessionStorage.getItem('language') == "en-EN") {
@@ -220,6 +252,23 @@ $(document).ready(function () {
             $('.stip-labelRequired').css("color", "#FF2828")
         }
     });
+
+    $(".stip-emailSectionBtn").click(function () {
+        // append thank you message
+        let context
+        if (sessionStorage.getItem('language') == "en-EN") {
+            context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
+        } else {
+            context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+        }
+        let source = document.getElementById("stip-thanks").innerHTML;
+        let template = Handlebars.compile(source);
+        $('body').append(template(context))
+
+        $(".stip-closeReprompt").click(function () {
+            $(".stip-reprompt-container").css("display", "none")
+        })
+    })
 
     anime({
         targets: '.stip-loadLogo',
@@ -310,14 +359,24 @@ $(document).ready(function () {
 
     // maps
     if ($(location).attr('href').includes("contacts")) {
-        var place = { lat: 41.901610, lng: 12.503200 };
+        var place
+        var contentString
+        if (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null) {
+            place = { lat: 37.870171, lng: -122.268624 };
+            contentString = '<div id="content">' +
+                '<h1 class="stip-h3">Skydeck Berkley</h1>' +
+                '<p class="stip-txt">2150 Shattuck Ave, Berkley, CA 94704, USA</p>' +
+                '</div>';
+        } else {
+            place = { lat: 41.901610, lng: 12.503200 };
+            contentString = '<div id="content">' +
+                '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
+                '<p class="stip-txt">Roma Termini, Via Marsala 29H, Roma, RM 00185, ITALY</p>' +
+                '</div>';
+        }
         var map = new google.maps.Map(
             document.getElementById('map'), { zoom: 15, center: place });
         var marker = new google.maps.Marker({ position: place, map: map });
-        var contentString = '<div id="content">' +
-            '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
-            '<p class="stip-txt">Roma Termini, Via Marsala, 29/h, 00185 Roma RM</p>' +
-            '</div>';
         var infowindow = new google.maps.InfoWindow({
             content: contentString
         });

@@ -687,6 +687,27 @@
     </script>
     <!-- end demo en-EN section -->
 
+    <!-- thanks popup section -->
+    <script id="stip-thanks" type="text/x-handlebars-template">
+        <div class="container-fluid text-center h-100 fixed-top stip-reprompt-container">
+            <div class="row flex-grow-1">
+                <div class="col">
+                    <div class="card stip-reprompt">
+                        <div class="card-body">
+                            <button type="button" class="close stip-closeReprompt" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img src="src/img/checkIcon.svg" width="30%" alt="">
+                            <h1 class="stip-h1">{{thanksTitle}}</h1>
+                            <h2 class="stip-h3">{{thanksSubtitle}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- end thanks popup section -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>
