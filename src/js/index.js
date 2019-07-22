@@ -326,7 +326,7 @@ $(document).ready(function () {
     $(".stip-linkToSection").click(function (e) {
         if ($(location).attr('href').includes(e.currentTarget.pathname)) { // scroll animation if section is on page
             $('html,body').animate({
-                scrollTop: $(e.target.attributes[0].nodeValue).offset().top
+                scrollTop: $(e.target.attributes[0].nodeValue).offset().top - $(".stip-sectionTitle").height()
             },
                 1000);
         }
