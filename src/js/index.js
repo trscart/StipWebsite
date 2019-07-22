@@ -351,8 +351,26 @@ $(document).ready(function () {
             let template = Handlebars.compile(source);
             $('body').append(template(context))
 
-            $("#stip-closeReprompt").click(function () {
+            $(".stip-closeReprompt").click(function () {
                 $(".stip-reprompt-container").css("display", "none")
+            })
+
+            $(".stip-emailSectionBtn").click(function () {
+                $(".stip-reprompt-container").css("display", "none")
+                // append thank you message
+                let context
+                if (sessionStorage.getItem('language') == "en-EN") {
+                    context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
+                } else {
+                    context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+                }
+                let source = document.getElementById("stip-thanks").innerHTML;
+                let template = Handlebars.compile(source);
+                $('body').append(template(context))
+
+                $(".stip-closeReprompt").click(function () {
+                    $(".stip-reprompt-container").css("display", "none")
+                })
             })
         }, 180000);
     }
