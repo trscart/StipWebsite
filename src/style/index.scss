@@ -86,7 +86,7 @@ $txtsize: 14px;
 .stip-active {
     color: $ndcolor !important;
 }
-
+ 
 .stip-navMobile {
     visibility: hidden;
     padding: 2.5rem 10rem;
@@ -287,8 +287,8 @@ $txtsize: 14px;
     justify-content: center;
 
     .stip-heroIllustration {
-        width: 14em;
-        height: 14em;
+        position: absolute;
+        max-width: 180%;
     }
 }
 
@@ -561,8 +561,7 @@ $txtsize: 14px;
     }
 
     .stip-heroIllustration {
-        width: 300px !important;
-        height: 300px !important;
+        max-width: 100% !important;
     }
 
     .stipIconDim {
@@ -658,11 +657,6 @@ $txtsize: 14px;
             font-size: 14px !important;
         }
     }
-
-    /*.stip-heroIllustration {
-        width: 300px !important;
-        height: 300px !important;
-    }*/
 
     .stip-sectionTitle {
         padding: 0 10% !important;

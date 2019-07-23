@@ -377,29 +377,35 @@ $(document).ready(function () {
 
     // maps
     if ($(location).attr('href').includes("contacts")) {
-        var place
-        var contentString
-        if (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null) {
-            place = { lat: 37.870171, lng: -122.268624 };
-            contentString = '<div id="content">' +
-                '<h1 class="stip-h3">Skydeck Berkley</h1>' +
-                '<p class="stip-txt">2150 Shattuck Ave, Berkley, CA 94704, USA</p>' +
-                '</div>';
-        } else {
-            place = { lat: 41.901610, lng: 12.503200 };
-            contentString = '<div id="content">' +
-                '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
-                '<p class="stip-txt">Roma Termini, Via Marsala 29H, Roma, RM 00185, ITALY</p>' +
-                '</div>';
-        }
-        var map = new google.maps.Map(
-            document.getElementById('map'), { zoom: 15, center: place });
-        var marker = new google.maps.Marker({ position: place, map: map });
+        //en map
+        let placeEn = { lat: 37.870171, lng: -122.268624 };
+        let contentStringEn = '<div id="content">' +
+            '<h1 class="stip-h3">Skydeck Berkley</h1>' +
+            '<p class="stip-txt">2150 Shattuck Ave, Berkley, CA 94704, USA</p>' +
+            '</div>';
+        var mapEn = new google.maps.Map(
+            document.getElementById('mapEn'), { zoom: 15, center: placeEn });
+        var markerEn = new google.maps.Marker({ position: placeEn, map: mapEn });
         var infowindow = new google.maps.InfoWindow({
-            content: contentString
+            content: contentStringEn
         });
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
+        markerEn.addListener('click', function () {
+            infowindow.open(mapEn, markerEn);
+        });
+
+        let placeIt = { lat: 41.901610, lng: 12.503200 };
+        let contentStringIt = '<div id="content">' +
+            '<h1 class="stip-h3">HUB LVenture Group e LUISS EnLabs</h1>' +
+            '<p class="stip-txt">Roma Termini, Via Marsala 29H, Roma, RM 00185, ITALY</p>' +
+            '</div>';
+        var mapIt = new google.maps.Map(
+            document.getElementById('mapIt'), { zoom: 15, center: placeIt });
+        var markerIt = new google.maps.Marker({ position: placeIt, map: mapIt });
+        var infowindow = new google.maps.InfoWindow({
+            content: contentStringIt
+        });
+        markerIt.addListener('click', function () {
+            infowindow.open(mapIt, markerIt);
         });
     }
 });
