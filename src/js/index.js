@@ -73,7 +73,7 @@ $(document).ready(function () {
 
     $(".stip-demoRequest").click(function () { // append demo section
         let source
-        if (sessionStorage.getItem('language') == "en-EN" || navigator.language != "it-IT") { // source en-EN demo section
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
             source = document.getElementById("stip-demoSection-en").innerHTML;
         } else { // source it-IT demo section
             source = document.getElementById("stip-demoSection-it").innerHTML;
