@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
             $('.stip-navDesktop').css("background-color", "white")
-            $('.stip-navDesktop').css("padding", "0.5em 10em")
+            $('.stip-navDesktop').css("padding", "0 10em")
             $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
             $('.logo').attr("src", "src/img/logoColor.svg")
             $(".stip-navDesktopItem").css("color", "#4384f1")
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
         // ajax call for demo request
         $("#stip-demoSend").click(function () {
-            if ($('#stip-phone-demo').val() && $('#stip-email-demo').val()) {
+            if ($('#stip-firstName-demo').val() && $('#stip-lastName-demo').val() && $('#stip-email-demo').val()) {
                 $('.stip-inputRequired').css("border-color", "transparent")
                 $('.stip-labelRequired').css("color", "white")
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
 
     // ajax call for contact request
     $("#stip-contactUs").click(function () {
-        if ($('#stip-fullName-contact').val() && $('#stip-email-contact').val() && $('#stip-msg-contact').val()) {
+        if ($('#stip-fullName-contact').val() && $('#stip-email-contact').val()) {
             $('.stip-inputRequired').css("border-color", "transparent")
             $('.stip-labelRequired').css("color", "white")
 
@@ -343,9 +343,9 @@ $(document).ready(function () {
         setTimeout(function () {
             let context
             if (sessionStorage.getItem('language') == "en-EN") {
-                context = { popupTitle: "Want to improve your customers' CX?", popupSubtitle: "Improve your Social & Email Customer Care with Stip! Write here your email and you will get our information material in a jiffy!", popupBtn: "Send" };
+                context = { popupTitle: "Want to improve your customers' CX?", popupSubtitle: "Improve your Social & Email Customer Care with Stip! Write here your email and you will get our information material in a jiffy!", popupBtn: "Send", emailPlaceholder: "Corporate email" };
             } else {
-                context = { popupTitle: "Vuoi migliorare la CX dei tuoi clienti?", popupSubtitle: "Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.", popupBtn: "Invia" };
+                context = { popupTitle: "Vuoi migliorare la CX dei tuoi clienti?", popupSubtitle: "Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.", popupBtn: "Invia", emailPlaceholder: "Email aziendale" };
             }
             let source = document.getElementById("stip-popup").innerHTML;
             let template = Handlebars.compile(source);
@@ -372,7 +372,7 @@ $(document).ready(function () {
                     $(".stip-reprompt-container").css("display", "none")
                 })
             })
-        }, 180000);
+        }, 210000);
     }
 
     // maps
