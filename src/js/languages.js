@@ -199,11 +199,14 @@ let languages = {
 
 
 $(document).ready(function () {
-    let language = navigator.language; // get current language
-    console.log(language)
+    console.log("here")
+    let language = null
+    if(sessionStorage.getItem('language') == null){
+        language = navigator.language; // get current language
+    }
 
     // change text language on load
-    if (language != "it-IT" || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
+    if ((language != "it-IT" && language != null) || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
             $(".stip-languageDrop").text("EN");
