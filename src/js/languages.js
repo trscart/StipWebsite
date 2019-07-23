@@ -200,6 +200,7 @@ let languages = {
 
 $(document).ready(function () {
     let language = navigator.language; // get current language
+    console.log(language)
 
     // change text language on load
     if (language != "it-IT" || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
