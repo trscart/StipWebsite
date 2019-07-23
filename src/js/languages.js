@@ -199,7 +199,6 @@ let languages = {
 
 
 $(document).ready(function () {
-    console.log("here")
     let language = null
     if(sessionStorage.getItem('language') == null){
         language = navigator.language; // get current language
