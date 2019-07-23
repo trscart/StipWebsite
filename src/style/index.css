@@ -700,7 +700,9 @@
     margin: 0 !important;
   }
   .stip-heroIllustration {
-    max-width: 100% !important;
+    max-width: 140% !important;
+    left: 2em;
+    top: -10em;
   }
   .stipIconDim {
     height: 80px !important;
