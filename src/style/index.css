@@ -535,8 +535,9 @@
 }
 
 .stipIconDim {
-  height: 120px;
-  width: 120px;
+  height: 15em;
+  width: 20em;
+  padding: 2em;
 }
 
 .stipIllustrationDim {
@@ -705,8 +706,8 @@
     top: -10em;
   }
   .stipIconDim {
-    height: 80px !important;
-    width: 80px !important;
+    height: 15em;
+    width: 20em;
   }
   .stipCaringIconDim {
     height: 80px !important;
@@ -747,7 +748,7 @@
 
 @media (max-width: 768px) {
   .stip-waveBody {
-    background-position-y: 25% !important;
+    background-position-y: 35% !important;
   }
   .stip-navModalImg {
     right: -5em !important;
@@ -792,8 +793,8 @@
     margin: 100px 5% 0 5% !important;
   }
   .stipIconDim {
-    height: 80px !important;
-    width: 80px !important;
+    height: 10em;
+    width: 15em;
   }
   .stipCaringIconDim {
     height: 80px !important;

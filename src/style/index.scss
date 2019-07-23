@@ -2,7 +2,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-$stcolor: #4384f1; 
+$stcolor: #4384f1;
 $ndcolor: #FD6B15;
 $h1size: 26px;
 $h2size: 21px;
@@ -86,7 +86,7 @@ $txtsize: 14px;
 .stip-active {
     color: $ndcolor !important;
 }
- 
+
 .stip-navMobile {
     visibility: hidden;
     padding: 2.5rem 10rem;
@@ -383,8 +383,9 @@ $txtsize: 14px;
 }
 
 .stipIconDim {
-    height: 120px;
-    width: 120px;
+    height: 15em;
+    width: 20em;
+    padding: 2em;
 }
 
 .stipIllustrationDim {
@@ -567,8 +568,8 @@ $txtsize: 14px;
     }
 
     .stipIconDim {
-        height: 80px !important;
-        width: 80px !important;
+        height: 15em;
+        width: 20em;
     }
 
     .stipCaringIconDim {
@@ -611,7 +612,7 @@ $txtsize: 14px;
 
 @media (max-width: 768px) {
     .stip-waveBody {
-        background-position-y: 25% !important;
+        background-position-y: 35% !important;
     }
 
     .stip-navModalImg {
@@ -670,8 +671,8 @@ $txtsize: 14px;
     }
 
     .stipIconDim {
-        height: 80px !important;
-        width: 80px !important;
+        height: 10em;
+        width: 15em;
     }
 
     .stipCaringIconDim {
