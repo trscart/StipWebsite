@@ -54,7 +54,7 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) { // nav-item change on scroll
+        if ($(window).scrollTop() > 0 ) { // nav-item change on scroll
             $('.stip-navDesktop').css("background-color", "white")
             $('.stip-navDesktop').css("padding", "0 10em")
             $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
@@ -81,7 +81,7 @@ $(document).ready(function () {
         }
 
         $('.stip-hideMe').each(function (i) { // appear effect on scroll
-            if ($(window).scrollTop() + $(window).height() > $(this).offset().top + $(this).outerHeight() - 30) {
+            if ($(window).scrollTop() + $(window).height() + 100 > $(this).offset().top + $(this).outerHeight() - 30) {
                 $(this).animate({ 'opacity': '1' }, 500);
             }
         });
