@@ -109,7 +109,7 @@ $(document).ready(function () {
 
                             // append thank you message
                             let context
-                            if (sessionStorage.getItem('language') == "en-EN") {
+                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                                 context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
                             } else {
                                 context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
@@ -197,7 +197,7 @@ $(document).ready(function () {
 
                         // append thank you message
                         let context
-                        if (sessionStorage.getItem('language') == "en-EN") {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                             context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
                         } else {
                             context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
@@ -256,7 +256,7 @@ $(document).ready(function () {
     $(".stip-emailSectionBtn").click(function () {
         // append thank you message
         let context
-        if (sessionStorage.getItem('language') == "en-EN") {
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
             context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
         } else {
             context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
