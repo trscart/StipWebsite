@@ -54,7 +54,7 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 ) { // nav-item change on scroll
+        if ($(window).scrollTop() > 0) { // nav-item change on scroll
             $('.stip-navDesktop').css("background-color", "white")
             $('.stip-navDesktop').css("padding", "0 10em")
             $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
@@ -127,6 +127,10 @@ $(document).ready(function () {
                     "email": $('#stip-email-demo').val(),
                     "captcha": "..."
                 }
+                // process animation
+                $("#stip-demoSend").text("")
+                $("#stip-demoSend").append("<img style='width: 2em' src='src/img/loading.gif'>");
+                // fetch call
                 fetch('https://stip.io/app/stip_rest/api/company/', {
                     method: 'POST',
                     headers: {
@@ -215,6 +219,10 @@ $(document).ready(function () {
                 "question": $('#stip-msg-contact').val(),
                 "captcha": "..."
             }
+            // process animation
+            $("#stip-contactUs").text("")
+            $("#stip-contactUs").append("<img style='width: 2em' src='src/img/loading.gif'>");
+            // fetch call
             fetch('https://stip.io/app/stip_rest/api/companyQuestion/', {
                 method: 'POST',
                 headers: {
