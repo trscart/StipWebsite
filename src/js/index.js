@@ -53,12 +53,16 @@ $(document).ready(function () {
         $(".stip-languageDrop").css("color", "#4384f1")
     }
 
+    let logoChangeCounter = 0 // 
     $(window).scroll(function () {
+        logoChangeCounter += 1
         if ($(window).scrollTop() > 0) { // nav-item change on scroll
+            if (logoChangeCounter == 1) {
+                $('.logo').attr("src", "src/img/logoColor.svg")
+            }
             $('.stip-navDesktop').css("background-color", "white")
             $('.stip-navDesktop').css("padding", "0 10em")
             $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
-            $('.logo').attr("src", "src/img/logoColor.svg")
             $(".stip-navDesktopItem").css("color", "#4384f1")
             $(".stip-languageDrop").css("color", "#4384f1")
 
@@ -67,6 +71,7 @@ $(document).ready(function () {
                 $(".line").css("background-color", "#ffffff")
             }
         } else if (!$(location).attr('href').includes("contacts")) {
+            logoChangeCounter = 0
             $('.stip-navDesktop').css("background-color", "transparent")
             $('.stip-navDesktop').css("padding", "2.5em 10em")
             $('.stip-navDesktop').css("box-shadow", "none")
@@ -101,6 +106,7 @@ $(document).ready(function () {
         $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
     });
 
+    // ajax call for demo request
     $(".stip-demoRequest").click(function () { // append demo section
         let source
         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
@@ -177,7 +183,7 @@ $(document).ready(function () {
                     .catch(function (err) { //if error
                         $('.stip-messageSend').css("background-color", "#FF2828")
                         $('.stip-messageSend').css("color", "white")
-                        if (sessionStorage.getItem('language') == "en-EN") {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                             $('.stip-messageSend').text("Error, try again");
                         } else {
                             $('.stip-messageSend').text("Errore, riprova");
@@ -185,7 +191,7 @@ $(document).ready(function () {
                         setTimeout(function () {
                             $('.stip-messageSend').css("background-color", "#f8f9fa")
                             $('.stip-messageSend').css("color", "black")
-                            if (sessionStorage.getItem('language') == "en-EN") {
+                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                                 $('.stip-messageSend').text("Demo request");
                             } else {
                                 $('.stip-messageSend').text("Richiedi demo");
@@ -269,7 +275,7 @@ $(document).ready(function () {
                 .catch(function (err) { //if error
                     $('.stip-messageSend').css("background-color", "#FF2828")
                     $('.stip-messageSend').css("color", "white")
-                    if (sessionStorage.getItem('language') == "en-EN") {
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                         $('.stip-messageSend').text("Error, try again");
                     } else {
                         $('.stip-messageSend').text("Errore, riprova");
@@ -277,7 +283,7 @@ $(document).ready(function () {
                     setTimeout(function () {
                         $('.stip-messageSend').css("background-color", "#f8f9fa")
                         $('.stip-messageSend').css("color", "black")
-                        if (sessionStorage.getItem('language') == "en-EN") {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                             $('.stip-messageSend').text("Send");
                         } else {
                             $('.stip-messageSend').text("Invia");
@@ -291,21 +297,59 @@ $(document).ready(function () {
         }
     });
 
+    // ajax call for email newsletter
     $(".stip-emailSectionBtn").click(function () {
-        // append thank you message
-        let context
-        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-            context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
-        } else {
-            context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
-        }
-        let source = document.getElementById("stip-thanks").innerHTML;
-        let template = Handlebars.compile(source);
-        $('body').append(template(context))
+        if ($('#stip-email-newsletter').val()) {
+            $('.stip-inputRequired').css("border-color", "transparent")
 
-        $(".stip-closeReprompt").click(function () {
-            $(".stip-reprompt-container").css("display", "none")
-        })
+            let data = {
+                "email": $('#stip-email-newsletter').val(),
+            }
+            fetch('https://stip.io/app/stip_rest/api/companyNewsletter/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(function (res) {
+                    if (res.status == 201) { //if status 201
+
+                        // append thank you message
+                        let context
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
+                        } else {
+                            context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+                        }
+                        let source = document.getElementById("stip-thanks").innerHTML;
+                        let template = Handlebars.compile(source);
+                        $('body').append(template(context))
+
+                        $(".stip-closeReprompt").click(function () {
+                            $(".stip-reprompt-container").css("display", "none")
+                        })
+                    }
+                })
+                .catch(function (err) { //if error
+                    console.log(err)
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-emailSectionBtn').text("Error, try again");
+                    } else {
+                        $('.stip-emailSectionBtn').text("Errore, riprova");
+                    }
+                    setTimeout(function () {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            $('.stip-emailSectionBtn').text("Send");
+                        } else {
+                            $('.stip-emailSectionBtn').text("Invia");
+                        }
+                    }, 1300);
+                })
+
+        } else {
+            $('.stip-inputRequired').css("border-color", "#FF2828")
+        }
     })
 
     // blog card compile PROVA
@@ -341,7 +385,6 @@ $(document).ready(function () {
                 1000);
         }
     })
-
 
     // hashtag button append
     let hashtag = ["#CustomerCare", "#CustomerSuccess", "#AssistenzaClienti", "#CustomerSatisfaction", "#IntelligenzaArtificiale", "#DeepLearning", "#SocialCustomerCare", "#CRM", "#IA"]
@@ -396,11 +439,11 @@ $(document).ready(function () {
         var mapEn = new google.maps.Map(
             document.getElementById('mapEn'), { zoom: 15, center: placeEn });
         var markerEn = new google.maps.Marker({ position: placeEn, map: mapEn });
-        var infowindow = new google.maps.InfoWindow({
+        var infowindowEn = new google.maps.InfoWindow({
             content: contentStringEn
         });
         markerEn.addListener('click', function () {
-            infowindow.open(mapEn, markerEn);
+            infowindowEn.open(mapEn, markerEn);
         });
 
         let placeIt = { lat: 41.901610, lng: 12.503200 };
@@ -411,11 +454,11 @@ $(document).ready(function () {
         var mapIt = new google.maps.Map(
             document.getElementById('mapIt'), { zoom: 15, center: placeIt });
         var markerIt = new google.maps.Marker({ position: placeIt, map: mapIt });
-        var infowindow = new google.maps.InfoWindow({
+        var infowindowIt = new google.maps.InfoWindow({
             content: contentStringIt
         });
         markerIt.addListener('click', function () {
-            infowindow.open(mapIt, markerIt);
+            infowindowIt.open(mapIt, markerIt);
         });
     }
 });
