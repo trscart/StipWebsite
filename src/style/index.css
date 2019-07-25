@@ -122,6 +122,9 @@ b {
   .stip-contactContainer {
     height: auto;
   }
+  .stip-contactRow {
+    margin-top: 8em;
+  }
 }
 
 .stip-privacyContainer {
