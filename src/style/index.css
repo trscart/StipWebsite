@@ -2,6 +2,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+b {
+  font-weight: 600;
+}
+
 .stip-heroBgPlatform {
   background: url("../img/heroWave.svg") no-repeat;
   background-size: cover;
