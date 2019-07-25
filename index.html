@@ -323,7 +323,7 @@
                 <h2 class="stip-h3 lang" key="emailSubtitle">Lasciaci la tua email se vuoi maggiori informazioni su Stip o per metterti in contatto con noi.
                 </h2>
                 <div class="input-group mt-4">
-                    <input type="text" class="form-control stip-txt stip-inputRequired" id="stip-email-newsletter" placeholder="Corporate email" aria-label="Corporate email" aria-describedby="button-addon2">
+                    <input type="text" name="email" class="form-control stip-txt stip-inputRequired" id="stip-email-newsletter" placeholder="Corporate email" aria-label="Corporate email" aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary stip-emailSectionBtn lang" key="emailBtn" type="button" id="button-addon2">Registrati</button>
                     </div>
@@ -499,24 +499,24 @@
                         <form class="p-4 p-sm-5 flex-grow-1 text-white">
                             <h1 class="mb-4 stip-h1">Richiedi una Demo e prova subito Stip</h1>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Nome*</label>
-                                <input type="text" class="form-control stip-inputRequired" placeholder="Nome" id="stip-firstName-demo">
+                                <label class="stip-h3 stip-labelRequired">Nome*</label>
+                                <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="Nome" id="stip-firstName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Cognome*</label>
-                                <input type="text" class="form-control stip-inputRequired" placeholder="Cognome" id="stip-lastName-demo">
+                                <label class="stip-h3 stip-labelRequired">Cognome*</label>
+                                <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Cognome" id="stip-lastName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3">Azienda</label>
+                                <label class="stip-h3">Azienda</label>
                                 <input type="text" class="form-control" placeholder="Nome azienda" id="stip-companyName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Email aziendale*</label>
-                                <input type="text" class="form-control stip-inputRequired" placeholder="Email ziendale" required id="stip-email-demo">
+                                <label class="stip-h3 stip-labelRequired">Email aziendale*</label>
+                                <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Email aziendale" required id="stip-email-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3">Telefono</label>
-                                <input type="text" class="form-control" placeholder="Telefono" id="stip-phone-demo">
+                                <label class="stip-h3">Telefono</label>
+                                <input type="text" name="phone" class="form-control" placeholder="Telefono" id="stip-phone-demo">
                             </div>
                             <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Richiedi demo</button>
                         </form>
@@ -563,24 +563,24 @@
                         <form class="p-4 p-sm-5 flex-grow-1 text-white">
                             <h1 class="mb-4 stip-h1">Request a Demo and try Stip immediately</h1>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">First name*</label>
-                                <input type="text" class="form-control stip-inputRequired" placeholder="First name" id="stip-firstName-demo">
+                                <label class="stip-h3 stip-labelRequired">First name*</label>
+                                <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="First name" id="stip-firstName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Last name*</label>
-                                <input type="text" class="form-control stip-inputRequired" placeholder="Last name" id="stip-lastName-demo">
+                                <label class="stip-h3 stip-labelRequired">Last name*</label>
+                                <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Last name" id="stip-lastName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3">Company</label>
+                                <label class="stip-h3">Company</label>
                                 <input type="text" class="form-control" placeholder="Company name" id="stip-companyName-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3 stip-labelRequired">Corporate email*</label>
-                                <input type="text" class="form-control stip-inputRequired" placeholder="Corporate email" required id="stip-email-demo">
+                                <label class="stip-h3 stip-labelRequired">Corporate email*</label>
+                                <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Corporate email" required id="stip-email-demo">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="stip-h3">Phone</label>
-                                <input type="text" class="form-control" placeholder="Phone" id="stip-phone-demo">
+                                <label class="stip-h3">Phone</label>
+                                <input type="text" name="phone" class="form-control" placeholder="Phone" id="stip-phone-demo">
                             </div>
                             <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Demo request</button>
                         </form>
