@@ -53,6 +53,16 @@ $(document).ready(function () {
         $(".stip-languageDrop").css("color", "#4384f1")
     }
 
+    if ($(location).attr('href').includes("privacy")) {
+        $('.stip-navDesktop').css("background-color", "white")
+        $('.stip-navDesktop').css("padding", "0.5em 10em")
+        $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
+        $('.stip-navMobile').css("position", "relative")
+        $('.logo').attr("src", "src/img/logoColor.svg")
+        $(".stip-navDesktopItem").css("color", "#4384f1")
+        $(".stip-languageDrop").css("color", "#4384f1")
+    }
+
     let logoChangeCounter = 0 // 
     $(window).scroll(function () {
         logoChangeCounter += 1
@@ -70,7 +80,7 @@ $(document).ready(function () {
             if ($(location).attr('href').includes("blog")) {
                 $(".line").css("background-color", "#ffffff")
             }
-        } else if (!$(location).attr('href').includes("contacts")) {
+        } else if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy")) {
             logoChangeCounter = 0
             $('.stip-navDesktop').css("background-color", "transparent")
             $('.stip-navDesktop').css("padding", "2.5em 10em")

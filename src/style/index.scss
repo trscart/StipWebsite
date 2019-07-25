@@ -3,7 +3,7 @@
 }
 
 b {
-    font-weight: 600;
+    font-weight: 600; 
 }
 
 $stcolor: #4384f1;
@@ -16,6 +16,7 @@ $txtsize: 14px;
 @import "platform.scss";
 @import "blog.scss";
 @import "contacts.scss";
+@import "privacyPolicy.scss";
 
 .stip-h1 {
     font-size: $h1size;
@@ -92,7 +93,7 @@ $txtsize: 14px;
 }
 
 .stip-navMobile {
-    visibility: hidden;
+    display: none;
     padding: 2.5rem 10rem;
     transition: 0.3s;
     position: absolute;
@@ -101,7 +102,7 @@ $txtsize: 14px;
 }
 
 .stip-navDesktop {
-    visibility: visible;
+    display: flex;
     padding: 2.5rem 10rem;
     transition: 0.3s;
     z-index: 1000;
@@ -632,11 +633,11 @@ $txtsize: 14px;
 
 @media (max-width: 992px) {
     .stip-navDesktop {
-        visibility: hidden;
+        display: none;
     }
 
     .stip-navMobile {
-        visibility: visible;
+        display: flex; 
     }
 }
 
