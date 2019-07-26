@@ -116,6 +116,15 @@ $(document).ready(function () {
         $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
     });
 
+    // stip policy language
+    $("#stip-policy").click(function () {
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)){
+            $(this).attr("href", "./privacy-policy-en.html");
+        } else {
+            $(this).attr("href", "./privacy-policy.html");
+        }
+    });
+
     // ajax call for demo request
     $(".stip-demoRequest").click(function () { // append demo section
         let source

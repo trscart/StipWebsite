@@ -1,0 +1,372 @@
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="src/style/index.css">
+</head>
+
+<body>
+    <!-- navbar mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light stip-navMobile">
+        <a class="navbar-brand flex-grow-1" href="./index.html">
+            <img class="logo" src="src/img/logoWhite.svg" width="80" height="80" alt="">
+        </a>
+        <button class="p-3 stip-menuIcon">
+            <a href="#" class="stip-hamburgerIcon">
+                <span class="line line-top"></span>
+                <span class="line line-middle"></span>
+                <span class="line line-bottom"></span>
+            </a>
+        </button>
+        <div class="stip-navModal">
+            <ul class="m-md-5 mb-4">
+                <li class="nav-item">
+                    <a class="nav-link stip-navItem lang" key="nav-item1" href="./index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link stip-navItem lang" key="nav-item2" href="./platform.html">PIATTAFORMA</a>
+                </li>
+                <!--<li class="nav-item">
+                        <a class="nav-link stip-navItem lang" key="nav-item3" href="./blog.html">BLOG</a>
+                    </li>-->
+                <li class="nav-item">
+                    <a class="nav-link stip-navItem lang" key="nav-item4" href="./contacts.html">CONTATTI</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 stip-socialIcon" width="183.564" height="36.084" viewBox="0 0 183.564 36.084">
+                        <g id="Group_43" data-name="Group 43" transform="translate(-848 -5608)">
+                            <a href="https://www.facebook.com/stipapp/">
+                                <g class="stip-facebookIcon" id="facebook-letter-logo" transform="translate(939.51 5608.084)">
+                                    <path id="Facebook" d="M118.325,6.969v4.953H114.7v6.057h3.629v18h7.455v-18h5s.469-2.9.7-6.08h-5.67V7.758a1.759,1.759,0,0,1,1.616-1.452h4.062V0h-5.522C118.141,0,118.325,6.064,118.325,6.969Z"
+                                        transform="translate(-114.696 -0.001)" fill="#4384f1" />
+                                </g>
+                            </a>
+                            <a href="https://www.linkedin.com/company/stip-ai/">
+                                <g class="stip-linkedinIcon" id="linkedin-logo" transform="translate(995.587 5608)">
+                                    <path id="LinkedIn__x28_alt_x29_" d="M33.323,0H2.66A2.619,2.619,0,0,0,0,2.578V33.4A2.62,2.62,0,0,0,2.66,35.978H33.323A2.619,2.619,0,0,0,35.979,33.4V2.578A2.618,2.618,0,0,0,33.323,0ZM10.909,30.116H5.473V13.872h5.436ZM8.192,11.653H8.155a2.815,2.815,0,1,1,.071-5.612,2.816,2.816,0,1,1-.034,5.612ZM30.5,30.116H25.07V21.425c0-2.184-.787-3.674-2.753-3.674a2.969,2.969,0,0,0-2.788,1.976,3.63,3.63,0,0,0-.181,1.316v9.073H13.915s.071-14.72,0-16.243h5.434v2.3a5.4,5.4,0,0,1,4.9-2.685c3.577,0,6.259,2.32,6.259,7.312ZM19.314,16.226c.009-.015.022-.034.035-.051v.051Z"
+                                        transform="translate(-0.002)" fill="#4384f1" />
+                                </g>
+                            </a>
+                            <a href="https://twitter.com/Stip_Social">
+                                <g class="stip-twitterIcon" id="twitter-logo" transform="translate(848 5608)">
+                                    <path id="Twitter__x28_alt_x29_" d="M46.445,82.949c2.942-.243,4.937-1.58,5.705-3.395-1.061.652-4.355,1.363-6.175.686-.089-.427-.189-.833-.287-1.2-1.386-5.09-6.133-9.191-11.106-8.7.4-.162.81-.314,1.217-.45.547-.2,3.759-.719,3.253-1.852-.426-1-4.35.754-5.089.982.975-.367,2.588-1,2.761-2.118a7.79,7.79,0,0,0-4.095,1.939,2.815,2.815,0,0,0,.785-1.555c-3.985,2.546-6.314,7.679-8.2,12.658a19.531,19.531,0,0,0-3.967-3.19A103.41,103.41,0,0,0,7.814,70.843c-.19,2.049,1.013,4.774,4.482,6.586a10.967,10.967,0,0,0-3.224.387c.448,2.348,1.909,4.282,5.866,5.217a4.793,4.793,0,0,0-3.59,1.418,6.08,6.08,0,0,0,6.449,3.16c-4.02,1.732-1.639,4.941,1.632,4.462A13.889,13.889,0,0,1,0,92.592c13.189,17.971,41.858,10.628,46.131-6.682a7.936,7.936,0,0,0,6.25-2.361A12.751,12.751,0,0,1,46.445,82.949Z"
+                                        transform="translate(0 -66.906)" fill="#4384f1" />
+                                </g>
+                            </a>
+                        </g>
+                    </svg>
+                </li>
+            </ul>
+            <div class="stip-languageBtnBox ml-md-5 ml-2">
+                <button type="button" class="btn btn-link stip-h3 stip-languageBtn stip-itBtn">IT</button>
+                <button type="button" class="btn btn-link p-0 stip-h3 stip-languageBtn stip-enBtn">ENG</button>
+            </div>
+            <img src="src/img/stip-logoBig.svg" class="stip-navModalImg" alt="">
+        </div>
+    </nav>
+    <!-- end navbar mobile -->
+
+    <!-- navbar desktop -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top stip-navDesktop">
+        <a class="navbar-brand flex-grow-1" href="./index.html">
+            <img class="logo" src="src/img/logoColor.svg" width="80" height="80" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="stip-navDesktopItem lang" key="nav-item1" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="stip-navDesktopItem lang" key="nav-item2" href="./platform.html">Piattaforma</a>
+                </li>
+                <!--<li class="nav-item">
+                        <a class="stip-navOpenItem lang" key="nav-item3" href="./blog.html">Blog</a>
+                    </li>-->
+                <li class="nav-item">
+                    <a class="stip-navDesktopItem lang" key="nav-item4" href="./contacts.html">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group stip-languageDropBox">
+                        <a class="btn dropdown-toggle stip-languageDrop stip-h3" data-toggle="dropdown" href="#">
+                            IT
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="stip-h3 stip-itBtn">IT</a>
+                            </li>
+                            <li>
+                                <a class="stip-h3 stip-enBtn">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navbar desktop -->
+
+    <div class="container stip-privacyContainer" id="stip-scrollDetect">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-center">
+                    <b> PRIVACY POLICY </b>
+                </h4>
+
+                <p>This information is provided, pursuant to art.13 of the European Regulation 679/2016 (GDPR), to those who
+                    connect to the website: www.stip.io and to the third-level pages or domains connected to it. The information
+                    is provided only for the aforementioned sites and not for other external sites. By browsing the websites
+                    mentioned above, personal data of users who consult and interact with their web services may be processed.</p>
+                <br>
+
+                <h5>
+                    <b>1) Data controller</b>
+                </h5>
+
+
+                <p>www.stip.io, Stip s.r.l., with headquarter in Viale Quirino Majorana, 203, 00152 Rome (RM), Italy.</p>
+
+
+
+
+                <h5>
+                    <b>2) Nature of the processed data and purpose of the processing</b>
+                </h5>
+
+                <p>Navigation data following consultation of this website and data related to identified or identifiable persons
+                    may be processed. The computer systems and software procedures used to operate this domain acquire, during
+                    normal operation, some personal data whose transmission is implicit in the use of internet communication
+                    protocols. This information is not collected to be associated with identified interested parties, but
+                    by their very nature could, through processing and association with data held by third parties, allow
+                    users to be identified. This category of data includes IP addresses or domain names of computers used
+                    by users connecting to the site, URI (Uniform Resource Identifier) addresses of the requested resources,
+                    the time of the request, the method used to submit the request to the server, the size of the file obtained
+                    by the server (success, error, etc.) and other parameters related to the operating system and the user's
+                    computer environment. These data are used only to obtain anonymous statistical information on the use
+                    of the site and to check its correct functioning and are deleted immediately after processing. Data could
+                    be used to ascertain responsibility in case of hypothetical computer crimes against the site. The personal
+                    data that the user spontaneously provides are also subject to processing, using the contact forms present
+                    on the web pages. These data will be processed for the purpose of providing an answer as technical assistance
+                    to the user. The personal and sensitive data uploaded on the Stip.io web portal will be used exclusively
+                    for the realization of the technical performance requested, and will be processed only by the employees.</p>
+
+
+                <h5>
+                    <b>3) Purpose of the processing&nbsp;</b>
+                </h5>
+                <p>The treatment we intend to carry out, with your specific consent where necessary, has the following purposes:</p>
+                <ul>
+                    <li>a. allow browsing and browsing of websites;</li>
+                    <li>b. respond to requests for assistance, information, contact or demos, which we will receive via email,
+                        telephone or chat or through the specific form;&nbsp;</li>
+                    <li>c. fulfill legal, accounting and tax obligations;</li>
+                    <li>d. carry out direct marketing via email for services similar to those you have subscribed for, unless
+                        you initially opposed such processing or in subsequent communications;&nbsp;</li>
+                    <li>e. realize customized business proposals based on the products or services you purchased or in which
+                        you showed interested while browsing our website, or based on the group of customers you belong to
+                        (profiling). This processing is necessary for the pursuit of the legitimate interest of the data
+                        controller to personalize his business proposals. You can always object to this treatment via email
+                        "Privacy reports" to the appropriate contact details;</li>
+                    <li>f. for the sole purpose of security and prevention of fraudulent conduct the Data Controller sets up
+                        an automatic control system that involves the detection and analysis of user behavior on the site
+                        associated with the processing of Personal Data including the IP address.</li>
+                    <br>
+                </ul>
+
+                <h5>
+                    <b>4) Data Recipients</b>
+                </h5>
+                <p>The employees who are authorized to process data under the direct authority of the companies and the external
+                    managers and sub-managers who provide the company with specific services and with which they have entered
+                    into specific contracts, pursuant to art. 28 GDPR. The complete list of data processors and below-managers
+                    is available directly from Stip srl. All the preceding subjects are obliged to use the information received
+                    only for the purposes of the processing indicated above, to keep them confidential, intact and not available
+                    to unauthorized third parties. Furthermore, personal data can be communicated by virtue of a provision
+                    of law or regulation or to execute an order from an administrative or judicial authority.</p>
+                <br>
+
+                <h5>
+                    <b>5) Processing methods and storage times</b>
+                </h5>
+                <p>Personal data is processed by automated tools for the strictly necessary time to achieve the purposes for
+                    which it was collected. Specific security measures are observed to prevent the loss of data, illicit
+                    or incorrect use and unauthorized access. All information collected on the sites is stored and maintained
+                    in secure facilities that limit access only to authorized personnel. The websites are regularly checked
+                    to verify the possible presence of security breaches and to ensure that all the information collected
+                    is inaccessible to unauthorized parties. The data provided by the user will be deleted when they are
+                    no longer necessary to manage his requests, unless consent is given for commercial communication purposes,
+                    as in this case the data will be stored for 24 months.</p>
+                <br>
+
+                <h5>
+                    <b>6) Access rights</b>
+                </h5>
+                <p>Articles from 15 to 22 GDPR grant the user, as an interested party, the exercise of specific rights. Art.15
+                    acknowledges to those interested the right to access their personal data and to obtain a copy of it.
+                    The right to obtain a copy of the data must not affect the rights and freedoms of others. With the access
+                    request, the user has the right to obtain confirmation whether or not a processing of his personal data
+                    is in progress and to know the purposes and categories of data processed, the third parties to whom the
+                    data is communicated and if the data is transferred to a non-European country with adequate guarantees.
+                    The user also has the right to know the storage time of his personal data, with respect to the aforementioned
+                    purposes.
+                </p>
+                <br>
+
+                <h5>
+                    <b>7) Other rights</b>
+                </h5>
+                <p>With respect to their personal data, the user has the right to request the rectification of inaccurate data
+                    and the integration of incomplete ones, the cancellation (right to oblivion) under the conditions indicated
+                    by art.17 GDPR, treatment limitation and data portability. The user also has the right to object, at
+                    any time, to the processing of data concerning him for purposes of commercial communication.
+                    <br>To exercise the rights, the user can contact the owners at the following address: www.stip.io, mail:
+                    info@stip.io. Before providing an answer, the owner may need to identify the user by requesting provide
+                    a copy of the personal ID.</p>
+
+
+                <h5>
+                    <b>8) Complaint</b>
+                </h5>
+                <p>In the event that the user believes that the processing of his personal data violates the provisions of the
+                    GDPR, he has the right to lodge a complaint with the Authority for the Protection of Personal Data pursuant
+                    to art.77 GDPR, as well as having recourse before the judicial authority.</p>
+                <br>
+                <h4 style="text-align:center" id="cookie">
+                    <b>Cookies</b>
+                </h4>
+
+                <h6>
+                    <b>Definitions, characteristics and enforcement</b>
+                </h6>
+                <p>Cookies are small text files that the websites visited by the user send and record on his computer or mobile
+                    device, to then be re-transmitted to the same sites at the next visit. Thanks to cookies a site remembers
+                    the user's actions and preferences (such as, for example, login data, the chosen language, font sizes,
+                    other display settings, etc.) so that they do not have to be indicated again when the user returns to
+                    visit said site or browse from one page to another of it. Cookies are therefore used to perform computer
+                    authentication, session monitoring and storage of information regarding the activities of users accessing
+                    a site and may also contain a unique identification code that allows users to keep track of the user's
+                    navigation within of the site itself for statistical or advertising purposes. While browsing a website,
+                    the user can also receive on his computer or mobile device cookies from sites or web servers other than
+                    the one he is visiting (s.c. "third-party" cookies). There are various types of cookies, depending on
+                    their characteristics and functions, and these can remain on the user's computer or mobile device for
+                    different periods of time: s.c. session cookie, which is automatically canceled when the browser is closed
+                    or s.c. persistent cookies, which remain on the user's equipment until a set deadline. According to the
+                    legislation in force in Italy, for the use of cookies an express user consent is not always required.
+                    In particular, "technical cookies", ie those used for the sole purpose of transmitting a communication
+                    over an electronic communication network, or in the measure strictly necessary to provide a service explicitly
+                    requested by the user do not require this consent. In other words, these cookies are indispensable for
+                    the functioning of the site or necessary to perform activities requested by the user. Among technical
+                    cookies, that do not require an express consent for their use, the Italian Data Protection Authority
+                    (see ‘Measure Identification of simplified procedures for information and the acquisition of consent
+                    for the use of cookies’ May 8th, 2014, hereinafter only "Measure") also includes:
+                </p>
+                <ul>
+                    <li>analytics cookies, where used directly by the site manager to collect information, in aggregate form,
+                        on the number of users and how they visit the site</li>
+                    <li>browsing or session cookies (to authenticate)</li>
+                    <li>functional cookies, which allow the user to browse according to a set of selected criteria (for example,
+                        the language, the products selected for purchase) in order to improve the service rendered to the
+                        same.
+                    </li>
+                </ul>
+                <p>For "profiling cookies" - vice versa - ie those aimed at creating user profiles and used in order to send
+                    advertising messages in line with the preferences shown by the user in the context of web browsing, a
+                    prior consent from the user is required.</p>
+                <br>
+                <h6>
+                    <b>Types of cookies used by the website and possibility of de-selection</b>
+                </h6>
+
+                <p>The website uses the following cookies that can be deselected:</p>
+                <ul>
+                    <li>Technical navigation or session cookies that are strictly necessary for the functioning of the site or
+                        to allow the user to take advantage of the contents and services requested by them;</li>
+                    <li>Analytics cookies, which allow to understand how the site is used by users. These cookies do not collect
+                        information on the user's identity or any personal data. The information is treated in aggregate
+                        and anonymous form;</li>
+                    <li>Functional cookies, that are used to activate specific features of the website and a set of selected
+                        criteria (for example, the language) in order to improve the service rendered;</li>
+                    <li>Third-party cookies, ie cookies of different websites or web servers, used for the purposes of said third
+                        parties, including profiling cookies. It should be noted that these third parties, listed below with
+                        the relative links to the privacy policies, are autonomous data controllers of the data collected
+                        through the cookies they serve; therefore, you must refer to their policies for the processing of
+                        personal data, information and consent forms (selection and deselection of the respective cookies),
+                        as specified in the aforementioned provision.</li>
+                </ul>
+                <p>As for the third parties who send cookies through our site, we provide the following links to the respective
+                    privacy policies: to these third parties we delegate, as already stated, the responsibility to provide
+                    the information and collect the users' consent, as expected from the Measure. This responsibility refers
+                    not only to cookies that third parties send directly, but also to any additional cookies that are sent
+                    through our site by virtue of the use of services that the third parties themselves use. Below are links
+                    to information on third-party cookies:&nbsp;
+                    <br>
+                    <a href="https://policies.google.com/technologies/types?hl=it">Google</a>
+                    <br>
+                    <a href="https://www.facebook.com/policies/cookies/Facebook">Facebook</a>
+                </p>
+
+                <h6>
+                    <b>Cookie settings</b>
+                </h6>
+
+                <p>It is possible for you to make a choice with reference to the receipt of profiling cookies. Failure to authorize
+                    the use of the indicated cookies (profiling) will not affect the operation of the website. You may block
+                    or delete (in whole or in part) technical and functional cookies through the specific functions of your
+                    browser. Your preferences regarding cookies should be reset if you use different devices or browsers
+                    to access the site. How to view and modify cookies through your browser: you can select which proprietary
+                    cookies you authorize through the specific procedure set out on this page, as well as authorizing, blocking
+                    or deleting (in whole or in part) cookies through the specific functions of its navigation program (s.c.
+                    browser). For more information on how to set preferences on the use of cookies through your browser,
+                    you can consult the relevant instructions: Internet Explorer, Microsoft Edge, Firefox, Chrome, Safari.
+                    To disable Google Analytics tracking cookies, follow this link:
+                    <a href="https://tools.google.com/dlpage/gaoptout/">https://tools.google.com/dlpage/gaoptout/ </a>
+                    Download and install the add-on for your web browser. To work, it must be loaded and executed correctly in the browser in
+                    use.
+                </p>
+                <br>
+
+                <h6>
+                    <b>Data processors</b>
+                </h6>
+                <p>Your personal data may be processed, either manually or electronically or telematically, or directly by Stip
+                    s.r.l. that by third parties who, having experience, technical skills, professionalism and reliability,
+                    carry out processing operations on behalf of our association, to offer an ever better service and to
+                    guarantee maximum satisfaction of the needs expressed by the users of our site, in compliance security
+                    and confidentiality of information. It could, for example, be companies that print or package "social
+                    advertising" messages sent to the donor's home. The complete and updated list of data processors can
+                    be requested at:&nbsp;info@stip.io&nbsp;or at the postal address indicated in the previous paragraph.</p>
+                &nbsp;
+                <h6>
+                    <b>
+                        Third parties to whom your data is communicated</b>
+                </h6>
+                <p>Your data may be made available to third parties, autonomous Data Controllers, for purposes related to the
+                    provision of services of interest or in compliance with laws and regulations that govern their communication,
+                    as well as control bodies. They could be communicated to third parties for their autonomous use only
+                    if the user's consent has been previously requested and obtained.
+                </p>
+
+                </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/languages.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
