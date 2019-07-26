@@ -497,7 +497,7 @@ $(document).ready(function () {
     gtag('js', new Date());
     gtag('config', 'UA-77012119-1');
 
-    /*!function (f, b, e, v, n, t, s) {
+    !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () {
             n.callMethod ?
                 n.callMethod.apply(n, arguments) : n.queue.push(arguments)
@@ -509,14 +509,14 @@ $(document).ready(function () {
     }(window, document, 'script',
         'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '326854251303193');
-    fbq('track', 'PageView');*/
+    fbq('track', 'PageView');
     /* end analytics, facebook and cookies */
 
-    if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
+   /* if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
         AOS.init({
             duration: 500,
             easing: 'ease-in-out',
             disable: false
         });
-    }
+    }*/
 });
