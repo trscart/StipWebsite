@@ -9,6 +9,13 @@ if (sessionStorage.getItem('dontLoad') == null) { // do loading animation only o
 */
 
 $(document).ready(function () {
+    if (!$(location).attr('href').includes("contacts")) {
+        AOS.init({
+            duration: 500,
+            easing: 'ease-in-out',
+        });
+    }
+
     /* logo animation
     anime({
         targets: '.stip-loadLogo',
@@ -118,7 +125,7 @@ $(document).ready(function () {
 
     // stip policy language
     $("#stip-policy").click(function () {
-        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)){
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
             $(this).attr("href", "./privacy-policy-en.html");
         } else {
             $(this).attr("href", "./privacy-policy.html");
