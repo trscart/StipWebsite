@@ -610,6 +610,10 @@ $txtsize: 14px;
 }
 
 @media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+
     .stip-heroIllustration {
         max-width: 140% !important;
     }
