@@ -39,7 +39,6 @@ anime({
 */
 
 $(document).ready(function () {
-    console.log("here")
 
     /* analytics, facebook and cookies */
     (function (w, d, s, l, i) {
@@ -78,6 +77,8 @@ $(document).ready(function () {
             disable: false
         });
     }
+
+    console.log("here2")
 
     // change menu icon color in blog section
     if ($(location).attr('href').includes("blog")) {
