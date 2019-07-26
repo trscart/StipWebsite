@@ -39,6 +39,8 @@ anime({
 */
 
 $(document).ready(function () {
+    console.log("here")
+
     /* analytics, facebook and cookies */
     (function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({
@@ -173,7 +175,6 @@ $(document).ready(function () {
         }
         let template = Handlebars.compile(source);
         $('body').append(template)
-
         $('body').css("overflow", "hidden")
 
         // ajax call for demo request
