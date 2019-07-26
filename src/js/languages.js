@@ -224,6 +224,9 @@ $(document).ready(function () {
         $(".stip-hamburgerIcon").removeClass('active');
         $(".stip-navModal").removeClass('stip-navModalAppear')
         $('body').removeClass('overflow-body');
+        if($(location).attr('href').includes("privacy-policy")){
+            window.location = "privacy-policy.html"
+        }
     });
 
     $(".stip-enBtn").click(function (e) { // click for en-EN language
@@ -236,5 +239,8 @@ $(document).ready(function () {
         $(".stip-hamburgerIcon").removeClass('active');
         $(".stip-navModal").removeClass('stip-navModalAppear')
         $('body').removeClass('overflow-body');
+        if($(location).attr('href').includes("privacy-policy")){
+            window.location = "privacy-policy-en.html"
+        }
     });
 })
