@@ -78,7 +78,7 @@ $(document).ready(function () {
         });
     }
 
-    console.log("here")
+    console.log("here1")
 
     // change menu icon color in blog section
     if ($(location).attr('href').includes("blog")) {
