@@ -6,6 +6,10 @@ b {
   font-weight: 600;
 }
 
+.aos-animate {
+  opacity: 1 !important;
+}
+
 .stip-heroBgPlatform {
   background: url("../img/heroWave.svg") no-repeat;
   background-size: cover;
@@ -761,6 +765,9 @@ b {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .stip-heroIllustration {
     max-width: 140% !important;
   }

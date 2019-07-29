@@ -146,7 +146,7 @@ $(document).ready(function () {
                 $('.stip-labelRequired').css("color", "white")
 
                 let data = {
-                    "company_name": $('#stip-companyName-demo').val(),
+                    "company_name": "",
                     "firstname": $('#stip-firstName-demo').val(),
                     "lastname": $('#stip-lastName-demo').val(),
                     "phone": $('#stip-phone-demo').val(),

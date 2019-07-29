@@ -90,9 +90,9 @@ let languages = {
         "contactSocialTitle": "Trovaci sui nostri canali",
         "contactFormTitle": "Mettiti in contatto con Stip!",
         "contactFormName": "Nome completo*",
-        "contactFormEmail": "Email*",
+        "contactFormEmail": "Email aziendale*",
         "contactFormPhone": "Telefono",
-        "contactFormMessage": "Messaggio",
+        "contactFormMessage": "Lasciaci un messaggio",
         "contactFormSend": "Invia"
     },
     "en-EN": {
@@ -186,9 +186,9 @@ let languages = {
         "contactSocialTitle": "Find us on our social media",
         "contactFormTitle": "Get in touch with Stip!",
         "contactFormName": "Full name*",
-        "contactFormEmail": "Email*",
+        "contactFormEmail": "Corporate email*",
         "contactFormPhone": "Phone",
-        "contactFormMessage": "Message",
+        "contactFormMessage": "Leave us a message",
         "contactFormSend": "Send"
     }
 }
