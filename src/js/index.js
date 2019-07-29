@@ -400,28 +400,30 @@ $(document).ready(function () {
         $('#stip-hashtag').append("<div class='swiper-slide d-flex justify-content-center'><button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button></div>")
     })
 
-    var mySwiper = new Swiper('.swiper-container', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 4,
-        slidesPerColumn: 2,
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
+    if ($(location).attr('href').includes("blog.html")) {
+        var mySwiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            576: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            992: {
-                slidesPerView: 4,
-            },
-        }
-    })
+            slidesPerView: 4,
+            slidesPerColumn: 2,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+            }
+        })
+    }
 
     if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
         setTimeout(function () {

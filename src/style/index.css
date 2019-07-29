@@ -110,6 +110,12 @@ b {
 }
 
 @media (max-width: 576px) {
+  .stip-heroArticleImg {
+    border-radius: 0 !important;
+  }
+  .stip-articleImg {
+    border-radius: 0 !important;
+  }
   .stip-articleNav {
     padding: 1rem 2rem;
   }
