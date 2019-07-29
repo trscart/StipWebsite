@@ -6,10 +6,6 @@ b {
   font-weight: 600;
 }
 
-.aos-animate {
-  opacity: 1 !important;
-}
-
 .stip-heroBgPlatform {
   background: url("../img/heroWave.svg") no-repeat;
   background-size: cover;
@@ -47,6 +43,10 @@ b {
   }
 }
 
+.stip-hamLineBlog {
+  background-color: #4384f1 !important;
+}
+
 .stip-heroArticleImg {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
@@ -57,6 +57,14 @@ b {
 .stip-card {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-container {
+  width: 90%;
+}
+
+.stip-swiper-btn {
+  height: 1.5em;
 }
 
 .stip-articleNav {
@@ -83,12 +91,17 @@ b {
 }
 
 .stip-articleAuthorImg {
-  background: url("https://timedotcom.files.wordpress.com/2018/01/stephanie-schriock-motto.jpg") no-repeat;
+  background: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/07/36.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   height: 4em;
   width: 4em;
   border-radius: 50%;
+}
+
+.stip-comment {
+  margin-top: 1.5em;
+  border-bottom: 1px solid #b8b8b8;
 }
 
 .stip-articleFooter {
@@ -99,6 +112,9 @@ b {
 @media (max-width: 576px) {
   .stip-articleNav {
     padding: 1rem 2rem;
+  }
+  .swiper-container {
+    width: 100% !important;
   }
 }
 

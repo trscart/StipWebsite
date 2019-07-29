@@ -2,15 +2,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-b {
+b { 
     font-weight: 600;
 }
 
-.aos-animate{
-    opacity: 1 !important;
-}
-
-$stcolor: #4384f1;
+$stcolor: #4384f1; 
 $ndcolor: #FD6B15;
 $h1size: 26px;
 $h2size: 21px;
@@ -238,7 +234,7 @@ $txtsize: 14px;
     }
 
     .line {
-        background-color: white;
+        background-color: white; 
         display: block;
         height: 2.5px;
         left: 0;

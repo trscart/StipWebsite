@@ -23,8 +23,8 @@ let languages = {
         "footerHomeAi": "La nostra AI",
         "footerPlatform": "PIATTAFORMA",
         "footerPlatformHow": "Come funziona",
-        "footerPlatformIntegration": "Le integrazioni",
-        "footerPlatformCustomer": "Customer experience",
+        "footerPlatformIntegration": "Le Integrazioni",
+        "footerPlatformCustomer": "Customer Experience",
         "footerBlog": "BLOG",
         "footerBlogMore": "Scopri tutti gli articoli",
 
@@ -93,7 +93,11 @@ let languages = {
         "contactFormEmail": "Email aziendale*",
         "contactFormPhone": "Telefono",
         "contactFormMessage": "Lasciaci un messaggio",
-        "contactFormSend": "Invia"
+        "contactFormSend": "Invia",
+
+        // blog
+        "loadMore": "scopri di più",
+        "readArticle": "Leggi l'articolo"
     },
     "en-EN": {
 
@@ -116,11 +120,11 @@ let languages = {
         "footerHome": "HOME",
         "footerHomeWhat": "What we do",
         "footerHomeBenefit": "Discover the benefits",
-        "footerHomeAi": "Artificial intelligence",
+        "footerHomeAi": "Artificial Intelligence",
         "footerPlatform": "PLATFORM",
         "footerPlatformHow": "How It works",
         "footerPlatformIntegration": "Integration",
-        "footerPlatformCustomer": "Customer experience",
+        "footerPlatformCustomer": "Customer Experience",
         "footerBlog": "BLOG",
         "footerBlogMore": "Check out all the articles",
 
@@ -189,7 +193,11 @@ let languages = {
         "contactFormEmail": "Corporate email*",
         "contactFormPhone": "Phone",
         "contactFormMessage": "Leave us a message",
-        "contactFormSend": "Send"
+        "contactFormSend": "Send",
+
+        // blog
+        "loadMore": "load more",
+        "readArticle": "Read the article"
     }
 }
 

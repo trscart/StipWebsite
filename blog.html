@@ -2,6 +2,7 @@
 <html lang="it" class="h-100">
 
 <head>
+    <title>Stip - Blog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,6 +18,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <!-- style -->
     <link rel="stylesheet" href="src/style/index.css">
 </head>
@@ -24,6 +27,9 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light stip-articleNav">
+        <a class="material-icons mt-2 mr-4 stip-backIcon" href="blog.html">
+            arrow_back
+        </a>
         <a class="navbar-brand flex-grow-1" href="./index.html">
             <img id="logo" src="src/img/logoColor.svg" width="80" height="80" alt="">
         </a>
@@ -74,8 +80,8 @@
                 </li>
             </ul>
             <div class="stip-languageBtnBox ml-md-5 ml-2">
-                <button type="button" class="btn btn-link stip-h3 stip-languageBtn" id="stip-itBtn">IT</button>
-                <button type="button" class="btn btn-link p-0 stip-h3 stip-languageBtn" id="stip-enBtn">ENG</button>
+                <button type="button" class="btn btn-link stip-h3 stip-languageBtn stip-itBtn">IT</button>
+                <button type="button" class="btn btn-link p-0 stip-h3 stip-languageBtn stip-enBtn">ENG</button>
             </div>
             <img src="src/img/stip-logoBig.svg" class="stip-navModalImg" alt="">
         </div>
@@ -92,19 +98,23 @@
         </div>
     </div>
 
-    <button id="prova">prova</button>
-
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col" id="stip-hashtag">
-
+            <div class="col" style="z-index: 0;">
+                <div class="swiper-button-prev stip-swiper-btn"></div>
+                <div class="swiper-button-next stip-swiper-btn"></div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" id="stip-hashtag">
+                        <!-- Slides -->
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row d-flex justify-content-center mt-5" id="stip-blogCards">
 
         </div>
         <div class="row d-flex justify-content-center">
-            <button class="btn btn-primary mt-5" id="stip-loadMore">scopri di più</button>
+            <button class="btn btn-primary mt-5 lang" key="loadMore" id="stip-loadMore">scopri di più</button>
         </div>
     </div>
 
@@ -151,15 +161,18 @@
             <div class="card-body">
                 <h2 class="card-title stip-h2">{{cardTitle}}</h2>
                 <p class="card-text stip-txt">{{cardTxt}}</p>
-                <button class="btn btn-primary stip-txt stip-cardBtn">leggi l'articolo</button>
+                <a href="./blog-article.html"><button class="btn btn-primary stip-txt stip-cardBtn lang" key="readArticle">leggi l'articolo</button></a>
             </div>
         </div>
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>
+    <script src="src/js/languages.js"></script>
     <script src="src/js/index.js"></script>
+
 </body>
 
 </html>

@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     // change menu icon color in blog section
     if ($(location).attr('href').includes("blog")) {
-        $(".line").css("background-color", "#4384f1")
+        $(".line").addClass('stip-hamLineBlog');
     }
 
     if ($(location).attr('href').includes("contacts")) {
@@ -80,7 +80,7 @@ $(document).ready(function () {
 
             $('.stip-menuIcon').addClass('stip-menuIconScrolled');
             if ($(location).attr('href').includes("blog")) {
-                $(".line").css("background-color", "#ffffff")
+                $(".line").removeClass('stip-hamLineBlog');
             }
         } else if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy")) {
             logoChangeCounter = 0
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
             $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
             if ($(location).attr('href').includes("blog")) {
-                $(".line").css("background-color", "#4384f1")
+                $(".line").addClass('stip-hamLineBlog');
             }
         }
 
@@ -109,7 +109,10 @@ $(document).ready(function () {
         $(".stip-hamburgerIcon").toggleClass('active');
         $(".stip-navModal").toggleClass('stip-navModalAppear')
         $('body').toggleClass('overflow-body');
-        if ($(window).scrollTop() > $("#stip-scrollDetect").offset().top) {
+        if ($(location).attr('href').includes("blog")) {
+            $(".line").toggleClass('stip-hamLineBlog');
+        }
+        if ($(window).scrollTop() > 0) {
             $('.stip-menuIcon').toggleClass('stip-menuIconScrolled');
         }
     });
@@ -372,17 +375,6 @@ $(document).ready(function () {
         }
     })
 
-    // blog card compile PROVA
-    $("#prova").click(function () {
-        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
-        var source = document.getElementById("stip-blogCard").innerHTML;
-        var template = Handlebars.compile(source);
-        for (let index = 0; index < 3; index++) {
-            $('#stip-blogCards').append(template(context))
-
-        }
-    })
-
     $("#stip-loadMore").click(function () {
         var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
         var source = document.getElementById("stip-blogCard").innerHTML;
@@ -390,10 +382,6 @@ $(document).ready(function () {
         for (let index = 0; index < 3; index++) {
             $('#stip-blogCards').append(template(context))
         }
-        /*$('html,body').animate({
-            scrollTop: $("#stip-blogCards").offset().top + $("#stip-blogCards").outerHeight()
-        },
-            1500);*/
     })
 
     // footer scroll to section animation
@@ -409,7 +397,30 @@ $(document).ready(function () {
     // hashtag button append
     let hashtag = ["#CustomerCare", "#CustomerSuccess", "#AssistenzaClienti", "#CustomerSatisfaction", "#IntelligenzaArtificiale", "#DeepLearning", "#SocialCustomerCare", "#CRM", "#IA"]
     hashtag.forEach(function (item, index) {
-        $('#stip-hashtag').append("<button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button>")
+        $('#stip-hashtag').append("<div class='swiper-slide d-flex justify-content-center'><button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button></div>")
+    })
+
+    var mySwiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+        }
     })
 
     if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
@@ -512,11 +523,11 @@ $(document).ready(function () {
     fbq('track', 'PageView');
     /* end analytics, facebook and cookies */
 
-   /* if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
-        AOS.init({
-            duration: 500,
-            easing: 'ease-in-out',
-            disable: false
-        });
-    }*/
+    /* if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
+         AOS.init({
+             duration: 500,
+             easing: 'ease-in-out',
+             disable: false
+         });
+     }*/
 });

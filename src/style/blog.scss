@@ -1,11 +1,23 @@
+.stip-hamLineBlog {
+    background-color: #4384f1 !important;
+}
+
 .stip-heroArticleImg {
-    background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
     background-position: top center !important;
     height: 35em;
 }
 
 .stip-card {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-container {
+    width: 90%;
+}
+
+.stip-swiper-btn {
+    height: 1.5em;
 }
 
 //blog article
@@ -25,14 +37,14 @@
 }
 
 .stip-articleImg {
-    background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.4)), url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
     height: 35em;
 }
 
-.stip-articleAuthorImg{
-    background: url("https://timedotcom.files.wordpress.com/2018/01/stephanie-schriock-motto.jpg") no-repeat;
+.stip-articleAuthorImg {
+    background: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/07/36.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
     height: 4em;
@@ -40,7 +52,12 @@
     border-radius: 50%;
 }
 
-.stip-articleFooter{
+.stip-comment{
+    margin-top: 1.5em;
+    border-bottom: 1px solid #b8b8b8;
+}
+
+.stip-articleFooter {
     background-color: #4384f1;
     margin-top: 10em;
 }
@@ -48,5 +65,9 @@
 @media (max-width: 576px) {
     .stip-articleNav {
         padding: 1rem 2rem;
+    }
+
+    .swiper-container {
+        width: 100% !important;
     }
 }
