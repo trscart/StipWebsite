@@ -1,1 +1,3 @@
-# blank file allows all
+# allows all agents
+
+User-agent: *

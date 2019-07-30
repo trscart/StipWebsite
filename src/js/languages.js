@@ -8,7 +8,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contatti",
         // hero
-        "heroTitle": "La piattaforma che automatizza il tuo Social ed Email Customer Care",
+        "heroTitle": "Stip la piattaforma che automatizza il tuo Social ed Email Customer Care",
         // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
@@ -108,7 +108,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contacts",
         // hero
-        "heroTitle": "The platform that automates all Social & Email Customer Care activities",
+        "heroTitle": "Stip the platform that automates all Social & Email Customer Care activities",
         // btn
         "demoBtn": "DEMO REQUEST",
         "contactBtn": "CONTACT US",
