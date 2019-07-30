@@ -1,3 +1,5 @@
 # allows all agents
 
 User-agent: *
+
+Sitemap: https://trscart.github.io/StipWebsite/sitemap.xml
