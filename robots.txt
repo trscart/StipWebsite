@@ -2,4 +2,4 @@
 
 User-agent: *
 
-Sitemap: https://trscart.github.io/StipWebsite/sitemap.xml
+Sitemap: https://stip.io/sitemap.xml
