@@ -187,7 +187,7 @@ $(document).ready(function () {
 
                             $('.stip-messageSend').css("background-color", "#16B72E")
                             $('.stip-messageSend').css("color", "white")
-                            if (sessionStorage.getItem('language') == "en-EN") {
+                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                                 $('.stip-messageSend').text("Sent");
                             } else {
                                 $('.stip-messageSend').text("Inviata");
@@ -195,7 +195,7 @@ $(document).ready(function () {
                             setTimeout(function () {
                                 $('.stip-messageSend').css("background-color", "#f8f9fa")
                                 $('.stip-messageSend').css("color", "black")
-                                if (sessionStorage.getItem('language') == "en-EN") {
+                                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                                     $('.stip-messageSend').text("Demo request");
                                 } else {
                                     $('.stip-messageSend').text("Richiedi demo");
@@ -279,7 +279,7 @@ $(document).ready(function () {
 
                         $('.stip-messageSend').css("background-color", "#16B72E")
                         $('.stip-messageSend').css("color", "white")
-                        if (sessionStorage.getItem('language') == "en-EN") {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                             $('.stip-messageSend').text("Message sent");
                         } else {
                             $('.stip-messageSend').text("Messaggio inviato");
@@ -287,7 +287,7 @@ $(document).ready(function () {
                         setTimeout(function () {
                             $('.stip-messageSend').css("background-color", "#f8f9fa")
                             $('.stip-messageSend').css("color", "black")
-                            if (sessionStorage.getItem('language') == "en-EN") {
+                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                                 $('.stip-messageSend').text("Send");
                             } else {
                                 $('.stip-messageSend').text("Invia");
@@ -428,7 +428,7 @@ $(document).ready(function () {
     if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
         setTimeout(function () {
             let context
-            if (sessionStorage.getItem('language') == "en-EN") {
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                 context = { popupTitle: "Want to improve your customers' CX?", popupSubtitle: "Improve your Social & Email Customer Care with Stip! Write here your email and you will get our information material in a jiffy!", popupBtn: "Send", emailPlaceholder: "Corporate email" };
             } else {
                 context = { popupTitle: "Vuoi migliorare la CX dei tuoi clienti?", popupSubtitle: "Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.", popupBtn: "Invia", emailPlaceholder: "Email aziendale" };
@@ -445,7 +445,7 @@ $(document).ready(function () {
                 $(".stip-reprompt-container").css("display", "none")
                 // append thank you message
                 let context
-                if (sessionStorage.getItem('language') == "en-EN") {
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                     context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
                 } else {
                     context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
