@@ -21,8 +21,9 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">-->
     <!-- style -->
     <link rel="stylesheet" href="src/style/index.css">
 </head>
@@ -30,9 +31,6 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light stip-articleNav">
-        <a class="material-icons mt-2 mr-4 stip-backIcon" href="blog.html">
-            arrow_back
-        </a>
         <a class="navbar-brand flex-grow-1" href="./index.html">
             <img alt="color logo" id="logo" src="src/img/logoColor.svg" width="80" height="80">
         </a>
@@ -94,22 +92,50 @@
     <!-- article -->
     <div class="container">
         <div class="row stip-rounded mb-5 shadow-lg d-flex flex-column justify-content-end stip-heroArticleImg" id="stip-scrollDetect">
-            <div class="m-5">
-                <h1 class="text-white stip-h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-                <h2 class="text-white stip-txt">22 gen 2019</h2>
+            <div class="col m-0 m-sm-5 flex-grow-0 p-4 shadow text-white stip-rounded stip-latestArticle">
+                <div>
+                    <h3 class="d-inline stip-h3 mr-3">LATEST</h3>
+                    <p class="d-inline stip-txt">xx/yy/zzzz</p>
+                    <span>|</span>
+                    <p class="d-inline stip-txt">Artificial Intelligence</p>
+                </div>
+                <div>
+                    <h1 class="mt-4 stip-h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                    <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit amet, consectetur adipiscing
+                        elit ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div>
+                    <a href="./blog-article.html"><button type="button" class="btn btn-link text-white stip-h3 p-0" key="readArticle">Leggi l'articolo</button></a>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row d-flex justify-content-center">
+        <!--<div class="row d-flex justify-content-center">
             <div class="col" style="z-index: 0;">
                 <div class="swiper-button-prev stip-swiper-btn"></div>
                 <div class="swiper-button-next stip-swiper-btn"></div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper" id="stip-hashtag">
-                        <!-- Slides -->
+                        
                     </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="row p-3 align-items-center">
+            <h2 class="m-0 stip-h3">Filter by</h2>
+            <div class="dropdown ml-4">
+                <button class="btn btn-secondary dropdown-toggle" id="stip-categoryItem" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    All categories
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button class="dropdown-item stip-category" type="button">Intelligent Automation</button>
+                    <button class="dropdown-item stip-category" type="button">Digital Customer Care</button>
+                    <button class="dropdown-item stip-category" type="button">Email Customer Care</button>
+                    <button class="dropdown-item stip-category" type="button">Customer Experience</button>
+                    <button class="dropdown-item stip-category" type="button">All categories</button>
                 </div>
             </div>
         </div>
@@ -158,18 +184,156 @@
     </footer>
     <!-- end footer -->
 
+    <!-- article card -->
     <script id="stip-blogCard" type="text/x-handlebars-template">
-        <div class="m-3 stip-card" style="width: 18rem;">
-            <img  alt="card image" src="http://www.nationalgeographic.it/images/2016/12/06/164441083-abc66e5b-8d1b-46d7-a0aa-024b9dea5edb.jpg" class="card-img-top">
+        <div class="m-3 shadow stip-rounded stip-blogCard" style="width: 18rem;">
+            <img alt="card image" src="http://www.nationalgeographic.it/images/2016/12/06/164441083-abc66e5b-8d1b-46d7-a0aa-024b9dea5edb.jpg" class="card-img-top stip-cardImage">
             <div class="card-body">
+                <p class="card-text text-secondary stip-txt">{{cardDate}} | {{cardCategory}}</p>
                 <h2 class="card-title stip-h2">{{cardTitle}}</h2>
                 <p class="card-text stip-txt">{{cardTxt}}</p>
                 <a href="./blog-article.html"><button class="btn btn-primary stip-txt stip-cardBtn lang" key="readArticle">leggi l'articolo</button></a>
             </div>
         </div>
     </script>
+    <!-- end article card -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- blog cta -->
+    <script id="stip-blogCta" type="text/x-handlebars-template">
+        <div class="row align-items-center shadow stip-rounded my-5">
+            <div class="col-8 mt-md-0 mt-5 d-flex flex-column align-items-center text-center">
+                <h2 class="stip-h1">Stip</h2>
+                <p class="stip-h3 lang" key="ctaTitle">{{ctaTitle}}</p>
+                <div class="row">
+                    <button class="stip-demoRequest lang" key="demoBtn" type="button" data-toggle="modal" data-target="#demoModal">{{ctaDemoBtn}}</button>
+                    <a href="./contacts.html" title="contacts">
+                        <button class="ml-4 stip-demoRequest lang" style="background-color: #4384f1;" key="contactBtn" type="button">{{ctaContactBtn}}</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-4">
+                <img alt="satisfaction illustration" src="./src/img/satisfactionIllustration.png" style="max-width: 100%;">
+            </div>
+        </div>
+    </script>
+    <!-- end blog cta -->
+
+    <!-- demo it-IT section -->
+    <script id="stip-demoSection-it" type="text/x-handlebars-template">
+        <div class="container-fluid d-flex fixed-top stip-demoContainer">
+                <a href="" title="close" class="stip-demoCloseIcon"><i class="material-icons float-right">close</i></a>
+                <div class="row flex-grow-1" style="overflow: auto">
+                    <div class="col-md-7 p-5 d-flex flex-column justify-content-center">
+                        <img  alt="color logo" id="logo" class="align-self-center" src="src/img/logoColor.svg" width="80" height="80">
+                        <h2 class="stip-h2">Scopri come Stip può migliorare il tuo Customer Care e la Customer Experience dei tuoi clienti:</h2>
+                        <ul>
+                            <li>
+                                <h3 class="stip-h3">Ottimizza i tuoi tempi di risposta e rende più efficiente il lavoro dei tuoi operatori:</h3>
+                                <p class="stip-txt">Stip permette di ridurre il tempo medio di risposta da 6 ore a 0,3 minuti. Grazie al monitoraggio dei contenuti prodotti dagli utenti e all’individuazione delle segnalazioni da gestire, raccoglie le informazioni e permette agli operatori di risolvere qualsiasi casistica in maniera altamente personalizzata e in una sola interazione con l’utente.
+                                </p>
+                            </li>
+                            <li>
+                                <h3 class="stip-h3">Permette di ridurre i costi dell’assistenza clienti e utilizza un bot personalizzato:</h3>
+                                <p class="stip-txt">è prevista una riduzione totale dei costi del 67%. Il chatbot integrato di Stip interagisce direttamente
+                                    con i clienti e permette di raccogliere tutte le informazioni necessarie per una risoluzione
+                                    ottimale di ogni casistica, mantenendo alto il livello di customizzazione.</p>
+                            </li>
+                            <li>
+                                <h3 class="stip-h3">Fornisce statistiche e KPIs riguardanti l’intero processo:</h3>
+                                <p class="stip-txt">monitora, traccia e analizza ogni attività relativa al Customer Service, disponibile real-time sulla
+                                    piattaforma. I dati sono esportabili in qualsiasi formato e permettono di monitorare l’operatività
+                                    del team e la qualità della relazione con i tuoi clienti.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 p-4 p-sm-5 d-flex justify-content-center align-items-center stip-demoCol">
+                        <form class="p-4 p-sm-5 flex-grow-1 text-white">
+                            <h2 class="mb-4 stip-h1">Richiedi una Demo e prova subito Stip</h2>
+                            <div class="form-group">
+                                <label class="stip-h3 stip-labelRequired">Nome*</label>
+                                <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="Nome" id="stip-firstName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label class="stip-h3 stip-labelRequired">Cognome*</label>
+                                <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Cognome" id="stip-lastName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label class="stip-h3 stip-labelRequired">Email aziendale*</label>
+                                <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Email aziendale" required id="stip-email-demo">
+                            </div>
+                            <div class="form-group">
+                                <label class="stip-h3">Telefono</label>
+                                <input type="text" name="phone" class="form-control" placeholder="Telefono" id="stip-phone-demo">
+                            </div>
+                            <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Richiedi demo</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </script>
+    <!-- end demo it-IT section -->
+
+    <!-- demo en-EN section -->
+    <script id="stip-demoSection-en" type="text/x-handlebars-template">
+        <div class="container-fluid d-flex fixed-top stip-demoContainer">
+                <a href="" class="stip-demoCloseIcon">
+                    <i class="material-icons float-right">close</i>
+                </a>
+                <div class="row flex-grow-1" style="overflow: auto">
+                    <div class="col-md-7 p-5 d-flex flex-column justify-content-center">
+                        <img  alt="color logo" id="logo" class="align-self-center" src="src/img/logoColor.svg" width="80" height="80">
+                        <h2 class="stip-h2">See how Stip can improve your Customer Experience:</h2>
+                        <ul>
+                            <li>
+                                <h3 class="stip-h3">Maximises your response time and increases your agents’ performances:</h3>
+                                <p class="stip-txt">Stip allows you to reduce your average response time from 6 hours to 0,3 minutes. By monitoring all
+                                    user generated contents and by detecting and identifying all contents that require management,
+                                    Stip is able to collect relevant information enabling Customer Service operators to solve any
+                                    case in a personalised way and in only one interaction with the client.
+                                </p>
+                            </li>
+                            <li>
+                                <h3 class="stip-h3">Reduces your Customer Care costs and uses a highly personalised bot:</h3>
+                                <p class="stip-txt">Stip reduces overall Customer Care costs by 67%. The platform’s integrated proprietary chatbot interacts
+                                    directly with your customers and collects all necessary information for an ideal resolution of
+                                    every case, always maintaining a high level of customisation.</p>
+                            </li>
+                            <li>
+                                <h3 class="stip-h3">Delivers strong KPIs throughout the whole process:</h3>
+                                <p class="stip-txt">Stip monitors, tracks and analyses every Customer Service related activity and collects results that
+                                    are available real-time on the platform. Data can be exported in any format and enable you to
+                                    monitor your team’s performances as well as the quality of the relationship with your clients.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 p-4 p-sm-5 d-flex justify-content-center align-items-center stip-demoCol">
+                        <form class="p-4 p-sm-5 flex-grow-1 text-white">
+                            <h2 class="mb-4 stip-h1">Request a Demo and try Stip immediately</h2>
+                            <div class="form-group">
+                                <label class="stip-h3 stip-labelRequired">First name*</label>
+                                <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="First name" id="stip-firstName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label class="stip-h3 stip-labelRequired">Last name*</label>
+                                <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Last name" id="stip-lastName-demo">
+                            </div>
+                            <div class="form-group">
+                                <label class="stip-h3 stip-labelRequired">Corporate email*</label>
+                                <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Corporate email" required id="stip-email-demo">
+                            </div>
+                            <div class="form-group">
+                                <label class="stip-h3">Phone</label>
+                                <input type="text" name="phone" class="form-control" placeholder="Phone" id="stip-phone-demo">
+                            </div>
+                            <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Demo request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </script>
+    <!-- end demo en-EN section -->
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="src/js/anime.min.js"></script>

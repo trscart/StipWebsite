@@ -93,13 +93,17 @@
     <div class="container">
         <div class="row stip-rounded mb-5 shadow-lg d-flex flex-column justify-content-end stip-articleImg" id="stip-scrollDetect">
             <div class="m-5 stip-articleBoxTitle">
-                <h1 class="text-white stip-h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-                <h2 class="text-white stip-txt">22 gen 2019</h2>
+
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
-                <h3 class="stip-h3">#stip</h3>
+            <div class="col">
+                <div>
+                    <p class="d-inline stip-txt">xx/yy/zzzz</p>
+                    <span>|</span>
+                    <p class="d-inline stip-txt">Artificial Intelligence</p>
+                </div>
+                <h1 class="mt-4 stip-h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
                 <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nulla sit amet leo aliquam cursus.
                     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
                     vehicula sapien quis dui sagittis, non volutpat elit malesuada. Nullam at quam ornare, tincidunt elit
@@ -113,23 +117,20 @@
                     <h3 class="ml-3 stip-h3 stip-articleAuthorName">Maria Rossi</h3>
                 </div>
             </div>
-            <div class="col-md-4 mt-md-0 mt-5 d-flex flex-column align-items-center">
-                <h2 class="stip-h1">Stip</h2>
-                <p class="text-center stip-h3 lang" key="heroTitle">La piattaforma che automatizza il tuo Social ed Email Customer Care</p>
-                <button class="stip-demoRequest lang" key="demoBtn" type="button" data-toggle="modal" data-target="#demoModal">RICHIEDI DEMO</button>
-                <img alt="satisfaction illustration" src="./src/img/satisfactionIllustration.png" style="max-width: 100%;">
+        </div>
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-8 m-2 p-4 p-sm-5 bg-white stip-rounded shadow-lg stip-emailSection">
+                <h2 class="stip-h1 lang" key="emailTitle">Non perderti nulla!</h2>
+                <h2 class="stip-h3 lang" key="emailSubtitle">Lasciaci la tua email se vuoi maggiori informazioni su Stip o per metterti in contatto con noi.
+                </h2>
+                <div class="input-group mt-4">
+                    <input type="text" name="email" class="form-control stip-txt stip-inputRequired" id="stip-email-newsletter" placeholder="Corporate email"
+                        aria-label="Corporate email" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary stip-emailSectionBtn py-0 lang" key="emailBtn" type="button" id="button-addon2">Registrati</button>
+                    </div>
+                </div>
             </div>
-            <!--<div class="col-md-4">
-                <h2 class="stip-h2">Commenti</h2>
-                <ul class="mt-4" style="list-style: none;">
-                    <li class="stip-comment">
-                        <h5 class="stip-h3">Mario Rossi</h5>
-                        <p class="stip-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nulla sit amet leo aliquam
-                            cursus.
-                        </p>
-                    </li>
-                </ul>
-            </div>-->
         </div>
     </div>
     <!-- end article -->

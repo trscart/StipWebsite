@@ -375,11 +375,27 @@ $(document).ready(function () {
         }
     })
 
+    // category dropdown
+    $(".stip-category").click(function () {
+        $("#stip-categoryItem").html($(this).text());
+    });
+
+    // card append
     $("#stip-loadMore").click(function () {
-        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum" };
+        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryItem").html() };
         var source = document.getElementById("stip-blogCard").innerHTML;
         var template = Handlebars.compile(source);
         for (let index = 0; index < 3; index++) {
+            $('#stip-blogCards').append(template(context))
+        }
+        if ($('.stip-blogCard').length == 6) {
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                var context = { ctaTitle: "Full efficiency with zero effort. That is your Customer Care with Stip", ctaDemoBtn: "Demo request", ctaContactBtn: "Contact us" };
+            } else {
+                var context = { ctaTitle: "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo", ctaDemoBtn: "Richiedi demo", ctaContactBtn: "Contattaci" };
+            }
+            var source = document.getElementById("stip-blogCta").innerHTML;
+            var template = Handlebars.compile(source);
             $('#stip-blogCards').append(template(context))
         }
     })
@@ -400,7 +416,8 @@ $(document).ready(function () {
         $('#stip-hashtag').append("<div class='swiper-slide d-flex justify-content-center'><button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button></div>")
     })
 
-    if ($(location).attr('href').includes("blog.html")) {
+    // swiper hashtag
+    /*if ($(location).attr('href').includes("blog.html")) {
         var mySwiper = new Swiper('.swiper-container', {
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -423,7 +440,7 @@ $(document).ready(function () {
                 },
             }
         })
-    }
+    }*/
 
     if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
         setTimeout(function () {

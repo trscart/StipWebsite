@@ -97,7 +97,8 @@ let languages = {
 
         // blog
         "loadMore": "scopri di più",
-        "readArticle": "Leggi l'articolo"
+        "readArticle": "Leggi l'articolo",
+        "ctaTitle": "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo"
     },
     "en-EN": {
 
@@ -197,7 +198,8 @@ let languages = {
 
         // blog
         "loadMore": "load more",
-        "readArticle": "Read the article"
+        "readArticle": "Read the article",
+        "ctaTitle": "Full efficiency with zero effort. That is your Customer Care with Stip"
     }
 }
 
