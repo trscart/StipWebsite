@@ -41,9 +41,13 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
+    // general css change
     if (!$(location).attr('href').includes("index") && !$(location).attr('href').includes("platform")) {
         $('.stip-nav').css("padding", "0 5em")
         $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
+    }
+    if ($(location).attr('href').includes("contacts")) {
+        $('.stip-nav').css("position", "relative")
     }
 
     $(window).scroll(function () {
