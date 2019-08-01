@@ -2,6 +2,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 b {
   font-weight: 600;
 }
@@ -661,9 +665,6 @@ b {
 }
 
 @media (max-width: 992px) {
-  body {
-    overflow-x: hidden;
-  }
   .stip-navDesktop {
     display: none;
   }
