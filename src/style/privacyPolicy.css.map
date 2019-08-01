@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,sBAAsB,CAAA;EAClB,UAAU,EAAE,IAAI;CACnB;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,sBAAsB,CAAA;IAClB,UAAU,EAAE,CAAC;GAChB",
+    "mappings": "AAAA,AAAA,sBAAsB,CAAA;EAClB,UAAU,EAAE,IAAI;CACnB",
     "sources": [
         "privacyPolicy.scss"
     ],

@@ -1,7 +1,17 @@
-.stip-heroBgPlatform {
-  background: url("../img/heroWave.svg") no-repeat;
-  background-size: cover;
-  background-position: top center;
+.stip-heroContainerPlatform {
+  height: 100vh;
+  padding: 10%;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stip-heroContainerPlatform h1 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .stip-platformHero {
@@ -10,11 +20,6 @@
 
 .stip-platformHero .stip-heroScreen {
   max-width: 80%;
-}
-
-.stip-platformHero h1 {
-  color: white;
-  margin-bottom: 2em;
 }
 
 .stip-functionImg {

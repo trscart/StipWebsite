@@ -1,7 +1,14 @@
-.stip-heroBgPlatform {
-    background: url("../img/heroWave.svg") no-repeat;
-    background-size: cover;
-    background-position: top center;
+.stip-heroContainerPlatform {
+    height: 100vh;
+    padding: 10%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    h1{
+        font-size: 42px;
+        font-weight: 800;
+        text-align: center;
+    }
 }
 
 .stip-platformHero {
@@ -9,11 +16,6 @@
 
     .stip-heroScreen {
         max-width: 80%;
-    }
-
-    h1 {
-        color: white;
-        margin-bottom: 2em;
     }
 }
 

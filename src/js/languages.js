@@ -8,7 +8,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contatti",
         // hero
-        "heroTitle": "Stip la piattaforma che automatizza il tuo Social ed Email Customer Care",
+        "heroTitle": "Stip automatizza il tuo Social ed Email Customer Care",
         // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
@@ -48,7 +48,7 @@ let languages = {
         "benefitCostTitle": "Riduzione dei Costi",
         "benefitCostTxt": "Stip permette una riduzione dei costi di oltre il 67% rispetto al customer care tradizionale",
         "optimizeTitle": "Stip ottimizza il Social ed Email Customer Care della tua azienda",
-        "optimizeSetupTitle": "Facile Configurazione",
+        "optimizeSetupTitle": "Easy Setup",
         "optimizeSetupTxt": "L’Intelligenza Artificiale proprietaria di Stip è estremamente versatile e ti permette di avere la tua AI personalizzata in pochissimo tempo",
         "optimizeSocialTitle": "Social Listening",
         "optimizeSocialTxt": "Stip monitora costantemente tutti i canali social e individua tutte le menzioni della tua azienda, sia all’interno che all’esterno delle pagine ufficiali della compagnia",
@@ -109,7 +109,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contacts",
         // hero
-        "heroTitle": "Stip the platform that automates all Social & Email Customer Care activities",
+        "heroTitle": "Stip automates all Social & Email Customer Care activities",
         // btn
         "demoBtn": "DEMO REQUEST",
         "contactBtn": "CONTACT US",
@@ -214,12 +214,12 @@ $(document).ready(function () {
     if ((language != "it-IT" && language != null) || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
-            $(".stip-languageDrop").text("EN");
+            $("#stip-langDrop").text("EN");
         });
     } else {
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
-            $(".stip-languageDrop").text("IT");
+            $("#stip-langDrop").text("IT");
         });
     }
 
@@ -229,11 +229,6 @@ $(document).ready(function () {
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
         });
-        $(".stip-itBtn").css("color", "#FD6B15")
-        $(".stip-enBtn").css("color", "#4384f1")
-        $(".stip-hamburgerIcon").removeClass('active');
-        $(".stip-navModal").removeClass('stip-navModalAppear')
-        $('body').removeClass('overflow-body');
         if($(location).attr('href').includes("privacy-policy")){
             window.location = "privacy-policy.html"
         }
@@ -244,11 +239,6 @@ $(document).ready(function () {
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
         });
-        $(".stip-itBtn").css("color", "#4384f1")
-        $(".stip-enBtn").css("color", "#FD6B15")
-        $(".stip-hamburgerIcon").removeClass('active');
-        $(".stip-navModal").removeClass('stip-navModalAppear')
-        $('body').removeClass('overflow-body');
         if($(location).attr('href').includes("privacy-policy")){
             window.location = "privacy-policy-en.html"
         }

@@ -1,10 +1,4 @@
 .stip-privacyContainer {
   margin-top: 10em;
 }
-
-@media (max-width: 992px) {
-  .stip-privacyContainer {
-    margin-top: 0;
-  }
-}
 /*# sourceMappingURL=privacyPolicy.css.map */

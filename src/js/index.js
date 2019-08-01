@@ -41,80 +41,28 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
-    // change menu icon color in blog section
-    if ($(location).attr('href').includes("blog")) {
-        $(".line").addClass('stip-hamLineBlog');
+    if (!$(location).attr('href').includes("index") && !$(location).attr('href').includes("platform")) {
+        $('.stip-nav').css("padding", "0 5em")
+        $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
     }
 
-    if ($(location).attr('href').includes("contacts")) {
-        $('.stip-navDesktop').css("background-color", "white")
-        $('.stip-navDesktop').css("padding", "0.5em 10em")
-        $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
-        $('.logo').attr("src", "src/img/logoColor.svg")
-        $(".stip-navDesktopItem").css("color", "#4384f1")
-        $(".stip-languageDrop").css("color", "#4384f1")
-    }
-
-    if ($(location).attr('href').includes("privacy")) {
-        $('.stip-navDesktop').css("background-color", "white")
-        $('.stip-navDesktop').css("padding", "0.5em 10em")
-        $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
-        $('.stip-navMobile').css("position", "relative")
-        $('.logo').attr("src", "src/img/logoColor.svg")
-        $(".stip-navDesktopItem").css("color", "#4384f1")
-        $(".stip-languageDrop").css("color", "#4384f1")
-    }
-
-    let logoChangeCounter = 0 // 
     $(window).scroll(function () {
-        logoChangeCounter += 1
-        if ($(window).scrollTop() > 0) { // nav-item change on scroll
-            if (logoChangeCounter == 1) {
-                $('.logo').attr("src", "src/img/logoColor.svg")
-            }
-            $('.stip-navDesktop').css("background-color", "white")
-            $('.stip-navDesktop').css("padding", "0 10em")
-            $('.stip-navDesktop').css("box-shadow", "0 0rem 1rem rgba(0,0,0,.175)")
-            $(".stip-navDesktopItem").css("color", "#4384f1")
+        if ($(window).scrollTop() > 0 && ($(location).attr('href').includes("index") || $(location).attr('href').includes("platform"))) { // nav-item change on scroll
+            $('.stip-nav').css("padding", "0 5em")
+            $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
             $(".stip-languageDrop").css("color", "#4384f1")
 
-            $('.stip-menuIcon').addClass('stip-menuIconScrolled');
-            if ($(location).attr('href').includes("blog")) {
-                $(".line").removeClass('stip-hamLineBlog');
-            }
-        } else if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy")) {
-            logoChangeCounter = 0
-            $('.stip-navDesktop').css("background-color", "transparent")
-            $('.stip-navDesktop').css("padding", "2.5em 10em")
-            $('.stip-navDesktop').css("box-shadow", "none")
-            $('.logo').attr("src", "src/img/logoWhite.svg")
-            $(".stip-navDesktopItem").css("color", "#ffffff")
+        } else if ($(location).attr('href').includes("index") || $(location).attr('href').includes("platform")) {
+            $('.stip-nav').css("padding", "2em 5em")
+            $('.stip-nav').css("box-shadow", "none")
             $(".stip-languageDrop").css("color", "#ffffff")
-
-            $('.stip-menuIcon').removeClass('stip-menuIconScrolled');
-            if ($(location).attr('href').includes("blog")) {
-                $(".line").addClass('stip-hamLineBlog');
-            }
         }
 
-        $('.stip-hideMe').each(function (i) { // appear effect on scroll
+        /*$('.stip-hideMe').each(function (i) { // appear effect on scroll
             if ($(window).scrollTop() + $(window).height() + 100 > $(this).offset().top + $(this).outerHeight() - 30) {
                 $(this).animate({ 'opacity': '1' }, 500);
             }
-        });
-    });
-
-    $(".stip-menuIcon").click(function (e) { //hambuger icon animation
-        e.preventDefault();
-        $(".stip-hamburgerIcon").toggleClass('active');
-        $(".stip-navModal").toggleClass('stip-navModalAppear')
-        $('body').toggleClass('overflow-body');
-        if ($(location).attr('href').includes("blog")) {
-            $(".line").toggleClass('stip-hamLineBlog');
-        }
-        if ($(window).scrollTop() > 0) {
-            $('.stip-menuIcon').toggleClass('stip-menuIconScrolled');
-        }
+        });*/
     });
 
     $(".dropdown-menu li a").click(function () {
@@ -376,13 +324,18 @@ $(document).ready(function () {
     })
 
     // category dropdown
-    $(".stip-category").click(function () {
-        $("#stip-categoryItem").html($(this).text());
+    $(".stip-categoryDropItem").click(function () {
+        $("#stip-categoryDrop").html($(this).text());
+    });
+
+    // lang dropdown
+    $(".stip-langDropItem").click(function () {
+        $("#stip-langDrop").html($(this).text());
     });
 
     // card append
     $("#stip-loadMore").click(function () {
-        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryItem").html() };
+        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryDrop").html() };
         var source = document.getElementById("stip-blogCard").innerHTML;
         var template = Handlebars.compile(source);
         for (let index = 0; index < 3; index++) {
@@ -542,11 +495,11 @@ $(document).ready(function () {
     fbq('track', 'PageView');
     /* end analytics, facebook and cookies */
 
-    /* if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
+    if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
          AOS.init({
              duration: 500,
              easing: 'ease-in-out',
              disable: false
          });
-     }*/
+     }
 });
