@@ -49,6 +49,11 @@ $(document).ready(function () {
     if ($(location).attr('href').includes("contacts")) {
         $('.stip-nav').css("position", "relative")
     }
+    $("#navBtn").click(function () {
+        if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
+            $('.stip-nav').toggleClass("stip-shadow")
+        }
+    });
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0 && ($(location).attr('href').includes("index") || $(location).attr('href').includes("platform"))) { // nav-item change on scroll
@@ -500,10 +505,10 @@ $(document).ready(function () {
     /* end analytics, facebook and cookies */
 
     if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
-         AOS.init({
-             duration: 500,
-             easing: 'ease-in-out',
-             disable: false
-         });
-     }
+        AOS.init({
+            duration: 500,
+            easing: 'ease-in-out',
+            disable: false
+        });
+    }
 });

@@ -44,6 +44,11 @@ b {
 }
 
 @media (max-width: 768px) {
+  .stip-heroContainerPlatform h1 {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+  }
   .stip-heroScreen {
     max-width: 90% !important;
   }
@@ -204,6 +209,11 @@ b {
 
 .stip-rounded {
   border-radius: 1.25rem;
+}
+
+.stip-shadow {
+  -webkit-box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1) !important;
 }
 
 .stip-loadLogo {
@@ -584,6 +594,9 @@ b {
   }
   .stip-sectionBody {
     margin: 100px 0 0 0 !important;
+  }
+  .stip-heroContainer {
+    background-size: 120%;
   }
   .stip-btnHero {
     display: -webkit-box !important;

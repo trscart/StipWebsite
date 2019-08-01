@@ -58,6 +58,10 @@ $txtsize: 16px;
     border-radius: 1.25rem;
 }
 
+.stip-shadow{
+    box-shadow: 0 0rem 1rem rgba(0,0,0,0.1) !important;
+}
+
 .stip-loadLogo {
     height: 30%;
     transform-box: fill-box;
@@ -409,7 +413,7 @@ $txtsize: 16px;
             font-size: 12px !important;
         }
     }
-
+ 
     .stip-sectionTitle {
         padding: 0 5% !important;
         margin-top: 100px !important;
@@ -417,6 +421,10 @@ $txtsize: 16px;
 
     .stip-sectionBody {
         margin: 100px 0 0 0 !important;
+    }
+
+    .stip-heroContainer {
+        background-size: 120%;
     }
 
     .stip-btnHero {
