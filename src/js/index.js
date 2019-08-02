@@ -50,7 +50,6 @@ $(document).ready(function () {
         $('.stip-nav').css("position", "relative")
     }
     $("#navBtn").click(function () {
-        console.log("eo")
         if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
             $('.stip-nav').toggleClass("stip-shadow")
         }
@@ -89,66 +88,87 @@ $(document).ready(function () {
     });
 
     // ajax call for demo request
-    $(".stip-demoRequest").click(function () { // append demo section
-        let source
-        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
-            source = document.getElementById("stip-demoSection-en").innerHTML;
-        } else { // source it-IT demo section
-            source = document.getElementById("stip-demoSection-it").innerHTML;
-        }
-        let template = Handlebars.compile(source);
-        $('body').append(template)
-        $('body').css("overflow", "hidden")
+    let demoCall = function () {
+        $(".stip-demoRequest").click(function () { // append demo section
+            console.log("ie")
+            let source
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
+                source = document.getElementById("stip-demoSection-en").innerHTML;
+            } else { // source it-IT demo section
+                source = document.getElementById("stip-demoSection-it").innerHTML;
+            }
+            let template = Handlebars.compile(source);
+            $('body').append(template)
+            $('body').css("overflow", "hidden")
 
-        // ajax call for demo request
-        $("#stip-demoSend").click(function () {
-            if ($('#stip-firstName-demo').val() && $('#stip-lastName-demo').val() && $('#stip-email-demo').val()) {
-                $('.stip-inputRequired').css("border-color", "transparent")
-                $('.stip-labelRequired').css("color", "white")
+            // ajax call for demo request
+            $("#stip-demoSend").click(function () {
+                if ($('#stip-firstName-demo').val() && $('#stip-lastName-demo').val() && $('#stip-email-demo').val()) {
+                    $('.stip-inputRequired').css("border-color", "transparent")
+                    $('.stip-labelRequired').css("color", "white")
 
-                let data = {
-                    "company_name": "",
-                    "firstname": $('#stip-firstName-demo').val(),
-                    "lastname": $('#stip-lastName-demo').val(),
-                    "phone": $('#stip-phone-demo').val(),
-                    "email": $('#stip-email-demo').val(),
-                    "captcha": "..."
-                }
-                // process animation
-                $("#stip-demoSend").text("")
-                $("#stip-demoSend").append("<img style='width: 2em' src='src/img/loading.gif'>");
-                // fetch call
-                fetch('https://stip.io/app/stip_rest/api/company/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                    .then(function (res) {
-                        if (res.status == 201) { //if status 201
+                    let data = {
+                        "company_name": "",
+                        "firstname": $('#stip-firstName-demo').val(),
+                        "lastname": $('#stip-lastName-demo').val(),
+                        "phone": $('#stip-phone-demo').val(),
+                        "email": $('#stip-email-demo').val(),
+                        "captcha": "..."
+                    }
+                    // process animation
+                    $("#stip-demoSend").text("")
+                    $("#stip-demoSend").append("<img style='width: 2em' src='src/img/loading.gif'>");
+                    // fetch call
+                    fetch('https://stip.io/app/stip_rest/api/company/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                        .then(function (res) {
+                            if (res.status == 201) { //if status 201
 
-                            // append thank you message
-                            let context
-                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                                context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
-                            } else {
-                                context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+                                // append thank you message
+                                let context
+                                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                                    context = { thanksTitle: "Thank you for writing us!", thanksSubtitle: "We will contact you as soon as possible." };
+                                } else {
+                                    context = { thanksTitle: "Grazie per averci scritto!", thanksSubtitle: "Ti contatteremo al più presto." };
+                                }
+                                let source = document.getElementById("stip-thanks").innerHTML;
+                                let template = Handlebars.compile(source);
+                                $('body').append(template(context))
+
+                                $(".stip-closeReprompt").click(function () {
+                                    $(".stip-reprompt-container").css("display", "none")
+                                })
+
+                                $('.stip-messageSend').css("background-color", "#16B72E")
+                                $('.stip-messageSend').css("color", "white")
+                                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                                    $('.stip-messageSend').text("Sent");
+                                } else {
+                                    $('.stip-messageSend').text("Inviata");
+                                }
+                                setTimeout(function () {
+                                    $('.stip-messageSend').css("background-color", "#f8f9fa")
+                                    $('.stip-messageSend').css("color", "black")
+                                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                                        $('.stip-messageSend').text("Demo request");
+                                    } else {
+                                        $('.stip-messageSend').text("Richiedi demo");
+                                    }
+                                }, 1300);
                             }
-                            let source = document.getElementById("stip-thanks").innerHTML;
-                            let template = Handlebars.compile(source);
-                            $('body').append(template(context))
-
-                            $(".stip-closeReprompt").click(function () {
-                                $(".stip-reprompt-container").css("display", "none")
-                            })
-
-                            $('.stip-messageSend').css("background-color", "#16B72E")
+                        })
+                        .catch(function (err) { //if error
+                            $('.stip-messageSend').css("background-color", "#FF2828")
                             $('.stip-messageSend').css("color", "white")
                             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                                $('.stip-messageSend').text("Sent");
+                                $('.stip-messageSend').text("Error, try again");
                             } else {
-                                $('.stip-messageSend').text("Inviata");
+                                $('.stip-messageSend').text("Errore, riprova");
                             }
                             setTimeout(function () {
                                 $('.stip-messageSend').css("background-color", "#f8f9fa")
@@ -159,39 +179,22 @@ $(document).ready(function () {
                                     $('.stip-messageSend').text("Richiedi demo");
                                 }
                             }, 1300);
-                        }
-                    })
-                    .catch(function (err) { //if error
-                        $('.stip-messageSend').css("background-color", "#FF2828")
-                        $('.stip-messageSend').css("color", "white")
-                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            $('.stip-messageSend').text("Error, try again");
-                        } else {
-                            $('.stip-messageSend').text("Errore, riprova");
-                        }
-                        setTimeout(function () {
-                            $('.stip-messageSend').css("background-color", "#f8f9fa")
-                            $('.stip-messageSend').css("color", "black")
-                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                                $('.stip-messageSend').text("Demo request");
-                            } else {
-                                $('.stip-messageSend').text("Richiedi demo");
-                            }
-                        }, 1300);
-                    })
+                        })
 
-            } else {
-                $('.stip-inputRequired').css("border-color", "#FF2828")
-                $('.stip-labelRequired').css("color", "#FF2828")
-            }
-        });
+                } else {
+                    $('.stip-inputRequired').css("border-color", "#FF2828")
+                    $('.stip-labelRequired').css("color", "#FF2828")
+                }
+            });
 
-        $(".stip-demoCloseIcon").click(function (e) {
-            e.preventDefault()
-            $('body').css("overflow", "auto")
-            $(".stip-demoContainer").remove();
+            $(".stip-demoCloseIcon").click(function (e) {
+                e.preventDefault()
+                $('body').css("overflow", "auto")
+                $(".stip-demoContainer").remove();
+            })
         })
-    })
+    }
+
 
     // ajax call for contact request
     $("#stip-contactUs").click(function () {
@@ -360,6 +363,7 @@ $(document).ready(function () {
             var source = document.getElementById("stip-blogCta").innerHTML;
             var template = Handlebars.compile(source);
             $('#stip-blogCards').append(template(context))
+            demoCall()
         }
     })
 
