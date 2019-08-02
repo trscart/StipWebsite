@@ -6,9 +6,7 @@ if (sessionStorage.getItem('dontLoad') == null) { // do loading animation only o
 } else {
     $(".stip-loading").hide()
 }
-*/
 
-/* logo animation
 anime({
     targets: '.stip-loadLogo',
     scale: ["1", "1.05", "1"],
@@ -376,38 +374,6 @@ $(document).ready(function () {
                 1000);
         }
     })
-
-    // hashtag button append
-    let hashtag = ["#CustomerCare", "#CustomerSuccess", "#AssistenzaClienti", "#CustomerSatisfaction", "#IntelligenzaArtificiale", "#DeepLearning", "#SocialCustomerCare", "#CRM", "#IA"]
-    hashtag.forEach(function (item, index) {
-        $('#stip-hashtag').append("<div class='swiper-slide d-flex justify-content-center'><button type='button' class='btn btn-outline-primary m-2 stip-txt'>" + item + "</button></div>")
-    })
-
-    // swiper hashtag
-    /*if ($(location).attr('href').includes("blog.html")) {
-        var mySwiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            slidesPerView: 4,
-            slidesPerColumn: 2,
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                },
-                576: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                992: {
-                    slidesPerView: 4,
-                },
-            }
-        })
-    }*/
 
     if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
         setTimeout(function () {

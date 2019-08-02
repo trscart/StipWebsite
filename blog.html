@@ -24,6 +24,7 @@
     <!-- swiper -->
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">-->
     <!-- style -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="src/style/index.css">
 </head>
 
@@ -93,17 +94,6 @@
     </div>
 
     <div class="container">
-        <!--<div class="row d-flex justify-content-center">
-            <div class="col" style="z-index: 0;">
-                <div class="swiper-button-prev stip-swiper-btn"></div>
-                <div class="swiper-button-next stip-swiper-btn"></div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper" id="stip-hashtag">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <div class="row p-3 align-items-center">
             <h2 class="m-0 stip-h3">Filter by</h2>
             <div class="dropdown ml-4">
@@ -167,7 +157,7 @@
 
     <!-- article card -->
     <script id="stip-blogCard" type="text/x-handlebars-template">
-        <div class="m-3 shadow stip-rounded stip-blogCard" style="width: 18rem;">
+        <div class="m-3 shadow stip-rounded stip-blogCard" style="width: 18rem;" data-aos="fade">
             <img alt="card image" src="http://www.nationalgeographic.it/images/2016/12/06/164441083-abc66e5b-8d1b-46d7-a0aa-024b9dea5edb.jpg" class="card-img-top stip-cardImage">
             <div class="card-body">
                 <p class="card-text text-secondary stip-txt">{{cardDate}} | {{cardCategory}}</p>
@@ -314,7 +304,6 @@
     </script>
     <!-- end demo en-EN section -->
 
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
