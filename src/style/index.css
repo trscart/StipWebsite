@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap");
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -21,7 +22,7 @@ b {
 }
 
 .stip-heroContainerPlatform h1 {
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 800;
   text-align: center;
 }
@@ -176,12 +177,12 @@ b {
 }
 
 .stip-h1 {
-  font-size: 29px;
-  font-weight: 800;
+  font-size: 27px;
+  font-weight: 700;
 }
 
 .stip-h2 {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 600;
 }
 

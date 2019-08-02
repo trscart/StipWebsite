@@ -1,5 +1,7 @@
-* {
-    font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
+
+* { 
+    font-family: 'Poppins', sans-serif;
 }
 
 body { 
@@ -12,8 +14,8 @@ b {
 
 $stcolor: #4384f1;
 $ndcolor: #FD6B15;
-$h1size: 29px;
-$h2size: 24px;
+$h1size: 27px;
+$h2size: 21px;
 $h3size: 18px;
 $txtsize: 16px;
 
@@ -24,7 +26,7 @@ $txtsize: 16px;
 
 .stip-h1 {
     font-size: $h1size;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .stip-h2 {
