@@ -42,7 +42,7 @@ $(document).ready(function () {
     console.log("here!")
 
     // general css change
-    if (!$(location).attr('href').includes("index") && !$(location).attr('href').includes("platform")) {
+    if ($(location).attr('href').includes("contacts")) {
         $('.stip-nav').css("padding", "0 5em")
         $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
     }
@@ -57,12 +57,12 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 && ($(location).attr('href').includes("index") || $(location).attr('href').includes("platform"))) { // nav-item change on scroll
+        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("contacts")) { // nav-item change on scroll
             $('.stip-nav').css("padding", "0 5em")
             $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
             $(".stip-languageDrop").css("color", "#4384f1")
 
-        } else if ($(location).attr('href').includes("index") || $(location).attr('href').includes("platform")) {
+        } else if (!$(location).attr('href').includes("contacts")) {
             $('.stip-nav').css("padding", "2em 5em")
             $('.stip-nav').css("box-shadow", "none")
             $(".stip-languageDrop").css("color", "#ffffff")
