@@ -94,6 +94,8 @@ $(document).ready(function () {
             $('#stip-blogCards').append(template(context))
         }
         if ($('.stip-blogCard').length == 6) {
+            /*
+            // cta append
             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                 var context = { ctaTitle: "Full efficiency with zero effort. That is your Customer Care with Stip", ctaDemoBtn: "Demo request", ctaContactBtn: "Contact us" };
             } else {
@@ -105,7 +107,7 @@ $(document).ready(function () {
             // ajax call for demo request
             $(".stip-demoRequest").click(function () { // append demo section
                 demoCall()
-            })
+            })*/
         }
     })
 
