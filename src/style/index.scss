@@ -4,6 +4,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+* { 
+    color: #303030;
+}
+
 body { 
     overflow-x: hidden;
 }
@@ -338,17 +342,30 @@ $txtsize: 16px;
     }
 }
 
+.stip-footer2 {
+    margin-top: 5em;
+    border-top: 1.5px solid #ececec;
+
+    .stip-footerCta {
+        padding-top: 5%;
+
+        .stip-footerBtn {
+            margin-top: 25px;
+        }
+    }
+}
+
 .stip-footerLink {
     a {
+        color: #303030;
         display: block;
-        color: white;
         margin: 0.5em 0;
     }
 }
 
 .stip-footerTxt {
     .stip-policy {
-        color: white;
+        color: #303030;
     }
 }
 
