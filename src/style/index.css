@@ -3,16 +3,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
-* {
-  color: #303030;
-}
-
 body {
   overflow-x: hidden;
 }
 
 b {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .stip-heroContainerPlatform {
@@ -125,7 +121,7 @@ b {
 }
 
 .stip-articleFooter {
-  background-color: #4384f1;
+  border-top: 1.5px solid #ececec;
   margin-top: 10em;
 }
 

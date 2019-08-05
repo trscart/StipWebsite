@@ -2,18 +2,14 @@
 
 * { 
     font-family: 'Poppins', sans-serif;
-}
-
-* { 
-    color: #303030;
-}
+} 
 
 body { 
     overflow-x: hidden;
 }
 
 b {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 $stcolor: #4384f1;
@@ -329,7 +325,7 @@ $txtsize: 16px;
 
 .stip-footer {
     margin-top: 5em;
-    color: white;
+    color: white; 
     background: url("../img/footerWave.svg") no-repeat;
     background-size: cover;
 
