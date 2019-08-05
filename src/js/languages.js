@@ -102,7 +102,9 @@ let languages = {
         "loadMore": "scopri di più",
         "readArticle": "Leggi l'articolo",
         "ctaTitle": "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo",
-        "shareTxt": "Condividi su"
+        "shareTxt": "Condividi su",
+        "blogEmailTitle": "Resta con noi!",
+        "blogEmailSubtitle": "Vuoi rimanere aggiornato su tutti i trend del Digital Customer Care e sul mondo Stip? Scrivi qui la tua email."
     },
     "en-EN": {
 
@@ -207,7 +209,9 @@ let languages = {
         "loadMore": "load more",
         "readArticle": "Read the article",
         "ctaTitle": "Full efficiency with zero effort. That is your Customer Care with Stip",
-        "shareTxt": "Share on"
+        "shareTxt": "Share on",
+        "blogEmailTitle": "Don't miss anything!",
+        "blogEmailSubtitle": "What about keeping yourself updated with Digital Customer Care trends and with all the news from Stip world? Write your email right here."
     }
 }
 
