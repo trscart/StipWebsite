@@ -37,7 +37,7 @@ anime({
 */
 
 $(document).ready(function () {
-    console.log("here!")
+    console.log("here")
 
     // general css change
     if ($(location).attr('href').includes("contacts")) {
