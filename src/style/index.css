@@ -200,6 +200,10 @@ b {
   color: #4384f1;
 }
 
+.stip-mb {
+  margin-bottom: 5em;
+}
+
 .stip-hideMe {
   opacity: 0;
 }
