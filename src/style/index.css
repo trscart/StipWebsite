@@ -324,7 +324,7 @@ b {
 }
 
 .stip-demoRequest {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
   color: white;
   background-color: #FD6B15;
@@ -339,7 +339,7 @@ b {
 }
 
 .stip-contactUs {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
   color: white;
   background-color: transparent;
@@ -355,7 +355,7 @@ b {
 }
 
 .stip-contactUsHero {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
   color: #4384f1;
   background-color: transparent;
