@@ -15,7 +15,7 @@ b {
 $stcolor: #4384f1;
 $ndcolor: #FD6B15;
 $h1size: 27px;
-$h2size: 21px;
+$h2size: 21px; 
 $h3size: 18px;
 $txtsize: 16px;
 
@@ -24,24 +24,24 @@ $txtsize: 16px;
 @import "contacts.scss";
 @import "privacyPolicy.scss";
 
-.stip-h1 {
+.stip-h1 { 
     font-size: $h1size;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .stip-h2 {
     font-size: $h2size;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .stip-h3 {
     font-size: $h3size;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .stip-txt {
     font-size: $txtsize;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .stip-colorTxt {
