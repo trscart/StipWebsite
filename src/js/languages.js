@@ -60,7 +60,7 @@ let languages = {
         "optimizeMetricTitle": "Ricca di Funzionalità",
         "optimizeMetricTxt": "Stip fornisce una piattaforma per gestire il tuo CRM, prevede report e analisi sulla base di un set dettagliato di KPIs e può integrarsi con qualsiasi CRM aziendale",
         "learnMoreTitle": "Vuoi saperne di più?",
-        "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità o richiesta d’informazioni. D’altronde, il customer care è il nostro forte!",
+        "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità. D’altronde, il customer care è il nostro forte!",
 
         // platform page
         "howTitle": "Come funziona",
