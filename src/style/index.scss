@@ -163,6 +163,8 @@ $txtsize: 16px;
 }
 
 .stip-demoRequest {
+    height: 3em;
+    width: 12em;
     font-weight: 600;
     font-size: $h3size;
     color: white;
@@ -177,6 +179,8 @@ $txtsize: 16px;
 }
 
 .stip-contactUs {
+    height: 3em;
+    width: 12em;
     font-weight: 600;
     font-size: $h3size;
     color: white;
@@ -193,6 +197,8 @@ $txtsize: 16px;
 }
 
 .stip-contactUsHero {
+    height: 3em;
+    width: 12em;
     font-weight: 600;
     font-size: $h3size;
     color: $stcolor;
@@ -426,12 +432,6 @@ $txtsize: 16px;
     .stip-nav {
         padding: 0 1em !important;
     }
-
-    .stip-btnHero {
-        button {
-            font-size: 12px !important;
-        }
-    }
  
     .stip-sectionTitle {
         padding: 0 5% !important;
@@ -484,17 +484,11 @@ $txtsize: 16px;
         align-items: center !important;
 
         button:first-child {
-            margin: 0 0 10px 0 !important;
+            margin: 0 !important;
         }
 
         button:nth-child(2) {
             margin: 0 !important;
-        }
-    }
-
-    .stip-footerBtn {
-        button {
-            font-size: 12px !important;
         }
     }
 
@@ -559,7 +553,7 @@ $txtsize: 16px;
 
     .stip-btnHero {
         button {
-            font-size: 14px !important;
+            font-size: 15px !important;
         }
     }
 
@@ -584,7 +578,7 @@ $txtsize: 16px;
 
     .stip-footerBtn {
         button {
-            font-size: 14px !important;
+            font-size: 15px !important;
         }
     }
 }
