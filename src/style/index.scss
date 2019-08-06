@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
 
 * { 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
 } 
 
 body { 
@@ -95,6 +95,13 @@ $txtsize: 16px;
 .stip-nav {
     transition: 0.5s;
     padding: 2em 5em;
+}
+
+.stip-btnNav{
+    border: none;
+    &:focus{
+        outline: none;
+    }
 }
 
 .stip-active {
