@@ -484,7 +484,8 @@ $(document).ready(function () {
         AOS.init({
             duration: 500,
             easing: 'ease-in-out',
-            disable: false
+            disable: false,
+            once: true
         });
     }
 });
