@@ -337,6 +337,10 @@ b {
           align-items: center;
 }
 
+.stip-heroContainer h1 {
+  font-size: 32px;
+}
+
 .stip-demoRequest {
   height: 3em;
   width: 12em;
@@ -590,7 +594,7 @@ b {
     padding: 0 5% !important;
   }
   .stip-sectionBody {
-    margin: 100px 0 0 0 !important;
+    margin: 3em 0 0 0 !important;
   }
   .stip-heroContainer {
     background-size: 160%;
@@ -620,6 +624,16 @@ b {
   .stipCaringIconDim {
     height: 80px !important;
     width: 150px !important;
+  }
+  .stip-howWork {
+    padding: 2em !important;
+    padding-top: 12em !important;
+  }
+  .stip-howWork h2 {
+    font-size: 1.7em !important;
+  }
+  .stip-howWork p {
+    font-size: 0.7em !important;
   }
   .stip-emailSection {
     -webkit-box-shadow: none !important;
@@ -669,6 +683,27 @@ b {
   .stip-demoCloseIcon i {
     color: #4384f1 !important;
   }
+  .stip-howWork {
+    padding: 3em;
+  }
+  .stip-howWork h2 {
+    font-size: 1.7em;
+  }
+  .stip-howWork p {
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .stip-howWork {
+    padding: 5em;
+  }
+  .stip-howWork h2 {
+    font-size: 2em;
+  }
+  .stip-howWork p {
+    font-size: 1em;
+  }
 }
 
 @media (max-width: 992px) {
@@ -703,7 +738,7 @@ b {
     margin-top: 10em !important;
   }
   .stip-sectionBody {
-    margin: 100px 5% 0 5% !important;
+    margin: 3em 5% 0 5% !important;
   }
   .stipIconDim {
     height: 10em;
