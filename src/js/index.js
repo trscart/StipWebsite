@@ -50,6 +50,7 @@ $(document).ready(function () {
     $("#navBtn").click(function () {
         if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
             $('.stip-nav').toggleClass("stip-shadow")
+            $('.stip-nav').css("background-color", "white")
         }
     });
 

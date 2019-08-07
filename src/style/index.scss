@@ -94,6 +94,7 @@ $txtsize: 16px;
 }
 
 .stip-nav {
+    z-index: 1030;
     transition: 0.5s;
     padding: 2em 5em;
 }
@@ -163,7 +164,7 @@ $txtsize: 16px;
     height: 100vh;
     padding: 10%;
     background: url("../img/heroBannerIlustration.png") no-repeat;
-    background-size: 80%;
+    background-size: 90%;
     background-position-y: bottom;
     background-position-x: right;
     position: relative;
@@ -224,50 +225,6 @@ $txtsize: 16px;
     }
 }
 
-.waves {
-    position: absolute;
-    bottom: -135px;
-    width: 100%;
-}
-
-.wave {
-    width: 2402px;
-    height: 427px;
-    background: url("https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png") no-repeat center bottom;
-    position: absolute;
-    animation: wave 5s ease-in-out alternate infinite;
-    left: -180px;
-    bottom: 0px;
-}
-
-.wave.a {
-    background-position: 0 -854px;
-}
-
-.wave.b {
-    animation-delay: 6s;
-    background-position: 0 -427px;
-}
-
-.wave.c {
-    animation-delay: 1.2s;
-    background-position: 0 0;
-}
-
-@keyframes wave {
-    0% {
-        transform: translate(0px, 0px);
-    }
-
-    50% {
-        transform: translate(-80px, 30px);
-    }
-
-    100% {
-        transform: translate(160px, -60px);
-    }
-}
-
 .stip-sectionTitle {
     padding: 0 25%;
     text-align: center;
@@ -323,6 +280,36 @@ $txtsize: 16px;
 .stip-esseLogo {
     background: url("../img/esselunga.png") no-repeat center center;
     background-size: contain;
+}
+
+.stip-howWork {
+    padding: 10em;
+
+    h2 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+.stip-caringBG{
+    background: url("../img/caringBG.png") no-repeat;
+    background-size: contain;
+    background-position-x: left;
+}
+
+.stip-ticketBG{
+    background: url("../img/ticketBG.png") no-repeat;
+    background-size: contain;
+    background-position-x: right;
+}
+
+.stip-redirectBG{
+    background: url("../img/redirectBG.png") no-repeat;
+    background-size: contain;
+    background-position-x: left;
 }
 
 .stip-emailSectionBtn {
@@ -451,7 +438,7 @@ $txtsize: 16px;
     }
 
     .stip-heroContainer {
-        background-size: 120%;
+        background-size: 160%;
     }
 
     .stip-btnHero {
