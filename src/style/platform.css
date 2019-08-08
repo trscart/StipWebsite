@@ -36,6 +36,7 @@
 
 @media (max-width: 576px) {
   .stip-heroPlatform {
+    height: 90vh;
     background-size: 150%;
   }
   .stip-heroPlatform h1 {
