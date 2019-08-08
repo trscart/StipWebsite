@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700|Nunito:300,400,600,700&display=swap");
 * {
   font-family: 'Roboto', sans-serif;
   font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -179,7 +180,7 @@ b {
 
 .stip-h1 {
   font-size: 29px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .stip-h2 {
@@ -327,7 +328,7 @@ b {
   height: 100vh;
   padding: 10%;
   background: url("../img/heroBannerIlustration.png") no-repeat;
-  background-size: 90%;
+  background-size: contain;
   background-position-y: bottom;
   background-position-x: right;
   position: relative;
@@ -596,9 +597,6 @@ b {
   .stip-sectionBody {
     margin: 3em 0 0 0 !important;
   }
-  .stip-heroContainer {
-    background-size: 160%;
-  }
   .stip-btnHero {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -627,13 +625,14 @@ b {
   }
   .stip-howWork {
     padding: 2em !important;
-    padding-top: 12em !important;
+    padding-top: 20em !important;
+    background-size: 85%;
   }
   .stip-howWork h2 {
     font-size: 1.7em !important;
   }
   .stip-howWork p {
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
   }
   .stip-emailSection {
     -webkit-box-shadow: none !important;

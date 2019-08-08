@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700|Nunito:300,400,600,700&display=swap');
 
 * {
     font-family: 'Roboto', sans-serif;
     font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -27,7 +28,7 @@ $txtsize: 16px;
 
 .stip-h1 {
     font-size: $h1size;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .stip-h2 {
@@ -164,7 +165,7 @@ $txtsize: 16px;
     height: 100vh;
     padding: 10%;
     background: url("../img/heroBannerIlustration.png") no-repeat;
-    background-size: 90%;
+    background-size: contain;
     background-position-y: bottom;
     background-position-x: right;
     position: relative;
@@ -440,10 +441,6 @@ $txtsize: 16px;
         margin: 3em 0 0 0 !important;
     }
 
-    .stip-heroContainer {
-        background-size: 160%;
-    }
-
     .stip-btnHero {
         display: flex !important;
         flex-direction: column;
@@ -471,14 +468,15 @@ $txtsize: 16px;
 
     .stip-howWork {
         padding: 2em !important;
-        padding-top: 12em !important;
+        padding-top: 20em !important;
+        background-size: 85%;
 
         h2 {
             font-size: 1.7em !important;
         }
 
         p {
-            font-size: 0.7em !important;
+            font-size: 0.8em !important;
         }
     }
 
