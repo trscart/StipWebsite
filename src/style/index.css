@@ -57,6 +57,7 @@ b {
     background-size: 150%;
   }
   .stip-heroPlatform h1 {
+    margin-top: -7em;
     font-size: 21px !important;
   }
 }
