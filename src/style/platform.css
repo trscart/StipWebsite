@@ -50,6 +50,9 @@
     font-size: 28px;
     text-align: center !important;
   }
+  .stip-heroPlatform p {
+    text-align: center !important;
+  }
   .stip-heroScreen {
     max-width: 90% !important;
   }

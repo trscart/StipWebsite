@@ -67,6 +67,9 @@ b {
     font-size: 28px;
     text-align: center !important;
   }
+  .stip-heroPlatform p {
+    text-align: center !important;
+  }
   .stip-heroScreen {
     max-width: 90% !important;
   }
@@ -616,7 +619,7 @@ b {
     background-position-y: 85%;
   }
   .stip-heroContainer h1 {
-    margin-top: -12em;
+    margin-top: -10em;
     font-size: 32px;
   }
   .stip-btnHero {

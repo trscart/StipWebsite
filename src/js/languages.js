@@ -29,7 +29,7 @@ let languages = {
         "footerBlogMore": "Scopri tutti gli articoli",
 
         // home page
-        "heroSubtitle": "Con Stip puoi ridurre i costi e i tempi di gestione della tua assistenza clienti, permettendo ai tuoi operatori di migliorare le proprie performance, grazie all’automatizzazione di tutte le attività di Customer Care. La nostra Intelligenza Artificiale permette agli agenti di concentrarsi sull’unica cosa che davvero conta: rendere felici i tuoi clienti.",
+        "heroSubtitle": "La nostra Intelligenza Artificiale aiuta le aziende a ridurre i tempi di gestione, i costi dell'assistenza clienti e ad aumentare le performance dei tuoi operatori, automatizzando tutte le attività di customer care.",
         "whatTitle": "Semplifica tutte le interazioni con i tuoi clienti",
         "whatSubtitle": "Stip applica la sua AI a 3 livelli per snellire il processo di assistenza ai clienti, rendendo il lavoro dei tuoi operatori più efficiente",
         "whatCaringTitle": "Assisti i tuoi clienti in difficoltà",
@@ -63,6 +63,7 @@ let languages = {
         "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità. D’altronde, il customer care è il nostro forte!",
 
         // platform page
+        "heroPlatformSubtitle": "Stip è nata per rendere il tuo Customer Care efficiente, veloce e senza sforzi",
         "howTitle": "Come funziona",
         "howHoldTitle": "Tieni tutto sotto controllo",
         "howHoldTxt": "Stip individua e monitora tutti i contenuti relazionati con il tuo brand, sia all’interno che all’esterno dei canali ufficiali dell’azienda. La piattaforma definisce automaticamente quali contenuti degli utenti necessitino di una gestione e quali possano essere ignorati.",
@@ -137,7 +138,7 @@ let languages = {
         "footerBlogMore": "Check out all the articles",
 
         // home page
-        "heroSubtitle": "Stip reduces customer care costs, decreases ticket management time and enables customer service staff to become more productive by automating all social and email customer care processes. Our artificial intelligence allows agents to focus on the one thing that truly matters: making customers happy.",
+        "heroSubtitle": "Our Artificial Intelligence helps companies to reduce ticket management time, customer care costs and increase customer service staff performances by automating all customer care activities.",
         "whatTitle": "Streamline All Your Customer Care Interactions",
         "whatSubtitle": "Stip applies 3 layers of AI to your Customer Care interactions, making your service team more efficient.",
         "whatCaringTitle": "Spot the Clients in Need of Care",
@@ -171,6 +172,7 @@ let languages = {
         "learnMoreSubtitle": "Our team is at your service. After all, customer care is what we do best!",
 
         // platform page
+        "heroPlatformSubtitle": "Stip is born to make your Company’s Customer Care efficient, fast and effortless",
         "howTitle": "How It works",
         "howHoldTitle": "Be in Control",
         "howHoldTxt": "Stip monitors and identifies all user generated content related to your brand, both inside and outside the company’s official channels. The platform automatically defines which content needs a response and which can be ignored.",
