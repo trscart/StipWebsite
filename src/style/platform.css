@@ -1,6 +1,10 @@
-.stip-heroContainerPlatform {
+.stip-heroPlatform {
   height: 100vh;
   padding: 10%;
+  background: url("../img/heroPlatformIllustration.png") no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  background-position-x: left;
   position: relative;
   overflow: hidden;
   -webkit-box-align: center;
@@ -8,10 +12,9 @@
           align-items: center;
 }
 
-.stip-heroContainerPlatform h1 {
-  font-size: 38px;
-  font-weight: 500;
-  text-align: center;
+.stip-heroPlatform h1 {
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .stip-platformHero {
@@ -31,11 +34,19 @@
   background-position: center center;
 }
 
+@media (max-width: 576px) {
+  .stip-heroPlatform {
+    background-size: 150%;
+  }
+  .stip-heroPlatform h1 {
+    font-size: 21px !important;
+  }
+}
+
 @media (max-width: 768px) {
-  .stip-heroContainerPlatform h1 {
+  .stip-heroPlatform h1 {
     font-size: 28px;
-    font-weight: 500;
-    text-align: center;
+    text-align: center !important;
   }
   .stip-heroScreen {
     max-width: 90% !important;

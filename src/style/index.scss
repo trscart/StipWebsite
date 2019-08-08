@@ -139,11 +139,11 @@ $txtsize: 16px;
             color: white;
         }
     }
-
+ 
     a {
         cursor: pointer;
     }
-}
+} 
 
 .stip-reprompt-container {
     display: flex;
@@ -456,16 +456,6 @@ $txtsize: 16px;
 
     }
 
-    .stipIconDim {
-        height: 15em;
-        width: 20em;
-    }
-
-    .stipCaringIconDim {
-        height: 80px !important;
-        width: 150px !important;
-    }
-
     .stip-howWork {
         padding: 2em !important;
         padding-top: 20em !important;
@@ -599,16 +589,6 @@ $txtsize: 16px;
 
     .stip-sectionBody {
         margin: 3em 5% 0 5% !important;
-    }
-
-    .stipIconDim {
-        height: 10em;
-        width: 15em;
-    }
-
-    .stipCaringIconDim {
-        height: 80px !important;
-        width: 150px !important;
     }
 
     .stip-footerBtn {

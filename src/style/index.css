@@ -13,9 +13,13 @@ b {
   font-weight: 500;
 }
 
-.stip-heroContainerPlatform {
+.stip-heroPlatform {
   height: 100vh;
   padding: 10%;
+  background: url("../img/heroPlatformIllustration.png") no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  background-position-x: left;
   position: relative;
   overflow: hidden;
   -webkit-box-align: center;
@@ -23,10 +27,9 @@ b {
           align-items: center;
 }
 
-.stip-heroContainerPlatform h1 {
-  font-size: 38px;
-  font-weight: 500;
-  text-align: center;
+.stip-heroPlatform h1 {
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .stip-platformHero {
@@ -46,11 +49,19 @@ b {
   background-position: center center;
 }
 
+@media (max-width: 576px) {
+  .stip-heroPlatform {
+    background-size: 150%;
+  }
+  .stip-heroPlatform h1 {
+    font-size: 21px !important;
+  }
+}
+
 @media (max-width: 768px) {
-  .stip-heroContainerPlatform h1 {
+  .stip-heroPlatform h1 {
     font-size: 28px;
-    font-weight: 500;
-    text-align: center;
+    text-align: center !important;
   }
   .stip-heroScreen {
     max-width: 90% !important;
@@ -615,14 +626,6 @@ b {
   .stip-btnHero button:nth-child(2) {
     margin: 0 !important;
   }
-  .stipIconDim {
-    height: 15em;
-    width: 20em;
-  }
-  .stipCaringIconDim {
-    height: 80px !important;
-    width: 150px !important;
-  }
   .stip-howWork {
     padding: 2em !important;
     padding-top: 20em !important;
@@ -738,14 +741,6 @@ b {
   }
   .stip-sectionBody {
     margin: 3em 5% 0 5% !important;
-  }
-  .stipIconDim {
-    height: 10em;
-    width: 15em;
-  }
-  .stipCaringIconDim {
-    height: 80px !important;
-    width: 150px !important;
   }
   .stip-footerBtn button {
     font-size: 15px !important;

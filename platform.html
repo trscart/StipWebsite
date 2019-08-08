@@ -56,12 +56,12 @@
 <body>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top navbar-expand-sm stip-nav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-sm stip-nav">
         <a class="navbar-brand" href="./index.html">
             <img alt="logo" class="logo" src="src/img/logoColor.svg" width="80" height="80">
         </a>
-        <button class="navbar-toggler stip-btnNav" id="navBtn" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler stip-btnNav" id="navBtn" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -98,13 +98,12 @@
     <!-- end navbar -->
 
     <!-- heroBanner -->
-    <div class="container-fluid d-flex justify-content-center stip-heroContainerPlatform">
-        <div class="row">
-            <div class="col d-flex flex-column align-items-center stip-platformHero">
-                <h1 class="mb-4 lang" key="heroTitle" id="stip-scrollDetect">La piattaforma che automatizza il tuo
-                    Social ed Email Customer Care</h1>
-                <img alt="herobanner platform illustration" class="align-self-center stip-heroScreen"
-                    src="src/img/heroPlatform.png">
+    <div class="container-fluid d-flex stip-heroPlatform">
+        <div class="row flex-grow-1">
+            <div class="col-md-5 offset-md-7 d-flex flex-grow-1 flex-column justify-content-center" style="z-index: 1;">
+                <h1 class="text-right lang" key="heroTitle" id="stip-scrollDetect">Stip automatizza il tuo Social ed Email
+                    Customer Care
+                </h1>
             </div>
         </div>
     </div>
@@ -112,7 +111,7 @@
 
     <!-- "come funziona stip" section -->
     <div class="container-fluid stip-function" id="stip-function">
-        <div class="row justify-content-center stip-sectionTitle stip-hideMe" data-aos="fade">
+        <div class="row justify-content-center stip-hideMe" data-aos="fade">
             <h2 class="stip-h1 lang" key="howTitle">Come funziona</h2>
         </div>
         <div class="row stip-sectionBody">
