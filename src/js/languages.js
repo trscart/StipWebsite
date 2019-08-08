@@ -36,7 +36,7 @@ let languages = {
         "caringTitle": "Individua tutte le richieste di assistenza e sii sempre presente per i tuoi clienti",
         "whatCaringTxt": "Stip monitora tutti i contenuti prodotti dagli utenti che abbiano a che fare con la tua azienda, sia all’interno che all’esterno dei canali ufficiali della compagnia. La piattaforma identifica automaticamente i contenuti che non richiedono l’intervento di un operatore, lasciando ai tuoi agenti il compito di concentrarsi unicamente sulle richieste rilevanti",
         "whatTicketTitle": "Fornisci ai tuoi operatori le informazioni necessarie",
-        "ticketTitle": "Dai al tuoi Chatbot la possibilità di conoscere i tuoi clienti e raccogliere informazioni preziose",
+        "ticketTitle": "Dai al tuo Chatbot la possibilità di conoscere i tuoi clienti e raccogliere informazioni preziose",
         "whatTicketTxt": "Stip interagisce proattivamente e in tempo reale con i tuoi clienti, domandandogli tutte le informazioni necessarie per gestire la loro richiesta. I tuoi operatori avranno così accesso a tutte le informazioni rilevanti su ogni cliente, a cui potranno accedere dal CRM aziendale o dalla pratica piattaforma di Stip per la gestione dei ticket",
         "whatRedirectTitle": "Scegli sempre l’agente giusto",
         "redirectTitle": "Crea e categorizza automaticamente i tuoi ticket e reindirizzali all'operatore più adatto",

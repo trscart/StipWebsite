@@ -11,7 +11,7 @@ body {
     max-width: 1920px;
     margin: auto;
 }
-  
+
 b {
     font-weight: 500;
 }
@@ -141,11 +141,11 @@ $txtsize: 16px;
             color: white;
         }
     }
- 
+
     a {
         cursor: pointer;
     }
-} 
+}
 
 .stip-reprompt-container {
     display: flex;
@@ -173,7 +173,8 @@ $txtsize: 16px;
     position: relative;
     overflow: hidden;
     align-items: center;
-    h1{
+
+    h1 {
         font-size: 32px;
     }
 }
@@ -258,12 +259,9 @@ $txtsize: 16px;
     width: 20em;
 }
 
-.stip-clientSection {
-    margin-top: 5%;
-}
 
 .stip-clientLogoDim {
-    height: 150px;
+    height: 7em;
     width: 200px;
 }
 
@@ -441,15 +439,17 @@ $txtsize: 16px;
 
     .stip-sectionTitle {
         padding: 0 5% !important;
+        margin-top: 8em;
     }
- 
+
     .stip-sectionBody {
         margin: 3em 0 0 0 !important;
     }
 
-    .stip-heroContainer { 
+    .stip-heroContainer {
         background-position-y: 85%;
-        h1{
+
+        h1 {
             margin-top: -12em;
             font-size: 32px;
         }
@@ -538,6 +538,7 @@ $txtsize: 16px;
 
     .stip-howWork {
         padding: 3em;
+
         h2 {
             font-size: 1.7em;
         }
@@ -608,22 +609,5 @@ $txtsize: 16px;
         button {
             font-size: 15px !important;
         }
-    }
-}
-
-@media (min-width:992px) and (max-width: 1200px) {
-    .stip-waveBody {
-        background-position-y: 25% !important;
-    }
-}
-
-@media (min-width:1200px) {
-    .stip-clientLogoDim {
-        height: 100px !important;
-        width: 250px !important;
-    }
-
-    .stip-waveBody {
-        background-position-y: 10% !important;
     }
 }

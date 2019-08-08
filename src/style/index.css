@@ -439,12 +439,8 @@ b {
   width: 20em;
 }
 
-.stip-clientSection {
-  margin-top: 5%;
-}
-
 .stip-clientLogoDim {
-  height: 150px;
+  height: 7em;
   width: 200px;
 }
 
@@ -611,6 +607,7 @@ b {
   }
   .stip-sectionTitle {
     padding: 0 5% !important;
+    margin-top: 8em;
   }
   .stip-sectionBody {
     margin: 3em 0 0 0 !important;
@@ -758,22 +755,6 @@ b {
   }
   .stip-footerBtn button {
     font-size: 15px !important;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  .stip-waveBody {
-    background-position-y: 25% !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .stip-clientLogoDim {
-    height: 100px !important;
-    width: 250px !important;
-  }
-  .stip-waveBody {
-    background-position-y: 10% !important;
   }
 }
 /*# sourceMappingURL=index.css.map */
