@@ -62,7 +62,6 @@ $(document).ready(function () {
             $(".stip-languageDrop").css("color", "#4384f1")
 
         } else if (!$(location).attr('href').includes("contacts")) {
-            console.log("eo")
             $('.stip-nav').css("padding", "2em 5em")
             $('.stip-nav').css("background-color", "transparent")
             $('.stip-nav').css("box-shadow", "none")
