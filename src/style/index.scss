@@ -113,9 +113,10 @@ $txtsize: 16px;
     padding: .5rem;
 
     button {
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
+
         &:focus {
             box-shadow: none;
         }
@@ -162,7 +163,7 @@ $txtsize: 16px;
     height: 3em;
     width: 12em;
     font-weight: 600;
-    font-size: $h3size;
+    font-size: $h3size - 2;
     color: white;
     background-color: $ndcolor;
     border-color: transparent;
@@ -178,7 +179,7 @@ $txtsize: 16px;
     height: 3em;
     width: 12em;
     font-weight: 600;
-    font-size: $h3size;
+    font-size: $h3size - 2;
     color: white;
     background-color: transparent;
     border: 3px solid white;
@@ -196,7 +197,7 @@ $txtsize: 16px;
     height: 3em;
     width: 12em;
     font-weight: 600;
-    font-size: $h3size;
+    font-size: $h3size - 2;
     color: $stcolor;
     background-color: transparent;
     border: 3px solid $stcolor;
@@ -334,7 +335,7 @@ $txtsize: 16px;
 }
 
 .stip-minFooter {
-    border-top: 1.5px solid #e8e8e8; 
+    border-top: 1.5px solid #e8e8e8;
     margin-top: 10em;
 }
 
@@ -384,7 +385,7 @@ $txtsize: 16px;
     }
 
     .stip-langBtnBox {
-        padding: 0.5em 0 1em 0; 
+        padding: 0.5em 0 1em 0;
     }
 
     .stip-mt {
