@@ -76,10 +76,6 @@ b {
     }*/
 }
 
-.stip-hamLineBlog {
-  background-color: #4384f1 !important;
-}
-
 .stip-heroArticleImg {
   background: url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
   background-position: top center !important;
@@ -114,14 +110,6 @@ b {
   width: 100%;
 }
 
-.stip-backIcon {
-  font-size: 35px;
-}
-
-.stip-backIcon:hover {
-  text-decoration: none;
-}
-
 .stip-articleImg {
   background: url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
   background-size: cover;
@@ -138,7 +126,7 @@ b {
   border-radius: 50%;
 }
 
-.stip-articleFooter {
+.stip-minFooter {
   border-top: 1.5px solid #e8e8e8;
   margin-top: 10em;
 }
@@ -506,6 +494,11 @@ b {
 
 .stip-socialIcon path:hover {
   fill: #FD6B15;
+}
+
+.stip-minFooter {
+  border-top: 1.5px solid #e8e8e8;
+  margin-top: 10em;
 }
 
 .stip-demoContainer {

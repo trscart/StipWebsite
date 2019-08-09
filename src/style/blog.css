@@ -1,7 +1,3 @@
-.stip-hamLineBlog {
-  background-color: #4384f1 !important;
-}
-
 .stip-heroArticleImg {
   background: url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
   background-position: top center !important;
@@ -17,31 +13,15 @@
   border-radius: 1.25rem 1.25rem 0 0;
 }
 
-.swiper-container {
-  width: 90%;
+/*.swiper-container {
+    width: 90%;
 }
 
 .stip-swiper-btn {
-  height: 1.5em;
-}
-
+    height: 1.5em;
+}*/
 .stip-latestArticle {
   background-color: #4384f1;
-}
-
-.stip-articleNav {
-  padding: 2rem 10rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  width: 100%;
-}
-
-.stip-backIcon {
-  font-size: 35px;
-}
-
-.stip-backIcon:hover {
-  text-decoration: none;
 }
 
 .stip-articleImg {
@@ -60,11 +40,6 @@
   border-radius: 50%;
 }
 
-.stip-articleFooter {
-  border-top: 1.5px solid #e8e8e8;
-  margin-top: 10em;
-}
-
 @media (max-width: 576px) {
   .stip-latestArticle {
     border-radius: 0 !important;
@@ -75,11 +50,8 @@
   .stip-articleImg {
     border-radius: 0 !important;
   }
-  .stip-articleNav {
-    padding: 1rem 2rem;
-  }
-  .swiper-container {
-    width: 100% !important;
-  }
+  /*.swiper-container {
+        width: 100% !important;
+    }*/
 }
 /*# sourceMappingURL=blog.css.map */
