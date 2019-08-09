@@ -91,23 +91,15 @@ b {
   border-radius: 1.25rem 1.25rem 0 0;
 }
 
-.swiper-container {
-  width: 90%;
+/*.swiper-container {
+    width: 90%;
 }
 
 .stip-swiper-btn {
-  height: 1.5em;
-}
-
+    height: 1.5em;
+}*/
 .stip-latestArticle {
   background-color: #4384f1;
-}
-
-.stip-articleNav {
-  padding: 2rem 10rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  width: 100%;
 }
 
 .stip-articleImg {
@@ -126,11 +118,6 @@ b {
   border-radius: 50%;
 }
 
-.stip-minFooter {
-  border-top: 1.5px solid #e8e8e8;
-  margin-top: 10em;
-}
-
 @media (max-width: 576px) {
   .stip-latestArticle {
     border-radius: 0 !important;
@@ -141,12 +128,9 @@ b {
   .stip-articleImg {
     border-radius: 0 !important;
   }
-  .stip-articleNav {
-    padding: 1rem 2rem;
-  }
-  .swiper-container {
-    width: 100% !important;
-  }
+  /*.swiper-container {
+        width: 100% !important;
+    }*/
 }
 
 .stip-contactForm {
@@ -306,7 +290,7 @@ b {
 .stip-heroContainer {
   height: 100vh;
   padding: 10%;
-  background: url("../img/heroBannerIlustration.png") no-repeat;
+  background: url("../img/heroBannerIllustration.png") no-repeat;
   background-size: contain;
   background-position-y: bottom;
   background-position-x: right;
