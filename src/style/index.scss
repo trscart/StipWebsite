@@ -71,7 +71,7 @@ $txtsize: 16px;
     box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1) !important;
 }
 
-.stip-loadLogo {
+/*.stip-loadLogo {
     height: 30%;
     transform-box: fill-box;
     opacity: 1;
@@ -93,7 +93,7 @@ $txtsize: 16px;
 
 .stip-loading {
     display: flex;
-}
+}*/
 
 .stip-nav {
     z-index: 1030;
@@ -106,26 +106,6 @@ $txtsize: 16px;
 
     &:focus {
         outline: none;
-    }
-}
-
-.stip-btnLang {
-    padding: .5rem;
-    border: 0;
-    color: #303030;
-    background-color: transparent;
-
-    &:hover {
-        color: #303030;
-        background-color: transparent;
-    }
-
-    &:focus {
-        box-shadow: none !important;
-    }
-
-    &:active {
-        background-color: transparent !important;
     }
 }
 
@@ -144,39 +124,6 @@ $txtsize: 16px;
 
 .stip-active {
     color: $ndcolor !important;
-}
-
-.stip-languageBtnBox {
-    position: absolute;
-    top: 4em;
-    left: 2.5em;
-
-    .stip-languageBtn {
-        color: #4384f1;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-}
-
-.stip-languageDropBox {
-    .stip-languageDrop {
-        color: white;
-        padding: 0;
-
-        &:focus {
-            box-shadow: none;
-        }
-
-        &:hover {
-            color: white;
-        }
-    }
-
-    a {
-        cursor: pointer;
-    }
 }
 
 .stip-reprompt-container {
@@ -280,27 +227,14 @@ $txtsize: 16px;
     color: $stcolor;
 }
 
-.stipIconDim {
-    height: 15em;
-    width: 20em;
-    padding: 2em;
-}
-
-.stipIllustrationDim {
+.stip-IllustrationDim {
     height: 15em;
     width: 20em;
 }
-
 
 .stip-clientLogoDim {
     height: 7em;
     width: 200px;
-}
-
-.stip-waveBody {
-    background: url("../img/bodyWave.svg") no-repeat;
-    background-size: auto;
-    background-position-y: 30%;
 }
 
 .stip-agosLogo {
@@ -359,28 +293,7 @@ $txtsize: 16px;
     }
 }
 
-.stip-footerImg {
-    margin-top: 200px;
-    position: absolute;
-    max-width: 100%;
-}
-
 .stip-footer {
-    margin-top: 5em;
-    color: white;
-    background: url("../img/footerWave.svg") no-repeat;
-    background-size: cover;
-
-    .stip-footerCta {
-        padding-top: 10%;
-
-        .stip-footerBtn {
-            margin-top: 25px;
-        }
-    }
-}
-
-.stip-footer2 {
     margin-top: 5em;
     border-top: 1.5px solid #e8e8e8;
 
@@ -550,21 +463,13 @@ $txtsize: 16px;
     }
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
+    .stip-howWork {
+        background-size: 50%;
+    }
+}
+
 @media (max-width: 768px) {
-
-    .stip-heroIllustration {
-        max-width: 140% !important;
-    }
-
-    .stip-waveBody {
-        background-position-y: 35% !important;
-    }
-
-    .stip-navModalImg {
-        right: -5em !important;
-        top: 25em !important;
-        max-width: 85% !important;
-    }
 
     .stip-demoCloseIcon {
         i {
@@ -596,16 +501,6 @@ $txtsize: 16px;
         p {
             font-size: 1em;
         }
-    }
-}
-
-@media (max-width: 992px) {
-    .stip-navDesktop {
-        display: none;
-    }
-
-    .stip-navMobile {
-        display: flex;
     }
 }
 
