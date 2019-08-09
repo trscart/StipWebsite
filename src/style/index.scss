@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700|Nunito:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Nunito:300,400,600,700&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Nunito', sans-serif;
 }
@@ -107,6 +106,39 @@ $txtsize: 16px;
 
     &:focus {
         outline: none;
+    }
+}
+
+.stip-btnLang {
+    padding: .5rem;
+    border: 0;
+    color: #303030;
+    background-color: transparent;
+
+    &:hover {
+        color: #303030;
+        background-color: transparent;
+    }
+
+    &:focus {
+        box-shadow: none !important;
+    }
+
+    &:active {
+        background-color: transparent !important;
+    }
+}
+
+.stip-langBtnBox {
+    padding: .5rem;
+
+    button {
+        &:hover{
+            text-decoration: underline;
+        }
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
@@ -431,6 +463,10 @@ $txtsize: 16px;
 
     .stip-nav {
         padding: 0 1em !important;
+    }
+
+    .stip-langBtnBox {
+        padding: 0.5em 0 1em 0; 
     }
 
     .stip-mt {

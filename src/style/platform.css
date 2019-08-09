@@ -29,11 +29,10 @@
   max-width: 100%;
 }
 
-.stip-function {
-  background: url("../img/bodyWave.svg") no-repeat;
-  background-position: center center;
-}
-
+/*.stip-function {
+    background: url("../img/bodyWave.svg") no-repeat;
+    background-position: center center;
+}*/
 @media (max-width: 576px) {
   .stip-heroPlatform {
     background-size: 150%;
@@ -56,8 +55,8 @@
   .stip-heroScreen {
     max-width: 90% !important;
   }
-  .stip-function {
-    background-position: center 40% !important;
-  }
+  /*.stip-function {
+        background-position: center 40%;
+    }*/
 }
 /*# sourceMappingURL=platform.css.map */

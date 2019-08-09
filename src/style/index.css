@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700|Nunito:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Nunito:300,400,600,700&display=swap");
 * {
-  font-family: 'Roboto', sans-serif;
   font-family: 'Poppins', sans-serif;
   font-family: 'Nunito', sans-serif;
 }
@@ -62,6 +61,13 @@ b {
   }
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
+  .stip-function {
+    background-size: 150%;
+    background-position: center 50% !important;
+  }
+}
+
 @media (max-width: 768px) {
   .stip-heroPlatform h1 {
     font-size: 28px;
@@ -74,7 +80,7 @@ b {
     max-width: 90% !important;
   }
   .stip-function {
-    background-position: center 40% !important;
+    background-position: center 40%;
   }
 }
 
@@ -283,6 +289,40 @@ b {
 
 .stip-btnNav:focus {
   outline: none;
+}
+
+.stip-btnLang {
+  padding: .5rem;
+  border: 0;
+  color: #303030;
+  background-color: transparent;
+}
+
+.stip-btnLang:hover {
+  color: #303030;
+  background-color: transparent;
+}
+
+.stip-btnLang:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.stip-btnLang:active {
+  background-color: transparent !important;
+}
+
+.stip-langBtnBox {
+  padding: .5rem;
+}
+
+.stip-langBtnBox button:hover {
+  text-decoration: underline;
+}
+
+.stip-langBtnBox button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .stip-active {
@@ -604,6 +644,9 @@ b {
   }
   .stip-nav {
     padding: 0 1em !important;
+  }
+  .stip-langBtnBox {
+    padding: 0.5em 0 1em 0;
   }
   .stip-mt {
     margin: 1em !important;

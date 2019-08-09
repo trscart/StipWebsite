@@ -366,6 +366,10 @@ $(document).ready(function () {
     $(".stip-langDropItem").click(function () {
         $("#stip-langDrop").html($(this).text());
     });
+    $("#stip-langDrop").click(function () {
+        $(this).css("background-color", "transparent")
+        $(this).css("color", "#303030")
+    });
 
     // footer scroll to section animation
     $(".stip-linkToSection").click(function (e) {
