@@ -364,6 +364,11 @@ b {
   margin: 3em 10% 0 10%;
 }
 
+.stip-sectionBodyCard {
+  margin: 3em 20% 0 20%;
+  border-radius: 3.25rem;
+}
+
 .stip-titleNum {
   font-size: 42px;
   font-weight: 700;
@@ -400,7 +405,7 @@ b {
 }
 
 .stip-howWork h2 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .stip-howWork p {
@@ -663,6 +668,12 @@ b {
 @media (min-width: 576px) and (max-width: 992px) {
   .stip-heroContainer {
     background-size: 65%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .stip-sectionBodyCard {
+    margin: 3em 5% 0 5%;
   }
 }
 /*# sourceMappingURL=index.css.map */

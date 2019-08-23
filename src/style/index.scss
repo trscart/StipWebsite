@@ -222,6 +222,11 @@ $txtsize: 16px;
     margin: 3em 10% 0 10%;
 }
 
+.stip-sectionBodyCard {
+    margin: 3em 20% 0 20%;
+    border-radius: 3.25rem;
+}
+
 .stip-titleNum {
     font-size: 42px;
     font-weight: 700;
@@ -257,7 +262,7 @@ $txtsize: 16px;
     padding: 10em;
 
     h2 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     p {
@@ -518,7 +523,7 @@ $txtsize: 16px;
     .stip-h2 {
         font-size: 18px !important;
     }
-    
+
     .stip-h3 {
         font-size: 14px !important;
     }
@@ -552,6 +557,12 @@ $txtsize: 16px;
 
 @media (min-width: 576px) and (max-width: 992px) {
     .stip-heroContainer {
-        background-size: 65%; 
+        background-size: 65%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .stip-sectionBodyCard {
+        margin: 3em 5% 0 5%;
     }
 }
