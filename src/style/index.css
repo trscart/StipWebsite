@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Nunito:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Rubik:300,400,500&display=swap");
 * {
   font-family: 'Poppins', sans-serif;
   font-family: 'Nunito', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
@@ -30,7 +31,7 @@ b {
 
 .stip-heroPlatform h1 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .stip-platformHero {
@@ -93,7 +94,7 @@ b {
     height: 1.5em;
 }*/
 .stip-latestArticle {
-  background-color: #4384f1;
+  background-color: #4E8EF0;
 }
 
 .stip-articleImg {
@@ -162,7 +163,7 @@ b {
 
 .stip-h1 {
   font-size: 29px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .stip-h2 {
@@ -297,12 +298,13 @@ b {
 
 .stip-heroContainer h1 {
   font-size: 32px;
+  font-weight: 400;
 }
 
 .stip-demoRequest {
   height: 3em;
   width: 12em;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: white;
   background-color: #FD6B15;
@@ -319,7 +321,7 @@ b {
 .stip-contactUs {
   height: 3em;
   width: 12em;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: white;
   background-color: transparent;
@@ -337,7 +339,7 @@ b {
 .stip-contactUsHero {
   height: 3em;
   width: 12em;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #4E8EF0;
   background-color: transparent;
