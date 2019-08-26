@@ -72,9 +72,10 @@ b {
 }
 
 .stip-heroArticleImg {
-  background: url("https://images.pexels.com/photos/266246/pexels-photo-266246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat !important;
+  background: url("../img/prova-17.png") no-repeat !important;
   background-position: top center !important;
   height: 35em;
+  background-size: cover !important;
 }
 
 .stip-card {
@@ -95,6 +96,7 @@ b {
 }*/
 .stip-latestArticle {
   background-color: #4E8EF0;
+  opacity: 0.85;
 }
 
 .stip-articleImg {
