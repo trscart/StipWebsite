@@ -94,7 +94,7 @@ b {
     height: 1.5em;
 }*/
 .stip-latestArticle {
-  background-color: #4E8EF0;
+  background-color: #0062FF;
   opacity: 0.85;
 }
 
@@ -130,7 +130,7 @@ b {
 }
 
 .stip-contactForm {
-  background-color: #4E8EF0;
+  background-color: #0062FF;
 }
 
 .stip-contactContainer {
@@ -183,7 +183,7 @@ b {
 }
 
 .stip-colorTxt {
-  color: #4E8EF0;
+  color: #0062FF;
 }
 
 .stip-mb {
@@ -259,7 +259,7 @@ b {
 }
 
 .stip-active {
-  color: #FD6B15 !important;
+  color: #FF7E00 !important;
 }
 
 .stip-reprompt-container {
@@ -308,7 +308,7 @@ b {
   font-weight: 600;
   font-size: 16px;
   color: white;
-  background-color: #FD6B15;
+  background-color: #FF7E00;
   border-color: transparent;
   border-radius: 50px;
   padding: 10px 30px;
@@ -333,8 +333,8 @@ b {
 }
 
 .stip-contactUs:hover {
-  border-color: #FD6B15;
-  color: #FD6B15;
+  border-color: #FF7E00;
+  color: #FF7E00;
 }
 
 .stip-contactUsHero {
@@ -342,9 +342,9 @@ b {
   width: 12em;
   font-weight: 600;
   font-size: 16px;
-  color: #4E8EF0;
+  color: #0062FF;
   background-color: transparent;
-  border: 3px solid #4E8EF0;
+  border: 3px solid #0062FF;
   border-radius: 50px;
   padding: 10px 30px;
   margin-left: 20px;
@@ -353,8 +353,8 @@ b {
 }
 
 .stip-contactUsHero:hover {
-  border-color: #FD6B15;
-  color: #FD6B15;
+  border-color: #FF7E00;
+  color: #FF7E00;
 }
 
 .stip-sectionTitle {
@@ -375,7 +375,7 @@ b {
 .stip-titleNum {
   font-size: 42px;
   font-weight: 700;
-  color: #4E8EF0;
+  color: #0062FF;
 }
 
 .stip-IllustrationDim {
@@ -434,7 +434,7 @@ b {
 }
 
 .stip-emailSectionBtn {
-  background-color: #4E8EF0;
+  background-color: #0062FF;
   color: white;
   border: 0;
   -webkit-transition: 0.2s;
@@ -442,7 +442,7 @@ b {
 }
 
 .stip-emailSectionBtn:hover {
-  background-color: #FD6B15;
+  background-color: #FF7E00;
 }
 
 .stip-footer {
@@ -479,7 +479,7 @@ b {
 }
 
 .stip-socialIcon path:hover {
-  fill: #FD6B15;
+  fill: #FF7E00;
 }
 
 .stip-minFooter {
@@ -493,7 +493,7 @@ b {
 }
 
 .stip-demoContainer .stip-demoCol {
-  background-color: #4E8EF0;
+  background-color: #0062FF;
 }
 
 .stip-demoCloseIcon {
@@ -614,7 +614,7 @@ b {
 
 @media (max-width: 768px) {
   .stip-demoCloseIcon i {
-    color: #4E8EF0 !important;
+    color: #0062FF !important;
   }
   .stip-howWork {
     padding: 3em;
