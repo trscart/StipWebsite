@@ -468,6 +468,14 @@ b {
   color: #303030;
 }
 
+.stip-footerTxt p {
+  font-size: 14px;
+}
+
+.stip-footerTxt a {
+  font-size: 14px;
+}
+
 .stip-socialIcon {
   width: 100px;
   cursor: pointer;

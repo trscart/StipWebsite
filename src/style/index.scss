@@ -14,7 +14,7 @@ body {
 b {
     font-weight: 500;
 }
- 
+
 $stcolor: #0062FF; // old color #4E8EF0
 $ndcolor: #FF7E00; // old color #FD6B15
 $h1size: 29px;
@@ -99,7 +99,7 @@ $txtsize: 16px;
     z-index: 1030;
     transition: 0.5s;
     padding: 2em 5em;
-} 
+}
 
 .stip-btnNav {
     border: none;
@@ -125,7 +125,7 @@ $txtsize: 16px;
 
 .stip-active {
     color: $ndcolor !important;
-} 
+}
 
 .stip-reprompt-container {
     display: flex;
@@ -142,7 +142,7 @@ $txtsize: 16px;
         transition: 0.5s;
     }
 }
-  
+
 .stip-heroContainer {
     height: 100vh;
     padding: 10%;
@@ -324,6 +324,14 @@ $txtsize: 16px;
 .stip-footerTxt {
     .stip-policy {
         color: #303030;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
     }
 }
 
