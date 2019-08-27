@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Rubik:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500|Nunito:300,400,600,700&display=swap');
 
 * {
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Nunito', sans-serif;
     font-family: 'Rubik', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -30,7 +29,7 @@ $txtsize: 16px;
 
 .stip-h1 {
     font-size: $h1size;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .stip-h2 {
@@ -164,7 +163,7 @@ $txtsize: 16px;
 .stip-demoRequest {
     height: 3em;
     width: 12em;
-    font-weight: 500;
+    font-weight: 600;
     font-size: $h3size - 2;
     color: white;
     background-color: $ndcolor;
@@ -180,7 +179,7 @@ $txtsize: 16px;
 .stip-contactUs {
     height: 3em;
     width: 12em;
-    font-weight: 500;
+    font-weight: 600;
     font-size: $h3size - 2;
     color: white;
     background-color: transparent;
@@ -198,7 +197,7 @@ $txtsize: 16px;
 .stip-contactUsHero {
     height: 3em;
     width: 12em;
-    font-weight: 500;
+    font-weight: 600;
     font-size: $h3size - 2;
     color: $stcolor;
     background-color: transparent;
