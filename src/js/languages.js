@@ -244,7 +244,7 @@ $(document).ready(function () {
     // change text language on click
     $(".stip-itBtn").click(function (e) { // click for it-IT language
         sessionStorage.setItem('language', "it-IT"); // set language in session storage item
-        $(".stip-itBtn").css("color", "#4384f1")
+        $(".stip-itBtn").css("color", "#399fad")
         $(".stip-enBtn").css("color", "#303030")
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
@@ -257,7 +257,7 @@ $(document).ready(function () {
     $(".stip-enBtn").click(function (e) { // click for en-EN language
         sessionStorage.setItem('language', "en-EN"); // set language in session storage item
         $(".stip-itBtn").css("color", "#303030")
-        $(".stip-enBtn").css("color", "#4384f1")
+        $(".stip-enBtn").css("color", "#399fad")
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
         });
