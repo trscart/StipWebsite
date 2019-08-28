@@ -5,6 +5,10 @@
     font-family: 'Nunito', sans-serif;
 }
 
+.hs-form{
+    background-color: red !important;
+}
+
 body {
     overflow-x: hidden;
     max-width: 1920px;
@@ -281,7 +285,7 @@ $txtsize: 16px;
     background: url("../img/ticketBG.png") no-repeat;
     background-size: contain;
     background-position-x: right;
-}
+} 
 
 .stip-redirectBG {
     background: url("../img/redirectBG.png") no-repeat;

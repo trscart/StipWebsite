@@ -4,6 +4,10 @@
   font-family: 'Nunito', sans-serif;
 }
 
+.hs-form {
+  background-color: red !important;
+}
+
 body {
   overflow-x: hidden;
   max-width: 1920px;
