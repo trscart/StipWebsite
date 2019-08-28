@@ -231,13 +231,13 @@ $(document).ready(function () {
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
             $("#stip-langDrop").text("EN");
-            $(".stip-enBtn").css("color", "#4384f1")
+            $(".stip-enBtn").css("color", "#399fad")
         });
     } else {
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
             $("#stip-langDrop").text("IT");
-            $(".stip-itBtn").css("color", "#4384f1")
+            $(".stip-itBtn").css("color", "#399fad")
         });
     }
 
