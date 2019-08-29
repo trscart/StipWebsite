@@ -98,6 +98,10 @@ let languages = {
         "contactFormPhone": "Telefono",
         "contactFormMessage": "Lasciaci un messaggio",
         "contactFormSend": "Invia",
+        "contactName": "Nome completo",
+        "contactEmail": "Email",
+        "contactPhone": "Telefono",
+        "contactMessage": "Messaggio",
 
         // blog
         "loadMore": "scopri di più",
@@ -207,6 +211,10 @@ let languages = {
         "contactFormPhone": "Phone",
         "contactFormMessage": "Leave us a message",
         "contactFormSend": "Send",
+        "contactName": "Full name",
+        "contactEmail": "Email",
+        "contactPhone": "Phone",
+        "contactMessage": "Message",
 
         // blog
         "loadMore": "load more",
@@ -233,11 +241,17 @@ $(document).ready(function () {
             $("#stip-langDrop").text("EN");
             $(".stip-enBtn").css("color", "#399fad")
         });
+        $(".placeholderLang").each(function () {
+            $(this).attr("placeholder", languages["en-EN"][$(this).attr("key")]);
+        });
     } else {
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
             $("#stip-langDrop").text("IT");
             $(".stip-itBtn").css("color", "#399fad")
+        });
+        $(".placeholderLang").each(function () {
+            $(this).attr("placeholder", languages["it-IT"][$(this).attr("key")]);
         });
     }
 
@@ -248,6 +262,9 @@ $(document).ready(function () {
         $(".stip-enBtn").css("color", "#303030")
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
+        });
+        $(".placeholderLang").each(function () {
+            $(this).attr("placeholder", languages["it-IT"][$(this).attr("key")]);
         });
         if($(location).attr('href').includes("privacy-policy")){
             window.location = "privacy-policy.html"
@@ -260,6 +277,9 @@ $(document).ready(function () {
         $(".stip-enBtn").css("color", "#399fad")
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
+        });
+        $(".placeholderLang").each(function () {
+            $(this).attr("placeholder", languages["en-EN"][$(this).attr("key")]);
         });
         if($(location).attr('href').includes("privacy-policy")){
             window.location = "privacy-policy-en.html"
