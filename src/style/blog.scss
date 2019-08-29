@@ -1,3 +1,6 @@
+$stcolor: #399fad; // old color #4E8EF0 or #0062FF
+$ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
+
 .stip-heroArticleImg {
     background: url("../img/prova-17.png") no-repeat !important;
     background-position: top center !important;
@@ -22,7 +25,7 @@
 }*/
 
 .stip-latestArticle {
-    background-color: #0062FF;
+    background-color: $stcolor;
     opacity: 0.85;
 }
 
