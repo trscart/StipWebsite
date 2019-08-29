@@ -371,11 +371,6 @@ b {
   margin: 3em 10% 0 10%;
 }
 
-.stip-sectionBodyCard {
-  margin: 8em 15% 0 15%;
-  border-radius: 2.25rem;
-}
-
 .stip-titleNum {
   font-size: 42px;
   font-weight: 700;
@@ -405,6 +400,17 @@ b {
 .stip-esseLogo {
   background: url("../img/esselunga.png") no-repeat center center;
   background-size: contain;
+}
+
+.stip-benefitContainer {
+  background: url("../img/benefitBG.png") no-repeat center center;
+  background-size: contain;
+}
+
+.stip-benefitRow {
+  margin: 8em 15% 0 15%;
+  border-radius: 2.25rem;
+  padding: 3rem 4rem;
 }
 
 .stip-howWork {
@@ -637,6 +643,10 @@ b {
   .stip-howWork p {
     font-size: 0.7em;
   }
+  .stip-benefitContainer {
+    background: url("../img/benefitBG_small.png") no-repeat center center;
+    background-size: contain;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -684,11 +694,17 @@ b {
   .stip-heroContainer {
     background-size: 65%;
   }
+  .stip-benefitRow {
+    padding: 1rem 0rem !important;
+  }
 }
 
 @media (max-width: 1200px) {
   .stip-sectionBodyCard {
     margin: 3em 5% 0 5%;
+  }
+  .stip-benefitRow {
+    padding: 2rem 1rem;
   }
 }
 /*# sourceMappingURL=index.css.map */
