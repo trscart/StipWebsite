@@ -131,7 +131,7 @@ let languages = {
         "emailBtn": "sign in",
         // footer
         "footerHome": "HOME",
-        "footerHomeWhat": "What we do",
+        "footerHomeWhat": "Why Stip",
         "footerHomeBenefit": "Discover the benefits",
         "footerHomeAi": "Features",
         "footerPlatform": "PLATFORM",
