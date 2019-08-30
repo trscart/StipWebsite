@@ -408,7 +408,8 @@ b {
 }
 
 .stip-benefitRow {
-  margin: 8em 15% 0 15%;
+  max-width: 1000px;
+  margin: 8em auto 0 auto;
   border-radius: 2.25rem;
   padding: 3rem 4rem;
 }
@@ -635,7 +636,7 @@ b {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .stip-demoCloseIcon i {
     color: #399fad !important;
   }
@@ -709,6 +710,7 @@ b {
     margin: 3em 5% 0 5%;
   }
   .stip-benefitRow {
+    margin: 8em 15% 0 15%;
     padding: 2rem 1rem;
   }
 }
