@@ -566,6 +566,7 @@ b {
     margin: 3em 0 0 0 !important;
   }
   .stip-heroContainer {
+    background-size: 80%;
     background-position-y: 90%;
   }
   .stip-heroContainer h1 {
