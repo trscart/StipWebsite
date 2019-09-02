@@ -227,7 +227,7 @@ let languages = {
     }
 }
 
-
+$(".lang").text("");
 $(document).ready(function () {
     let language = null
     if (sessionStorage.getItem('language') == null) {
