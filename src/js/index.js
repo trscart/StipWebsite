@@ -9,7 +9,7 @@ if (sessionStorage.getItem('dontLoad') == null) { // do loading animation only o
 
 anime({
     targets: '.stip-loadLogo',
-    scale: ["1", "1.05", "1"],
+    scale: ["0.6", "0.65", "0.6"],
     easing: 'easeInOutQuint',
     loop: true,
     duration: 1800
@@ -27,14 +27,14 @@ anime({
 anime({
     targets: '.stip-spunta',
     scale: ["1", "0.7", "1"],
-    fill: ["#4384f1", "#FD6B15", "#4384f1"],
+    fill: ["#399fad", "#ff6161", "#399fad"],
     rotateY: ["0", "360"],
     easing: 'easeInOutExpo',
     loop: true,
     delay: 600,
     duration: 1200
-})
-*/
+})*/
+
 
 $(document).ready(function () {
     console.log("here!")
@@ -137,7 +137,7 @@ $(document).ready(function () {
                 $("#stip-demoSend").text("")
                 $("#stip-demoSend").append("<img style='width: 2em' src='src/img/loading.gif'>");
                 // fetch call
-                fetch('https://stip.io/app/stip_rest/api/company/', {
+                fetch('https://stipworld.com/api/companyDemoRequest/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -234,7 +234,7 @@ $(document).ready(function () {
             $("#stip-contactUs").text("")
             $("#stip-contactUs").append("<img style='width: 2em' src='src/img/loading.gif'>");
             // fetch call
-            fetch('https://stip.io/app/stip_rest/api/companyQuestion/', {
+            fetch('https://stipworld.com/api/companyQuestion/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -310,7 +310,7 @@ $(document).ready(function () {
             let data = {
                 "email": $('#stip-email-newsletter').val(),
             }
-            fetch('https://stip.io/app/stip_rest/api/companyNewsletter/', {
+            fetch('https://stipworld.com/api/companyNewsletter/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
