@@ -531,11 +531,6 @@ b {
   color: white;
 }
 
-.stip-demoBG {
-  background: url("../img/demoBG.png") no-repeat bottom left;
-  background-size: 90%;
-}
-
 @media (max-width: 576px) {
   .stip-h1 {
     font-size: 18px !important;
