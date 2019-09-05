@@ -1,16 +1,16 @@
 $stcolor: #399fad; // old color #4E8EF0 or #0062FF
 $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 
-.stip-navs{
-    box-shadow: 0 0rem 1rem rgba(0,0,0,0.1);
+.stip-navs {
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.stip-navBlog{
+.stip-navBlog {
     padding: 0 5em;
     border-top: 1px solid #eeeeee;
 }
 
-.stip-lastArticleContainer{
+.stip-lastArticleContainer {
     margin-top: 15em;
 }
 
@@ -44,6 +44,29 @@ $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 
 //blog article
 
+.stip-arrowBack {
+    i {
+        transform: rotateZ(-180deg);
+        font-size: 2.5em;
+        color: $stcolor;
+    }
+
+    span {
+        color: $stcolor;
+    }
+
+    &:hover{
+        text-decoration: none;
+        i {
+            color: $ndcolor;
+        }
+    
+        span {
+            color: $ndcolor;
+        }
+    }
+}
+
 .stip-articleImg {
     background: url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
     background-size: cover;
@@ -61,8 +84,8 @@ $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 }
 
 @media (max-width: 576px) {
-    .stip-lastArticleContainer{
-        margin-top: 10em;
+    .stip-lastArticleContainer {
+        margin-top: 8em;
     }
 
     .stip-latestArticle {
@@ -71,10 +94,12 @@ $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 
     .stip-heroArticleImg {
         border-radius: 0 !important;
+        box-shadow: none !important;
     }
 
     .stip-articleImg {
         border-radius: 0 !important;
+        box-shadow: none !important;
     }
 
     /*.swiper-container {

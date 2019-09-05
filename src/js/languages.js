@@ -104,6 +104,7 @@ let languages = {
         "contactMessage": "Messaggio",
 
         // blog
+        "backBlog": "Torna al Blog",
         "loadMore": "scopri di più",
         "readArticle": "Leggi l'articolo",
         "ctaTitle": "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo",
@@ -217,6 +218,7 @@ let languages = {
         "contactMessage": "Message",
 
         // blog
+        "backBlog": "Back to Blog",
         "loadMore": "load more",
         "readArticle": "Read the article",
         "ctaTitle": "Full efficiency with zero effort. That is your Customer Care with Stip",

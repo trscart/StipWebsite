@@ -40,6 +40,29 @@
   opacity: 0.85;
 }
 
+.stip-arrowBack i {
+  -webkit-transform: rotateZ(-180deg);
+          transform: rotateZ(-180deg);
+  font-size: 2.5em;
+  color: #399fad;
+}
+
+.stip-arrowBack span {
+  color: #399fad;
+}
+
+.stip-arrowBack:hover {
+  text-decoration: none;
+}
+
+.stip-arrowBack:hover i {
+  color: #ff6161;
+}
+
+.stip-arrowBack:hover span {
+  color: #ff6161;
+}
+
 .stip-articleImg {
   background: url("https://www.repstatic.it/content/localirep/img/rep-firenze/2018/10/28/181215340-d48996a8-38ee-4195-9224-b59d48608b93.jpg") no-repeat;
   background-size: cover;
@@ -58,16 +81,20 @@
 
 @media (max-width: 576px) {
   .stip-lastArticleContainer {
-    margin-top: 10em;
+    margin-top: 8em;
   }
   .stip-latestArticle {
     border-radius: 0 !important;
   }
   .stip-heroArticleImg {
     border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
   }
   .stip-articleImg {
     border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
   }
   /*.swiper-container {
         width: 100% !important;
