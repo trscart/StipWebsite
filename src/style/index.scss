@@ -103,10 +103,14 @@ $txtsize: 16px;
     display: flex;
 }*/ 
 
+.stip-navs{
+    transition: 0.3s ease-out;
+} 
+
 .stip-nav {
     z-index: 1030;
     transition: 0.5s;
-    padding: 2em 5em;
+    padding: 2em 5em 0 5em;
 }
 
 .stip-btnNav {
@@ -167,7 +171,7 @@ $txtsize: 16px;
         font-weight: 400;
     }
 }
-
+ 
 .stip-demoRequest {
     height: 3em;
     width: 12em;

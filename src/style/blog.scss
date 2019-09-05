@@ -1,6 +1,19 @@
 $stcolor: #399fad; // old color #4E8EF0 or #0062FF
 $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 
+.stip-navs{
+    box-shadow: 0 0rem 1rem rgba(0,0,0,0.1);
+}
+
+.stip-navBlog{
+    padding: 0 5em;
+    border-top: 1px solid #eeeeee;
+}
+
+.stip-lastArticleContainer{
+    margin-top: 15em;
+}
+
 .stip-heroArticleImg {
     background: url("../img/blogImg/blog_4.png") no-repeat !important;
     background-position: top center !important;
@@ -48,6 +61,10 @@ $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 }
 
 @media (max-width: 576px) {
+    .stip-lastArticleContainer{
+        margin-top: 10em;
+    }
+
     .stip-latestArticle {
         border-radius: 0 !important;
     }

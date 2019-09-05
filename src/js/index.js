@@ -55,19 +55,53 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("contacts")) { // nav-item change on scroll
+        if ($(window).scrollTop() > 0 && $(location).attr('href').includes("index")) { // nav-item change on scroll
             $('.stip-nav').css("padding", "0 5em")
             $('.stip-nav').css("background-color", "white")
             $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
             $(".stip-languageDrop").css("color", "#4384f1")
-
-        } else if (!$(location).attr('href').includes("contacts")) {
+        }
+        else if ($(location).attr('href').includes("index")) {
             $('.stip-nav').css("padding", "2em 5em")
             $('.stip-nav').css("background-color", "transparent")
             $('.stip-nav').css("box-shadow", "none")
             $(".stip-languageDrop").css("color", "#ffffff")
         }
     });
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0 && $(window).width() > 767 && $(location).attr('href').includes("blog")) { // double nav animation
+            $('.stip-navs').css("top", -$('.stip-nav').outerHeight())
+            $('.stip-navs').css("background-color", "white")
+        }
+        else if ($(window).scrollTop() > 0 && $(window).width() < 767) {
+            $('.stip-navs').css("top", 0)
+            $('.stip-navs').css("background-color", "white")
+            $('.stip-nav').css("padding", "0 5em")
+        }
+        else if ($(window).width() > 767 && !$(location).attr('href').includes("contacts")) {
+            $('.stip-navs').css("top", 0)
+        }
+    });
+
+    fetch('https://blog.stip.io/api/articles/latests/', {
+        mode: "cors",
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(function (res) {
+            res.json().then(function (data) {
+                console.log(data)
+                for (let i = 0; i < 3; i++) {
+                    $(".stip-footerBlog").append("<a href='" +  + "' title='blog' class='stip-txt'>" + data[i].draft_title + "</a>");
+                }
+            })
+        })
+        .catch(function (err) { //if error
+            console.log(err)
+        })
 
     $(".dropdown-menu li a").click(function () {
         $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
@@ -81,34 +115,6 @@ $(document).ready(function () {
             $(this).attr("href", "./privacy-policy.html");
         }
     });
-
-    fetch('https://blog.stip.io/api/articles/latests', {
-        mode: "cors",
-        method: 'GET',
-        headers: {
-            'content-type': 'application/json'
-        }
-    })
-        .then(function (res) {
-            console.log(res)
-        })
-        .catch(function (err) { //if error
-            console.log(err)
-        })
-
-    /*$.ajax({
-        url: "https://blog.stip.io/api/articles/latests/", dataType: 'jsonp', success: function (result) {
-            console.log(result)
-        }
-    });
-
-    $.ajax({
-        url: "https://blog.stip.io/api/articles/latests/",
-        dataType: "jsonp",
-        success: function (data) {
-            console.log(data)
-        }
-    });*/
 
     // card append
     $("#stip-loadMore").click(function () {
