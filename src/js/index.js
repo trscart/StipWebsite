@@ -83,7 +83,7 @@ $(document).ready(function () {
     });
 
     fetch('https://blog.stip.io/api/articles/latests', {
-        mode: "no-cors",
+        mode: "cors",
         method: 'GET',
         headers: {
             'content-type': 'application/json'
