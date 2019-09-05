@@ -82,6 +82,34 @@ $(document).ready(function () {
         }
     });
 
+    fetch('https://blog.stip.io/api/articles/latests', {
+        mode: "no-cors",
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(function (res) {
+            console.log(res)
+        })
+        .catch(function (err) { //if error
+            console.log(err)
+        })
+
+    /*$.ajax({
+        url: "https://blog.stip.io/api/articles/latests/", dataType: 'jsonp', success: function (result) {
+            console.log(result)
+        }
+    });
+
+    $.ajax({
+        url: "https://blog.stip.io/api/articles/latests/",
+        dataType: "jsonp",
+        success: function (data) {
+            console.log(data)
+        }
+    });*/
+
     // card append
     $("#stip-loadMore").click(function () {
         var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryDrop").html() };
