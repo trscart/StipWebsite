@@ -96,7 +96,7 @@ $(document).ready(function () {
             res.json().then(function (data) {
                 //console.log(data)
                 for (let i = 0; i < 3; i++) {
-                    $(".stip-footerBlog").append("<a href='https://blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title + "</a>");
+                    $(".stip-footerBlog").append("<a href='https://blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0,6).join(' ').concat(" ...")  + "</a>");
                 }
             })
         })
