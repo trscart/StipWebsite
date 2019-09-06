@@ -8,6 +8,14 @@ $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 .stip-navBlog {
     padding: 0 5em;
     border-top: 1px solid #eeeeee;
+
+    .stip-homeBlog{
+        color: $stcolor;
+        &:hover{
+            color: $ndcolor;
+            text-decoration: none;
+        }
+    }
 }
 
 .stip-lastArticleContainer {

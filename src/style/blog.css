@@ -8,6 +8,15 @@
   border-top: 1px solid #eeeeee;
 }
 
+.stip-navBlog .stip-homeBlog {
+  color: #399fad;
+}
+
+.stip-navBlog .stip-homeBlog:hover {
+  color: #ff6161;
+  text-decoration: none;
+}
+
 .stip-lastArticleContainer {
   margin-top: 15em;
 }
