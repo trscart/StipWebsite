@@ -181,7 +181,7 @@ $txtsize: 16px;
     background-color: $ndcolor;
     border-color: transparent;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 10px 20px;
 
     &:hover {
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
@@ -197,7 +197,7 @@ $txtsize: 16px;
     background-color: transparent;
     border: 3px solid white;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     margin-left: 20px;
 
     &:hover {
@@ -215,7 +215,7 @@ $txtsize: 16px;
     background-color: transparent;
     border: 3px solid $stcolor;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     margin-left: 20px;
     transition: 0.3s;
 
@@ -583,7 +583,7 @@ $txtsize: 16px;
 
     .stip-footerBtn {
         button {
-            font-size: 15px !important;
+            font-size: 13px !important;
         }
     }
 }
