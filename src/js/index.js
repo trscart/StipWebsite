@@ -94,14 +94,14 @@ $(document).ready(function () {
     })
         .then(function (res) {
             res.json().then(function (data) {
-                console.log(data)
+                //console.log(data)
                 for (let i = 0; i < 3; i++) {
-                    $(".stip-footerBlog").append("<a href='' title='blog' class='stip-txt'>" + data[i].draft_title + "</a>");
+                    $(".stip-footerBlog").append("<a href='https://blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title + "</a>");
                 }
             })
         })
         .catch(function (err) { //if error
-            console.log(err)
+            //console.log(err)
         })
 
     $(".dropdown-menu li a").click(function () {
@@ -372,7 +372,7 @@ $(document).ready(function () {
                     }
                 })
                 .catch(function (err) { //if error
-                    console.log(err)
+                    //console.log(err)
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                         $('.stip-emailSectionBtn').text("Error, try again");
                     } else {
@@ -455,7 +455,7 @@ $(document).ready(function () {
     // maps
     if ($(location).attr('href').includes("contacts")) {
         //en map
-        let placeEn = { lat: 37.870171, lng: -122.268624 };
+        /*let placeEn = { lat: 37.870171, lng: -122.268624 };
         let contentStringEn = '<div id="content">' +
             '<h1 class="stip-h3">Skydeck Berkley</h1>' +
             '<p class="stip-txt">2150 Shattuck Ave, Berkley, CA 94704, USA</p>' +
@@ -468,7 +468,7 @@ $(document).ready(function () {
         });
         markerEn.addListener('click', function () {
             infowindowEn.open(mapEn, markerEn);
-        });
+        });*/
 
         let placeIt = { lat: 41.901610, lng: 12.503200 };
         let contentStringIt = '<div id="content">' +
