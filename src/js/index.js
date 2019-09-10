@@ -91,6 +91,11 @@ $(document).ready(function () {
 
                             $(".stip-closeReprompt").click(function () {
                                 $(".stip-reprompt-container").css("display", "none")
+                                $(".stip-demoContainer").remove()
+                                $('#stip-firstName-demo').val("")
+                                $('#stip-lastName-demo').val("")
+                                $('#stip-phone-demo').val("")
+                                $('#stip-email-demo').val("")
                             })
 
                             $('.stip-messageSend').css("background-color", "#16B72E")
@@ -296,6 +301,10 @@ $(document).ready(function () {
 
                         $(".stip-closeReprompt").click(function () {
                             $(".stip-reprompt-container").css("display", "none")
+                            $('#stip-fullName-contact').val("")
+                            $('#stip-phone-contact').val("")
+                            $('#stip-email-contact').val("")
+                            $('#stip-msg-contact').val("")
                         })
 
                         $('.stip-messageSend').css("background-color", "#16B72E")
@@ -372,6 +381,7 @@ $(document).ready(function () {
 
                         $(".stip-closeReprompt").click(function () {
                             $(".stip-reprompt-container").css("display", "none")
+                            $('#stip-email-newsletter').val("")
                         })
                     }
                 })
