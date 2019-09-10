@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 && $(location).attr('href').includes("index")) { // nav-item change on scroll
+        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("contact")) { // nav-item change on scroll
             $('.stip-nav').css("padding", "0 5em")
             $('.stip-nav').css("background-color", "white")
             $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
