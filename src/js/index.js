@@ -85,7 +85,7 @@ $(document).ready(function () {
     });
 
     // get latest articles and append them on footer
-    fetch('https://blog.stip.io/api/articles/latests/', {
+    fetch('https://stip.io/blog/api/articles/latests/', {
         mode: "cors",
         method: 'GET',
         headers: {
@@ -96,7 +96,7 @@ $(document).ready(function () {
             res.json().then(function (data) {
                 //console.log(data)
                 for (let i = 0; i < 3; i++) {
-                    $(".stip-footerBlog").append("<a href='https://blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0,6).join(' ').concat(" ...")  + "</a>");
+                    $(".stip-footerBlog").append("<a href='https://stip.io/blog/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0,6).join(' ').concat(" ...")  + "</a>");
                 }
             })
         })
