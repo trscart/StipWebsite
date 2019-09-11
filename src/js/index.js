@@ -39,6 +39,9 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
+    let price
+    let volume
+
     let demoCall = function () {
         let source
         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
@@ -53,7 +56,7 @@ $(document).ready(function () {
         // ajax call for demo request
         $("#stip-demoSend").click(function () {
             if ($('#stip-firstName-demo').val() && $('#stip-lastName-demo').val() && $('#stip-email-demo').val()) {
-                $('.stip-inputRequired').css("border-color", "transparent")
+                $('.stip-inputRequired').css("border-color", "#ced4da")
                 $('.stip-labelRequired').css("color", "white")
 
                 let data = {
@@ -264,7 +267,7 @@ $(document).ready(function () {
     // ajax call for contact request
     $("#stip-contactUs").click(function () {
         if ($('#stip-fullName-contact').val() && $('#stip-email-contact').val()) {
-            $('.stip-inputRequired').css("border-color", "transparent")
+            $('.stip-inputRequired').css("border-color", "#ced4da")
             $('.stip-labelRequired').css("color", "white")
 
             let data = {
@@ -351,9 +354,65 @@ $(document).ready(function () {
     });
 
     // ajax call for email newsletter
+    $(".stip-requestQuoteBtn").click(function () {
+        if ($('#stip-email-quote').val()) {
+            $('.stip-inputRequired').css("border-color", "#ced4da")
+
+            let data = {
+                "email": $('#stip-email-quote').val(),
+            }
+            /*fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(function (res) {
+                    if (res.status == 201) { //if status 201
+
+                        // append thank you message
+                        let context
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                        } else {
+                            context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
+                        }
+                        let source = document.getElementById("stip-thanks").innerHTML;
+                        let template = Handlebars.compile(source);
+                        $('body').append(template(context))
+
+                        $(".stip-closeReprompt").click(function () {
+                            $(".stip-reprompt-container").css("display", "none")
+                            $('#stip-email-quote').val("")
+                        })
+                    }
+                })
+                .catch(function (err) { //if error
+                    //console.log(err)
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-requestQuoteBtn').text("Error, try again");
+                    } else {
+                        $('.stip-requestQuoteBtn').text("Errore, riprova");
+                    }
+                    setTimeout(function () {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            $('.stip-requestQuoteBtn').text("Quote request");
+                        } else {
+                            $('.stip-requestQuoteBtn').text("Richiedi preventivo");
+                        }
+                    }, 1300);
+                })*/
+
+        } else {
+            $('.stip-inputRequired').css("border-color", "#FF2828")
+        }
+    })
+
+    // ajax call for email newsletter
     $(".stip-emailSectionBtn").click(function () {
         if ($('#stip-email-newsletter').val()) {
-            $('.stip-inputRequired').css("border-color", "transparent")
+            $('.stip-inputRequired').css("border-color", "#ced4da")
 
             let data = {
                 "email": $('#stip-email-newsletter').val(),

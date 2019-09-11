@@ -12,6 +12,8 @@ let languages = {
         // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
+        //roi section
+        "quoteBtn": "Richiedi preventivo",
         //email section
         "emailTitle": "Non perderti nulla!",
         "emailSubtitle": "Lasciaci la tua email se vuoi maggiori informazioni su Stip o per metterti in contatto con noi.",
@@ -126,6 +128,8 @@ let languages = {
         // btn
         "demoBtn": "DEMO REQUEST",
         "contactBtn": "CONTACT US",
+        //roi section
+        "quoteBtn": "Quote request",
         //email section
         "emailTitle": "Don't miss anything!",
         "emailSubtitle": "Leave us your email if you want more information on Stip, or just to keep in touch.",
