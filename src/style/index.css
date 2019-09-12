@@ -742,6 +742,7 @@ input[type=range].price:focus::-ms-fill-upper {
   background-color: transparent;
   border: 0;
   color: #399fad;
+  font-weight: 600;
 }
 
 .stip-requestQuote button:hover {

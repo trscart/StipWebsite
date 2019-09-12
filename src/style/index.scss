@@ -551,6 +551,7 @@ input[type=range].price:focus::-ms-fill-upper {
         background-color: transparent;
         border: 0;
         color: $stcolor;
+        font-weight: 600;
 
         &:hover {
             background-color: transparent;

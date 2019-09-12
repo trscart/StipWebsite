@@ -353,6 +353,8 @@ $(document).ready(function () {
         }
     });
 
+
+    // lock scroll when there is a touch event on roi sliders
     $("#priceSlider").on('touchstart', function () {
         $('body').css("overflow-y", "hidden")
     });
@@ -360,7 +362,7 @@ $(document).ready(function () {
         $('body').css("overflow-y", "hidden")
     });
 
-    // ajax call for email newsletter
+    // ajax call for quote request
     $(".stip-requestQuoteBtn").click(function () {
         if ($('#stip-email-quote').val()) {
             $('.stip-inputRequired').css("border-color", "#ced4da")
@@ -478,15 +480,6 @@ $(document).ready(function () {
     // category dropdown
     $(".stip-categoryDropItem").click(function () {
         $("#stip-categoryDrop").html($(this).text());
-    });
-
-    // lang dropdown
-    $(".stip-langDropItem").click(function () {
-        $("#stip-langDrop").html($(this).text());
-    });
-    $("#stip-langDrop").click(function () {
-        $(this).css("background-color", "transparent")
-        $(this).css("color", "#303030")
     });
 
     // footer scroll to section animation
