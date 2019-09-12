@@ -360,7 +360,10 @@ $(document).ready(function () {
 
             let data = {
                 "email": $('#stip-email-quote').val(),
+                "volume": $('#volumeSlider').val(),
+                "price": $('#priceSlider').val(),
             }
+            console.log($('#stip-email-quote').val() + " " + $('#volumeSlider').val() + " " + $('#priceSlider').val())
             /*fetch('', {
                 method: 'POST',
                 headers: {

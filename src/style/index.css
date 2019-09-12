@@ -530,6 +530,14 @@ b {
   font-weight: 400;
 }
 
+.stip-volumeSlider output {
+  color: #399fad;
+}
+
+.stip-priceSlider output {
+  color: #ff6161;
+}
+
 input[type=range].volume {
   -webkit-appearance: none;
   width: 100%;
@@ -746,6 +754,14 @@ input[type=range].price:focus::-ms-fill-upper {
           box-shadow: none;
 }
 
+.stip-requestQuote button:active {
+  color: #399fad !important;
+  background-color: transparent !important;
+  border: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .stip-emailSectionBtn {
   background-color: #399fad;
   color: white;
@@ -931,6 +947,13 @@ input[type=range].price:focus::-ms-fill-upper {
 @media (min-width: 576px) and (max-width: 768px) {
   .stip-howWork {
     background-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stip-reductionCol {
+    border-top: 2px solid #e8e8e8;
+    border-right: 0;
   }
 }
 

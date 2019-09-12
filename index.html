@@ -312,39 +312,40 @@
 
     <!-- quote section -->
     <div class="container text-center mt-5">
-        <div class="row bg-white stip-rounded shadow-lg mx-5">
-            <div class="col-md-5 py-5 stip-reductionCol">
-                <div class="stip-reduction mb-3">
-                    <h2 class="stip-h1">-7859€</h2>
-                    <span class="stip-h3"> /anno</span>
-                </div>
-                <div class="stip-reduction">
-                    <h2 class="stip-h1">-17h</h2>
-                    <span class="stip-h3"> /anno</span>
-                </div>
-                <div class="stip-requestQuote mt-4 px-4">
-                    <input type="text" name="email" class="form-control stip-txt stip-inputRequired"
-                        id="stip-email-quote" placeholder="Corporate email" aria-label="Corporate email"
-                        aria-describedby="button-addon2">
-                    <button type="button" class="btn btn-primary btn-lg btn-block stip-h3 stip-requestQuoteBtn lang" key="quoteBtn">Richiedi preventivo</button>
-                </div>
-            </div>
-            <div class="col-md-7 d-flex flex-column justify-content-center py-5">
-                <div class="stip-volumeSlider px-5 mb-4">
+        <div class="row bg-white stip-rounded shadow-lg mx-2 mx-md-0 mx-lg-5">
+            <div class="col-md-7 order-md-last d-flex flex-column justify-content-center py-5">
+                <div class="stip-volumeSlider px-3 px-md-5 mb-4">
                     <form class="range-field" oninput="volume.value=parseInt(volumeSlider.value)">
-                        <label class="stip-h2" for="customRange1">Lorem Ipsum</label>
+                        <label class="stip-h2 lang" key="volumeLabel" for="customRange1">Lorem Ipsum</label>
                         <input type="range" class="custom-range volume" id="volumeSlider" value="5000" min="0"
                             max="10000" step="50" id="customRange3" data-popup-enabled="true">
                         <output class="stip-h3" name="volume">5000</output>
                     </form>
                 </div>
-                <div class="stip-priceSlider px-5">
+                <div class="stip-priceSlider px-3 px-md-5">
                     <form class="range-field" oninput="price.value=parseInt(priceSlider.value)">
-                        <label class="stip-h2" for="customRange1">Lorem Ipsum</label>
+                        <label class="stip-h2 lang" key="priceLabel" for="customRange1">Lorem Ipsum</label>
                         <input type="range" class="custom-range price" id="priceSlider" value="5000" min="0" max="10000"
                             step="50" id="customRange3">
                         <output class="stip-h3" name="price">5000</output>
                     </form>
+                </div>
+            </div>
+            <div class="col-md-5 order-md-first py-5 stip-reductionCol">
+                <div class="stip-reduction mb-3">
+                    <h2>-7859€</h2>
+                    <span> /anno</span>
+                </div>
+                <div class="stip-reduction">
+                    <h2>-17h</h2>
+                    <span> /anno</span>
+                </div>
+                <div class="stip-requestQuote mt-4 px-4">
+                    <input type="text" name="email" class="form-control stip-txt stip-inputRequired"
+                        id="stip-email-quote" placeholder="Corporate email" aria-label="Corporate email"
+                        aria-describedby="button-addon2">
+                    <button type="button" class="btn btn-primary btn-lg btn-block stip-h3 stip-requestQuoteBtn lang"
+                        key="quoteBtn">Richiedi preventivo</button>
                 </div>
             </div>
         </div>

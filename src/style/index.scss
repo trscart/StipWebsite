@@ -334,6 +334,18 @@ $txtsize: 16px;
     }
 }
 
+.stip-volumeSlider {
+    output {
+        color: $stcolor;
+    }
+}
+
+.stip-priceSlider {
+    output {
+        color: $ndcolor;
+    }
+}
+
 // range sliders style
 input[type=range].volume {
     -webkit-appearance: none;
@@ -539,12 +551,21 @@ input[type=range].price:focus::-ms-fill-upper {
         background-color: transparent;
         border: 0;
         color: $stcolor;
-        &:hover{
+
+        &:hover {
             background-color: transparent;
             color: $ndcolor;
         }
-        &:focus{
+
+        &:focus {
             box-shadow: none;
+        }
+
+        &:active {
+            color: $stcolor !important;
+            background-color: transparent !important;
+            border: 0;
+            box-shadow: none !important;
         }
     }
 }
@@ -747,6 +768,13 @@ input[type=range].price:focus::-ms-fill-upper {
 @media (min-width: 576px) and (max-width: 768px) {
     .stip-howWork {
         background-size: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .stip-reductionCol {
+        border-top: 2px solid #e8e8e8;
+        border-right: 0;
     }
 }
 
