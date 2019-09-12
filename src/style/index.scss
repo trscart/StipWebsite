@@ -325,9 +325,11 @@ $txtsize: 16px;
             font-size: $h1size + 19;
             font-weight: 600;
             display: inline;
+            color: $stcolor;
         }
 
         span {
+            color: $stcolor;
             font-size: $h1size;
             font-weight: 400;
         }

@@ -523,9 +523,11 @@ b {
   font-size: 48px;
   font-weight: 600;
   display: inline;
+  color: #399fad;
 }
 
 .stip-reductionCol .stip-reduction span {
+  color: #399fad;
   font-size: 29px;
   font-weight: 400;
 }
