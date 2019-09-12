@@ -353,6 +353,13 @@ $(document).ready(function () {
         }
     });
 
+    $("#priceSlider").on('touchstart', function () {
+        $('body').css("overflow-y", "hidden")
+    });
+    $("#volumeSlider").on('touchstart', function () {
+        $('body').css("overflow-y", "hidden")
+    });
+
     // ajax call for email newsletter
     $(".stip-requestQuoteBtn").click(function () {
         if ($('#stip-email-quote').val()) {
