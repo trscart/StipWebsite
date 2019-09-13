@@ -126,7 +126,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contacts",
         // hero
-        "heroTitle": "Automate your Social and Email Customer Care",
+        "heroTitle": "Boost your Social and Digital Customer Care performance with Artificial Intelligence",
         // btn
         "demoBtn": "DEMO REQUEST",
         "contactBtn": "CONTACT US",
