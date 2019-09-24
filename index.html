@@ -313,39 +313,38 @@
     <!-- quote section -->
     <div class="container text-center mt-5">
         <div class="row bg-white stip-rounded shadow-lg mx-2 mx-md-0 mx-lg-5">
-            <div class="col-md-7 order-md-last d-flex flex-column justify-content-center py-5">
-                <div class="stip-volumeSlider px-3 px-md-5 mb-4">
-                    <form class="range-field" oninput="volume.value=parseInt(volumeSlider.value)">
-                        <label class="stip-h2 lang" key="volumeLabel" for="customRange1">Lorem Ipsum</label>
-                        <input type="range" class="custom-range volume" id="volumeSlider" value="5000" min="0"
-                            max="10000" step="50" id="customRange3" data-popup-enabled="true">
-                        <output class="stip-h3" name="volume">5000</output>
-                    </form>
-                </div>
-                <div class="stip-priceSlider px-3 px-md-5">
-                    <form class="range-field" oninput="price.value=parseInt(priceSlider.value)">
-                        <label class="stip-h2 lang" key="priceLabel" for="customRange1">Lorem Ipsum</label>
-                        <input type="range" class="custom-range price" id="priceSlider" value="5000" min="0" max="10000"
-                            step="50" id="customRange3">
-                        <output class="stip-h3" name="price">5000</output>
-                    </form>
-                </div>
+            <div class="col-md-6 p-4 p-md-5 stip-volumeSlider">
+                <form class="range-field" oninput="volume.value=parseInt(volumeSlider.value)">
+                    <label class="d-block stip-h2 lang" key="volumeLabel" for="customRange1">Volume annuo</label>
+                    <output class="stip-h3" name="volume">5000</output>
+                    <input type="range" class="custom-range volume" id="volumeSlider" value="5000" min="1000"
+                        max="5000000" step="1000" id="customRange3" data-popup-enabled="true">
+                </form>
+                <p class="mt-5 px-5 stip-txt">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit</p>
+                <h2 class="costReduction-txt">-7859€</h2>
+                <span> /anno</span>
             </div>
-            <div class="col-md-5 order-md-first d-flex flex-column justify-content-center py-5 stip-reductionCol">
-                <div class="stip-reduction mb-3">
-                    <h2>-7859€</h2>
-                    <span> /anno</span>
-                </div>
-                <div class="stip-reduction">
-                    <h2>-17h</h2>
-                    <span> /anno</span>
-                </div>
-                <div class="stip-requestQuote mt-4 px-4">
+            <div class="col-md-6 p-4 p-md-5 stip-priceSlider">
+                <form class="range-field" oninput="price.value=parseInt(priceSlider.value)">
+                    <label class="d-block stip-h2 lang" key="priceLabel" for="customRange1">Tempi di gestione</label>
+                    <output class="stip-h3" name="price">1</output>
+                    <input type="range" class="custom-range price" id="priceSlider" value="1" min="1" max="30" step="1"
+                        id="customRange3">
+                </form>
+                <p class="mt-5 px-5 stip-txt">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit</p>
+                <h2 class="timeReduction-txt">-17h</h2>
+            </div>
+            <div class="col-12 px-5 py-4 stip-requestQuote">
+                <div class="input-group">
                     <input type="text" name="email" class="form-control stip-txt stip-inputRequired"
                         id="stip-email-quote" placeholder="Corporate email" aria-label="Corporate email"
                         aria-describedby="button-addon2">
-                    <button type="button" class="btn btn-primary btn-lg btn-block stip-h3 stip-requestQuoteBtn lang"
-                        key="quoteBtn">Richiedi preventivo</button>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary stip-requestQuoteBtn py-0 lang" key="quoteBtn"
+                            type="button">Richiedi preventivo</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -317,33 +317,53 @@ $txtsize: 16px;
     background-position-x: left;
 }
 
-.stip-reductionCol {
-    border-right: 2px solid #e8e8e8;
-
-    .stip-reduction {
-        h2 {
-            font-size: $h1size + 19;
-            font-weight: 600;
-            display: inline;
-            color: $stcolor;
-        }
-
-        span {
-            color: $stcolor;
-            font-size: $h1size;
-            font-weight: 400;
-        }
-    }
+.costReduction-txt {
+    font-size: $h1size + 19;
+    font-weight: 600;
+    display: inline;
+    color: $stcolor;
 }
 
+.timeReduction-txt {
+    font-size: $h1size + 19;
+    font-weight: 600;
+    display: inline;
+    color: $ndcolor;
+}
+
+
 .stip-volumeSlider {
+    border-right: 2px solid #e8e8e8;
+
+    span {
+        color: $stcolor;
+        font-size: $h1size;
+        font-weight: 400;
+    }
+
+    label {
+        color: $stcolor;
+    }
+
     output {
+        color: $stcolor;
+    }
+
+    p {
         color: $stcolor;
     }
 }
 
 .stip-priceSlider {
+    label {
+        color: $ndcolor;
+    }
+
     output {
+        color: $ndcolor;
+    }
+
+    p {
         color: $ndcolor;
     }
 }
@@ -549,26 +569,15 @@ input[type=range].price:focus::-ms-fill-upper {
 // end range sliders style
 
 .stip-requestQuote {
+    border-top: 2px solid #e8e8e8;
     button {
-        background-color: transparent;
+        background-color: $stcolor;
+        color: white;
         border: 0;
-        color: $stcolor;
-        font-weight: 600;
+        transition: 0.2s;
 
         &:hover {
-            background-color: transparent;
-            color: $ndcolor;
-        }
-
-        &:focus {
-            box-shadow: none;
-        }
-
-        &:active {
-            color: $stcolor !important;
-            background-color: transparent !important;
-            border: 0;
-            box-shadow: none !important;
+            background-color: $ndcolor;
         }
     }
 }
@@ -775,8 +784,8 @@ input[type=range].price:focus::-ms-fill-upper {
 }
 
 @media (max-width: 768px) {
-    .stip-reductionCol {
-        border-top: 2px solid #e8e8e8;
+    .stip-volumeSlider {
+        border-bottom: 2px solid #e8e8e8;
         border-right: 0;
     }
 }

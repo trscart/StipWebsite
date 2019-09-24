@@ -14,8 +14,8 @@ let languages = {
         "contactBtn": "CONTATTACI",
         //roi section
         "quoteBtn": "Richiedi preventivo",
-        "volumeLabel": "Lorem Ipsum",
-        "priceLabel": "Lorem Ipsum",
+        "volumeLabel": "Volume annuo",
+        "priceLabel": "Tempi di gestione",
         //email section
         "emailTitle": "Non perderti nulla!",
         "emailSubtitle": "Lasciaci la tua email se vuoi maggiori informazioni su Stip o per metterti in contatto con noi.",

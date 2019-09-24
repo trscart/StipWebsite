@@ -39,8 +39,15 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
-    let price
-    let volume
+    // roi calculation
+    $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
+    $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
+    $("#volumeSlider").change(function() {
+        $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
+    });
+    $("#priceSlider").change(function() {
+        $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
+    });
 
     let demoCall = function () {
         let source

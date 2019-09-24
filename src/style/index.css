@@ -515,28 +515,51 @@ b {
   background-position-x: left;
 }
 
-.stip-reductionCol {
-  border-right: 2px solid #e8e8e8;
-}
-
-.stip-reductionCol .stip-reduction h2 {
+.costReduction-txt {
   font-size: 48px;
   font-weight: 600;
   display: inline;
   color: #399fad;
 }
 
-.stip-reductionCol .stip-reduction span {
+.timeReduction-txt {
+  font-size: 48px;
+  font-weight: 600;
+  display: inline;
+  color: #ff6161;
+}
+
+.stip-volumeSlider {
+  border-right: 2px solid #e8e8e8;
+}
+
+.stip-volumeSlider span {
   color: #399fad;
   font-size: 29px;
   font-weight: 400;
+}
+
+.stip-volumeSlider label {
+  color: #399fad;
 }
 
 .stip-volumeSlider output {
   color: #399fad;
 }
 
+.stip-volumeSlider p {
+  color: #399fad;
+}
+
+.stip-priceSlider label {
+  color: #ff6161;
+}
+
 .stip-priceSlider output {
+  color: #ff6161;
+}
+
+.stip-priceSlider p {
   color: #ff6161;
 }
 
@@ -740,29 +763,20 @@ input[type=range].price:focus::-ms-fill-upper {
   background: rgba(255, 97, 97, 0.3);
 }
 
+.stip-requestQuote {
+  border-top: 2px solid #e8e8e8;
+}
+
 .stip-requestQuote button {
-  background-color: transparent;
+  background-color: #399fad;
+  color: white;
   border: 0;
-  color: #399fad;
-  font-weight: 600;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .stip-requestQuote button:hover {
-  background-color: transparent;
-  color: #ff6161;
-}
-
-.stip-requestQuote button:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.stip-requestQuote button:active {
-  color: #399fad !important;
-  background-color: transparent !important;
-  border: 0;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  background-color: #ff6161;
 }
 
 .stip-emailSectionBtn {
@@ -954,8 +968,8 @@ input[type=range].price:focus::-ms-fill-upper {
 }
 
 @media (max-width: 768px) {
-  .stip-reductionCol {
-    border-top: 2px solid #e8e8e8;
+  .stip-volumeSlider {
+    border-bottom: 2px solid #e8e8e8;
     border-right: 0;
   }
 }
