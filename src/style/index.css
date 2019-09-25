@@ -928,6 +928,15 @@ input[type=range].price:focus::-ms-fill-upper {
   .stip-howWork p {
     font-size: 0.8em !important;
   }
+  #stip-email-quote {
+    width: 100%;
+    border-radius: 0.25rem 0.25rem 0 0 !important;
+  }
+  .stip-requestQuoteBtn {
+    width: 100%;
+    border-radius: 0 0 0.25rem 0.25rem !important;
+    padding: 0.3em !important;
+  }
   .stip-emailSection {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
