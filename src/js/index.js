@@ -607,7 +607,7 @@ $(document).ready(function () {
     // maps
     if ($(location).attr('href').includes("contacts")) {
         //en map
-        /*let placeEn = { lat: 37.870171, lng: -122.268624 };
+        let placeEn = { lat: 37.870171, lng: -122.268624 };
         let contentStringEn = '<div id="content">' +
             '<h1 class="stip-h3">Skydeck Berkley</h1>' +
             '<p class="stip-txt">2150 Shattuck Ave, Berkley, CA 94704, USA</p>' +
@@ -620,7 +620,7 @@ $(document).ready(function () {
         });
         markerEn.addListener('click', function () {
             infowindowEn.open(mapEn, markerEn);
-        });*/
+        });
 
         let placeIt = { lat: 41.901610, lng: 12.503200 };
         let contentStringIt = '<div id="content">' +
