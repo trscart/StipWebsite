@@ -11,6 +11,7 @@ $ndcolor: #ff6161;
     color: white;
     background-color: $stcolor;
     transition: 0.2s;
+    border: 0;
 
     &:hover{
         background-color: $ndcolor;

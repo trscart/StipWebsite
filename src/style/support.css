@@ -9,6 +9,7 @@
   background-color: #399fad;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  border: 0;
 }
 
 #stip-support-send:hover {
