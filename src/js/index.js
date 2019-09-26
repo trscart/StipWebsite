@@ -78,7 +78,7 @@ $(document).ready(function () {
             })
     }
 
-    // roi calculation
+    /* roi calculation
     $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
     $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
     $("#volumeSlider").change(function () {
@@ -86,7 +86,7 @@ $(document).ready(function () {
     });
     $("#priceSlider").change(function () {
         $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
-    });
+    });*/
 
     let demoCall = function () {
         let source
