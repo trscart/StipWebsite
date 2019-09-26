@@ -245,10 +245,11 @@ let languages = {
         "suggestedArticleTitle": "Suggested articles",
 
         // support
-        "supportEmail": "Email",
-        "supportName": "Name",
-        "supportDomain": "Domain",
-        "supportSection": "Section",
+        "supportEmail": "Email*",
+        "supportName": "Name*",
+        "supportDomain": "Domain*",
+        "supportSection": "Section*",
+        "supportSection": "Category*",
         "supportDescription": "Description",
         "supportBtn": "Send"
     }
