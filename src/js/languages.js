@@ -249,7 +249,7 @@ let languages = {
         "supportName": "Name*",
         "supportDomain": "Domain*",
         "supportSection": "Section*",
-        "supportSection": "Category*",
+        "supportCategory": "Category*",
         "supportDescription": "Description",
         "supportBtn": "Send"
     }
