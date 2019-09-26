@@ -487,7 +487,6 @@ $(document).ready(function () {
     // ajax call for support request
     $("#stip-support-form").submit(function (e) {
         e.preventDefault()
-        console.log("prova")
         let data = {
             "name": $('#stip-name-support').val(),
             "email": $('#stip-email-support').val(),
@@ -520,22 +519,22 @@ $(document).ready(function () {
 
                     $(".stip-closeReprompt").click(function () {
                         $(".stip-reprompt-container").css("display", "none")
-                        $('#stip-email-quote').val("")
+                        $("#stip-support-form").reset()
                     })
                 }
             })
             .catch(function (err) { //if error
                 //console.log(err)
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    $('.stip-requestQuoteBtn').text("Error, try again");
+                    $('.stip-support-send').text("Error, try again");
                 } else {
-                    $('.stip-requestQuoteBtn').text("Errore, riprova");
+                    $('.stip-support-send').text("Errore, riprova");
                 }
                 setTimeout(function () {
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('.stip-requestQuoteBtn').text("Quote request");
+                        $('.stip-support-send').text("Send");
                     } else {
-                        $('.stip-requestQuoteBtn').text("Richiedi preventivo");
+                        $('.stip-support-send').text("Invia");
                     }
                 }, 1300);
             })*/
