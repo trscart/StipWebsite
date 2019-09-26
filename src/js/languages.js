@@ -123,7 +123,7 @@ let languages = {
         "supportDomain": "Dominio*",
         "supportSection": "Sezione*",
         "supportCategory": "Categoria*",
-        "supportDescription": "Descrizione",
+        "supportDescription": "Descrizione*",
         "supportBtn": "Invia"
     },
     "en-EN": {
@@ -250,7 +250,7 @@ let languages = {
         "supportDomain": "Domain*",
         "supportSection": "Section*",
         "supportCategory": "Category*",
-        "supportDescription": "Description",
+        "supportDescription": "Description*",
         "supportBtn": "Send"
     }
 }

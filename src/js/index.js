@@ -523,9 +523,9 @@ $(document).ready(function () {
                 // append thank you message
                 let context
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                    context = { thanksTitle: "Thank you for filling our form!"};
                 } else {
-                    context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
+                    context = { thanksTitle: "Grazie per aver compilato il form!"};
                 }
                 let source = document.getElementById("stip-thanks").innerHTML;
                 let template = Handlebars.compile(source);
