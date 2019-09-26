@@ -1,0 +1,34 @@
+$stcolor: #399fad;
+$ndcolor: #ff6161;
+
+.stip-supportContainer{
+    height: 100vh;
+    background: url("../img/supportBG.png") no-repeat center 100%;
+    background-size: 100%;
+}
+
+#stip-support-send{
+    color: white;
+    background-color: $stcolor;
+    transition: 0.2s;
+
+    &:hover{
+        background-color: $ndcolor;
+    }
+}
+
+/*.error{
+    display: none !important;
+}*/
+
+/*@media (max-width: 576px) {
+    .stip-supportContainer{
+        background-size: 50% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .stip-supportContainer{
+        background-size: 50% !important;
+    }
+}*/

@@ -21,7 +21,7 @@ body {
 
 b {
     font-weight: 500;
-}
+} 
 
 $stcolor: #399fad; // old color #4E8EF0 or #0062FF
 $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
@@ -34,6 +34,7 @@ $txtsize: 16px;
 @import "blog.scss";
 @import "contacts.scss";
 @import "privacyPolicy.scss";
+@import "support.scss";
 
 .p-5_2 {
     padding: 2rem !important;

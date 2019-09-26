@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Stip - Social & Email Customer Care Automation</title>
+    <meta name="title" content="Stip - Social & Email Customer Care Automation">
+    <meta name="description"
+        content="Customer Satisfaction becomes reality thanks to the combination between Artificial Intelligence and human interaction">
+
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="src/style/index.css">
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex stip-supportContainer">
+        <div class="row flex-grow-1">
+            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+                <img src="src/img/logoColor.svg" class="align-self-center mb-4" style="max-width: 30%" alt="">
+                <form id="stip-support-form">
+                    <div class="form-group">
+                        <!--<label class="stip-h3 stip-labelRequired lang" key="supportName">Nome</label>-->
+                        <input type="text" name="name" class="form-control stip-inputRequired placeholderLang"
+                            key="supportName" placeholder="Name" required id="stip-name-support">
+                    </div>
+                    <div class="form-group">
+                        <!--<label class="stip-h3 stip-labelRequired lang" key="supportEmail">Email</label>-->
+                        <input type="text" name="email" class="form-control stip-inputRequired placeholderLang"
+                            key="supportEmail" placeholder="Email" required id="stip-email-support">
+                    </div>
+                    <div class="form-group">
+                        <!--<label class="stip-h3 stip-labelRequired lang" key="supportDomain">Dominio</label>-->
+                        <input type="text" name="domain" class="form-control stip-inputRequired placeholderLang"
+                            key="supportDomain" placeholder="Domain" required id="stip-domain-support">
+                    </div>
+                    <div class="form-group">
+                        <!--<label class="stip-h3 stip-labelRequired lang" key="supportSection">Sezione</label>-->
+                        <select class="custom-select stip-section-support" id="inputGroupSelect01" required>
+                            <option selected class="lang" key="supportSection" value="">Sezione</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="custom-select stip-category-support" id="inputGroupSelect01" required>
+                            <option selected class="lang" key="supportCategory" value="">Categoria</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <!--<label class="stip-h3 stip-labelRequired lang" key="supportDescription">Descrizione</label>-->
+                        <textarea class="form-control stip-inputRequired placeholderLang"
+                            id="exampleFormControlTextarea1" rows="3" key="supportDescription"
+                            placeholder="Description"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 lang" key="supportBtn"
+                        id="stip-support-send">Invia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- thanks popup section -->
+    <script id="stip-thanks" type="text/x-handlebars-template">
+        <div class="container-fluid text-center h-100 fixed-top stip-reprompt-container">
+            <div class="row flex-grow-1">
+                <div class="col">
+                    <div class="card stip-reprompt stip-rounded">
+                        <div class="card-body">
+                            <button type="button" class="close stip-closeReprompt" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img alt="check illustration" src="src/img/checkIllustration.png" width="40%">
+                            <h2 class="stip-h1">{{thanksTitle}}</h2>
+                            <h2 class="stip-h3">{{thanksSubtitle}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- end thanks popup section -->
+
+    <!-- cookie -->
+    <script type="text/javascript">
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+            var nibirumail_advice_text = 'stip.io uses cookies to offer you a better browsing experience. By using our service you accept the use of cookies in accordance with ours <a href="privacy-policy.html#cookie" title="cookie" target="_blank">COOKIE POLICY</a><a href="javascript:;" title="policy" class="nibirumail_agreement"><button class="btn btn-xs btn-primary ml-3" style="background-color:#4384f1; border-radius: 1.25rem">ACCEPT</button></a>';
+        } else {
+            var nibirumail_advice_text = 'stip.io utilizza i cookies per offrirti un esperienza di navigazione migliore. Usando il nostro servizio accetti l impiego di cookie in accordo con la nostra <a href="privacy-policy.html#cookie" title="cookie" target="_blank">COOKIE POLICY</a><a href="javascript:;" title="policy" class="nibirumail_agreement"><button class="btn btn-xs btn-primary ml-3" style="background-color:#4384f1; border-radius: 1.25rem">ACCETTO</button></a>';
+        } 
+    </script>
+    <script type="text/javascript" src="https://nibirumail.com/docs/scripts/nibirumail.cookie.min.js"></script>
+
+    <script src="src/js/languages.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>

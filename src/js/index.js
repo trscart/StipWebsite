@@ -42,10 +42,10 @@ $(document).ready(function () {
     // roi calculation
     $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
     $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
-    $("#volumeSlider").change(function() {
+    $("#volumeSlider").change(function () {
         $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
     });
-    $("#priceSlider").change(function() {
+    $("#priceSlider").change(function () {
         $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
     });
 
@@ -484,6 +484,63 @@ $(document).ready(function () {
         }
     })
 
+    // ajax call for support request
+    $("#stip-support-form").submit(function (e) {
+        e.preventDefault()
+        console.log("prova")
+        let data = {
+            "name": $('#stip-name-support').val(),
+            "email": $('#stip-email-support').val(),
+            "domain_app": $('#stip-domain-support').val(),
+            "section": $('.stip-section-support').val(),
+            "category": $('.stip-category-support').val(),
+            "description": $('#stip-description-support').val()
+        }
+
+        /*fetch('https://stipworld.com/api/alertdown/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(function (res) {
+                if (res.status == 201) { //if status 201
+
+                    // append thank you message
+                    let context
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                    } else {
+                        context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
+                    }
+                    let source = document.getElementById("stip-thanks").innerHTML;
+                    let template = Handlebars.compile(source);
+                    $('body').append(template(context))
+
+                    $(".stip-closeReprompt").click(function () {
+                        $(".stip-reprompt-container").css("display", "none")
+                        $('#stip-email-quote').val("")
+                    })
+                }
+            })
+            .catch(function (err) { //if error
+                //console.log(err)
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    $('.stip-requestQuoteBtn').text("Error, try again");
+                } else {
+                    $('.stip-requestQuoteBtn').text("Errore, riprova");
+                }
+                setTimeout(function () {
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-requestQuoteBtn').text("Quote request");
+                    } else {
+                        $('.stip-requestQuoteBtn').text("Richiedi preventivo");
+                    }
+                }, 1300);
+            })*/
+    })
+
     // category dropdown
     $(".stip-categoryDropItem").click(function () {
         $("#stip-categoryDrop").html($(this).text());
@@ -599,7 +656,7 @@ $(document).ready(function () {
     fbq('track', 'PageView');
     /* end analytics, facebook and cookies */
 
-    if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy")) {
+    if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy") && !$(location).attr('href').includes("support")) {
         AOS.init({
             duration: 500,
             easing: 'ease-in-out',

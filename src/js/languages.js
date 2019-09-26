@@ -115,7 +115,16 @@ let languages = {
         "shareTxt": "Condividi su",
         "blogEmailTitle": "Resta con noi!",
         "blogEmailSubtitle": "Vuoi rimanere aggiornato su tutti i trend del Digital Customer Care e sul mondo Stip? Scrivi qui la tua email.",
-        "suggestedArticleTitle": "Articoli suggeriti"
+        "suggestedArticleTitle": "Articoli suggeriti",
+
+        // support
+        "supportEmail": "Email*",
+        "supportName": "Nome*",
+        "supportDomain": "Dominio*",
+        "supportSection": "Sezione*",
+        "supportCategory": "Categoria*",
+        "supportDescription": "Descrizione",
+        "supportBtn": "Invia"
     },
     "en-EN": {
 
@@ -233,7 +242,15 @@ let languages = {
         "shareTxt": "Share on",
         "blogEmailTitle": "Don't miss anything!",
         "blogEmailSubtitle": "What about keeping yourself updated with Digital Customer Care trends and with all the news from Stip world? Write your email right here.",
-        "suggestedArticleTitle": "Suggested articles"
+        "suggestedArticleTitle": "Suggested articles",
+
+        // support
+        "supportEmail": "Email",
+        "supportName": "Name",
+        "supportDomain": "Domain",
+        "supportSection": "Section",
+        "supportDescription": "Description",
+        "supportBtn": "Send"
     }
 }
 

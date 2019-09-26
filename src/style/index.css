@@ -223,6 +223,37 @@ b {
   margin-top: 10em;
 }
 
+.stip-supportContainer {
+  height: 100vh;
+  background: url("../img/supportBG.png") no-repeat center 100%;
+  background-size: 100%;
+}
+
+#stip-support-send {
+  color: white;
+  background-color: #399fad;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#stip-support-send:hover {
+  background-color: #ff6161;
+}
+
+/*.error{
+    display: none !important;
+}*/
+/*@media (max-width: 576px) {
+    .stip-supportContainer{
+        background-size: 50% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .stip-supportContainer{
+        background-size: 50% !important;
+    }
+}*/
 .p-5_2 {
   padding: 2rem !important;
 }
