@@ -39,6 +39,45 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
+    // append option in support selects
+    if ($(location).attr('href').includes("support")) {
+        fetch('https://stipworld.com/api/sectionchoices/', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function (res) {
+                res.json().then(function (data) {
+                    console.log(data)
+                    data.forEach(element => {
+                        $(".stip-section-support").append("<option value=" + element[0] + ">" + element[1] + "</option>");
+                    });
+                })
+            })
+            .catch(function (err) { //if error
+                console.log(err)
+            })
+
+        fetch('https://stipworld.com/api/categorychoices/', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function (res) {
+                res.json().then(function (data) {
+                    console.log(data)
+                    data.forEach(element => {
+                        $(".stip-category-support").append("<option value=" + element[0] + ">" + element[1] + "</option>");
+                    });
+                })
+            })
+            .catch(function (err) { //if error
+                console.log(err)
+            })
+    }
+
     // roi calculation
     $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
     $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
@@ -470,10 +509,10 @@ $(document).ready(function () {
             "domain_app": $('#stip-domain-support').val(),
             "section": $('.stip-section-support').val(),
             "category": $('.stip-category-support').val(),
-            "description": $('#stip-description-support').val()
+            "description": $('.stip-description-support').val()
         }
 
-        /*fetch('https://stipworld.com/api/alertdown/', {
+        fetch('https://stipworld.com/api/alertdown/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -481,24 +520,21 @@ $(document).ready(function () {
             body: JSON.stringify(data)
         })
             .then(function (res) {
-                if (res.status == 201) { //if status 201
-
-                    // append thank you message
-                    let context
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
-                    } else {
-                        context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
-                    }
-                    let source = document.getElementById("stip-thanks").innerHTML;
-                    let template = Handlebars.compile(source);
-                    $('body').append(template(context))
-
-                    $(".stip-closeReprompt").click(function () {
-                        $(".stip-reprompt-container").css("display", "none")
-                        $("#stip-support-form")[0].reset()
-                    })
+                // append thank you message
+                let context
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                } else {
+                    context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
                 }
+                let source = document.getElementById("stip-thanks").innerHTML;
+                let template = Handlebars.compile(source);
+                $('body').append(template(context))
+
+                $(".stip-closeReprompt").click(function () {
+                    $(".stip-reprompt-container").css("display", "none")
+                    $("#stip-support-form")[0].reset()
+                })
             })
             .catch(function (err) { //if error
                 //console.log(err)
@@ -514,7 +550,7 @@ $(document).ready(function () {
                         $('.stip-support-send').text("Invia");
                     }
                 }, 1300);
-            })*/
+            })
     })
 
     // category dropdown
