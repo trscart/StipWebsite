@@ -263,25 +263,25 @@
                     </div>
                 </div>
                 <div class="col-md-5 p-5 d-flex justify-content-center align-items-center stip-demoCol">
-                    <form class="p-2 p-lg-5 flex-grow-1 text-white">
+                    <form class="p-2 p-lg-5 flex-grow-1 text-white" id="stip-demo-form">
                         <h2 class="mb-4 stip-h1">Richiedi qui la tua demo di Stip</h2>
                         <div class="form-group">
                             <label class="stip-h3 stip-labelRequired">Nome*</label>
-                            <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="Nome" id="stip-firstName-demo">
+                            <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="Nome" id="stip-firstName-demo" required>
                         </div>
                         <div class="form-group">
                             <label class="stip-h3 stip-labelRequired">Cognome*</label>
-                            <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Cognome" id="stip-lastName-demo">
+                            <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Cognome" id="stip-lastName-demo" required>
                         </div>
                         <div class="form-group">
                             <label class="stip-h3 stip-labelRequired">Email aziendale*</label>
-                            <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Email aziendale" required id="stip-email-demo">
+                            <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Email aziendale" required id="stip-email-demo" required>
                         </div>
                         <div class="form-group">
                             <label class="stip-h3">Telefono</label>
                             <input type="text" name="phone" class="form-control" placeholder="Telefono" id="stip-phone-demo">
                         </div>
-                        <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Prova Stip</button>
+                        <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend" id="stip-demoSend">Prova Stip</button>
                     </form>
                 </div>
             </div>
@@ -322,15 +322,15 @@
                         <h2 class="mb-4 stip-h1">Request a Demo and try Stip immediately</h2>
                         <div class="form-group">
                             <label class="stip-h3 stip-labelRequired">First name*</label>
-                            <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="First name" id="stip-firstName-demo">
+                            <input type="text" name="fname" class="form-control stip-inputRequired" placeholder="First name" id="stip-firstName-demo" required>
                         </div>
                         <div class="form-group">
                             <label class="stip-h3 stip-labelRequired">Last name*</label>
-                            <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Last name" id="stip-lastName-demo">
+                            <input type="text" name="lname" class="form-control stip-inputRequired" placeholder="Last name" id="stip-lastName-demo" required>
                         </div>
                         <div class="form-group">
                             <label class="stip-h3 stip-labelRequired">Corporate email*</label>
-                            <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Corporate email" required id="stip-email-demo">
+                            <input type="text" name="email" class="form-control stip-inputRequired" placeholder="Corporate email" required id="stip-email-demo" required>
                         </div>
                         <div class="form-group">
                             <label class="stip-h3">Phone</label>
@@ -373,7 +373,8 @@
 
                 </div>
                 <div class="d-flex mt-3 align-items-center">
-                    <a href="https://stip.io/blog/" title="blog" class="lang" key="footerBlogMore">Scopri tutti gli articoli</a>
+                    <a href="https://stip.io/blog/" title="blog" class="lang" key="footerBlogMore">Scopri tutti gli
+                        articoli</a>
                     <a href="https://stip.io/blog/" title="blog" class="material-icons ml-2">
                         arrow_right_alt
                     </a>
