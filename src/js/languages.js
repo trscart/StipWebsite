@@ -124,6 +124,7 @@ let languages = {
         "supportSection": "Sezione*",
         "supportCategory": "Categoria*",
         "supportDescription": "Descrizione*",
+        "fileSupport": "Carica un file",
         "supportBtn": "Invia"
     },
     "en-EN": {
@@ -251,6 +252,7 @@ let languages = {
         "supportSection": "Section*",
         "supportCategory": "Category*",
         "supportDescription": "Description*",
+        "fileSupport": "Upload a file",
         "supportBtn": "Send"
     }
 }

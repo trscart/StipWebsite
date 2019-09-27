@@ -509,6 +509,7 @@ $(document).ready(function () {
             "domain_app": $('#stip-domain-support').val(),
             "section": $('.stip-section-support').val(),
             "category": $('.stip-category-support').val(),
+            /*"file": $(".stip-file-support").val(),*/
             "description": $('.stip-description-support').val()
         }
 
@@ -523,9 +524,9 @@ $(document).ready(function () {
                 // append thank you message
                 let context
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    context = { thanksTitle: "Thank you for filling our form!"};
+                    context = { thanksTitle: "Thank you for filling our form!" };
                 } else {
-                    context = { thanksTitle: "Grazie per aver compilato il form!"};
+                    context = { thanksTitle: "Grazie per aver compilato il form!" };
                 }
                 let source = document.getElementById("stip-thanks").innerHTML;
                 let template = Handlebars.compile(source);
