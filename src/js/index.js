@@ -39,6 +39,10 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
+    $(".stip-file-support").change(function () {
+        console.log($(".stip-file-support").val())
+    });
+
     // append option in support selects
     if ($(location).attr('href').includes("support")) {
         fetch('https://stipworld.com/api/sectionchoices/', {
