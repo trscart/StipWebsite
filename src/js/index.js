@@ -39,8 +39,8 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
-    $(".stip-file-support").change(function () {
-        console.log($(".stip-file-support").val())
+    $(".stip-file-support").change(function (e) {
+        console.log(e)
     });
 
     // append option in support selects
