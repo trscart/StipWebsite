@@ -359,15 +359,15 @@
                 <h2 class="stip-h3 lang" key="emailSubtitle">Lasciaci la tua email se vuoi maggiori informazioni su Stip
                     o per metterti in contatto con noi.
                 </h2>
-                <div class="input-group mt-4">
+                <form class="input-group mt-4" id="stip-email-form">
                     <input type="email" name="email" class="form-control stip-txt stip-inputRequired"
                         id="stip-email-newsletter" placeholder="Corporate email" aria-label="Corporate email"
-                        aria-describedby="button-addon2">
+                        aria-describedby="button-addon2" required>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary stip-emailSectionBtn py-0 lang" key="emailBtn"
-                            type="button" id="button-addon2">Registrati</button>
+                            type="submit" id="button-addon2">Registrati</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -604,8 +604,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
 
-    <!-- HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5720221.js"></script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5720211.js"></script>
+    <!-- End of HubSpot Embed Code -->
     <!-- cookie -->
     <script type="text/javascript">
         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
