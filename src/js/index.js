@@ -35,7 +35,6 @@ anime({
     duration: 1200
 })*/
 
-
 $(document).ready(function () {
     console.log("here!")
 
@@ -299,6 +298,8 @@ $(document).ready(function () {
 
     // ajax call for demo request
     $(".stip-demoRequest").click(function () { // append demo section
+        document.location.href = "#demo-request"
+        location.reload();
         demoCall()
     })
 
@@ -325,41 +326,38 @@ $(document).ready(function () {
             body: JSON.stringify(data)
         })
             .then(function (res) {
-                if (res.status == 201) { //if status 201
-
-                    // append thank you message
-                    let context
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
-                    } else {
-                        context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
-                    }
-                    let source = document.getElementById("stip-thanks").innerHTML;
-                    let template = Handlebars.compile(source);
-                    $('body').append(template(context))
-
-                    $(".stip-closeReprompt").click(function () {
-                        $(".stip-reprompt-container").css("display", "none")
-                        $("#stip-contact-form")[0].reset()
-                    })
-
-                    $('.stip-messageSend').css("background-color", "#16B72E")
-                    $('.stip-messageSend').css("color", "white")
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('.stip-messageSend').text("Message sent");
-                    } else {
-                        $('.stip-messageSend').text("Messaggio inviato");
-                    }
-                    setTimeout(function () {
-                        $('.stip-messageSend').css("background-color", "#f8f9fa")
-                        $('.stip-messageSend').css("color", "black")
-                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            $('.stip-messageSend').text("Send");
-                        } else {
-                            $('.stip-messageSend').text("Invia");
-                        }
-                    }, 1300);
+                // append thank you message
+                let context
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                } else {
+                    context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
                 }
+                let source = document.getElementById("stip-thanks").innerHTML;
+                let template = Handlebars.compile(source);
+                $('body').append(template(context))
+
+                $(".stip-closeReprompt").click(function () {
+                    $(".stip-reprompt-container").css("display", "none")
+                    $("#stip-contact-form")[0].reset()
+                })
+
+                $('.stip-messageSend').css("background-color", "#16B72E")
+                $('.stip-messageSend').css("color", "white")
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    $('.stip-messageSend').text("Message sent");
+                } else {
+                    $('.stip-messageSend').text("Messaggio inviato");
+                }
+                setTimeout(function () {
+                    $('.stip-messageSend').css("background-color", "#f8f9fa")
+                    $('.stip-messageSend').css("color", "black")
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-messageSend').text("Send");
+                    } else {
+                        $('.stip-messageSend').text("Invia");
+                    }
+                }, 1300);
             })
             .catch(function (err) { //if error
                 $('.stip-messageSend').css("background-color", "#FF2828")
@@ -463,24 +461,22 @@ $(document).ready(function () {
             body: JSON.stringify(data)
         })
             .then(function (res) {
-                if (res.status == 201) { //if status 201
 
-                    // append thank you message
-                    let context
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
-                    } else {
-                        context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
-                    }
-                    let source = document.getElementById("stip-thanks").innerHTML;
-                    let template = Handlebars.compile(source);
-                    $('body').append(template(context))
-
-                    $(".stip-closeReprompt").click(function () {
-                        $(".stip-reprompt-container").css("display", "none")
-                        $("#stip-email-form")[0].reset()
-                    })
+                // append thank you message
+                let context
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                } else {
+                    context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
                 }
+                let source = document.getElementById("stip-thanks").innerHTML;
+                let template = Handlebars.compile(source);
+                $('body').append(template(context))
+
+                $(".stip-closeReprompt").click(function () {
+                    $(".stip-reprompt-container").css("display", "none")
+                    $("#stip-email-form")[0].reset()
+                })
             })
             .catch(function (err) { //if error
                 //console.log(err)
