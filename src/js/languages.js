@@ -142,7 +142,8 @@ let languages = {
         "demoLName": "Cognome",
         "demoEmail": "Email aziendale*",
         "demoPhone": "Telefono",
-        "demoCompany": "Nome azienda*"
+        "demoCompany": "Nome azienda*",
+        "demoCompanyNum": "Numero dipendenti"
     },
     "en-EN": {
 
@@ -287,7 +288,8 @@ let languages = {
         "demoLName": "Last name",
         "demoEmail": "Corporate email*",
         "demoPhone": "Phone",
-        "demoCompany": "Company name*"
+        "demoCompany": "Company name*",
+        "demoCompanyNum": "Numero dipendenti"
     }
 }
 

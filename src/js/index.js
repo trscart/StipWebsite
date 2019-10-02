@@ -91,6 +91,110 @@ $(document).ready(function () {
         $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
     });*/
 
+    // general css change
+    if ($(location).attr('href').includes("contacts")) {
+        $('.stip-nav').css("padding", "0 5em")
+        $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
+    }
+    if ($(location).attr('href').includes("contacts")) {
+        $('.stip-nav').css("position", "relative")
+    }
+    $("#navBtn").click(function () {
+        if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
+            $('.stip-nav').toggleClass("stip-shadow")
+            $('.stip-nav').css("background-color", "white")
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("blog")) { // nav-item change on scroll
+            $('.stip-nav').css("padding", "0 5em")
+            $('.stip-nav').css("background-color", "white")
+            $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
+            $(".stip-languageDrop").css("color", "#4384f1")
+        }
+        else if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("blog")) {
+            $('.stip-nav').css("padding", "2em 5em")
+            $('.stip-nav').css("background-color", "transparent")
+            $('.stip-nav').css("box-shadow", "none")
+            $(".stip-languageDrop").css("color", "#ffffff")
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0 && $(window).width() > 767 && $(location).attr('href').includes("blog")) { // double nav animation
+            $('.stip-navs').css("top", -$('.stip-nav').outerHeight())
+            $('.stip-navs').css("background-color", "white")
+        }
+        else if ($(window).scrollTop() > 0 && $(window).width() < 767) {
+            $('.stip-navs').css("top", 0)
+            $('.stip-navs').css("background-color", "white")
+            $('.stip-nav').css("padding", "0 5em")
+        }
+        else if ($(window).width() > 767 && !$(location).attr('href').includes("contacts")) {
+            $('.stip-navs').css("top", 0)
+        }
+    });
+
+    // get latest articles and append them on footer
+    fetch('https://stip.io/blog/api/articles/latests/', {
+        mode: "cors",
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(function (res) {
+            res.json().then(function (data) {
+                //console.log(data)
+                for (let i = 0; i < 3; i++) {
+                    $(".stip-footerBlog").append("<a href='https://stip.io/blog/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
+                }
+            })
+        })
+        .catch(function (err) { //if error
+            //console.log(err)
+        })
+
+    $(".dropdown-menu li a").click(function () {
+        $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
+    });
+
+    // stip policy language
+    $("#stip-policy").click(function () {
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+            $(this).attr("href", "./privacy-policy-en.html");
+        } else {
+            $(this).attr("href", "./privacy-policy.html");
+        }
+    });
+
+    // card append
+    $("#stip-loadMore").click(function () {
+        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryDrop").html() };
+        var source = document.getElementById("stip-blogCard").innerHTML;
+        var template = Handlebars.compile(source);
+        for (let index = 0; index < 3; index++) {
+            $('#stip-blogCards').append(template(context))
+        }
+        if ($('.stip-blogCard').length == 6) {
+            /*
+            // cta append
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                var context = { ctaTitle: "Full efficiency with zero effort. That is your Customer Care with Stip", ctaDemoBtn: "Demo request", ctaContactBtn: "Contact us" };
+            } else {
+                var context = { ctaTitle: "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo", ctaDemoBtn: "Richiedi demo", ctaContactBtn: "Contattaci" };
+            }
+            var source = document.getElementById("stip-blogCta").innerHTML;
+            var template = Handlebars.compile(source);
+            $('#stip-blogCards').append(template(context))
+            // ajax call for demo request
+            $(".stip-demoRequest").click(function () { // append demo section
+                demoCall()
+            })*/
+        }
+    })
+
     let demoCall = function () {
         let source
         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
@@ -204,7 +308,7 @@ $(document).ready(function () {
             $(".stip-demoBG").css("background-image", "url('./src/img/demoBG_2.png')")
         }
         else {
-            $("#stip-email-demo").css("border-color", "#ff6161")   
+            $("#stip-email-demo").css("border-color", "#ff6161")
         }
     })
     // ajax call for demo request
@@ -295,110 +399,6 @@ $(document).ready(function () {
     if ($(location).attr('href').includes("#demo-request")) {
         demoCall()
     }
-
-    // general css change
-    if ($(location).attr('href').includes("contacts")) {
-        $('.stip-nav').css("padding", "0 5em")
-        $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
-    }
-    if ($(location).attr('href').includes("contacts")) {
-        $('.stip-nav').css("position", "relative")
-    }
-    $("#navBtn").click(function () {
-        if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
-            $('.stip-nav').toggleClass("stip-shadow")
-            $('.stip-nav').css("background-color", "white")
-        }
-    });
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("blog")) { // nav-item change on scroll
-            $('.stip-nav').css("padding", "0 5em")
-            $('.stip-nav').css("background-color", "white")
-            $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
-            $(".stip-languageDrop").css("color", "#4384f1")
-        }
-        else if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("blog")) {
-            $('.stip-nav').css("padding", "2em 5em")
-            $('.stip-nav').css("background-color", "transparent")
-            $('.stip-nav').css("box-shadow", "none")
-            $(".stip-languageDrop").css("color", "#ffffff")
-        }
-    });
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 && $(window).width() > 767 && $(location).attr('href').includes("blog")) { // double nav animation
-            $('.stip-navs').css("top", -$('.stip-nav').outerHeight())
-            $('.stip-navs').css("background-color", "white")
-        }
-        else if ($(window).scrollTop() > 0 && $(window).width() < 767) {
-            $('.stip-navs').css("top", 0)
-            $('.stip-navs').css("background-color", "white")
-            $('.stip-nav').css("padding", "0 5em")
-        }
-        else if ($(window).width() > 767 && !$(location).attr('href').includes("contacts")) {
-            $('.stip-navs').css("top", 0)
-        }
-    });
-
-    // get latest articles and append them on footer
-    fetch('https://stip.io/blog/api/articles/latests/', {
-        mode: "cors",
-        method: 'GET',
-        headers: {
-            'content-type': 'application/json'
-        }
-    })
-        .then(function (res) {
-            res.json().then(function (data) {
-                //console.log(data)
-                for (let i = 0; i < 3; i++) {
-                    $(".stip-footerBlog").append("<a href='https://stip.io/blog/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
-                }
-            })
-        })
-        .catch(function (err) { //if error
-            //console.log(err)
-        })
-
-    $(".dropdown-menu li a").click(function () {
-        $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
-    });
-
-    // stip policy language
-    $("#stip-policy").click(function () {
-        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-            $(this).attr("href", "./privacy-policy-en.html");
-        } else {
-            $(this).attr("href", "./privacy-policy.html");
-        }
-    });
-
-    // card append
-    $("#stip-loadMore").click(function () {
-        var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryDrop").html() };
-        var source = document.getElementById("stip-blogCard").innerHTML;
-        var template = Handlebars.compile(source);
-        for (let index = 0; index < 3; index++) {
-            $('#stip-blogCards').append(template(context))
-        }
-        if ($('.stip-blogCard').length == 6) {
-            /*
-            // cta append
-            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                var context = { ctaTitle: "Full efficiency with zero effort. That is your Customer Care with Stip", ctaDemoBtn: "Demo request", ctaContactBtn: "Contact us" };
-            } else {
-                var context = { ctaTitle: "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo", ctaDemoBtn: "Richiedi demo", ctaContactBtn: "Contattaci" };
-            }
-            var source = document.getElementById("stip-blogCta").innerHTML;
-            var template = Handlebars.compile(source);
-            $('#stip-blogCards').append(template(context))
-            // ajax call for demo request
-            $(".stip-demoRequest").click(function () { // append demo section
-                demoCall()
-            })*/
-        }
-    })
 
     // ajax call for demo request
     $(".stip-demoRequest").click(function () { // append demo section
