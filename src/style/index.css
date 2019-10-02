@@ -247,6 +247,39 @@ b {
   }
 }
 
+.stip-demoHero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 5em;
+}
+
+.stip-demoBG {
+  background: url("../img/demoBG_1.png") no-repeat;
+  background-size: contain;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.stip-demo-button {
+  color: white;
+  background-color: #399fad;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+.stip-demo-button:hover {
+  background-color: #ff6161;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .stip-demoHero {
+    padding: 2em;
+  }
+}
+
 .p-5_2 {
   padding: 2rem !important;
 }

@@ -125,7 +125,24 @@ let languages = {
         "supportCategory": "Categoria*",
         "supportDescription": "Descrizione*",
         "fileSupport": "Carica un file",
-        "supportBtn": "Invia"
+        "supportBtn": "Invia",
+
+        // demo
+        "demoHeroTitle1": "Richiedi la tua Demo di Stip",
+        "demoHeroSubtitle1": "Scopri come l’Intelligenza Artificiale di Stip ti aiuta a migliorare le performance e l’efficienza del tuo Social e Digital Customer Support, rendendo la tua Customer Experience indimenticabile",
+        "demoHeroTitle2": "Aggiungi qualche informazione sulla tua azienda",
+        "demoHeroSubtitle2": "Dicci di più e potremmo proporti le funzionalità di Stip più in linea con le tue necessità",
+        "demoHeroTitle3": "Grazie!",
+        "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto. Nel frattempo, ti consigliamo di dare un’occhiata a uno dei Case Study di Stip",
+        "demoBtn1": "Chiedi la tua Demo",
+        "demoBtn-submit": "Prenota la tua Demo",
+        "demoBtn2": "Scarica il Case Study",
+        "demoBtn3": "Contatta Stip",
+        "demoFName": "Nome",
+        "demoLName": "Cognome",
+        "demoEmail": "Email aziendale*",
+        "demoPhone": "Telefono",
+        "demoCompany": "Nome azienda*"
     },
     "en-EN": {
 
@@ -253,7 +270,24 @@ let languages = {
         "supportCategory": "Category*",
         "supportDescription": "Description*",
         "fileSupport": "Upload a file",
-        "supportBtn": "Send"
+        "supportBtn": "Send",
+
+        // demo
+        "demoHeroTitle1": "Richiedi la tua Demo di Stip",
+        "demoHeroSubtitle1": "Scopri come l’Intelligenza Artificiale di Stip ti aiuta a migliorare le performance e l’efficienza del tuo Social e Digital Customer Support, rendendo la tua Customer Experience indimenticabile",
+        "demoHeroTitle2": "Aggiungi qualche informazione sulla tua azienda",
+        "demoHeroSubtitle2": "Dicci di più e potremmo proporti le funzionalità di Stip più in linea con le tue necessità",
+        "demoHeroTitle3": "Grazie!",
+        "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto. Nel frattempo, ti consigliamo di dare un’occhiata a uno dei Case Study di Stip",
+        "demoBtn1": "Chiedi la tua Demo",
+        "demoBtn-submit": "Prenota la tua Demo",
+        "demoBtn2": "Scarica il Case Study",
+        "demoBtn3": "Contatta Stip",
+        "demoFName": "First name",
+        "demoLName": "Last name",
+        "demoEmail": "Corporate email*",
+        "demoPhone": "Phone",
+        "demoCompany": "Company name*"
     }
 }
 

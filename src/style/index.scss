@@ -22,7 +22,7 @@ body {
 b {
     font-weight: 500;
 } 
-
+ 
 $stcolor: #399fad; // old color #4E8EF0 or #0062FF
 $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 $h1size: 29px;
@@ -35,6 +35,7 @@ $txtsize: 16px;
 @import "contacts.scss";
 @import "privacyPolicy.scss";
 @import "support.scss";
+@import "demo.scss";
 
 .p-5_2 {
     padding: 2rem !important;
@@ -87,7 +88,7 @@ $txtsize: 16px;
 
 .stip-shadow {
     box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1) !important;
-}
+} 
 
 /*.stip-loadLogo {
     height: 30%;
@@ -163,10 +164,10 @@ $txtsize: 16px;
         transform: translate(-50%, -50%);
         transition: 0.5s;
     }
-}
+} 
 
 .stip-heroContainer {
-    height: 100vh;
+    height: 100vh; 
     padding: 10%;
     background: url("../img/heroBannerIllustration.png") no-repeat;
     background-size: contain;
@@ -670,7 +671,7 @@ input[type=range].price:focus::-ms-fill-upper {
 }
 
 //media query
-
+ 
 @media (max-width: 576px) {
     .stip-h1 {
         font-size: 18px !important;
