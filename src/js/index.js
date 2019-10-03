@@ -195,7 +195,8 @@ $(document).ready(function () {
         }
     })
 
-    let demoCall = function () {
+    // old demo
+    /*let demoCall = function () {
         let source
         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
             source = document.getElementById("stip-demoSection-en").innerHTML;
@@ -292,6 +293,17 @@ $(document).ready(function () {
         })
     }
 
+    if ($(location).attr('href').includes("#demo-request")) {
+        demoCall()
+    }
+
+    // ajax call for demo request
+    $(".stip-demoRequest").click(function () { // append demo section
+        document.location.href = "#demo-request"
+        location.reload();
+        demoCall()
+    })*/
+
     // validate email
     function validateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -314,27 +326,17 @@ $(document).ready(function () {
     // ajax call for demo request
     $("#stip-demo-form").submit(function (e) {
         e.preventDefault()
-        $("#stip-demo-secondForm").hide()
-        $("#stip-demo-lastForm").show()
-        $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.png')")
-        if ($(window).width() < 576) {
-            console.log("eo")
-            $(".stip-demoHero").css("background-size", "contain")
-        }
         let data = {
             "firstname": $('#stip-firstName-demo').val(),
             "lastname": $('#stip-lastName-demo').val(),
             "email": $('#stip-email-demo').val(),
             "phone": $('#stip-phone-demo').val(),
             "company_name": $('#stip-companyName-demo').val(),
-            "company_num": $('.stip-companyNum-demo').val(),
-            "captcha": "..."
+            "company_num": $('.stip-companyNum-demo').val()
         }
-        console.log(data)
-        /*
         // process animation
-        $("#stip-demoSend").text("")
-        $("#stip-demoSend").append("<img style='width: 2em' src='src/img/loading.gif'>");
+        $("#stip-demo-send").text("")
+        $("#stip-demo-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
         // fetch call
         fetch('https://stipworld.com/api/companyDemoRequest/', {
             method: 'POST',
@@ -344,72 +346,33 @@ $(document).ready(function () {
             body: JSON.stringify(data)
         })
             .then(function (res) {
+                console.log(res)
                 if (res.status == 201) { //if status 201
-
-                    // append thank you message
-                    let context
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
-                    } else {
-                        context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
+                    $("#stip-demo-secondForm").hide()
+                    $("#stip-demo-lastForm").show()
+                    $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.png')")
+                    if ($(window).width() < 576) {
+                        $(".stip-demoHero").css("background-size", "contain")
                     }
-                    let source = document.getElementById("stip-thanks").innerHTML;
-                    let template = Handlebars.compile(source);
-                    $('body').append(template(context))
-
-                    $(".stip-closeReprompt").click(function () {
-                        $(".stip-reprompt-container").css("display", "none")
-                        $("#stip-demo-form")[0].reset()
-                    })
-
-                    $('.stip-messageSend').css("background-color", "#16B72E")
-                    $('.stip-messageSend').css("color", "white")
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('.stip-messageSend').text("Sent");
-                    } else {
-                        $('.stip-messageSend').text("Inviata");
-                    }
-                    setTimeout(function () {
-                        $('.stip-messageSend').css("background-color", "#f8f9fa")
-                        $('.stip-messageSend').css("color", "black")
-                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            $('.stip-messageSend').text("Demo request");
-                        } else {
-                            $('.stip-messageSend').text("Richiedi demo");
-                        }
-                    }, 1300);
+                    $("#stip-demo-form")[0].reset()
                 }
             })
             .catch(function (err) { //if error
-                $('.stip-messageSend').css("background-color", "#FF2828")
-                $('.stip-messageSend').css("color", "white")
+                console.log(err)
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    $('.stip-messageSend').text("Error, try again");
+                    $('#stip-demo-send').text("Error, try again");
                 } else {
-                    $('.stip-messageSend').text("Errore, riprova");
+                    $('#stip-demo-send').text("Errore, riprova");
                 }
                 setTimeout(function () {
-                    $('.stip-messageSend').css("background-color", "#f8f9fa")
-                    $('.stip-messageSend').css("color", "black")
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('.stip-messageSend').text("Demo request");
+                        $('#stip-demo-send').text("Prenota la tua demo");
                     } else {
-                        $('.stip-messageSend').text("Richiedi demo");
+                        $('#stip-demo-send').text("Prenota la tua demo");
                     }
                 }, 1300);
-            })*/
+            })
     });
-
-    if ($(location).attr('href').includes("#demo-request")) {
-        demoCall()
-    }
-
-    // ajax call for demo request
-    $(".stip-demoRequest").click(function () { // append demo section
-        document.location.href = "#demo-request"
-        location.reload();
-        demoCall()
-    })
 
     // ajax call for contact request
     $("#stip-contact-form").submit(function (e) {
