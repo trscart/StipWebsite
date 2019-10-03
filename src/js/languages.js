@@ -128,12 +128,12 @@ let languages = {
         "supportBtn": "Invia",
 
         // demo
-        "demoHeroTitle1": "Richiedi la tua Demo di Stip",
+        "demoHeroTitle1": "Chiedi la tua Demo di Stipp",
         "demoHeroSubtitle1": "Scopri come l’Intelligenza Artificiale di Stip ti aiuta a migliorare le performance e l’efficienza del tuo Social e Digital Customer Support, rendendo la tua Customer Experience indimenticabile",
         "demoHeroTitle2": "Aggiungi qualche informazione sulla tua azienda",
         "demoHeroSubtitle2": "Dicci di più e potremmo proporti le funzionalità di Stip più in linea con le tue necessità",
         "demoHeroTitle3": "Grazie!",
-        "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto. Nel frattempo, ti consigliamo di dare un’occhiata a uno dei Case Study di Stip",
+        "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto.",
         "demoBtn1": "Chiedi la tua Demo",
         "demoBtn-submit": "Prenota la tua Demo",
         "demoBtn2": "Scarica il Case Study",
@@ -274,22 +274,22 @@ let languages = {
         "supportBtn": "Send",
 
         // demo
-        "demoHeroTitle1": "Richiedi la tua Demo di Stip",
-        "demoHeroSubtitle1": "Scopri come l’Intelligenza Artificiale di Stip ti aiuta a migliorare le performance e l’efficienza del tuo Social e Digital Customer Support, rendendo la tua Customer Experience indimenticabile",
-        "demoHeroTitle2": "Aggiungi qualche informazione sulla tua azienda",
-        "demoHeroSubtitle2": "Dicci di più e potremmo proporti le funzionalità di Stip più in linea con le tue necessità",
-        "demoHeroTitle3": "Grazie!",
-        "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto. Nel frattempo, ti consigliamo di dare un’occhiata a uno dei Case Study di Stip",
-        "demoBtn1": "Chiedi la tua Demo",
-        "demoBtn-submit": "Prenota la tua Demo",
+        "demoHeroTitle1": "Request your demo",
+        "demoHeroSubtitle1": "See how Stip’s Artificial Intelligence helps improve your company’s social and digital customer service performances and efficiency and provide your customers with an outstanding experience",
+        "demoHeroTitle2": "Tell us something about your company",
+        "demoHeroSubtitle2": "Let’s add some details and we will show you the first-rate features of Stip",
+        "demoHeroTitle3": "Thank you!",
+        "demoHeroSubtitle3": "We will be in touch with you in a jiffy",
+        "demoBtn1": "Request your demo",
+        "demoBtn-submit": "Reserve your Demo",
         "demoBtn2": "Scarica il Case Study",
-        "demoBtn3": "Contatta Stip",
+        "demoBtn3": "Contact Stip",
         "demoFName": "First name",
         "demoLName": "Last name",
         "demoEmail": "Corporate email*",
-        "demoPhone": "Phone",
+        "demoPhone": "Phone number",
         "demoCompany": "Company name*",
-        "demoCompanyNum": "Numero dipendenti"
+        "demoCompanyNum": "Number of employees"
     }
 }
 
