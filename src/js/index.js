@@ -52,7 +52,7 @@ $(document).ready(function () {
         })
             .then(function (res) {
                 res.json().then(function (data) {
-                    console.log(data)
+                    //console.log(data)
                     data.forEach(element => {
                         $(".stip-section-support").append("<option value=" + element[0] + ">" + element[1] + "</option>");
                     });
@@ -70,7 +70,7 @@ $(document).ready(function () {
         })
             .then(function (res) {
                 res.json().then(function (data) {
-                    console.log(data)
+                    //console.log(data)
                     data.forEach(element => {
                         $(".stip-category-support").append("<option value=" + element[0] + ">" + element[1] + "</option>");
                     });
@@ -305,7 +305,7 @@ $(document).ready(function () {
         if (validateEmail($("#stip-email-demo").val())) {
             $("#stip-demo-firstForm").hide()
             $("#stip-demo-secondForm").show()
-            $(".stip-demoBG").css("background-image", "url('./src/img/demoBG_2.png')")
+            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
         }
         else {
             $("#stip-email-demo").css("border-color", "#ff6161")
@@ -316,7 +316,11 @@ $(document).ready(function () {
         e.preventDefault()
         $("#stip-demo-secondForm").hide()
         $("#stip-demo-lastForm").show()
-        $(".stip-demoBG").css("background-image", "url('./src/img/checkIllustration.png')")
+        $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.png')")
+        if ($(window).width() < 576) {
+            console.log("eo")
+            $(".stip-demoHero").css("background-size", "contain")
+        }
         let data = {
             "firstname": $('#stip-firstName-demo').val(),
             "lastname": $('#stip-lastName-demo').val(),
@@ -553,7 +557,6 @@ $(document).ready(function () {
     // ajax call for email newsletter
     $("#stip-email-form").submit(function (e) {
         e.preventDefault()
-        console.log($('#stip-email-newsletter').val())
         let data = {
             "email": $('#stip-email-newsletter').val(),
         }

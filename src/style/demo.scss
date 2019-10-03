@@ -6,22 +6,19 @@ $ndcolor: #ff6161;
     position: relative;
     overflow: hidden;
     padding: 5em;
-}
-
-.stip-demoBG{
     background: url("../img/demoBG_1.png") no-repeat;
-    background-size: contain;
+    background-size: 50%;
     background-position-y: center;
-    background-position-x: center;
+    background-position-x: right;
 }
 
-.stip-demo-button{
+.stip-demo-button {
     color: white;
     background-color: $stcolor;
     transition: 0.2s;
     border: 0;
 
-    &:hover{
+    &:hover {
         background-color: $ndcolor;
         color: white;
     }
@@ -30,5 +27,7 @@ $ndcolor: #ff6161;
 @media (max-width: 576px) {
     .stip-demoHero {
         padding: 2em;
+        background-position-y: bottom;
+        background-position-x: center;
     }
 }

@@ -252,13 +252,10 @@ b {
   position: relative;
   overflow: hidden;
   padding: 5em;
-}
-
-.stip-demoBG {
   background: url("../img/demoBG_1.png") no-repeat;
-  background-size: contain;
+  background-size: 50%;
   background-position-y: center;
-  background-position-x: center;
+  background-position-x: right;
 }
 
 .stip-demo-button {
@@ -277,6 +274,8 @@ b {
 @media (max-width: 576px) {
   .stip-demoHero {
     padding: 2em;
+    background-position-y: bottom;
+    background-position-x: center;
   }
 }
 
