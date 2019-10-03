@@ -128,7 +128,7 @@ let languages = {
         "supportBtn": "Invia",
 
         // demo
-        "demoHeroTitle1": "Chiedi la tua Demo di Stipp",
+        "demoHeroTitle1": "Chiedi la tua Demo di Stip",
         "demoHeroSubtitle1": "Scopri come l’Intelligenza Artificiale di Stip ti aiuta a migliorare le performance e l’efficienza del tuo Social e Digital Customer Support, rendendo la tua Customer Experience indimenticabile",
         "demoHeroTitle2": "Aggiungi qualche informazione sulla tua azienda",
         "demoHeroSubtitle2": "Dicci di più e potremmo proporti le funzionalità di Stip più in linea con le tue necessità",

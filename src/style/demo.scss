@@ -12,6 +12,14 @@ $ndcolor: #ff6161;
     background-position-x: right;
 }
 
+.stip-backIcon{
+    color: $stcolor;
+    cursor: pointer;
+    &:hover{
+        color: $ndcolor;
+    }
+}
+
 .stip-demo-button {
     color: white;
     background-color: $stcolor;

@@ -304,17 +304,30 @@ $(document).ready(function () {
         demoCall()
     })*/
 
-    // validate email
-    function validateEmail(email) {
+    // validate corporate email
+    function validateCorporateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
+        var famousDomain = ["gmail.com", "outlook.com", "yahoo.com", "icloud.com", "libero.it", "me.com", "live.com", "hotmail.com", "live.it", "aol.com", "mail.com"]
+        var check
+        for (let i = 0; i < famousDomain.length; i++) {
+            if (email.includes(famousDomain[i])) {
+                check = true
+                break
+            }
+        }
+        if (check) {
+            return false
+        }
+        else {
+            return re.test(String(email).toLowerCase());
+        }
     }
 
     // demo page steps and request
     $("#stip-demo-secondForm").hide()
     $("#stip-demo-lastForm").hide()
     $("#stip-demo-next").click(function () {
-        if (validateEmail($("#stip-email-demo").val())) {
+        if (validateCorporateEmail($("#stip-email-demo").val())) {
             $("#stip-demo-firstForm").hide()
             $("#stip-demo-secondForm").show()
             $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
@@ -322,6 +335,10 @@ $(document).ready(function () {
         else {
             $("#stip-email-demo").css("border-color", "#ff6161")
         }
+    })
+    $("#stip-demo-back").click(function () { //back icon
+        $("#stip-demo-firstForm").show()
+        $("#stip-demo-secondForm").hide()
     })
     // ajax call for demo request
     $("#stip-demo-form").submit(function (e) {

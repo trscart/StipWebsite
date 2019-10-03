@@ -258,6 +258,15 @@ b {
   background-position-x: right;
 }
 
+.stip-backIcon {
+  color: #399fad;
+  cursor: pointer;
+}
+
+.stip-backIcon:hover {
+  color: #ff6161;
+}
+
 .stip-demo-button {
   color: white;
   background-color: #399fad;
