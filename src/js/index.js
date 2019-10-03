@@ -195,7 +195,7 @@ $(document).ready(function () {
         }
     })
 
-    // old demo
+    // old demo 
     /*let demoCall = function () {
         let source
         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // source en-EN demo section
