@@ -117,9 +117,10 @@
                     </p>
                     <!--<button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang" key="demoBtn-case"
                         >Scarica il Case Study</button>-->
-                    <button type="button" class="btn btn-light btn-block stip-h3 stip-demo-button lang"
-                        key="demoBtn2" id="stip-survey-button">Dicci di più sulla tua azienda</button>
-                    <a href="./index.html" class="stip-h3 stip-demoBackHome lang mt-3 align-self-center" key="demoBackHome">Torna alla Home</a>
+                    <button type="button" class="btn btn-light btn-block stip-h3 stip-demo-button lang" key="demoBtn2"
+                        id="stip-survey-button">Dicci di più sulla tua azienda</button>
+                    <a href="./index.html" class="stip-h3 stip-demoBackHome lang mt-3 align-self-center"
+                        key="demoBackHome">Torna alla Home</a>
                 </div>
                 <form id="stip-demo-secondForm">
                     <h1 class="stip-h1 lang" key="demoHeroTitle2">Aggiungi qualche informazione
@@ -138,9 +139,9 @@
                             <label class="stip-txt lang" key="demoContentNum">Quanti contenuti prodotti dagli utenti
                                 riceve
                                 mensilmente la tua azienda?</label>
-                            <i class="material-icons-outlined titleLang" style="font-size: 1em; cursor: pointer;"
-                                data-toggle="tooltip" data-placement="top" key="infoContentNum"
-                                title="Le tipologie di contenuti gestibili da Stip sono: post social, commenti, messaggi privati, menzioni, hashtag, tweet, messaggi Whatsapp e Telegram, email">
+                            <i class="material-icons-outlined datacontentLang" style="font-size: 1em; cursor: pointer;"
+                                data-container="body" data-toggle="popover" data-placement="top" key="infoContentNum"
+                                data-content="Le tipologie di contenuti gestibili da Stip sono: post social, commenti, messaggi privati, menzioni, hashtag, tweet, messaggi Whatsapp e Telegram, email">
                                 info
                             </i>
                         </div>
@@ -180,7 +181,7 @@
     <!-- end heroBanner -->
 
     <!-- footer -->
-    <footer class="container-fluid stip-footer p-md-5">
+    <footer class="container-fluid stip-footer mt-4 p-md-5">
         <div class="row p-5_2 stip-footerLink">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="./index.html" title="index" class="stip-h2 lang" key="footerHome">HOME</a>
@@ -318,6 +319,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="src/js/languages.js"></script>
     <script src="src/js/index.js"></script>
+    <script>
+        $("[data-toggle=popover]").popover();
+    </script>
 </body>
 
 </html>
