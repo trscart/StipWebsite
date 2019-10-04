@@ -136,6 +136,7 @@ let languages = {
         "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto.",
         "demoBtn1": "Chiedi la tua Demo",
         "demoBtn2": "Dicci di più sulla tua azienda",
+        "demoBackHome": "Torna alla Home",
         "demoBtn-case": "Scarica il Case Study",
         "demoBtn3": "Invia",
         "demoFName": "Nome",
@@ -184,7 +185,7 @@ let languages = {
         "footerBlogMore": "Check out all the articles",
 
         // home page
-        "heroSubtitle": "Stip uses Artificial Intelligence to increase your Customer Care Representatives’ performance, reduce Management Time, and decrease your Customer Support costs",
+        "heroSubtitle": "Stip uses Artificial Intelligence to make your customer service representatives' work more efficient, reduce management time and decrease your overall customer support costs",
         "whatTitle": "Artificial Intelligence helps Customer Care representatives and clients",
         "whatSubtitle": "Stip applies 3 layers of AI to your Customer Care interactions, making your service team more efficient.",
         "whatCaringTitle": "Help your clients in need of support",
@@ -287,6 +288,7 @@ let languages = {
         "demoHeroSubtitle3": "We will be in touch with you in a jiffy",
         "demoBtn1": "Request your demo",
         "demoBtn2": "Let's add your company details",
+        "demoBackHome": "Back to Home",
         "demoBtn-case": "Scarica il Case Study",
         "demoBtn3": "Send",
         "demoFName": "First name",

@@ -391,7 +391,12 @@ $(document).ready(function () {
     $("#stip-survey-button").click(function () {
         $("#stip-demo-secondForm").show()
         $("#stip-demo-thanks").hide()
-        $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
+        if ($(window).width() < 576) {
+            $(".stip-demoHero").css("background-image", "none")
+        }
+        else {
+            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
+        }
     })
     $("#stip-demo-secondForm").submit(function (e) {
         e.preventDefault()
@@ -415,7 +420,7 @@ $(document).ready(function () {
 
         $(".stip-closeReprompt").click(function () {
             window.location.href = "index.html";
-        }) 
+        })
 
         /*
         // process animation
