@@ -298,7 +298,7 @@ let languages = {
         "demoCompany": "Company name*",
         "demoContentNum": "How many user produced contents your company receive on a monthly basis?",
         "infoContentNum": "The kind of contents managed by Stip are: social post, comments, private messages, mentions, hashtag, tweet, Whatsapp and telegram messages, email",
-        "demoAgentNum": "Are you aware of the number of customer service representatives who take care of your company’s customers?",
+        "demoAgentNum": "How many customer service representatives take care of your customers?",
         "demoCrm": "What kind of CRM does your company use?",
         "crmProprietary": "Proprietary",
         "crmExternal": "External"
