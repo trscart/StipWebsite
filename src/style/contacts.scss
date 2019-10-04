@@ -1,9 +1,19 @@
-.stip-contactForm {
-    background-color: $stcolor;
-}
-
 .stip-contactContainer{
     height: 100vh;
+    background: url("../img/contactBG.png") no-repeat center right;
+    background-size: 50%;
+}
+
+#stip-contactUs{
+    color: white;
+    background-color: $stcolor;
+    transition: 0.2s;
+    border: 0;
+
+    &:hover {
+        background-color: $ndcolor;
+        color: white;
+    }
 }
 
 .map {
@@ -13,19 +23,9 @@
 }
 
 @media (max-width: 576px) {
-    .stip-contactForm {
-        form {
-            margin-top: 2em;
-        }
-    }
-}
-
-@media (max-width: 992px) {
     .stip-contactContainer{
-        height: auto;
-    }
-
-    .stip-contactRow{
-        margin-top: 8em;
+        padding: 2em;
+        background-position-y: bottom;
+        background-position-x: center;
     }
 }

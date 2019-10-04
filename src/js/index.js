@@ -92,13 +92,13 @@ $(document).ready(function () {
     });*/
 
     // general css change
-    if ($(location).attr('href').includes("contacts")) {
+    /*if ($(location).attr('href').includes("contacts")) {
         $('.stip-nav').css("padding", "0 5em")
         $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
     }
     if ($(location).attr('href').includes("contacts")) {
         $('.stip-nav').css("position", "relative")
-    }
+    }*/
     $("#navBtn").click(function () {
         if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
             $('.stip-nav').toggleClass("stip-shadow")
@@ -107,13 +107,13 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("blog")) { // nav-item change on scroll
+        if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("blog")) { // nav-item change on scroll
             $('.stip-nav').css("padding", "0 5em")
             $('.stip-nav').css("background-color", "white")
             $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
             $(".stip-languageDrop").css("color", "#4384f1")
         }
-        else if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("blog")) {
+        else if (!$(location).attr('href').includes("blog")) {
             $('.stip-nav').css("padding", "2em 5em")
             $('.stip-nav').css("background-color", "transparent")
             $('.stip-nav').css("box-shadow", "none")
@@ -131,7 +131,7 @@ $(document).ready(function () {
             $('.stip-navs').css("background-color", "white")
             $('.stip-nav').css("padding", "0 5em")
         }
-        else if ($(window).width() > 767 && !$(location).attr('href').includes("contacts")) {
+        else if ($(window).width() > 767) {
             $('.stip-navs').css("top", 0)
         }
     });
@@ -176,22 +176,6 @@ $(document).ready(function () {
         var template = Handlebars.compile(source);
         for (let index = 0; index < 3; index++) {
             $('#stip-blogCards').append(template(context))
-        }
-        if ($('.stip-blogCard').length == 6) {
-            /*
-            // cta append
-            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                var context = { ctaTitle: "Full efficiency with zero effort. That is your Customer Care with Stip", ctaDemoBtn: "Demo request", ctaContactBtn: "Contact us" };
-            } else {
-                var context = { ctaTitle: "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo", ctaDemoBtn: "Richiedi demo", ctaContactBtn: "Contattaci" };
-            }
-            var source = document.getElementById("stip-blogCta").innerHTML;
-            var template = Handlebars.compile(source);
-            $('#stip-blogCards').append(template(context))
-            // ajax call for demo request
-            $(".stip-demoRequest").click(function () { // append demo section
-                demoCall()
-            })*/
         }
     })
 

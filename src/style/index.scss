@@ -635,14 +635,14 @@ input[type=range].price:focus::-ms-fill-upper {
     width: 100px;
     cursor: pointer;
 
-    path {
+    path {   
         transition: 0.2s;
 
         &:hover {
             fill: $ndcolor;
         }
     }
-}
+}   
 
 .stip-minFooter {
     border-top: 1.5px solid #e8e8e8;
@@ -668,7 +668,7 @@ input[type=range].price:focus::-ms-fill-upper {
         font-size: 2em;
         color: white;
     }
-}
+} 
 
 //media query
  

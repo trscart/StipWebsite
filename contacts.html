@@ -54,7 +54,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top navbar-expand-sm stip-nav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-sm stip-nav">
         <a class="navbar-brand" href="./index.html">
             <img alt="logo" class="logo" src="src/img/logoColor.svg" width="80" height="80">
         </a>
@@ -93,10 +93,38 @@
     <!-- body -->
     <div class="container-fluid d-flex stip-contactContainer" id="stip-scrollDetect">
         <div class="row flex-grow-1 stip-contactRow">
-            <div class="col-lg-7 p-5 d-flex flex-column justify-content-center stip-contactCol">
-                <h1 class="text-center stip-h1 lang" key="contactTitle">SIAMO QUI PER TE!</h1>
-                <p class="text-center stip-txt lang" key="contactSubtitle">Contatta Stip su uno dei nostri canali o
-                    compila il form per farci sapere come possiamo esserti utili.</p>
+            <div class="col-md-5 col-lg-4 offset-md-1 d-flex flex-column justify-content-center stip-contactForm">
+                <form class="stip-contactCol" id="stip-contact-form">
+                    <h2 class="stip-h1 lang" key="contactFormTitle">Mettiti in contatto con Stip!</h2>
+                    <p class="stip-txt lang" key="contactSubtitle">Contatta Stip su uno dei nostri canali o compila il
+                        form per farci sapere come possiamo esserti utili.
+                    </p>
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control placeholderLang" key="contactName"
+                            placeholder="Full name" required id="stip-fullName-contact">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control placeholderLang" key="contactEmail"
+                            placeholder="Email" required id="stip-email-contact">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control placeholderLang" key="contactPhone"
+                            placeholder="Phone" id="stip-phone-contact">
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" class="form-control placeholderLang" key="contactMessage"
+                            placeholder="Message" id="stip-msg-contact"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend lang"
+                        key="contactFormSend" id="stip-contactUs">Invia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col p-5 d-flex flex-column justify-content-center stip-contactCol">
                 <div class="row mt-4">
                     <div class="col-md-6">
                         <div class="map" id="mapIt"></div>
@@ -115,38 +143,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 p-5 d-flex flex-column justify-content-center text-white stip-contactForm">
-                <form class="stip-contactCol" id="stip-contact-form">
-                    <h2 class="mb-4 stip-h1 lang" key="contactFormTitle">Mettiti in contatto con Stip!</h2>
-                    <div class="form-group">
-                        <label class="stip-h3 lang" key="contactFormName">Nome completo*</label>
-                        <input type="text" name="name" class="form-control placeholderLang"
-                            key="contactName" placeholder="Full name" required id="stip-fullName-contact">
-                    </div>
-                    <div class="form-group">
-                        <label class="stip-h3 lang" key="contactFormEmail">Email Aziendale*</label>
-                        <input type="email" name="email" class="form-control placeholderLang"
-                            key="contactEmail" placeholder="Email" required id="stip-email-contact">
-                    </div>
-                    <div class="form-group">
-                        <label class="stip-h3 lang" key="contactFormPhone">Telefono</label>
-                        <input type="text" name="phone" class="form-control placeholderLang" key="contactPhone"
-                            placeholder="Phone" id="stip-phone-contact">
-                    </div>
-                    <div class="form-group">
-                        <label class="stip-h3 lang" key="contactFormMessage">Lasciaci un messaggio</label>
-                        <textarea type="text" class="form-control placeholderLang" key="contactMessage"
-                            placeholder="Message" id="stip-msg-contact"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 stip-messageSend lang"
-                        key="contactFormSend" id="stip-contactUs">Invia</button>
-                </form>
-            </div>
         </div>
     </div>
     <!-- end body -->
 
-    <!-- footer -->
+    <!-- old contact footer
     <footer class="container-fluid mt-0 stip-minFooter">
         <div class="row px-5 py-2 stip-footerTxt">
             <div class="col d-flex align-items-center">
@@ -184,6 +185,107 @@
             </div>
             <div class="col d-flex align-items-center justify-content-end">
                 <p class="m-0 stip-txt">Copyright © 2019 Stip</p>
+            </div>
+        </div>
+    </footer>
+    footer -->
+
+    <!-- footer -->
+    <footer class="container-fluid stip-footer p-md-5">
+        <div class="row p-5_2 stip-footerLink">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="#" title="index" class="stip-h2 lang" key="footerHome">HOME</a>
+                <a href="#stip-lineControl" title="index" class="stip-txt stip-linkToSection lang"
+                    key="footerHomeWhat">Cosa facciamo</a>
+                <a href="#stip-vantaggi" title="index" class="stip-txt stip-linkToSection lang"
+                    key="footerHomeBenefit">Scopri i vantaggi</a>
+                <a href="#stip-howWork" title="index" class="stip-txt stip-linkToSection lang" key="footerHomeAi">La
+                    nostra
+                    AI</a>
+            </div>
+            <!--<div class="col-md-3 d-none d-md-block">
+                <a href="./platform.html" title="platform" class="stip-h2 lang" key="footerPlatform">PIATTAFORMA</a>
+                <a href="platform.html#stip-function" title="platform" class="stip-txt stip-linkToSection lang"
+                    key="footerPlatformHow">Come funziona</a>
+                <a href="platform.html#stip-integrazioni" title="platform" class="stip-txt stip-linkToSection lang"
+                    key="footerPlatformIntegration">Le integrazioni</a>
+                <a href="platform.html#stip-risposta" title="platform" class="stip-txt stip-linkToSection lang"
+                    key="footerPlatformCustomer">Customer Experience</a>
+            </div>-->
+            <div class="col-md-4 mb-5 mb-md-0 d-lg-block">
+                <a href="https://stip.io/blog/" title="blog" class="stip-h2 stip-blog lang" key="footerBlog">BLOG</a>
+                <div class="stip-footerBlog stip-blog">
+
+                </div>
+                <div class="d-flex mt-3 align-items-center">
+                    <a href="https://stip.io/blog/" title="blog" class="stip-blog lang" key="footerBlogMore">Scopri
+                        tutti gli
+                        articoli</a>
+                    <a href="https://stip.io/blog/" title="blog" class="stip-blog material-icons ml-2">
+                        arrow_right_alt
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-5 text-center">
+                <h2 class="stip-h1 lang" key="learnMoreTitle">Vuoi saperne di più?</h2>
+                <h2 class="stip-h3 lang" key="learnMoreSubtitle">Il team di Stip è a tua disposizione per qualsiasi
+                    necessità. D’altronde, il customer care è il nostro forte!
+                </h2>
+                <div class="mt-4 stip-footerBtn">
+                    <a href="./demo.html" class="d-inline" title="demo">
+                        <button class="d-inline-block stip-demoRequest lang" key="demoBtn" type="button">RICHIEDI
+                            DEMO</button>
+                    </a>
+                    <a class="ml-0 ml-md-3
+                     d-inline-block" href="./contacts.html" title="contacts">
+                        <button class="m-0 stip-contactUsHero lang" key="contactBtn" type="button" data-toggle="modal"
+                            data-target="#contactModal">CONTATTACI</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row px-5_2 stip-footerTxt">
+            <div class="col-12 col-sm-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="stip-socialIcon" width="183.564" height="36.084"
+                    viewBox="0 0 183.564 36.084">
+                    <g id="Group_43" data-name="Group 43" transform="translate(-848 -5608)">
+                        <a href="https://www.facebook.com/stipapp/" title="facebook">
+                            <g class="stip-facebookIcon" id="facebook-letter-logo"
+                                transform="translate(939.51 5608.084)">
+                                <path id="Facebook"
+                                    d="M118.325,6.969v4.953H114.7v6.057h3.629v18h7.455v-18h5s.469-2.9.7-6.08h-5.67V7.758a1.759,1.759,0,0,1,1.616-1.452h4.062V0h-5.522C118.141,0,118.325,6.064,118.325,6.969Z"
+                                    transform="translate(-114.696 -0.001)" fill="#303030" />
+                            </g>
+                        </a>
+                        <a href="https://www.linkedin.com/company/stip-ai/" title="linkedin">
+                            <g class="stip-linkedinIcon" id="linkedin-logo" transform="translate(995.587 5608)">
+                                <path id="LinkedIn__x28_alt_x29_"
+                                    d="M33.323,0H2.66A2.619,2.619,0,0,0,0,2.578V33.4A2.62,2.62,0,0,0,2.66,35.978H33.323A2.619,2.619,0,0,0,35.979,33.4V2.578A2.618,2.618,0,0,0,33.323,0ZM10.909,30.116H5.473V13.872h5.436ZM8.192,11.653H8.155a2.815,2.815,0,1,1,.071-5.612,2.816,2.816,0,1,1-.034,5.612ZM30.5,30.116H25.07V21.425c0-2.184-.787-3.674-2.753-3.674a2.969,2.969,0,0,0-2.788,1.976,3.63,3.63,0,0,0-.181,1.316v9.073H13.915s.071-14.72,0-16.243h5.434v2.3a5.4,5.4,0,0,1,4.9-2.685c3.577,0,6.259,2.32,6.259,7.312ZM19.314,16.226c.009-.015.022-.034.035-.051v.051Z"
+                                    transform="translate(-0.002)" fill="#303030" />
+                            </g>
+                        </a>
+                        <a href="https://twitter.com/Stip_Social" title="twitter">
+                            <g class="stip-twitterIcon" id="twitter-logo" transform="translate(848 5608)">
+                                <path id="Twitter__x28_alt_x29_"
+                                    d="M46.445,82.949c2.942-.243,4.937-1.58,5.705-3.395-1.061.652-4.355,1.363-6.175.686-.089-.427-.189-.833-.287-1.2-1.386-5.09-6.133-9.191-11.106-8.7.4-.162.81-.314,1.217-.45.547-.2,3.759-.719,3.253-1.852-.426-1-4.35.754-5.089.982.975-.367,2.588-1,2.761-2.118a7.79,7.79,0,0,0-4.095,1.939,2.815,2.815,0,0,0,.785-1.555c-3.985,2.546-6.314,7.679-8.2,12.658a19.531,19.531,0,0,0-3.967-3.19A103.41,103.41,0,0,0,7.814,70.843c-.19,2.049,1.013,4.774,4.482,6.586a10.967,10.967,0,0,0-3.224.387c.448,2.348,1.909,4.282,5.866,5.217a4.793,4.793,0,0,0-3.59,1.418,6.08,6.08,0,0,0,6.449,3.16c-4.02,1.732-1.639,4.941,1.632,4.462A13.889,13.889,0,0,1,0,92.592c13.189,17.971,41.858,10.628,46.131-6.682a7.936,7.936,0,0,0,6.25-2.361A12.751,12.751,0,0,1,46.445,82.949Z"
+                                    transform="translate(0 -66.906)" fill="#303030" />
+                            </g>
+                        </a>
+                    </g>
+                </svg>
+                <p class="stip-txt">Stip s.r.l.
+                    <br>
+                    <b>Hub di LVenture Group e LUISS EnLabs</b> | Via Marsala 29H (00185), Roma, Italy
+                    <br>
+                    <b>Berkeley SkyDeck</b> | 2150 Shattuck Ave (CA 94704), Berkeley, USA
+                    <br> P.IVA/C.F. 14409831006 </p>
+            </div>
+            <div class="col d-flex align-items-end justify-content-center">
+                <a href="./privacy-policy.html" title="privacy-policy" id="stip-policy" class="stip-txt stip-policy"
+                    style="margin-bottom: 16px;">Privacy Policy</a>
+            </div>
+            <div class="col d-flex align-items-end justify-content-end">
+                <p class="stip-txt">Copyright © 2019 Stip</p>
             </div>
         </div>
     </footer>
