@@ -36,7 +36,7 @@
     </noscript>
 
     <!-- icon -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -95,75 +95,95 @@
         <div class="row flex-grow-1">
             <div class="col-md-5 col-lg-4 offset-lg-1 d-flex flex-grow-1 flex-column justify-content-center"
                 style="z-index: 1;">
-                <form id="stip-demo-form">
-                    <div id="stip-demo-firstForm">
-                        <h1 class="stip-h1 lang" key="demoHeroTitle1">Richiedi la tua Demo di Stip
-                        </h1>
-                        <p class="stip-txt lang" key="demoHeroSubtitle1">Scopri come l’Intelligenza Artificiale di Stip
-                            ti
-                            aiuta a migliorare le performance e l’efficienza del
-                            tuo Social e Digital Customer Support, rendendo
-                            la tua Customer Experience indimenticabile
-                        </p>
-                        <div class="form-group">
-                            <input type="text" name="fname" class="form-control placeholderLang" key="demoFName"
-                                placeholder="First name" id="stip-firstName-demo">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="lname" class="form-control placeholderLang" key="demoLName"
-                                placeholder="Last name" id="stip-lastName-demo">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control placeholderLang" key="demoEmail"
-                                placeholder="Corporate email*" required id="stip-email-demo" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="phone" class="form-control placeholderLang" key="demoPhone"
-                                placeholder="Phone" id="stip-phone-demo">
-                        </div>
-                        <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang"
-                            key="demoBtn1" id="stip-demo-next">Chiedi la tua Demo</button>
+                <form id="stip-demo-firstForm">
+                    <h1 class="stip-h1 lang" key="demoHeroTitle1">Richiedi la tua Demo di Stip
+                    </h1>
+                    <p class="stip-txt lang" key="demoHeroSubtitle1">Scopri come l’Intelligenza Artificiale di Stip
+                        ti
+                        aiuta a migliorare le performance e l’efficienza del
+                        tuo Social e Digital Customer Support, rendendo
+                        la tua Customer Experience indimenticabile
+                    </p>
+                    <div class="form-group">
+                        <input type="text" name="fname" class="form-control placeholderLang" key="demoFName"
+                            placeholder="First name" id="stip-firstName-demo">
                     </div>
-                    <div id="stip-demo-secondForm">
-                        <i class="material-icons stip-backIcon" id="stip-demo-back">
-                            keyboard_backspace
-                        </i>
-                        <h1 class="stip-h1 lang" key="demoHeroTitle2">Aggiungi qualche informazione
-                            sulla tua azienda
-                        </h1>
-                        <p class="stip-txt lang" key="demoHeroSubtitle2">Dicci di più e potremmo proporti le
-                            funzionalità di Stip
-                            più in linea con le tue necessità
-                        </p>
-                        <div class="form-group">
-                            <input type="text" name="company name" class="form-control placeholderLang"
-                                key="demoCompany" placeholder="Company name*" id="stip-companyName-demo" required>
-                        </div>
-                        <div class="form-group">
-                            <select class="custom-select stip-companyNum-demo" id="inputGroupSelect01">
-                                <option selected value="1000+" class="lang" key="demoCompanyNum">Numero dipendenti
-                                </option>
-                                <option value="0-500">0 - 500</option>
-                                <option value="500-1000">500 - 1000</option>
-                                <option value="1000+">1000+</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang"
-                            key="demoBtn-submit" id="stip-demo-send">Prenota la tua Demo</button>
+                    <div class="form-group">
+                        <input type="text" name="lname" class="form-control placeholderLang" key="demoLName"
+                            placeholder="Last name" id="stip-lastName-demo">
                     </div>
-                    <div id="stip-demo-lastForm">
-                        <h1 class="stip-h1 lang" key="demoHeroTitle3">Grazie!
-                        </h1>
-                        <p class="stip-txt lang" key="demoHeroSubtitle3">Ci metteremo in contatto con te al più presto.
-                            Nel frattempo, ti consigliamo di dare un’occhiata a
-                            uno dei Case Study di Stip
-                        </p>
-                        <!--<button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang" key="demoBtn2"
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control placeholderLang" key="demoEmail"
+                            placeholder="Corporate email*" required id="stip-email-demo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control placeholderLang" key="demoPhone"
+                            placeholder="Phone" id="stip-phone-demo">
+                    </div>
+                    <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang"
+                        key="demoBtn1" id="stip-demo-send">Chiedi la tua Demo</button>
+                </form>
+                <div id="stip-demo-thanks">
+                    <h1 class="stip-h1 lang" key="demoHeroTitle3">Grazie!
+                    </h1>
+                    <p class="stip-txt lang" key="demoHeroSubtitle3">Ci metteremo in contatto con te al più presto.
+                        Nel frattempo, ti consigliamo di dare un’occhiata a
+                        uno dei Case Study di Stip
+                    </p>
+                    <!--<button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang" key="demoBtn-case"
                         >Scarica il Case Study</button>-->
-                        <a href="./contacts.html" style="text-decoration: none"><button type="button"
-                                class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang"
-                                key="demoBtn3">Contatta Stip</button></a>
+                    <button type="button" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang"
+                        key="demoBtn2" id="stip-survey-button">Dicci di più sulla tua azienda</button>
+                </div>
+                <form id="stip-demo-secondForm">
+                    <h1 class="stip-h1 lang" key="demoHeroTitle2">Aggiungi qualche informazione
+                        sulla tua azienda
+                    </h1>
+                    <p class="stip-txt lang" key="demoHeroSubtitle2">Dicci di più e potremmo proporti le
+                        funzionalità di Stip
+                        più in linea con le tue necessità
+                    </p>
+                    <div class="form-group">
+                        <input type="text" name="company name" class="form-control placeholderLang" key="demoCompany"
+                            placeholder="Company name*" id="stip-companyName-demo" required>
                     </div>
+                    <div class="form-group">
+                        <div class="d-flex">
+                            <label class="stip-txt lang" key="demoContentNum">Quanti contenuti prodotti dagli utenti
+                                riceve
+                                mensilmente la tua azienda?</label>
+                            <i class="material-icons-outlined titleLang" style="font-size: 1em; cursor: pointer;" data-toggle="tooltip"
+                                data-placement="top" key="infoContentNum" title="Le tipologie di contenuti gestibili da Stip sono: post social, commenti, messaggi privati, menzioni, hashtag, tweet, messaggi Whatsapp e Telegram, email">
+                                info
+                            </i>
+                        </div>
+                        <select class="custom-select stip-contentNum-demo" id="inputGroupSelect01">
+                            <option selected value="0-1000">0 - 1000</option>
+                            <option value="1001-10000">1001 - 10000</option>
+                            <option value="1001-10000">1001 - 10000</option>
+                            <option value="50001+">50001 +</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="stip-txt lang" key="demoAgentNum">Quanti operatori di customer care si occupano
+                            della gestione dell’assistenza clienti della tua azienda?</label>
+                        <select class="custom-select stip-agentNum-demo" id="inputGroupSelect01">
+                            <option selected value="1-10">1 - 10</option>
+                            <option value="11-50">11 - 50</option>
+                            <option value="51-100">51 - 100</option>
+                            <option value="100+">100 +</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="stip-txt lang" key="demoCrm">Che tipologia di CRM utilizza la tua azienda?</label>
+                        <select class="custom-select stip-crmType-demo" id="inputGroupSelect01">
+                            <option selected value="proprietario" class="lang" key="crmProprietary">Proprietario
+                            </option>
+                            <option value="esterno" class="lang" key="crmExternal">Esterno</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 stip-demo-button lang"
+                        key="demoBtn3" id="stip-survey-send">Invia</button>
                 </form>
             </div>
             <div class="col-md-6 col-lg-6 d-none d-md-flex offset-md-1 offset-lg-1 stip-demoBG">
@@ -274,6 +294,27 @@
     </footer>
     <!-- end footer -->
 
+    <!-- thanks popup section -->
+    <script id="stip-thanks" type="text/x-handlebars-template">
+        <div class="container-fluid text-center h-100 fixed-top stip-reprompt-container">
+            <div class="row flex-grow-1">
+                <div class="col">
+                    <div class="card stip-reprompt stip-rounded">
+                        <div class="card-body">
+                            <button type="button" class="close stip-closeReprompt" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img alt="check illustration" src="src/img/checkIllustration.png" width="40%">
+                            <h2 class="stip-h1">{{thanksTitle}}</h2>
+                            <h2 class="stip-h3">{{thanksSubtitle}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- end thanks popup section -->
+
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5720211.js"></script>
     <!-- End of HubSpot Embed Code -->
@@ -287,6 +328,7 @@
     </script>
     <script type="text/javascript" src="https://nibirumail.com/docs/scripts/nibirumail.cookie.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="src/js/languages.js"></script>
     <script src="src/js/index.js"></script>
 </body>

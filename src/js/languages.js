@@ -135,15 +135,20 @@ let languages = {
         "demoHeroTitle3": "Grazie!",
         "demoHeroSubtitle3": "Ci metteremo in contatto con te al più presto.",
         "demoBtn1": "Chiedi la tua Demo",
-        "demoBtn-submit": "Prenota la tua Demo",
-        "demoBtn2": "Scarica il Case Study",
-        "demoBtn3": "Contatta Stip",
+        "demoBtn2": "Dicci di più sulla tua azienda",
+        "demoBtn-case": "Scarica il Case Study",
+        "demoBtn3": "Invia",
         "demoFName": "Nome",
         "demoLName": "Cognome",
         "demoEmail": "Email aziendale*",
         "demoPhone": "Telefono",
         "demoCompany": "Nome azienda*",
-        "demoCompanyNum": "Numero dipendenti"
+        "demoContentNum": "Quanti contenuti prodotti dagli utenti riceve mensilmente la tua azienda?",
+        "infoContentNum": "Le tipologie di contenuti gestibili da Stip sono: post social, commenti, messaggi privati, menzioni, hashtag, tweet, messaggi Whatsapp e Telegram, email",
+        "demoAgentNum": "Quanti operatori di customer care si occupano della gestione dell’assistenza clienti della tua azienda?",
+        "demoCrm": "Che tipologia di CRM utilizza la tua azienda?",
+        "crmProprietary": "Propietario",
+        "crmExternal": "Esterno"
     },
     "en-EN": {
 
@@ -281,15 +286,20 @@ let languages = {
         "demoHeroTitle3": "Thank you!",
         "demoHeroSubtitle3": "We will be in touch with you in a jiffy",
         "demoBtn1": "Request your demo",
-        "demoBtn-submit": "Reserve your Demo",
-        "demoBtn2": "Scarica il Case Study",
-        "demoBtn3": "Contact Stip",
+        "demoBtn2": "Let's add your company details",
+        "demoBtn-case": "Scarica il Case Study",
+        "demoBtn3": "Send",
         "demoFName": "First name",
         "demoLName": "Last name",
         "demoEmail": "Corporate email*",
         "demoPhone": "Phone number",
         "demoCompany": "Company name*",
-        "demoCompanyNum": "Number of employees"
+        "demoContentNum": "How many user produced contents your company receive on a monthly basis?",
+        "infoContentNum": "The kind of contents managed by Stip are: social post, comments, private messages, mentions, hashtag, tweet, Whatsapp and telegram messages, email",
+        "demoAgentNum": "Are you aware of the number of customer service representatives who take care of your company’s customers?",
+        "demoCrm": "What kind of CRM does your company use?",
+        "crmProprietary": "Proprietary",
+        "crmExternal": "External"
     }
 }
 
@@ -310,6 +320,9 @@ $(document).ready(function () {
         $(".placeholderLang").each(function () {
             $(this).attr("placeholder", languages["en-EN"][$(this).attr("key")]);
         });
+        $(".titleLang").each(function () {
+            $(this).attr("title", languages["en-EN"][$(this).attr("key")]);
+        });
     } else {
         $(".stip-blog").show() //show blog section if it
         $(".lang").each(function () {
@@ -318,6 +331,9 @@ $(document).ready(function () {
         });
         $(".placeholderLang").each(function () {
             $(this).attr("placeholder", languages["it-IT"][$(this).attr("key")]);
+        });
+        $(".titleLang").each(function () {
+            $(this).attr("title", languages["it-IT"][$(this).attr("key")]);
         });
     }
 
@@ -332,6 +348,9 @@ $(document).ready(function () {
         });
         $(".placeholderLang").each(function () {
             $(this).attr("placeholder", languages["it-IT"][$(this).attr("key")]);
+        });
+        $(".titleLang").each(function () {
+            $(this).attr("title", languages["it-IT"][$(this).attr("key")]);
         });
         if ($(location).attr('href').includes("privacy-policy")) {
             window.location = "privacy-policy.html"
@@ -348,6 +367,9 @@ $(document).ready(function () {
         });
         $(".placeholderLang").each(function () {
             $(this).attr("placeholder", languages["en-EN"][$(this).attr("key")]);
+        });
+        $(".titleLang").each(function () {
+            $(this).attr("title", languages["en-EN"][$(this).attr("key")]);
         });
         if ($(location).attr('href').includes("privacy-policy")) {
             window.location = "privacy-policy-en.html"
