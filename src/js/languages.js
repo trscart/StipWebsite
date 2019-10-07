@@ -273,7 +273,7 @@ let languages = {
 
         // demo
         "demoHeroTitle1": "Request your demo",
-        "demoHeroSubtitle1": "See how Stip’s Artificial Intelligence helps improve your company’s social and digital customer service performances and efficiency and provide your customers with an outstanding experience",
+        "demoHeroSubtitle1": "See how Stip’s Artificial Intelligence helps improve your company’s social and digital customer service performances and provide your customers with an outstanding experience",
         "demoHeroTitle2": "Tell us something about your company",
         "demoHeroSubtitle2": "Let’s add some details and we will show you the first-rate features of Stip",
         "demoHeroTitle3": "Thank you!",
@@ -288,9 +288,9 @@ let languages = {
         "demoEmail": "Corporate email*",
         "demoPhone": "Phone number",
         "demoCompany": "Company name*",
-        "demoContentNum": "How many user produced contents your company receive on a monthly basis?",
-        "infoContentNum": "The kind of contents managed by Stip are: social post, comments, private messages, mentions, hashtag, tweet, Whatsapp and telegram messages, email",
-        "demoAgentNum": "How many customer service representatives take care of your customers?",
+        "demoContentNum": "How many users-produced contents does your company receive on a monthly basis?",
+        "infoContentNum": "The kind of content managed by Stip are: social posts, comments, private messages, mentions, hashtags, tweets, Whatsapp and telegram messages, and emails",
+        "demoAgentNum": "How many representatives provide customer care to your customers?",
         "demoCrm": "What kind of CRM does your company use?",
         "crmProprietary": "Proprietary",
         "crmExternal": "External"
