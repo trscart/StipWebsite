@@ -232,7 +232,7 @@ $(document).ready(function () {
 
                     $("#stip-demo-firstForm").hide()
                     $("#stip-demo-thanks").show()
-                    $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.png')")
+                    $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.webp')")
                     if ($(window).width() < 576) {
                         $(".stip-demoHero").css("background-size", "contain")
                     }
@@ -253,7 +253,7 @@ $(document).ready(function () {
                         }
                     }, 1300);
                 })
-
+  
         }
         else { // show border and label error on demo email input
             $("#stip-email-demo").css("border-color", "#ff6161")
@@ -275,7 +275,7 @@ $(document).ready(function () {
             $(".stip-demoHero").css("background-image", "none")
         }
         else {
-            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
+            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.webp')")
         }
 
     })

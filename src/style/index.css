@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500|Nunito:300,400,600,700&display=swap");
+@font-face {
+  font-family: 'Nunito', sans-serif;
+  font-display: auto;
+  src: local("Nunito"), url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap");
+}
+
 * {
-  font-family: 'Rubik', sans-serif;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -20,62 +24,6 @@ body {
 
 b {
   font-weight: 500;
-}
-
-.stip-heroPlatform {
-  height: 100vh;
-  padding: 10%;
-  background: url("../img/heroPlatformIllustration.png") no-repeat;
-  background-size: contain;
-  background-position-y: bottom;
-  background-position-x: left;
-  position: relative;
-  overflow: hidden;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.stip-heroPlatform h1 {
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.stip-platformHero {
-  margin-top: 15em;
-}
-
-.stip-platformHero .stip-heroScreen {
-  max-width: 80%;
-}
-
-.stip-functionImg {
-  max-width: 100%;
-}
-
-/*.stip-function {
-    background: url("../img/bodyWave.svg") no-repeat;
-    background-position: center center;
-}*/
-@media (max-width: 576px) {
-  .stip-heroPlatform {
-    background-size: 150%;
-    background-position-y: 90%;
-  }
-  .stip-heroPlatform h1 {
-    margin-top: -8em;
-    font-size: 21px !important;
-    text-align: center !important;
-  }
-  .stip-heroPlatform p {
-    text-align: center !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-  .stip-heroPlatform {
-    background-size: 85% !important;
-  }
 }
 
 .stip-navs {
@@ -102,7 +50,7 @@ b {
 }
 
 .stip-heroArticleImg {
-  background: url("../img/blogImg/blog_1.png") no-repeat !important;
+  background: url("../img/blogImg/blog_1.webp") no-repeat !important;
   background-position: top center !important;
   height: 35em;
   background-size: cover !important;
@@ -192,7 +140,7 @@ b {
 
 .stip-contactContainer {
   height: 100vh;
-  background: url("../img/contactBG.png") no-repeat center right;
+  background: url("../img/contactBG.webp") no-repeat center right;
   background-size: 50%;
 }
 
@@ -232,7 +180,7 @@ b {
 
 .stip-supportContainer {
   height: 100vh;
-  background: url("../img/supportBG.png") no-repeat center 100%;
+  background: url("../img/supportBG.webp") no-repeat center 100%;
   background-size: 100%;
 }
 
@@ -259,7 +207,7 @@ b {
   position: relative;
   overflow: hidden;
   padding: 5em;
-  background: url("../img/demoBG_1.png") no-repeat;
+  background: url("../img/demoBG_1.webp") no-repeat;
   background-size: 50%;
   background-position-y: center;
   background-position-x: right;
@@ -442,7 +390,7 @@ b {
 .stip-heroContainer {
   height: 100vh;
   padding: 10%;
-  background: url("../img/heroBannerIllustration.png") no-repeat;
+  background: url("../img/heroBannerIllustration.webp") no-repeat;
   background-size: contain;
   background-position-y: bottom;
   background-position-x: right;
@@ -539,23 +487,8 @@ b {
   width: 200px;
 }
 
-.stip-agosLogo {
-  background: url("../img/agos.png") no-repeat center center;
-  background-size: contain;
-}
-
-.stip-iblLogo {
-  background: url("../img/ibl.png") no-repeat center center;
-  background-size: contain;
-}
-
-.stip-esseLogo {
-  background: url("../img/esselunga.png") no-repeat center center;
-  background-size: contain;
-}
-
 .stip-benefitContainer {
-  background: url("../img/benefitBG.png") no-repeat center center;
+  background: url("../img/benefitBG.webp") no-repeat center center;
   background-size: contain;
 }
 
@@ -579,19 +512,19 @@ b {
 }
 
 .stip-caringBG {
-  background: url("../img/caringBG.png") no-repeat;
+  background: url("../img/caringBG.webp") no-repeat;
   background-size: contain;
   background-position-x: left;
 }
 
 .stip-ticketBG {
-  background: url("../img/ticketBG.png") no-repeat;
+  background: url("../img/ticketBG.webp") no-repeat;
   background-size: contain;
   background-position-x: right;
 }
 
 .stip-redirectBG {
-  background: url("../img/redirectBG.png") no-repeat;
+  background: url("../img/redirectBG.webp") no-repeat;
   background-size: contain;
   background-position-x: left;
 }
@@ -1078,7 +1011,7 @@ input[type=range].price:focus::-ms-fill-upper {
     font-size: 0.7em;
   }
   .stip-benefitContainer {
-    background: url("../img/benefitBG_small.png") no-repeat center center;
+    background: url("../img/benefitBG_small.webp") no-repeat center center;
     background-size: contain;
   }
 }

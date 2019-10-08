@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500|Nunito:300,400,600,700&display=swap');
+@font-face {
+    font-family: 'Nunito', sans-serif;
+    font-display: auto;
+    src: local('Nunito'), url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
+}
 
 * {
-    font-family: 'Rubik', sans-serif;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -21,8 +24,8 @@ body {
 
 b {
     font-weight: 500;
-} 
- 
+}
+
 $stcolor: #399fad; // old color #4E8EF0 or #0062FF
 $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 $h1size: 29px;
@@ -30,7 +33,6 @@ $h2size: 21px;
 $h3size: 18px;
 $txtsize: 16px;
 
-@import "platform.scss";
 @import "blog.scss";
 @import "contacts.scss";
 @import "privacyPolicy.scss";
@@ -88,7 +90,7 @@ $txtsize: 16px;
 
 .stip-shadow {
     box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1) !important;
-} 
+}
 
 /*.stip-loadLogo {
     height: 30%;
@@ -164,12 +166,12 @@ $txtsize: 16px;
         transform: translate(-50%, -50%);
         transition: 0.5s;
     }
-} 
+}
 
 .stip-heroContainer {
-    height: 100vh; 
+    height: 100vh;
     padding: 10%;
-    background: url("../img/heroBannerIllustration.png") no-repeat;
+    background: url("../img/heroBannerIllustration.webp") no-repeat;
     background-size: contain;
     background-position-y: bottom;
     background-position-x: right;
@@ -262,23 +264,8 @@ $txtsize: 16px;
     width: 200px;
 }
 
-.stip-agosLogo {
-    background: url("../img/agos.png") no-repeat center center;
-    background-size: contain;
-}
-
-.stip-iblLogo {
-    background: url("../img/ibl.png") no-repeat center center;
-    background-size: contain;
-}
-
-.stip-esseLogo {
-    background: url("../img/esselunga.png") no-repeat center center;
-    background-size: contain;
-}
-
 .stip-benefitContainer {
-    background: url("../img/benefitBG.png") no-repeat center center;
+    background: url("../img/benefitBG.webp") no-repeat center center;
     background-size: contain;
 }
 
@@ -302,19 +289,19 @@ $txtsize: 16px;
 }
 
 .stip-caringBG {
-    background: url("../img/caringBG.png") no-repeat;
+    background: url("../img/caringBG.webp") no-repeat;
     background-size: contain;
     background-position-x: left;
 }
 
 .stip-ticketBG {
-    background: url("../img/ticketBG.png") no-repeat;
+    background: url("../img/ticketBG.webp") no-repeat;
     background-size: contain;
     background-position-x: right;
 }
 
 .stip-redirectBG {
-    background: url("../img/redirectBG.png") no-repeat;
+    background: url("../img/redirectBG.webp") no-repeat;
     background-size: contain;
     background-position-x: left;
 }
@@ -572,6 +559,7 @@ input[type=range].price:focus::-ms-fill-upper {
 
 .stip-requestQuote {
     border-top: 2px solid #e8e8e8;
+
     button {
         background-color: $stcolor;
         color: white;
@@ -642,7 +630,7 @@ input[type=range].price:focus::-ms-fill-upper {
             fill: $ndcolor;
         }
     }
-}   
+}
 
 .stip-minFooter {
     border-top: 1.5px solid #e8e8e8;
@@ -668,10 +656,10 @@ input[type=range].price:focus::-ms-fill-upper {
         font-size: 2em;
         color: white;
     }
-} 
+}
 
 //media query
- 
+
 @media (max-width: 576px) {
     .stip-h1 {
         font-size: 18px !important;
@@ -680,7 +668,7 @@ input[type=range].price:focus::-ms-fill-upper {
     .stip-h2 {
         font-size: 16px !important;
     }
-    
+
     .stip-h3 {
         font-size: 14px !important;
     }
@@ -748,12 +736,12 @@ input[type=range].price:focus::-ms-fill-upper {
         }
     }
 
-    #stip-email-quote{
+    #stip-email-quote {
         width: 100%;
         border-radius: 0.25rem 0.25rem 0 0 !important;
     }
 
-    .stip-requestQuoteBtn{
+    .stip-requestQuoteBtn {
         width: 100%;
         border-radius: 0 0 0.25rem 0.25rem !important;
         padding: 0.3em !important;
@@ -824,7 +812,7 @@ input[type=range].price:focus::-ms-fill-upper {
     }
 
     .stip-benefitContainer {
-        background: url("../img/benefitBG_small.png") no-repeat center center;
+        background: url("../img/benefitBG_small.webp") no-repeat center center;
         background-size: contain;
     }
 }
