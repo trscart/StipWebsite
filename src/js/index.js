@@ -247,17 +247,26 @@ $(document).ready(function () {
                     }
                     setTimeout(function () {
                         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            $('#stip-demo-send').text("Prenota la tua demo");
+                            $('#stip-demo-send').text("Request your Demo");
                         } else {
-                            $('#stip-demo-send').text("Prenota la tua demo");
+                            $('#stip-demo-send').text("Chiedi la tua Demo");
                         }
                     }, 1300);
                 })
 
         }
-        else {
+        else { // show border and label error on demo email input
             $("#stip-email-demo").css("border-color", "#ff6161")
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                $(".stip-email-demo").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a corporate email</label>")
+            } else {
+                $(".stip-email-demo").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+            }
         }
+    })
+    $(".stip-email-demo").keypress(function () { // remove border and label error on demo email input
+        $("#stip-email-demo").css("border-color", "rgb(206, 212, 218)")
+        $(".stip-emailLabelError").remove()
     })
     $("#stip-survey-button").click(function () { // onclick show second form and hide thank you page
         $("#stip-demo-secondForm").show()
@@ -327,9 +336,9 @@ $(document).ready(function () {
                 }
                 setTimeout(function () {
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('#stip-survey-send').text("Prenota la tua demo");
+                        $('#stip-survey-send').text("Chiedi la tua Demo");
                     } else {
-                        $('#stip-survey-send').text("Prenota la tua demo");
+                        $('#stip-survey-send').text("Request your Demo");
                     }
                 }, 1300);
             })
