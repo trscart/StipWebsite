@@ -145,7 +145,8 @@ let languages = {
         "demoAgentNum": "Quanti operatori di customer care si occupano della gestione dell’assistenza clienti della tua azienda?",
         "demoCrm": "Che tipologia di CRM utilizza la tua azienda?",
         "crmProprietary": "Propietario",
-        "crmExternal": "Esterno"
+        "crmExternal": "Esterno",
+        "otherCrm": "Altro ..."
     },
     "en-EN": {
 
@@ -293,7 +294,8 @@ let languages = {
         "demoAgentNum": "How many representatives provide customer care to your customers?",
         "demoCrm": "What kind of CRM does your company use?",
         "crmProprietary": "Proprietary",
-        "crmExternal": "External"
+        "crmExternal": "External",
+        "otherCrm": "Other ..."
     }
 }
 
