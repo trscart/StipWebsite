@@ -40,6 +40,16 @@
   color: white;
 }
 
+.stip-downloadContainer {
+  background: url("../img/benefitBG.webp") no-repeat center center;
+  background-size: contain;
+}
+
+.stip-downloadRow {
+  background: url("../img/benefitBG.webp") no-repeat center center;
+  background-size: contain;
+}
+
 @media (max-width: 576px) {
   .stip-demoHero {
     padding: 2em;

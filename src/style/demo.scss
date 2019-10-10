@@ -36,10 +36,39 @@ $ndcolor: #ff6161;
     }
 }
 
+.stip-downloadRow {
+    background: url("../img/benefitBG.webp") no-repeat center center;
+    background-size: contain;
+}
+
+.stip-downloadBtn{
+    height: 3em;
+    width: 12em;
+    font-weight: 600;
+    font-size: $h3size - 2;
+    color: white;
+    background-color: $stcolor;
+    border-color: transparent;
+    border-radius: 50px;
+    padding: 10px 20px;
+
+    &:hover {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+        background-color: $ndcolor;
+        border-color: transparent;
+    }
+}
+
 @media (max-width: 576px) {
     .stip-demoHero {
         padding: 2em;
         background-position-y: bottom;
         background-position-x: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .stip-downloadRow {
+        background: none;
     }
 }

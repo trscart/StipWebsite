@@ -133,7 +133,6 @@ let languages = {
         "demoBtn1": "Chiedi la tua Demo",
         "demoBtn2": "Dicci di più sulla tua azienda",
         "demoBackHome": "Torna alla Home",
-        "demoBtn-case": "Scarica il Case Study",
         "demoBtn3": "Invia",
         "demoFName": "Nome*",
         "demoLName": "Cognome*",
@@ -146,7 +145,10 @@ let languages = {
         "demoCrm": "Che tipologia di CRM utilizza la tua azienda?",
         "crmProprietary": "Propietario",
         "crmExternal": "Esterno",
-        "otherCrm": "Altro ..."
+        "otherCrm": "Altro ...",
+        "downloadCaseTitle": "Scarica il Case Study",
+        "downloadCaseTxt": "Scarica il Case Study e scopri come Stip permette di ridurre i tempi di gestione delle richieste degli utenti, i costi delle attività legate al Customer Care e di aumentare la produttività dei tuoi operatori",
+        "downloadBtn": "Download"
     },
     "en-EN": {
 
@@ -282,7 +284,6 @@ let languages = {
         "demoBtn1": "Request your demo",
         "demoBtn2": "Let's add your company details",
         "demoBackHome": "Back to Home",
-        "demoBtn-case": "Scarica il Case Study",
         "demoBtn3": "Send",
         "demoFName": "First name*",
         "demoLName": "Last name*",
@@ -295,7 +296,10 @@ let languages = {
         "demoCrm": "What kind of CRM does your company use?",
         "crmProprietary": "Proprietary",
         "crmExternal": "External",
-        "otherCrm": "Other ..."
+        "otherCrm": "Other ...",
+        "downloadCaseTitle": "Scarica il Case Study",
+        "downloadCaseTxt": "Scarica il Case Study e scopri come Stip permette di ridurre i tempi di gestione delle richieste degli utenti, i costi delle attività legate al Customer Care e di aumentare la produttività dei tuoi operatori",
+        "downloadBtn": "Download"
     }
 }
 

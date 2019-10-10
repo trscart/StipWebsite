@@ -193,12 +193,12 @@ $txtsize: 16px;
     color: white;
     background-color: $ndcolor;
     border-color: transparent;
-    border-radius: 50px;
+    border-radius: 50px; 
     padding: 10px 20px;
-
+ 
     &:hover {
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
-    }
+    } 
 }
 
 .stip-contactUs {
@@ -809,7 +809,7 @@ input[type=range].price:focus::-ms-fill-upper {
         p {
             font-size: 0.7em;
         }
-    }
+    } 
 
     .stip-benefitContainer {
         background: url("../img/benefitBG_small.webp") no-repeat center center;
