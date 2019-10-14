@@ -38,10 +38,6 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
-    $(".stip-file-support").change(function (e) {
-        console.log(e)
-    });
-
     // append option in support selects
     if ($(location).attr('href').includes("support")) {
         fetch('https://stipworld.com/api/sectionchoices/', {
@@ -253,7 +249,7 @@ $(document).ready(function () {
                         }
                     }, 1300);
                 })
-  
+
         }
         else { // show border and label error on demo email input
             $("#stip-email-demo").css("border-color", "#ff6161")
@@ -535,27 +531,31 @@ $(document).ready(function () {
             })
     })
 
+    // new formData for support request
+    var formData = new FormData()
     // ajax call for support request
     $("#stip-support-form").submit(function (e) {
         e.preventDefault()
-        let data = {
-            "name": $('#stip-name-support').val(),
-            "email": $('#stip-email-support').val(),
-            "domain_app": $('#stip-domain-support').val(),
-            "section": $('.stip-section-support').val(),
-            "category": $('.stip-category-support').val(),
-            /*"file": $(".stip-file-support").val(),*/
-            "description": $('.stip-description-support').val()
-        }
+        formData.append("name", $('#stip-name-support').val())
+        formData.append("email", $('#stip-email-support').val())
+        formData.append("domain_app", $('#stip-domain-support').val())
+        formData.append("section", $('.stip-section-support').val())
+        formData.append("category", $('.stip-category-support').val())
+        formData.append("description", $('.stip-description-support').val())
+        var files = []
+        $.each($("input[type='file']")[0].files, function (i, file) {
+            files.push(file)
+        });
+        formData.append('files', files);
 
-        fetch('https://stipworld.com/api/alertdown/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(function (res) {
+        $.ajax({
+            url: 'https://stipworld.com/api/alertdown/',
+            data: formData,
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            success: function (res) {
+                console.log(res)
                 // append thank you message
                 let context
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
@@ -571,9 +571,9 @@ $(document).ready(function () {
                     $(".stip-reprompt-container").css("display", "none")
                     $("#stip-support-form")[0].reset()
                 })
-            })
-            .catch(function (err) { //if error
-                //console.log(err)
+            },
+            error: function (err) { //if error
+                console.log(err)
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                     $('.stip-support-send').text("Error, try again");
                 } else {
@@ -586,7 +586,8 @@ $(document).ready(function () {
                         $('.stip-support-send').text("Invia");
                     }
                 }, 1300);
-            })
+            }
+        });
     })
 
     // category dropdown
