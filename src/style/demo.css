@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
   padding: 5em;
-  background: url("../img/demoBG_1.webp") no-repeat;
+  background: url("../img/demoBG_1.png") no-repeat;
   background-size: 50%;
   background-position-y: center;
   background-position-x: right;
@@ -40,14 +40,28 @@
   color: white;
 }
 
-.stip-downloadContainer {
-  background: url("../img/benefitBG.webp") no-repeat center center;
+.stip-downloadRow {
+  background: url("../img/benefitBG.png") no-repeat center center;
   background-size: contain;
 }
 
-.stip-downloadRow {
-  background: url("../img/benefitBG.webp") no-repeat center center;
-  background-size: contain;
+.stip-downloadBtn {
+  height: 3em;
+  width: 12em;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background-color: #399fad;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.stip-downloadBtn:hover {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+  background-color: #ff6161;
+  border-color: transparent;
 }
 
 @media (max-width: 576px) {
@@ -55,6 +69,12 @@
     padding: 2em;
     background-position-y: bottom;
     background-position-x: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .stip-downloadRow {
+    background: none;
   }
 }
 /*# sourceMappingURL=demo.css.map */

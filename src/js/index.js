@@ -232,7 +232,7 @@ $(document).ready(function () {
 
                     $("#stip-demo-firstForm").hide()
                     $("#stip-demo-thanks").show()
-                    $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.webp')")
+                    $(".stip-demoHero").css("background-image", "url('./src/img/checkIllustration.png')")
                     if ($(window).width() < 576) {
                         $(".stip-demoHero").css("background-size", "contain")
                     }
@@ -275,7 +275,7 @@ $(document).ready(function () {
             $(".stip-demoHero").css("background-image", "none")
         }
         else {
-            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.webp')")
+            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
         }
 
     })

@@ -797,7 +797,7 @@ input[type=range].price:focus::-ms-fill-upper {
         i {
             color: $stcolor !important;
         }
-    } 
+    }  
 
     .stip-howWork {
         padding: 3em;
@@ -815,7 +815,7 @@ input[type=range].price:focus::-ms-fill-upper {
         background: url("../img/benefitBG_small.png") no-repeat center center;
         background-size: contain;
     }
-}
+} 
 
 @media (min-width: 768px) and (max-width: 1200px) {
     .stip-howWork {

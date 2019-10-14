@@ -1,6 +1,8 @@
 $stcolor: #399fad;
 $ndcolor: #ff6161;
 
+$h3size: 18px;
+
 .stip-demoHero {
     height: 100vh;
     position: relative;
@@ -22,7 +24,7 @@ $ndcolor: #ff6161;
     &:hover{
         color: $ndcolor;
     }
-}
+} 
 
 .stip-demo-button {
     color: white;
@@ -34,7 +36,7 @@ $ndcolor: #ff6161;
         background-color: $ndcolor;
         color: white;
     }
-}
+} 
 
 .stip-downloadRow {
     background: url("../img/benefitBG.png") no-repeat center center;
