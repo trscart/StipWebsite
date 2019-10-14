@@ -171,7 +171,7 @@ $txtsize: 16px;
 .stip-heroContainer {
     height: 100vh;
     padding: 10%;
-    background: url("../img/heroBannerIllustration.webp") no-repeat;
+    background: url("../img/heroBannerIllustration.png") no-repeat;
     background-size: contain;
     background-position-y: bottom;
     background-position-x: right;
@@ -265,7 +265,7 @@ $txtsize: 16px;
 }
 
 .stip-benefitContainer {
-    background: url("../img/benefitBG.webp") no-repeat center center;
+    background: url("../img/benefitBG.png") no-repeat center center;
     background-size: contain;
 }
 
@@ -289,19 +289,19 @@ $txtsize: 16px;
 }
 
 .stip-caringBG {
-    background: url("../img/caringBG.webp") no-repeat;
+    background: url("../img/caringBG.png") no-repeat;
     background-size: contain;
     background-position-x: left;
 }
 
 .stip-ticketBG {
-    background: url("../img/ticketBG.webp") no-repeat;
+    background: url("../img/ticketBG.png") no-repeat;
     background-size: contain;
     background-position-x: right;
 }
 
 .stip-redirectBG {
-    background: url("../img/redirectBG.webp") no-repeat;
+    background: url("../img/redirectBG.png") no-repeat;
     background-size: contain;
     background-position-x: left;
 }
@@ -812,7 +812,7 @@ input[type=range].price:focus::-ms-fill-upper {
     } 
 
     .stip-benefitContainer {
-        background: url("../img/benefitBG_small.webp") no-repeat center center;
+        background: url("../img/benefitBG_small.png") no-repeat center center;
         background-size: contain;
     }
 }

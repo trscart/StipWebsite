@@ -37,6 +37,10 @@ anime({
 
 $(document).ready(function () {
     console.log("here!")
+    console.log(navigator.userAgent.search("Safari"))
+    if(navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0){
+        console.log("safari")
+    }
 
     // append option in support selects
     if ($(location).attr('href').includes("support")) {
@@ -211,7 +215,7 @@ $(document).ready(function () {
 
             // process animation
             $("#stip-demo-send").text("")
-            $("#stip-demo-send").append("<img style='width: 2em' src='src/img/loading.webp'>");
+            $("#stip-demo-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
             // fetch call
             fetch('https://stipworld.com/api/companyDemoRequest/', {
                 method: 'POST',
@@ -352,7 +356,7 @@ $(document).ready(function () {
         }
         // process animation
         $("#stip-contactUs").text("")
-        $("#stip-contactUs").append("<img style='width: 2em' src='src/img/loading.webp'>");
+        $("#stip-contactUs").append("<img style='width: 2em' src='src/img/loading.gif'>");
 
         // fetch call
         fetch('https://stipworld.com/api/companyQuestion/', {
@@ -553,7 +557,7 @@ $(document).ready(function () {
         formData.append('files', files);
 
         $("#stip-support-send").text("")
-        $("#stip-support-send").append("<img style='width: 2em' src='src/img/loading.webp'>");
+        $("#stip-support-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
         $.ajax({
             url: 'https://stipworld.com/api/alertdown/',
             data: formData,
