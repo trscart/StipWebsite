@@ -37,10 +37,6 @@ anime({
 
 $(document).ready(function () {
     console.log("here!")
-    console.log(navigator.userAgent.search("Safari"))
-    if(navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0){
-        console.log("safari")
-    }
 
     // append option in support selects
     if ($(location).attr('href').includes("support")) {
