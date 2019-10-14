@@ -312,6 +312,7 @@ $(document).ready(function () {
 
     // change text language on load
     if ((language != "it-IT" && language != null) || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
+        $('a[blog]').attr("href", "https://en.blog.stip.io/") // change href for blog link
         $(".stip-blog").hide() //hide blog section if eng
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
@@ -324,7 +325,8 @@ $(document).ready(function () {
             $(this).attr("data-content", languages["en-EN"][$(this).attr("key")]);
         });
     } else {
-        $(".stip-blog").show() //show blog section if it
+        $('a[blog]').attr("href", "https://it.blog.stip.io/") // change href for blog link
+        $(".stip-blog").show() //hide blog section if eng
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
             $(".stip-itBtn").css("color", "#399fad")
@@ -340,7 +342,8 @@ $(document).ready(function () {
     // change text language on click
     $(".stip-itBtn").click(function (e) { // click for it-IT language
         sessionStorage.setItem('language', "it-IT"); // set language in session storage item
-        $(".stip-blog").show() //show blog section if it
+        $('a[blog]').attr("href", "https://it.blog.stip.io/") // change href for blog link
+        $(".stip-blog").show() //hide blog section if eng
         $(".stip-itBtn").css("color", "#399fad")
         $(".stip-enBtn").css("color", "#303030")
         $(".lang").each(function () {
@@ -359,6 +362,7 @@ $(document).ready(function () {
 
     $(".stip-enBtn").click(function (e) { // click for en-EN language
         sessionStorage.setItem('language', "en-EN"); // set language in session storage item
+        $('a[blog]').attr("href", "https://en.blog.stip.io/") // change href for blog link
         $(".stip-blog").hide() //hide blog section if eng
         $(".stip-itBtn").css("color", "#303030")
         $(".stip-enBtn").css("color", "#399fad")
