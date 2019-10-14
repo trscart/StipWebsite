@@ -73,8 +73,14 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlFile1" class="lang" key="fileSupport">File input</label>
-                        <input type="file" class="form-control-file stip-file-support" id="exampleFormControlFile1"
-                            multiple>
+                        <div class="d-flex">
+                            <input type="file" class="form-control-file stip-file-support" id="exampleFormControlFile1"
+                                multiple>
+                            <i class="material-icons" id="stip-empty-files">
+                                close
+                            </i>
+                        </div>
+
                     </div>
                     <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 lang" key="supportBtn"
                         id="stip-support-send">Invia</button>

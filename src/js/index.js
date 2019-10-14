@@ -211,7 +211,7 @@ $(document).ready(function () {
 
             // process animation
             $("#stip-demo-send").text("")
-            $("#stip-demo-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
+            $("#stip-demo-send").append("<img style='width: 2em' src='src/img/loading.webp'>");
             // fetch call
             fetch('https://stipworld.com/api/companyDemoRequest/', {
                 method: 'POST',
@@ -352,7 +352,7 @@ $(document).ready(function () {
         }
         // process animation
         $("#stip-contactUs").text("")
-        $("#stip-contactUs").append("<img style='width: 2em' src='src/img/loading.gif'>");
+        $("#stip-contactUs").append("<img style='width: 2em' src='src/img/loading.webp'>");
 
         // fetch call
         fetch('https://stipworld.com/api/companyQuestion/', {
@@ -531,6 +531,10 @@ $(document).ready(function () {
             })
     })
 
+    // empty files input on close icon click
+    $("#stip-empty-files").click(function () {
+        $(".stip-file-support").val("")
+    })
     // new formData for support request
     var formData = new FormData()
     // ajax call for support request
@@ -548,6 +552,8 @@ $(document).ready(function () {
         });
         formData.append('files', files);
 
+        $("#stip-support-send").text("")
+        $("#stip-support-send").append("<img style='width: 2em' src='src/img/loading.webp'>");
         $.ajax({
             url: 'https://stipworld.com/api/alertdown/',
             data: formData,
@@ -560,8 +566,10 @@ $(document).ready(function () {
                 let context
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                     context = { thanksTitle: "Thank you for filling our form!" };
+                    $("#stip-support-send").text("Send")
                 } else {
                     context = { thanksTitle: "Grazie per aver compilato il form!" };
+                    $("#stip-support-send").text("Invia")
                 }
                 let source = document.getElementById("stip-thanks").innerHTML;
                 let template = Handlebars.compile(source);
