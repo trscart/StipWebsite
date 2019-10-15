@@ -132,26 +132,6 @@ $(document).ready(function () {
         }
     });
 
-    // get latest articles and append them on footer
-    fetch('https://it.blog.stip.io/api/articles/latests/', {
-        mode: "cors",
-        method: 'GET',
-        headers: {
-            'content-type': 'application/json'
-        }
-    })
-        .then(function (res) {
-            res.json().then(function (data) {
-                //console.log(data)
-                for (let i = 0; i < 3; i++) {
-                    $(".stip-footerBlog").append("<a href='https://it.blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
-                }
-            })
-        })
-        .catch(function (err) { //if error
-            //console.log(err)
-        })
-
     $(".dropdown-menu li a").click(function () {
         $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
     });
