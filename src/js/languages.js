@@ -66,31 +66,6 @@ let languages = {
         "learnMoreTitle": "Vuoi saperne di più?",
         "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità. D’altronde, il customer care è il nostro forte!",
 
-        // platform page
-        "heroPlatformSubtitle": "Stip è nata per rendere il tuo Customer Care efficiente, veloce e senza sforzi",
-        "howTitle": "Come funziona",
-        "howHoldTitle": "Tieni tutto sotto controllo",
-        "howHoldTxt": "Stip individua e monitora tutti i contenuti relazionati con il tuo brand, sia all’interno che all’esterno dei canali ufficiali dell’azienda. La piattaforma definisce automaticamente quali contenuti degli utenti necessitino di una gestione e quali possano essere ignorati.",
-        "howTicketTitle": "Un ticket come per magia",
-        "howTicketTxt": "Una volta individuate le segnalazioni da amministrare, Stip utilizza il suo bot per interagire direttamente con il cliente, richiedendo tutte le informazioni necessarie per risolvere quella determinata casistica. Dopo aver recepito i dati di interesse, Stip crea un ticket interno al sistema o sulla tua piattaforma CRM preferita, contenente tutte le informazioni necessarie ai tuoi operatori.",
-        "howOperatorTitle": "La richiesta giusta all’operatore giusto",
-        "howOperatorTxt": "L’AI si Stip indirizza i ticket creati automaticamente al membro del team più adatto a gestire quella richiesta. Ogni azienda può definire e disegnare il processo per garantire il rispetto dei workflow e degli step autorizzativi interni.",
-        "satisfyTitle": "Stip soddisfa le esigenze di aziende di qualsiasi dimensione. Personalizza il tuo workflow e utilizzalo sulla nostra piattaforma, oppure integralo con il tuo CRM!",
-        "satisfyCrmTitle": "Integrazione con i CRM",
-        "satisfyCrmTxt": "Stip può integrarsi facilmente con ogni sistema di CRM, evitando di stravolgere le routine aziendali e mantenendo sincronizzati tutti i dati dei tuoi clienti",
-        "satisfyStatisticsTitle": "Statistiche e Metriche",
-        "satisfyStatisticsTxt": "Stip monitora, traccia e analizza tutte le attività per offrire all’azienda tutte le metriche necessarie per migliorare e ottimizzare il tuo processo di social ed email customer care",
-        "satisfyPersonalisationTitle": "Personalizzazione",
-        "satisfyPersonalisationTxt": "L’AI di Stip può essere addestrata in poche ore. Prevediamo una vasta gamma di opzioni di personalizzazione: il chatbot può facilmente dare luogo a diversi processi e puoi decidere come indirizzare automaticamente i tuoi tickets",
-        "accurateTitle": "Dare una risposta rapida ed efficace ai tuoi clienti è l’unica cosa che conta!",
-        "accurateSubtitle": "Automatizzando tutte le attività del Customer Care sui Social e sul canale email, Stip permette ai tuoi operatori di concentrarsi sul l’unica cosa realmente importante: creare una relazione con i tuoi clienti e renderli felici e soddisfatti",
-        "accuratePerformanceTitle": "Migliora le prestazioni lavorative",
-        "accuratePerformanceTxt": "Le prestazioni del tuo staff miglioreranno del 167%. Stip si prende cura in maniera automatica delle richieste semplici e ripetitive, comprende le necessità dei tuoi clienti, crea e categorizza i tuoi ticket e li reindirizza all’operatore più competente. Ciò ti consente di migliorare il tuo tempo di risposta e incrementare la tua efficienza",
-        "accuratePersonalisationTitle": "Crea relazioni durature",
-        "accuratePersonalisationTxt": "Ai tuoi operatori resta il compito di rispondere alle richieste dei tuoi clienti. Gli utenti si aspettano di prendere parte ad una conversazione bidirezionale con il tuo brand e pretendono che tu comprenda le loro emozioni e necessità. Sappiamo tutti che la maggior parte dei chatbot falliscono nel raggiungimento di questo obiettivo! Per questa ragione, Stip si affida al tuo staff per gestire le richieste complesse e interagire direttamente con i tuoi clienti, per creare relazioni che durino nel tempo",
-        "accurateSatisfactionTitle": "Soddisfa i tuoi clienti",
-        "accurateSatisfactionTxt": "La soddisfazione e la felicità dei tuoi clienti diventa realtà con Stip. Ci prendiamo cura dei tuoi clienti, aggiornandoli in tempo reale riguardo alla gestione delle loro richieste, proprio come fosse un pacco Amazon! Questo riduce la percezione dei tempi d’attesa dei tuoi clienti e migliora la loro esperienza con il tuo brand",
-
         // contact page
         "contactTitle": "SIAMO QUI PER TE!",
         "contactSubtitle": "Contatta Stip su uno dei nostri canali o compila il form per farci sapere come possiamo esserti utili.",
@@ -112,6 +87,9 @@ let languages = {
         "blogEmailTitle": "Resta con noi!",
         "blogEmailSubtitle": "Vuoi rimanere aggiornato su tutti i trend del Digital Customer Care e sul mondo Stip? Scrivi qui la tua email.",
         "suggestedArticleTitle": "Articoli suggeriti",
+        "download60Title": "Looking for insights?",
+        "download60Subtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "download60Btn": "DOWNLOAD",
 
         // support
         "supportEmail": "Email*",
@@ -217,31 +195,6 @@ let languages = {
         "learnMoreTitle": "Contact us!",
         "learnMoreSubtitle": "Our team is at your service. After all, customer care is what we do best!",
 
-        // platform page
-        "heroPlatformSubtitle": "Stip is born to make your Company’s Customer Care efficient, fast and effortless",
-        "howTitle": "How It works",
-        "howHoldTitle": "Be in Control",
-        "howHoldTxt": "Stip monitors and identifies all user generated content related to your brand, both inside and outside the company’s official channels. The platform automatically defines which content needs a response and which can be ignored.",
-        "howTicketTitle": "Magically Create Tickets",
-        "howTicketTxt": "Once Stip has detected that a request needs attention, our friendly bot starts interacting directly with the customer, asking all the information needed by your staff to best solve each specific situation quickly. After getting all the relevant pieces of information, Stip creates a ticket in our system or in your preferred CRM platform.",
-        "howOperatorTitle": "The right person in the right place",
-        "howOperatorTxt": "Stip’s intelligence redirects the automatically-generated ticket to the most relevant staff member or team. Each company can design the process to best match their unique internal workflow and policies.",
-        "satisfyTitle": "Stip meets the needs of companies of all sizes. Customize your own workflow and use it by itself, or integrate it with your own CRM.",
-        "satisfyCrmTitle": "CRM integration",
-        "satisfyCrmTxt": "Stip can be easily integrated with any CRM system, avoiding disruptions on your internal routine and keeping all customer data in sync",
-        "satisfyStatisticsTitle": "Statistics and Metrics",
-        "satisfyStatisticsTxt": "Stip tracks, monitors and analyses all activities in order to offer companies all relevant metrics and statistics to improve and optimise your social and email customer care process",
-        "satisfyPersonalisationTitle": "Personalisation",
-        "satisfyPersonalisationTxt": "Stip’s AI can be trained in hours, not days or weeks. We include a wide set of customization options: the chatbot can easily implement different processes and you can decide how to route automatically generated tickets",
-        "accurateTitle": "A quick, clear and efficient response is all that matters to build relationships with your customers",
-        "accurateSubtitle": "By automating all customer care activities on social networks and email channels, Stip allows your staff to focus on the only thing that matters - developing meaningful relationships and making your customers happy.",
-        "accuratePerformanceTitle": "Performance improvement",
-        "accuratePerformanceTxt": "Your staff’s performance will increase. Stip automatically takes care of repetitive requests, understands your clients’ needs, creates tickets and redirects them to the most accurate operator. It allows you to optimize your response time, and improve efficiency.",
-        "accuratePersonalisationTitle": "Build relationships",
-        "accuratePersonalisationTxt": "Answering customers is an agent’s job! Your customers expect to have a unique conversation with your brand and expect you to understand their emotions and unique needs. We all know that most chatbot scan not achieve that. This is why Stip relies on your staff to manage complex requests and to interact directly with your customers, building a long-lasting relationship.",
-        "accurateSatisfactionTitle": "Customer Satisfaction",
-        "accurateSatisfactionTxt": "Customer satisfaction becomes reality through Stip. We take full care of your clients, updating them in real time on how their request is being managed, just as if it was an Amazon delivery! This reduces the perceived waiting time by clients and enhances their experience with your brand.",
-
         // contact page
         "contactTitle": "WE ARE HERE FOR YOU!",
         "contactSubtitle": "Contact Stip on one of our channels or fill out the form to let us know how we can help you.",
@@ -263,6 +216,9 @@ let languages = {
         "blogEmailTitle": "Don't miss anything!",
         "blogEmailSubtitle": "What about keeping yourself updated with Digital Customer Care trends and with all the news from Stip world? Write your email right here.",
         "suggestedArticleTitle": "Suggested articles",
+        "download60Title": "Looking for insights?",
+        "download60Subtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "download60Btn": "DOWNLOAD",
 
         // support
         "supportEmail": "Email*",

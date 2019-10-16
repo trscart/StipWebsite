@@ -26,7 +26,7 @@ $stcolor: #399fad; // old color #4E8EF0 or #0062FF
 $ndcolor: #ff6161; // old color #FD6B15 or #FF7E00
 $h1size: 29px;
 $h2size: 21px;
-$h3size: 18px;
+$h3size: 18px; 
 $txtsize: 16px;
 
 @import "blog.scss";
@@ -180,7 +180,7 @@ $txtsize: 16px;
         font-weight: 400;
     }
 }
-
+ 
 .stip-demoRequest {
     height: 3em;
     width: 12em;

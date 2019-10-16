@@ -72,6 +72,26 @@ b {
   opacity: 0.85;
 }
 
+.stip-download60 {
+  width: 12em;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background-color: #399fad;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 10px 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.stip-download60:hover {
+  color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+  text-decoration: none;
+}
+
 .stip-arrowBack i {
   -webkit-transform: rotateZ(-180deg);
           transform: rotateZ(-180deg);
@@ -112,6 +132,14 @@ b {
 }
 
 @media (max-width: 576px) {
+  .stip-download60-row {
+    text-align: center;
+  }
+  .stip-download60-row .stip-download60 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
   .stip-lastArticleContainer {
     margin-top: 8em;
   }
