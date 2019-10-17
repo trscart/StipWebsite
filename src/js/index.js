@@ -664,6 +664,7 @@ $(document).ready(function () {
     }
 
     /* analytics, facebook and cookies */
+    // google analytics
     (function (w, d, s, l, i) {
     w[l] = w[l] || []; w[l].push({
         'gtm.start':
@@ -678,6 +679,7 @@ $(document).ready(function () {
     gtag('js', new Date());
     gtag('config', 'UA-77012119-1');
 
+    // facebook insights
     !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () {
             n.callMethod ?
