@@ -268,7 +268,7 @@ $(document).ready(function () {
 
     // change text language on load
     if ((language != "it-IT" && language != null) || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
-        $('a[blog]').attr("href", "https://en.blog.stip.io/") // change href for blog link
+        $('a[blog]').attr("href", "https://stip.io/en/blog/") // change href for blog link
         $(".lang").each(function () {
             $(this).text(languages["en-EN"][$(this).attr("key")]);
             $(".stip-enBtn").css("color", "#399fad")
@@ -280,7 +280,7 @@ $(document).ready(function () {
             $(this).attr("data-content", languages["en-EN"][$(this).attr("key")]);
         });
         // get latest articles and append them on footer
-        fetch('https://en.blog.stip.io/api/articles/latests/', {
+        fetch('https://stip.io/en/blog/api/articles/latests/', {
             mode: "cors",
             method: 'GET',
             headers: {
@@ -291,7 +291,7 @@ $(document).ready(function () {
                 res.json().then(function (data) {
                     //console.log(data)
                     for (let i = 0; i < 3; i++) {
-                        $(".stip-footerBlog").append("<a href='https://en.blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
+                        $(".stip-footerBlog").append("<a href='https://stip.io/en/blog/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
                     }
                 })
             })
@@ -299,7 +299,7 @@ $(document).ready(function () {
                 //console.log(err)
             })
     } else {
-        $('a[blog]').attr("href", "https://it.blog.stip.io/") // change href for blog link
+        $('a[blog]').attr("href", "https://stip.io/it/blog/") // change href for blog link
         $(".lang").each(function () {
             $(this).text(languages["it-IT"][$(this).attr("key")]);
             $(".stip-itBtn").css("color", "#399fad")
@@ -311,7 +311,7 @@ $(document).ready(function () {
             $(this).attr("data-content", languages["it-IT"][$(this).attr("key")]);
         });
         // get latest articles and append them on footer
-        fetch('https://it.blog.stip.io/api/articles/latests/', {
+        fetch('https://stip.io/it/blog/api/articles/latests/', {
             mode: "cors",
             method: 'GET',
             headers: {
@@ -322,7 +322,7 @@ $(document).ready(function () {
                 res.json().then(function (data) {
                     //console.log(data)
                     for (let i = 0; i < 3; i++) {
-                        $(".stip-footerBlog").append("<a href='https://it.blog.stip.io/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
+                        $(".stip-footerBlog").append("<a href='https://stip.io/it/blog/" + data[i].slug + "' title='blog' class='stip-txt'>" + data[i].draft_title.split(' ').slice(0, 6).join(' ').concat(" ...") + "</a>");
                     }
                 })
             })
