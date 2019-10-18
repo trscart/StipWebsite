@@ -336,9 +336,8 @@ $(document).ready(function () {
         sessionStorage.setItem('language', "it-IT"); // set language in session storage item
         $(".stip-itBtn").css("color", "#399fad")
         $(".stip-enBtn").css("color", "#303030")
-        if ($(location).attr('href').includes("privacy-policy")) {
+        if ($(location).attr('href').includes("privacy-policy")) { // stip policy language
             window.location = "privacy-policy.html"
-            console.log("eo")
         } else {
             location.reload(); // reload to change eng changes
         }
@@ -348,10 +347,19 @@ $(document).ready(function () {
         sessionStorage.setItem('language', "en-EN"); // set language in session storage item
         $(".stip-itBtn").css("color", "#303030")
         $(".stip-enBtn").css("color", "#399fad")
-        if ($(location).attr('href').includes("privacy-policy")) {
+        if ($(location).attr('href').includes("privacy-policy")) { // stip policy language
             window.location = "privacy-policy-en.html"
         } else {
             location.reload(); // reload to change eng changes
+        }
+    });
+
+    // stip policy language
+    $("#stip-policy").click(function () {
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+            $(this).attr("href", "./privacy-policy-en.html");
+        } else {
+            $(this).attr("href", "./privacy-policy.html");
         }
     });
 })

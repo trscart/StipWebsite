@@ -136,15 +136,6 @@ $(document).ready(function () {
         $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
     });
 
-    // stip policy language
-    $("#stip-policy").click(function () {
-        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-            $(this).attr("href", "./privacy-policy-en.html");
-        } else {
-            $(this).attr("href", "./privacy-policy.html");
-        }
-    });
-
     // card append
     $("#stip-loadMore").click(function () {
         var context = { cardTitle: "Title", cardTxt: "Lorem Ipsum", cardDate: "xx/yy/zzzz", cardCategory: $("#stip-categoryDrop").html() };
