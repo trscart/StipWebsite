@@ -87,8 +87,8 @@ let languages = {
         "blogEmailTitle": "Resta con noi!",
         "blogEmailSubtitle": "Vuoi rimanere aggiornato su tutti i trend del Digital Customer Care e sul mondo Stip? Scrivi qui la tua email.",
         "suggestedArticleTitle": "Articoli suggeriti",
-        "download60Title": "Looking for insights?",
-        "download60Subtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "download60Title": "Vuoi saperne di più sul Digital Customer Service?",
+        "download60Subtitle": "Scopri tutte le best practices e i nuovi trend del customer service sui canali digitali!",
         "download60Btn": "DOWNLOAD",
 
         // support
@@ -124,8 +124,8 @@ let languages = {
         "crmProprietary": "Propietario",
         "crmExternal": "Esterno",
         "otherCrm": "Altro ...",
-        "downloadPaperTitle": "Looking for insights?",
-        "downloadPaperSubtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "downloadPaperTitle": "Ti interessa il Digital Customer Service?",
+        "downloadPaperSubtitle": "Scarica il Paper e scopri come i canali digitali ha rivoluzionato il customer care!",
         "downloadPaperBtn": "DOWNLOAD"
     },
     "en-EN": {
@@ -217,7 +217,7 @@ let languages = {
         "blogEmailSubtitle": "What about keeping yourself updated with Digital Customer Care trends and with all the news from Stip world? Write your email right here.",
         "suggestedArticleTitle": "Suggested articles",
         "download60Title": "Looking for insights?",
-        "download60Subtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "download60Subtitle": "Discover the best practices and tips to help shape your customer service operation!",
         "download60Btn": "DOWNLOAD",
 
         // support
@@ -253,8 +253,8 @@ let languages = {
         "crmProprietary": "Proprietary",
         "crmExternal": "External",
         "otherCrm": "Other ...",
-        "downloadPaperTitle": "Looking for insights?",
-        "downloadPaperSubtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "downloadPaperTitle": "Interested in Digital Customer Service?",
+        "downloadPaperSubtitle": "Discover how it reshaped the way companies interact with customers with our Paper!",
         "downloadPaperBtn": "DOWNLOAD"
     }
 }
