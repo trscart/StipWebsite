@@ -124,9 +124,9 @@ let languages = {
         "crmProprietary": "Propietario",
         "crmExternal": "Esterno",
         "otherCrm": "Altro ...",
-        "downloadCaseTitle": "Scarica il Case Study",
-        "downloadCaseTxt": "Scarica il Case Study e scopri come Stip permette di ridurre i tempi di gestione delle richieste degli utenti, i costi delle attività legate al Customer Care e di aumentare la produttività dei tuoi operatori",
-        "downloadBtn": "Download"
+        "downloadPaperTitle": "Looking for insights?",
+        "downloadPaperSubtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "downloadPaperBtn": "DOWNLOAD"
     },
     "en-EN": {
 
@@ -253,9 +253,9 @@ let languages = {
         "crmProprietary": "Proprietary",
         "crmExternal": "External",
         "otherCrm": "Other ...",
-        "downloadCaseTitle": "Scarica il Case Study",
-        "downloadCaseTxt": "Scarica il Case Study e scopri come Stip permette di ridurre i tempi di gestione delle richieste degli utenti, i costi delle attività legate al Customer Care e di aumentare la produttività dei tuoi operatori",
-        "downloadBtn": "Download"
+        "downloadPaperTitle": "Looking for insights?",
+        "downloadPaperSubtitle": "Discover the best practices and insights to help shape your customer service operation!",
+        "downloadPaperBtn": "DOWNLOAD"
     }
 }
 
