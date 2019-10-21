@@ -61,7 +61,7 @@ typings/
 .next
 
 # unused css
-*.map
-*.scss
-*.css
+.map
+.scss
+.css
 !index.css
