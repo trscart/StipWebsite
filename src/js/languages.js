@@ -88,7 +88,7 @@ let languages = {
         "blogEmailSubtitle": "Vuoi rimanere aggiornato su tutti i trend del Digital Customer Care e sul mondo Stip? Scrivi qui la tua email.",
         "suggestedArticleTitle": "Articoli suggeriti",
         "download60Title": "Vuoi saperne di più sul Digital Customer Service?",
-        "download60Subtitle": "Scopri tutte le best practices e i nuovi trend del customer service sui canali digitali!",
+        "download60Subtitle": "Scopri 60 statistiche e le best practices per gestire al meglio il tuo customer care su tutti i canali digitali!",
         "download60Btn": "DOWNLOAD",
 
         // support
@@ -217,7 +217,7 @@ let languages = {
         "blogEmailSubtitle": "What about keeping yourself updated with Digital Customer Care trends and with all the news from Stip world? Write your email right here.",
         "suggestedArticleTitle": "Suggested articles",
         "download60Title": "Looking for insights?",
-        "download60Subtitle": "Discover the best practices and tips to help shape your customer service operation!",
+        "download60Subtitle": "Download now our 60 stats and lessons and shape your customer service operation!",
         "download60Btn": "DOWNLOAD",
 
         // support
