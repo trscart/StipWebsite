@@ -164,6 +164,11 @@ $(document).ready(function () {
             return re.test(String(email).toLowerCase());
         }
     }
+    // validate email
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
 
     // demo page steps and request
     $("#stip-demo-secondForm").hide()
@@ -309,6 +314,37 @@ $(document).ready(function () {
                     }
                 }, 1300);
             })
+    })
+    $("#stip-survey-button").click(function () { // onclick show second form and hide thank you page
+        $("#stip-demo-secondForm").show()
+        $("#stip-demo-thanks").hide()
+        if ($(window).width() < 576) {
+            $(".stip-demoHero").css("background-image", "none")
+        }
+        else {
+            $(".stip-demoHero").css("background-image", "url('./src/img/demoBG_2.png')")
+        }
+
+    })
+
+    // validate email and then enable the "download btn" to download 60stats or paper
+    $("#stip-email-download").change(function () {
+        if (validateEmail($("#stip-email-download").val())) {
+            $("#stip-download-btn").removeClass("stip-downloadDisable")
+            $("#stip-download-btn").addClass("stip-download")
+            if ($(location).attr('href').includes("demo")) { // if location is demo download paper
+                $("#stip-download-btn").attr("download", "paper.pdf")
+                $("#stip-download-btn").attr("href", "./src/download/paper.pdf")
+            } else { // if location is blog download paper
+                $("#stip-download-btn").attr("download", "60stats.pdf")
+                $("#stip-download-btn").attr("href", "./src/download/60stats.pdf")
+            }
+        } else {
+            $("#stip-download-btn").removeClass("stip-download")
+            $("#stip-download-btn").addClass("stip-downloadDisable")
+            $("#stip-download-btn").removeAttr("download")
+            $("#stip-download-btn").removeAttr("href")
+        }
     })
 
     // ajax call for contact request
@@ -584,42 +620,6 @@ $(document).ready(function () {
         }
     })
 
-    if ($(location).attr('href').includes("platform.html")) { //reprompt demo request after 3 min in platform page
-        setTimeout(function () {
-            let context
-            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                context = { popupTitle: "Want to improve your customers' CX?", popupSubtitle: "Improve your Social & Email Customer Care with Stip! Write here your email and you will get our information material in a jiffy!", popupBtn: "Send", emailPlaceholder: "Corporate email" };
-            } else {
-                context = { popupTitle: "Vuoi migliorare la CX dei tuoi clienti?", popupSubtitle: "Migliora il tuo Social ed Email Customer Care con Stip! Lasciaci la tua mail e ti invieremo il nostro materiale informativo.", popupBtn: "Invia", emailPlaceholder: "Email aziendale" };
-            }
-            let source = document.getElementById("stip-popup").innerHTML;
-            let template = Handlebars.compile(source);
-            $('body').append(template(context))
-
-            $(".stip-closeReprompt").click(function () {
-                $(".stip-reprompt-container").css("display", "none")
-            })
-
-            $(".stip-emailSectionBtn").click(function () {
-                $(".stip-reprompt-container").css("display", "none")
-                // append thank you message
-                let context
-                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
-                } else {
-                    context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
-                }
-                let source = document.getElementById("stip-thanks").innerHTML;
-                let template = Handlebars.compile(source);
-                $('body').append(template(context))
-
-                $(".stip-closeReprompt").click(function () {
-                    $(".stip-reprompt-container").css("display", "none")
-                })
-            })
-        }, 210000);
-    }
-
     // maps
     if ($(location).attr('href').includes("contacts")) {
         //en map
@@ -657,12 +657,12 @@ $(document).ready(function () {
     /* analytics, facebook and cookies */
     // google analytics
     (function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NMMQBC3')
 
     window.dataLayer = window.dataLayer || [];

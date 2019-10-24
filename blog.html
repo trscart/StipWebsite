@@ -14,7 +14,7 @@
 
     <!-- icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -128,15 +128,17 @@
         <div class="row p-3 align-items-center">
             <h2 class="m-0 stip-h3">Filter by</h2>
             <div class="dropdown ml-4">
-                <button class="btn btn-secondary dropdown-toggle" id="stip-categoryDrop" type="button"
-                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle lang" key="allCategory" id="stip-categoryDrop"
+                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     All categories
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <button class="dropdown-item stip-categoryDropItem" type="button">Intelligent Automation</button>
                     <button class="dropdown-item stip-categoryDropItem" type="button">Digital Customer Care</button>
                     <button class="dropdown-item stip-categoryDropItem" type="button">Customer Experience</button>
-                    <button class="dropdown-item stip-categoryDropItem" type="button">All categories</button>
+                    <button class="dropdown-item stip-categoryDropItem lang" key="allCategory" type="button">All
+                        Topics</button>
                 </div>
             </div>
         </div>
@@ -240,16 +242,55 @@
 
     <!-- download60 section -->
     <div class="container my-5">
-        <div class="row px-5 stip-download60-row">
+        <div class="row px-5 stip-download-row">
             <div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
                 <h2 class="stip-h1 lang" key="download60Title">Looking for insight</h2>
-                <h2 class="stip-h3 lang" key="download60Subtitle">Discover the best practices and insights to help shape
+                <h2 class="stip-h3 lang" key="download60Subtitle">Discover the best practices and insights to help
+                    shape
                     your customer service operation!
                 </h2>
-                <a title="60 Essential Digital Customer Service Statistics and Lessons
-                for Business Growth [2019]" class="d-inline-block stip-download60 lang mt-3 text-center"
-                    key="download60Btn" download="60stats.pdf" href="./src/download/60stats.pdf"
-                    role="button">download</a>
+                <button type="button"
+                    title="The New Essential for Brands in 2019 - How Digital Customer Service has changed the playing field"
+                    class="btn btn-primary stip-download lang mt-3 text-center" key="download60Btn"
+                    data-toggle="modal" data-target="#stip-download-modal">
+                    Launch demo modal
+                </button>
+                <!-- download60 Modal -->
+                <div class="modal fade" id="stip-download-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center flex-column">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h2 class="modal-title align-self-center stip-h1 lang" key="modal60Title"
+                                    id="exampleModalLongTitle">
+                                    Dicci di più</h2>
+                                <p class="stip-h3 lang" key="modal60Subtitle">Scarica il paper e scopri tutto quello
+                                    che c'è da sapere sul digital customer care!</p>
+                            </div>
+                            <div class="modal-body">
+                                <form id="stip-download-form" class="d-flex flex-column p-2">
+                                    <div class="form-group">
+                                        <input type="text" name="fname" class="form-control placeholderLang"
+                                            key="modal60Name" placeholder="Nome" id="stip-name-download">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control placeholderLang"
+                                            key="modal60Email" placeholder="Email*" id="stip-email-download"
+                                            required>
+                                    </div>
+                                    <a title="The New Essential for Brands in 2019 - How Digital Customer Service has changed the playing field"
+                                        class="d-inline-block align-self-center mb-3 stip-downloadDisable lang mt-3 text-center"
+                                        key="modal60Btn" id="stip-download-btn">Scarica ora!</a>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end download60 Modal -->
             </div>
             <div class="col-md-5 d-none d-md-block">
                 <img src="./src/img/download60.png" style="max-width: 100%" alt="">

@@ -80,6 +80,7 @@ let languages = {
 
         // blog
         "backBlog": "Torna al Blog",
+        "allCategory": "Tutte",
         "loadMore": "scopri di più",
         "readArticle": "Leggi l'articolo",
         "ctaTitle": "Assicurati un Customer Care al massimo dell'efficienza, con il minimo sforzo",
@@ -90,6 +91,11 @@ let languages = {
         "download60Title": "Vuoi saperne di più sul Digital Customer Service?",
         "download60Subtitle": "Scopri 60 statistiche e le best practices per gestire al meglio il tuo customer care su tutti i canali digitali!",
         "download60Btn": "DOWNLOAD",
+        "modal60Title": "Dicci di più",
+        "modal60Subtitle": "Scarica le 60 statistiche e scopri tutto quello che c'è da sapere sul digital customer care!",
+        "modal60Name": "Nome",
+        "modal60Email": "Email*",
+        "modal60Btn": "Scaricalo ora!",
 
         // support
         "supportEmail": "Email*",
@@ -126,7 +132,12 @@ let languages = {
         "otherCrm": "Altro ...",
         "downloadPaperTitle": "Ti interessa il Digital Customer Service?",
         "downloadPaperSubtitle": "Scarica il Paper e scopri come i canali digitali ha rivoluzionato il customer care!",
-        "downloadPaperBtn": "DOWNLOAD"
+        "downloadPaperBtn": "DOWNLOAD",
+        "modalPaperTitle": "Dicci di più",
+        "modalPaperSubtitle": "Scarica il paper e scopri tutto quello che c'è da sapere sul digital customer care!",
+        "modalPaperName": "Nome",
+        "modalPaperEmail": "Email*",
+        "modalPaperBtn": "Scaricalo ora!"
     },
     "en-EN": {
 
@@ -209,6 +220,7 @@ let languages = {
 
         // blog
         "backBlog": "Back to Blog",
+        "allCategory": "All Topics",
         "loadMore": "load more",
         "readArticle": "Read the article",
         "ctaTitle": "Full efficiency with zero effort. That is your Customer Care with Stip",
@@ -219,6 +231,11 @@ let languages = {
         "download60Title": "Looking for insights?",
         "download60Subtitle": "Download now our 60 stats and lessons and shape your customer service operation!",
         "download60Btn": "DOWNLOAD",
+        "modal60Title": "Tell us more",
+        "modal60Subtitle": "Get the 60 stats and discover all digital customer care insights and trends!",
+        "modal60Name": "Name",
+        "modal60Email": "Email*",
+        "modal60Btn": "Download now!",
 
         // support
         "supportEmail": "Email*",
@@ -255,7 +272,12 @@ let languages = {
         "otherCrm": "Other ...",
         "downloadPaperTitle": "Interested in Digital Customer Service?",
         "downloadPaperSubtitle": "Discover how it reshaped the way companies interact with customers with our Paper!",
-        "downloadPaperBtn": "DOWNLOAD"
+        "downloadPaperBtn": "DOWNLOAD",
+        "modalPaperTitle": "Tell us more",
+        "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
+        "modalPaperName": "Name",
+        "modalPaperEmail": "Email*",
+        "modalPaperBtn": "Download now!"
     }
 }
 
