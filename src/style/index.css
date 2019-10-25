@@ -243,69 +243,11 @@ b {
   color: white;
 }
 
-.stip-download {
-  width: 12em;
-  font-weight: 600;
-  font-size: 16px;
-  color: white;
-  background-color: #399fad;
-  border-color: transparent;
-  border-radius: 50px;
-  padding: 10px 20px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  border: 0;
-}
-
-.stip-download:hover {
-  background-color: #399fad;
-  border: 0;
-  color: white;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  text-decoration: none;
-}
-
-.stip-downloadDisable {
-  width: 12em;
-  font-weight: 600;
-  font-size: 16px;
-  color: white !important;
-  background-color: #c3c3c3;
-  border-color: transparent;
-  border-radius: 50px;
-  padding: 10px 20px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  border: 0;
-}
-
-.stip-downloadDisable:hover {
-  background-color: #c3c3c3;
-  border: 0;
-  color: white !important;
-  text-decoration: none;
-}
-
 @media (max-width: 576px) {
   .stip-demoHero {
     padding: 2em;
     background-position-y: bottom;
     background-position-x: center;
-  }
-  .stip-download-row {
-    text-align: center;
-  }
-  .stip-download-row .stip-downloadPaper {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .stip-downloadRow {
-    background: none;
   }
 }
 
@@ -850,6 +792,59 @@ input[type=range].price:focus::-ms-fill-upper {
   background-color: #ff6161;
 }
 
+.stip-download {
+  width: 12em;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background-color: #399fad;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 10px 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+.stip-download:hover {
+  background-color: #399fad;
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.stip-downloadDisable {
+  width: 12em;
+  font-weight: 600;
+  font-size: 16px;
+  color: white !important;
+  background-color: #c3c3c3;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 10px 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+.stip-downloadDisable:hover {
+  background-color: #c3c3c3;
+  border: 0;
+  color: white !important;
+  text-decoration: none;
+}
+
+.stip-downloadPin {
+  background: url("../img/downloadPin.png") no-repeat;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  z-index: 1;
+}
+
 .stip-emailSectionBtn {
   background-color: #399fad;
   color: white;
@@ -1011,6 +1006,14 @@ input[type=range].price:focus::-ms-fill-upper {
   .stip-emailSection {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
+  }
+  .stip-download-row {
+    text-align: center;
+  }
+  .stip-download-row .stip-download {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .stip-footerCta {
     padding-top: 15% !important;

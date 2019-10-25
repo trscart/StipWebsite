@@ -327,9 +327,9 @@ $(document).ready(function () {
 
     })
 
-    // validate email and then enable the "download btn" to download 60stats or paper
-    $("#stip-email-download").change(function () {
-        if (validateEmail($("#stip-email-download").val())) {
+    // validate email and company name, then enable the "download btn" to download 60stats or paper
+    $("form :input").change(function () {
+        if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
             $("#stip-download-btn").removeClass("stip-downloadDisable")
             $("#stip-download-btn").addClass("stip-download")
             if ($(location).attr('href').includes("demo")) { // if location is demo download paper
@@ -339,6 +339,14 @@ $(document).ready(function () {
                 $("#stip-download-btn").attr("download", "60stats.pdf")
                 $("#stip-download-btn").attr("href", "./src/download/60stats.pdf")
             }
+            $("#stip-download-btn").click(function () {
+                let data = {
+                    "name": $('#stip-name-download').val(),
+                    "email": $('#stip-email-download').val(),
+                    "company_name": $('#stip-companyName-download').val(),
+                }
+                console.log(data)
+            })
         } else {
             $("#stip-download-btn").removeClass("stip-download")
             $("#stip-download-btn").addClass("stip-downloadDisable")

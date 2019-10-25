@@ -65,6 +65,15 @@ let languages = {
         "optimizeMetricTxt": "Puoi usare Stip per gestire l’intero processo, o integrare la sua  Intelligenze Artificiale all’interno dei CRM e sistemi aziendali",
         "learnMoreTitle": "Vuoi saperne di più?",
         "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità. D’altronde, il customer care è il nostro forte!",
+        "downloadPaperTitle": "Ti interessa il Digital Customer Service?",
+        "downloadPaperSubtitle": "Scarica il Paper e scopri come i canali digitali ha rivoluzionato il customer care!",
+        "downloadPaperBtn": "DOWNLOAD",
+        "modalPaperTitle": "Vuoi saperne di più sul Digital Customer Service?",
+        "modalPaperSubtitle": "Scarica il Paper di Stip e scopri tutto sull'innovazione dell'assistenza al cliente sui canali digitali!",
+        "modalPaperName": "Nome",
+        "modalPaperEmail": "Email*",
+        "modalPaperCompany": "Nome azienda*",
+        "modalPaperBtn": "Scaricalo ora!",
 
         // contact page
         "contactTitle": "SIAMO QUI PER TE!",
@@ -91,10 +100,11 @@ let languages = {
         "download60Title": "Vuoi saperne di più sul Digital Customer Service?",
         "download60Subtitle": "Scopri 60 statistiche e le best practices per gestire al meglio il tuo customer care su tutti i canali digitali!",
         "download60Btn": "DOWNLOAD",
-        "modal60Title": "Dicci di più",
+        "modal60Title": "Dicci di più!",
         "modal60Subtitle": "Scarica le 60 statistiche e scopri tutto quello che c'è da sapere sul digital customer care!",
         "modal60Name": "Nome",
         "modal60Email": "Email*",
+        "modal60Company": "Nome azienda*",
         "modal60Btn": "Scaricalo ora!",
 
         // support
@@ -129,15 +139,7 @@ let languages = {
         "demoCrm": "Che tipologia di CRM utilizza la tua azienda?",
         "crmProprietary": "Propietario",
         "crmExternal": "Esterno",
-        "otherCrm": "Altro ...",
-        "downloadPaperTitle": "Ti interessa il Digital Customer Service?",
-        "downloadPaperSubtitle": "Scarica il Paper e scopri come i canali digitali ha rivoluzionato il customer care!",
-        "downloadPaperBtn": "DOWNLOAD",
-        "modalPaperTitle": "Dicci di più",
-        "modalPaperSubtitle": "Scarica il paper e scopri tutto quello che c'è da sapere sul digital customer care!",
-        "modalPaperName": "Nome",
-        "modalPaperEmail": "Email*",
-        "modalPaperBtn": "Scaricalo ora!"
+        "otherCrm": "Altro ..."
     },
     "en-EN": {
 
@@ -205,6 +207,15 @@ let languages = {
         "optimizeMetricTxt": "Stip can manage the whole process or you can integrate its Artificial Intelligence with your company’s CRM system",
         "learnMoreTitle": "Contact us!",
         "learnMoreSubtitle": "Our team is at your service. After all, customer care is what we do best!",
+        "downloadPaperTitle": "Interested in Digital Customer Service?",
+        "downloadPaperSubtitle": "Discover how it reshaped the way companies interact with customers with our Paper!",
+        "downloadPaperBtn": "DOWNLOAD",
+        "modalPaperTitle": "Tell us more",
+        "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
+        "modalPaperName": "Name",
+        "modalPaperEmail": "Email*",
+        "modalPaperCompany": "Company name*",
+        "modalPaperBtn": "Download now!",
 
         // contact page
         "contactTitle": "WE ARE HERE FOR YOU!",
@@ -231,10 +242,11 @@ let languages = {
         "download60Title": "Looking for insights?",
         "download60Subtitle": "Download now our 60 stats and lessons and shape your customer service operation!",
         "download60Btn": "DOWNLOAD",
-        "modal60Title": "Tell us more",
+        "modal60Title": "Tell us more!",
         "modal60Subtitle": "Get the 60 stats and discover all digital customer care insights and trends!",
         "modal60Name": "Name",
         "modal60Email": "Email*",
+        "modal60Company": "Company name*",
         "modal60Btn": "Download now!",
 
         // support
@@ -269,15 +281,7 @@ let languages = {
         "demoCrm": "What kind of CRM does your company use?",
         "crmProprietary": "Proprietary",
         "crmExternal": "External",
-        "otherCrm": "Other ...",
-        "downloadPaperTitle": "Interested in Digital Customer Service?",
-        "downloadPaperSubtitle": "Discover how it reshaped the way companies interact with customers with our Paper!",
-        "downloadPaperBtn": "DOWNLOAD",
-        "modalPaperTitle": "Tell us more",
-        "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
-        "modalPaperName": "Name",
-        "modalPaperEmail": "Email*",
-        "modalPaperBtn": "Download now!"
+        "otherCrm": "Other ..."
     }
 }
 
