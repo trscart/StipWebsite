@@ -332,11 +332,11 @@ $(document).ready(function () {
         if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
             $("#stip-download-btn").removeClass("stip-downloadDisable")
             $("#stip-download-btn").addClass("stip-download")
-            if ($(location).attr('href').includes("demo")) { // if location is demo download paper
-                $("#stip-download-btn").attr("download", "paper.pdf")
-                $("#stip-download-btn").attr("href", "./src/download/paper.pdf")
-            } else { // if location is blog download paper
+            if ($(location).attr('href').includes("blog")) { // if location is blog, download paper
                 $("#stip-download-btn").attr("download", "60stats.pdf")
+                $("#stip-download-btn").attr("href", "./src/download/paper.pdf")
+            } else { // if location is home download paper
+                $("#stip-download-btn").attr("download", "paper.pdf")
                 $("#stip-download-btn").attr("href", "./src/download/60stats.pdf")
             }
             $("#stip-download-btn").click(function () {
@@ -346,6 +346,20 @@ $(document).ready(function () {
                     "company_name": $('#stip-companyName-download').val(),
                 }
                 console.log(data)
+                $('#stip-download-modal').modal('hide');
+                // ajax call for send "data" information before download the files
+                /*$.ajax({
+                    url: 'https://stipworld.com/api/alertdown/',
+                    data: data,
+                    type: 'POST',
+                    success: function (res) {
+                        console.log(res)
+                        $('#stip-download-modal').modal('hide');
+                    },
+                    error: function (err) { //if error
+                        console.log(err)
+                    }
+                });*/
             })
         } else {
             $("#stip-download-btn").removeClass("stip-download")

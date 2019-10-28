@@ -792,6 +792,15 @@ input[type=range].price:focus::-ms-fill-upper {
   background-color: #ff6161;
 }
 
+.stip-downloadCard {
+  border-radius: 1.5rem !important;
+}
+
+.stip-downloadCard h2 {
+  color: #399fad;
+  line-height: 1.3em;
+}
+
 .stip-download {
   width: 12em;
   font-weight: 600;
