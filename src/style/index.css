@@ -284,14 +284,6 @@ b {
   color: #399fad;
 }
 
-.stip-mb {
-  margin-bottom: 5em;
-}
-
-.stip-hideMe {
-  opacity: 0;
-}
-
 .z-index-low {
   z-index: -2 !important;
 }
@@ -479,11 +471,6 @@ b {
 .stip-IllustrationDim {
   height: 15em;
   width: 20em;
-}
-
-.stip-clientLogoDim {
-  height: 7em;
-  width: 200px;
 }
 
 .stip-benefitContainer {
@@ -916,27 +903,6 @@ input[type=range].price:focus::-ms-fill-upper {
   margin-top: 10em;
 }
 
-.stip-demoContainer {
-  height: 100vh;
-  background-color: white;
-}
-
-.stip-demoContainer .stip-demoCol {
-  background-color: #399fad;
-}
-
-.stip-demoCloseIcon {
-  position: absolute;
-  top: 2em;
-  right: 2em;
-  z-index: 1;
-}
-
-.stip-demoCloseIcon i {
-  font-size: 2em;
-  color: white;
-}
-
 @media (max-width: 576px) {
   .stip-h1 {
     font-size: 18px !important;
@@ -1067,9 +1033,6 @@ input[type=range].price:focus::-ms-fill-upper {
 }
 
 @media (max-width: 767px) {
-  .stip-demoCloseIcon i {
-    color: #399fad !important;
-  }
   .stip-howWork {
     padding: 3em;
   }

@@ -87,36 +87,25 @@ $(document).ready(function () {
         $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
     });*/
 
-    // general css change
-    /*if ($(location).attr('href').includes("contacts")) {
-        $('.stip-nav').css("padding", "0 5em")
-        $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
-    }
-    if ($(location).attr('href').includes("contacts")) {
-        $('.stip-nav').css("position", "relative")
-    }*/
+    // nav changes
     $("#navBtn").click(function () {
         if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
             $('.stip-nav').toggleClass("stip-shadow")
             $('.stip-nav').css("background-color", "white")
         }
     });
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("blog")) { // nav-item change on scroll
             $('.stip-nav').css("padding", "0 5em")
             $('.stip-nav').css("background-color", "white")
             $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
-            $(".stip-languageDrop").css("color", "#4384f1")
         }
         else if (!$(location).attr('href').includes("blog")) {
             $('.stip-nav').css("padding", "2em 5em")
             $('.stip-nav').css("background-color", "transparent")
             $('.stip-nav').css("box-shadow", "none")
-            $(".stip-languageDrop").css("color", "#ffffff")
         }
     });
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0 && $(window).width() > 767 && $(location).attr('href').includes("blog")) { // double nav animation
             $('.stip-navs').css("top", -$('.stip-nav').outerHeight())
@@ -130,10 +119,6 @@ $(document).ready(function () {
         else if ($(window).width() > 767) {
             $('.stip-navs').css("top", 0)
         }
-    });
-
-    $(".dropdown-menu li a").click(function () {
-        $(".stip-languageDrop:first-child").html($(this).text() + ' <span class="caret"></span>');
     });
 
     // card append
