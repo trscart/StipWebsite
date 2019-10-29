@@ -649,12 +649,12 @@ $(document).ready(function () {
             '</div>';
         var mapEn = new google.maps.Map(
             document.getElementById('mapEn'), { zoom: 15, center: placeEn });
-        var markerEn = new google.maps.Marker({ position: placeEn, map: mapEn });
+        var markerEn = new google.maps.Marker({ position: placeEn, map: mapEn, url: "https://www.google.com/maps/place/Berkeley+Skydeck/@37.8700232,-122.2708017,17z/data=!3m1!4b1!4m5!3m4!1s0x80857e9c3255d2f5:0x80750bac5ec71ec6!8m2!3d37.870019!4d-122.268613" });
         var infowindowEn = new google.maps.InfoWindow({
             content: contentStringEn
         });
-        markerEn.addListener('click', function () {
-            infowindowEn.open(mapEn, markerEn);
+        google.maps.event.addListener(markerEn, 'click', function () {
+            window.open(markerEn.url)
         });
 
         let placeIt = { lat: 41.901610, lng: 12.503200 };
@@ -664,13 +664,16 @@ $(document).ready(function () {
             '</div>';
         var mapIt = new google.maps.Map(
             document.getElementById('mapIt'), { zoom: 15, center: placeIt });
-        var markerIt = new google.maps.Marker({ position: placeIt, map: mapIt });
+        var markerIt = new google.maps.Marker({ position: placeIt, map: mapIt, url: "https://www.google.com/maps/place/HUB+LVenture+Group+e+LUISS+EnLabs/@41.9012616,12.5015184,17z/data=!3m1!4b1!4m5!3m4!1s0x132f61a3f6bcb73d:0x461a57bcc3b95f55!8m2!3d41.9012576!4d12.5037071" });
         var infowindowIt = new google.maps.InfoWindow({
             content: contentStringIt
         });
-        markerIt.addListener('click', function () {
-            infowindowIt.open(mapIt, markerIt);
+        google.maps.event.addListener(markerIt, 'click', function () {
+            window.open(markerIt.url)
         });
+        /*markerIt.addListener('click', function () {
+            infowindowIt.open(mapIt, markerIt);
+        });*/
     }
 
     /* analytics, facebook and cookies */
