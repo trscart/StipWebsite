@@ -340,12 +340,20 @@ $(document).ready(function () {
                         console.log(res)
                         $('.download-form-group').hide()
                         $('#modalPaperSubtitle').hide()
-                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // appned thank you message
                             $('#modalPaperTitle').text("You are good to go!")
-                            $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
+                            if ($(location).attr('href').includes("blog")) { // if location is blog and language is en-EN
+                                $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
+                            } else { // if location is home and language is en-EN
+                                $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>Paper to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
+                            }
                         } else {
                             $('#modalPaperTitle').text("You are good to go!")
-                            $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>") 
+                            if ($(location).attr('href').includes("blog")) { // if location is blog and language is it-IT
+                                $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
+                            } else { // if location is home and language is it-IT
+                                $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>Paper to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
+                            }
                         }
                     },
                     error: function (err) { //if error
