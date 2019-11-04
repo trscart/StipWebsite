@@ -338,7 +338,15 @@ $(document).ready(function () {
                     type: 'POST',
                     success: function (res) {
                         console.log(res)
-                        $('#stip-download-modal').modal('hide');
+                        $('.download-form-group').hide()
+                        $('#modalPaperSubtitle').hide()
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            $('#modalPaperTitle').text("You are good to go!")
+                            $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
+                        } else {
+                            $('#modalPaperTitle').text("You are good to go!")
+                            $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>") 
+                        }
                     },
                     error: function (err) { //if error
                         console.log(err)
