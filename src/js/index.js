@@ -329,6 +329,7 @@ $(document).ready(function () {
                     "name": $('#stip-name-download').val(),
                     "email": $('#stip-email-download').val(),
                     "company_name": $('#stip-companyName-download').val(),
+                    "page": "home"
                 }
                 // ajax call for send "data" information before download the files
                 $.ajax({
@@ -671,9 +672,6 @@ $(document).ready(function () {
         google.maps.event.addListener(markerIt, 'click', function () {
             window.open(markerIt.url)
         });
-        /*markerIt.addListener('click', function () {
-            infowindowIt.open(mapIt, markerIt);
-        });*/
     }
 
     /* analytics, facebook and cookies */
