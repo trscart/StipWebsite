@@ -71,7 +71,7 @@ let languages = {
         "modalPaperTitle": "Vuoi saperne di più sul Digital Customer Service?",
         "modalPaperSubtitle": "Scarica il Paper di Stip e scopri tutto sull'innovazione dell'assistenza al cliente sui canali digitali!",
         "modalPaperName": "Nome",
-        "modalPaperEmail": "Email*",
+        "modalPaperEmail": "Email aziendale*",
         "modalPaperCompany": "Nome azienda*",
         "modalPaperBtn": "Scaricalo ora!",
 
@@ -213,7 +213,7 @@ let languages = {
         "modalPaperTitle": "Tell us more",
         "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
         "modalPaperName": "Name",
-        "modalPaperEmail": "Email*",
+        "modalPaperEmail": "Corporate email*",
         "modalPaperCompany": "Company name*",
         "modalPaperBtn": "Download now!",
 

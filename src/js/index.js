@@ -313,8 +313,8 @@ $(document).ready(function () {
     })
 
     // validate email and company name, then enable the "download btn" to download 60stats or paper
-    $("form :input").change(function () {
-        if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
+    $("form :input").on('keyup touchend', function () {
+        if (validateCorporateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
             $("#stip-download-btn").removeClass("stip-downloadDisable")
             $("#stip-download-btn").addClass("stip-download")
             if ($(location).attr('href').includes("blog")) { // if location is blog, download paper
