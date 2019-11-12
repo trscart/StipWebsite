@@ -151,9 +151,41 @@
     </div>
     <!-- end heroBanner -->
 
+    <!-- Who’s for section section -->
+    <div class="container-fluid mt-5 pt-5 pt-sm-0">
+        <div class="row flex-column justify-content-center stip-sectionTitle stip-mt" data-aos="fade">
+            <h2 class="stip-h1 lang" key="whosforTitle">Who’s this guide for?</h2>
+            <p class="lang" key="whosforSubtitle">Any professional who works in a company and who is interested in:
+            </p>
+        </div>
+        <div class="row text-center stip-sectionBody">
+            <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade">
+                <div class="mb-5 stip-IllustrationDim">
+                    <img alt="easy setup illustration" src="./src/img/satisfactionIllustration.png"
+                        style="max-width: 100%;">
+                </div>
+                <h2 class="stip-h3 lang" key="whosfor1">Customer Service & Customer Experience</h2>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade">
+                <div class="mb-5 stip-IllustrationDim">
+                    <img alt="easy setup illustration" src="./src/img/digitalInnovation.png" style="max-width: 100%;">
+                </div>
+                <h2 class="stip-h3 lang" key="whosfor2">Digital Innovation & Intelligent Automation</h2>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade">
+                <div class="mb-5 stip-IllustrationDim">
+                    <img alt="easy setup illustration" src="./src/img/fullPlatformIllustration.png"
+                        style="max-width: 100%;">
+                </div>
+                <h2 class="stip-h3 lang" key="whosfor3">Social Media & Digital Customer Service</h2>
+            </div>
+        </div>
+    </div>
+    <!-- end Who’s for section section -->
+
     <!-- what's covered section -->
-    <div class="container-fluid">
-        <div class="row stip-whatscovered stip-whatscoveredBG" data-aos="fade">
+    <div class="container-fluid mt-5 pt-5 pt-sm-0">
+        <div class="row stip-whatscovered mt-5 stip-whatscoveredBG" data-aos="fade">
             <div class="col-md-7 col-lg-5" data-aos="fade-right">
                 <h2 class="mb-3 lang" key="whatscoveredTitle">What’s covered?</h2>
                 <p class="lang" key="whatscoveredSubtitle">In this guide, we’ll break down 60 key stats, facts and
@@ -168,107 +200,74 @@
                     <li class="lang" key="whatscoveredBullet5"></li>
                     <li class="lang" key="whatscoveredBullet6"></li>
                 </ul>
+                <button type="button"
+                    title="The New Essential for Brands in 2019 - How Digital Customer Service has changed the playing field"
+                    class="btn btn-primary stip-download lang mt-2 text-center" key="downloadPaperBtn"
+                    data-toggle="modal" data-target="#stip-download-modal">
+                    Download
+                </button>
+                <!-- downloadPaper Modal -->
+                <div class="modal fade" id="stip-download-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content stip-downloadCard border-0">
+                            <span class="stip-downloadPin d-none d-md-block"
+                                style="transform: translate(-100%, -100%); left: 0;"></span>
+                            <span class="stip-downloadPin d-none d-md-block"
+                                style="transform: translate(+100%, -100%) rotate(90deg); right: 0;"></span>
+                            <span class="stip-downloadPin d-none d-md-block"
+                                style="transform: translate(+100%, +100%) rotate(180deg); right: 0; bottom: 0;"></span>
+                            <span class="stip-downloadPin d-none d-md-block"
+                                style="transform: translate(-100%, +100%) rotate(-90deg); left: 0; bottom: 0;"></span>
+                            <div class="modal-header text-center flex-column">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h2 class="modal-title align-self-center mb-3 stip-h1 lang" key="modal60Title"
+                                    id="modalDownloadTitle">
+                                    Dicci di più</h2>
+                                <p class="stip-h3 lang" key="modal60Subtitle" id="modalDownloadSubtitle">Scarica il
+                                    paper e scopri tutto quello
+                                    che c'è da sapere sul digital customer care!</p>
+                            </div>
+                            <div class="modal-body">
+                                <form id="stip-download-form" style="display: flex;" class="flex-column p-2">
+                                    <div class="form-group download-form-group">
+                                        <input type="text" name="fname" class="form-control placeholderLang"
+                                            key="modal60Name" placeholder="Nome" id="stip-name-download">
+                                    </div>
+                                    <div class="form-group download-form-group">
+                                        <input type="email" name="email" class="form-control placeholderLang"
+                                            key="modal60Email" placeholder="Email*" id="stip-email-download" required>
+                                    </div>
+                                    <div class="form-group download-form-group">
+                                        <input type="text" name="company name" class="form-control placeholderLang"
+                                            key="modal60Company" placeholder="Nome azienda*"
+                                            id="stip-companyName-download" required>
+                                    </div>
+                                    <a title="The New Essential for Brands in 2019 - How Digital Customer Service has changed the playing field"
+                                        class="d-inline-block align-self-center mb-3 stip-downloadDisable lang mt-3 text-center"
+                                        key="modal60Btn" id="stip-download-btn" role="submit">Scarica ora!</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end downloadPaper Modal -->
             </div>
         </div>
     </div>
     <!-- what's covered section -->
 
-    <!-- Who’s for section -->
-    <div class="container-fluid" id="stip-ai">
-        <div class="row flex-column justify-content-center stip-sectionTitle" data-aos="fade">
-            <h2 class="stip-h1 lang" key="whosforTitle">Who’s this guide for?</h2>
-            <p class="lang" key="whosforSubtitle">Any professional who works in a company and who is interested in:
-            </p>
-        </div>
-        <div class="row text-center justify-content-center">
-            <div class="col-md-3 d-flex flex-column align-items-center px-5 mb-5" data-aos="fade">
-                <div class="mb-5 stip-IllustrationDim">
-                    <img alt="easy setup illustration" src="./src/img/satisfactionIllustration.png"
-                        style="max-width: 100%;">
-                </div>
-                <h2 class="stip-h3 lang" key="whosfor1">Customer Service & Customer Experience</h2>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center px-5 mb-5" data-aos="fade">
-                <div class="mb-5 stip-IllustrationDim">
-                    <img alt="easy setup illustration" src="./src/img/digitalInnovation.png" style="max-width: 100%;">
-                </div>
-                <h2 class="stip-h3 lang" key="whosfor2">Digital Innovation & Intelligent Automation</h2>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center px-5 mb-5" data-aos="fade">
-                <div class="mb-5 stip-IllustrationDim">
-                    <img alt="easy setup illustration" src="./src/img/fullPlatformIllustration.png"
-                        style="max-width: 100%;">
-                </div>
-                <h2 class="stip-h3 lang" key="whosfor3">Social Media & Digital Customer Service</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <button type="button"
-                title="The New Essential for Brands in 2019 - How Digital Customer Service has changed the playing field"
-                class="btn btn-primary stip-download lang mt-2 text-center" key="downloadPaperBtn" data-toggle="modal"
-                data-target="#stip-download-modal">
-                Download
-            </button>
-            <!-- downloadPaper Modal -->
-            <div class="modal fade" id="stip-download-modal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content stip-downloadCard border-0">
-                        <span class="stip-downloadPin d-none d-md-block"
-                            style="transform: translate(-100%, -100%); left: 0;"></span>
-                        <span class="stip-downloadPin d-none d-md-block"
-                            style="transform: translate(+100%, -100%) rotate(90deg); right: 0;"></span>
-                        <span class="stip-downloadPin d-none d-md-block"
-                            style="transform: translate(+100%, +100%) rotate(180deg); right: 0; bottom: 0;"></span>
-                        <span class="stip-downloadPin d-none d-md-block"
-                            style="transform: translate(-100%, +100%) rotate(-90deg); left: 0; bottom: 0;"></span>
-                        <div class="modal-header text-center flex-column">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h2 class="modal-title align-self-center mb-3 stip-h1 lang" key="modal60Title"
-                                id="modalDownloadTitle">
-                                Dicci di più</h2>
-                            <p class="stip-h3 lang" key="modal60Subtitle" id="modalDownloadSubtitle">Scarica il
-                                paper e scopri tutto quello
-                                che c'è da sapere sul digital customer care!</p>
-                        </div>
-                        <div class="modal-body">
-                            <form id="stip-download-form" style="display: flex;" class="flex-column p-2">
-                                <div class="form-group download-form-group">
-                                    <input type="text" name="fname" class="form-control placeholderLang"
-                                        key="modal60Name" placeholder="Nome" id="stip-name-download">
-                                </div>
-                                <div class="form-group download-form-group">
-                                    <input type="email" name="email" class="form-control placeholderLang"
-                                        key="modal60Email" placeholder="Email*" id="stip-email-download" required>
-                                </div>
-                                <div class="form-group download-form-group">
-                                    <input type="text" name="company name" class="form-control placeholderLang"
-                                        key="modal60Company" placeholder="Nome azienda*" id="stip-companyName-download"
-                                        required>
-                                </div>
-                                <a title="The New Essential for Brands in 2019 - How Digital Customer Service has changed the playing field"
-                                    class="d-inline-block align-self-center mb-3 stip-downloadDisable lang mt-3 text-center"
-                                    key="modal60Btn" id="stip-download-btn" role="submit">Scarica ora!</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end downloadPaper Modal -->
-        </div>
-    </div>
-    <!-- Who’s for section -->
-
     <!-- stip summury -->
-    <div class="container-fluid">
-        <div class="row stip-sectionTitle">
-            <div class="col-md-3">
+    <div class="container stip-summary">
+        <div class="row">
+            <div class="col-md-2 offset-md-2">
                 <img alt="logo" class="logo mb-3" src="src/img/logoColor.svg" width="80" height="80">
             </div>
-            <div class="col-md-9">
-                <p class="lang text-left" key="leadSummary">Stip is an AI-based solution that helps companies managing their
+            <div class="col-md-8">
+                <p class="lang text-left" key="leadSummary">Stip is an AI-based solution that helps companies managing
+                    their
                     digital customer support activities. Ideal for companies with high volumes of interactions with
                     their customers on digital channels such as: live chats, instant messaging tools, social media
                     networks and email.</p>

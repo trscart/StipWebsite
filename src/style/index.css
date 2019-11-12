@@ -278,7 +278,7 @@ b {
 }
 
 .stip-whatscovered {
-  padding: 10em 0 10em 7em;
+  padding: 10em 0 0 7em;
 }
 
 .stip-whatscovered h2 {
@@ -289,12 +289,20 @@ b {
   font-size: 1.2em;
 }
 
+.stip-summary {
+  margin-top: 10em;
+}
+
 @media (max-width: 576px) {
   .stip-heroLead {
     background: url("../img/heroLead-sm.png") no-repeat;
     background-size: contain;
     background-position-y: bottom;
     background-position-x: center;
+  }
+  .stip-summary {
+    margin-top: 3em;
+    padding: 3em;
   }
 }
 
