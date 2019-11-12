@@ -314,7 +314,7 @@ $(document).ready(function () {
         language = navigator.language; // get current language
     }
 
-    if ($(location).attr('href').includes("lead-magnet")) { // only english version for lead magnet page
+    if ($(location).attr('href').includes("digital-customer-service-guide")) { // only english version for lead magnet page
         language = "en-EN"
         sessionStorage.setItem('language', "en-EN");
     }

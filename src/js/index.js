@@ -343,16 +343,16 @@ $(document).ready(function () {
                         $('#modalDownloadSubtitle').hide()
                         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // appned thank you message
                             $('#modalDownloadTitle').text("You are good to go!")
-                            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("lead-magnet")) { // if location is blog and language is en-EN
+                            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog and language is en-EN
                                 $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
-                            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("lead-magnet")) { // if location is home and language is en-EN
+                            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is en-EN
                                 $('.modal-header').append("<p>Your free copy of the <b style ='font-weight: 800'>Paper on Digital Customer Service Trends and Insights</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
                             }
                         } else {
                             $('#modalPaperTitle').text("Tutto pronto!")
-                            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("lead-magnet")) { // if location is blog and language is it-IT
+                            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog and language is it-IT
                                 $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>60 Stats and Lessons per migliorare il tuo Digital Customer Service</b> si scaricherà automaticamente.<br><br> In caso di problemi, clicca qui per scaricarlo!</p>")
-                            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("lead-magnet")) { // if location is home and language is it-IT
+                            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is it-IT
                                 $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>Paper su innovazione e nuovi trend del Digital Customer Service</b> si scaricherà automaticamente.<br><br> In caso di problemi, clicca qui per scaricarlo!</p>")
                             }
                         }
