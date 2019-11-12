@@ -67,7 +67,7 @@ let languages = {
         "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità. D’altronde, il customer care è il nostro forte!",
         "downloadPaperTitle": "Ti interessa il Digital Customer Service?",
         "downloadPaperSubtitle": "Scarica il Paper e scopri come i canali digitali ha rivoluzionato il customer care!",
-        "downloadPaperBtn": "DOWNLOAD",
+        "downloadPaperBtn": "SCARICALO ORA!",
         "modalPaperTitle": "Vuoi saperne di più sul Digital Customer Service?",
         "modalPaperSubtitle": "Scarica il Paper di Stip e scopri tutto sull'innovazione dell'assistenza al cliente sui canali digitali!",
         "modalPaperName": "Nome",
@@ -99,7 +99,7 @@ let languages = {
         "suggestedArticleTitle": "Articoli suggeriti",
         "download60Title": "Vuoi saperne di più sul Digital Customer Service?",
         "download60Subtitle": "Scopri 60 statistiche e le best practices per gestire al meglio il tuo customer care su tutti i canali digitali!",
-        "download60Btn": "DOWNLOAD",
+        "download60Btn": "SCARICALO ORA!",
         "modal60Title": "Dicci di più!",
         "modal60Subtitle": "Scarica le 60 statistiche e scopri tutto quello che c'è da sapere sul digital customer care!",
         "modal60Name": "Nome",
@@ -139,7 +139,11 @@ let languages = {
         "demoCrm": "Che tipologia di CRM utilizza la tua azienda?",
         "crmProprietary": "Propietario",
         "crmExternal": "Esterno",
-        "otherCrm": "Altro ..."
+        "otherCrm": "Altro ...",
+
+        // lead magnet page
+        "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
+        "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it."
     },
     "en-EN": {
 
@@ -209,7 +213,7 @@ let languages = {
         "learnMoreSubtitle": "Our team is at your service. After all, customer care is what we do best!",
         "downloadPaperTitle": "Interested in Digital Customer Service?",
         "downloadPaperSubtitle": "Discover how it reshaped the way companies interact with customers with our Paper!",
-        "downloadPaperBtn": "DOWNLOAD",
+        "downloadPaperBtn": "DOWNLOAD NOW!",
         "modalPaperTitle": "Tell us more",
         "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
         "modalPaperName": "Name",
@@ -241,7 +245,7 @@ let languages = {
         "suggestedArticleTitle": "Suggested articles",
         "download60Title": "Looking for insights?",
         "download60Subtitle": "Download now our 60 stats and lessons and shape your customer service operation!",
-        "download60Btn": "DOWNLOAD",
+        "download60Btn": "DOWNLOAD NOW!",
         "modal60Title": "Tell us more!",
         "modal60Subtitle": "Get the 60 stats and discover all digital customer care insights and trends!",
         "modal60Name": "Name",
@@ -281,7 +285,25 @@ let languages = {
         "demoCrm": "What kind of CRM does your company use?",
         "crmProprietary": "Proprietary",
         "crmExternal": "External",
-        "otherCrm": "Other ..."
+        "otherCrm": "Other ...",
+
+        // lead magnet page
+        "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
+        "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it.",
+        "whatscoveredTitle": "What’s covered?",
+        "whatscoveredSubtitle": "In this guide, we’ll break down 60 key stats, facts and figures that will make you rethink your customer service strategy. Here are a few of the questions you can expect to have answered:",
+        "whatscoveredBullet1": "What is happening to traditional customer service?",
+        "whatscoveredBullet2": "How are social media modifying interactions between companies and customers?",
+        "whatscoveredBullet3": "What happens if a company is responsible for poor customer service?",
+        "whatscoveredBullet4": "And what are the benefits of good customer service?",
+        "whatscoveredBullet5": "How will the future of customer support look like?",
+        "whatscoveredBullet6": "But, more importantly: how to efficiently manage customer support on digital channels?",
+        "whosforTitle": "Who’s this guide for?",
+        "whosforSubtitle": "Any professional who works in a company and who is interested in:",
+        "whosfor1": "Customer Service & Customer Experience",
+        "whosfor2": "Digital Innovation & Intelligent Automation",
+        "whosfor3": "Social Media & Digital Customer Service",
+        "leadSummary": "Stip is an AI-based solution that helps companies managing their digital customer support activities. Ideal for companies with high volumes of interactions with their customers on digital channels such as: live chats, instant messaging tools, social media networks and email."
     }
 }
 
@@ -290,6 +312,11 @@ $(document).ready(function () {
     let language = null
     if (sessionStorage.getItem('language') == null) {
         language = navigator.language; // get current language
+    }
+
+    if ($(location).attr('href').includes("lead-magnet")) { // only english version for lead magnet page
+        language = "en-EN"
+        sessionStorage.setItem('language', "en-EN");
     }
 
     // change text language on load

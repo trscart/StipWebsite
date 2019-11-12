@@ -251,6 +251,75 @@ b {
   }
 }
 
+.stip-heroLead {
+  height: 100vh;
+  padding: 10%;
+  background: url("../img/heroLead.png") no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  background-position-x: right;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stip-heroLead h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.stip-whatscoveredBG {
+  background: url("../img/whatscoveredBG.png") no-repeat;
+  background-size: 40%;
+  background-position-y: center;
+  background-position-x: right;
+}
+
+.stip-whatscovered {
+  padding: 10em 0 10em 7em;
+}
+
+.stip-whatscovered h2 {
+  font-size: 2em;
+}
+
+.stip-whatscovered p {
+  font-size: 1.2em;
+}
+
+@media (max-width: 576px) {
+  .stip-heroLead {
+    background: url("../img/heroLead-sm.png") no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    background-position-x: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .stip-whatscoveredBG {
+    background: none;
+  }
+  .stip-whatscovered {
+    margin-top: 3em;
+    padding: 1em !important;
+  }
+  .stip-whatscovered h2 {
+    font-size: 1.7em;
+  }
+  .stip-whatscovered p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 992px) {
+  .stip-whatscovered {
+    padding: 5em;
+  }
+}
+
 .p-5_2 {
   padding: 2rem !important;
 }
