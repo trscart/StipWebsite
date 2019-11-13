@@ -333,7 +333,7 @@ $(document).ready(function () {
                 }
 
                 // ajax call for send "data" information before download the files
-                $.ajax({
+                $.ajax({ 
                     url: 'https://stipworld.com/api/papers/',
                     data: data,
                     type: 'POST',

@@ -143,8 +143,22 @@ let languages = {
 
         // lead magnet page
         "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
-        "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it."
-    },
+        "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it.",
+        "whatscoveredTitle": "What’s covered?",
+        "whatscoveredSubtitle": "In this guide, we’ll break down 60 key stats, facts and figures that will make you rethink your customer service strategy. Here are a few of the questions you can expect to have answered:",
+        "whatscoveredBullet1": "What is happening to traditional customer service?",
+        "whatscoveredBullet2": "How are social media modifying interactions between companies and customers?",
+        "whatscoveredBullet3": "What happens if a company is responsible for poor customer service?",
+        "whatscoveredBullet4": "And what are the benefits of good customer service?",
+        "whatscoveredBullet5": "How will the future of customer support look like?",
+        "whatscoveredBullet6": "But, more importantly: how to efficiently manage customer support on digital channels?",
+        "whosforTitle": "Who’s this guide for?",
+        "whosforSubtitle": "Any professional who works in a company and who is interested in:",
+        "whosfor1": "Customer Service & Customer Experience",
+        "whosfor2": "Digital Innovation & Intelligent Automation",
+        "whosfor3": "Social Media & Digital Customer Service",
+        "leadSummary": "Stip is an AI-based solution that helps companies managing their digital customer support activities. Ideal for companies with high volumes of interactions with their customers on digital channels such as: live chats, instant messaging tools, social media networks and email."
+    }, 
     "en-EN": {
 
         // GENERIC

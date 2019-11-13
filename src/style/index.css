@@ -272,7 +272,7 @@ b {
 
 .stip-whatscoveredBG {
   background: url("../img/whatscoveredBG.png") no-repeat;
-  background-size: 40%;
+  background-size: contain;
   background-position-y: center;
   background-position-x: right;
 }
