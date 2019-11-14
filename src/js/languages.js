@@ -144,6 +144,7 @@ let languages = {
         // lead magnet page
         "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
         "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it.",
+        "leadMagnet-btn": "DOWNLOAD NOW!",
         "whatscoveredTitle": "What’s covered?",
         "whatscoveredSubtitle": "In this guide, we’ll break down 60 key stats, facts and figures that will make you rethink your customer service strategy. Here are a few of the questions you can expect to have answered:",
         "whatscoveredBullet1": "What is happening to traditional customer service?",
@@ -309,6 +310,7 @@ let languages = {
         // lead magnet page
         "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
         "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it.",
+        "leadMagnet-btn": "DOWNLOAD NOW!",
         "whatscoveredTitle": "What’s covered?",
         "whatscoveredSubtitle": "In this guide, we’ll break down 60 key stats, facts and figures that will make you rethink your customer service strategy. Here are a few of the questions you can expect to have answered:",
         "whatscoveredBullet1": "What is happening to traditional customer service?",
@@ -336,11 +338,6 @@ $(document).ready(function () {
     let language = null
     if (sessionStorage.getItem('language') == null) {
         language = navigator.language; // get current language
-    }
-
-    if ($(location).attr('href').includes("digital-customer-service-guide")) { // only english version for lead magnet page
-        language = "en-EN"
-        sessionStorage.setItem('language', "en-EN");
     }
 
     // change text language on load
