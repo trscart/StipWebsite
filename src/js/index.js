@@ -312,6 +312,62 @@ $(document).ready(function () {
 
     })
 
+    $(".stip-download-btn").click(function () {
+        let data = {
+            "name": $('#stip-name-download').val(),
+            "email": $('#stip-email-download').val(),
+            "company_name": $('#stip-companyName-download').val(),
+            "page": "home"
+        }
+
+        // fetch call for send "data" information before download the files
+        fetch('https://stipworld.com/api/papers/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(function (res) {
+                console.log(res)
+                $('.stip-download-modalBody').hide()
+                $('.stip-download-modalHeader').css("border", "none")
+                $('#modalDownloadSubtitle').hide()
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // appned thank you message
+                    $('#modalDownloadTitle').text("You are good to go!")
+                    if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog or lead magnet page and language is en-EN
+                        $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.</p>")
+                    } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is en-EN
+                        $('.modal-header').append("<p>Your free copy of the <b style ='font-weight: 800'>Paper on Digital Customer Service Trends and Insights</b> should automatically download.</p>")
+                    }
+                } else {
+                    $('#modalPaperTitle').text("Tutto pronto!")
+                    if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { //  if location is blog or lead magnet page and language is it-IT
+                        $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>60 Stats and Lessons per migliorare il tuo Digital Customer Service</b> si scaricherà automaticamente.</p>")
+                    } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is it-IT
+                        $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>Paper su innovazione e nuovi trend del Digital Customer Service</b> si scaricherà automaticamente.</p>")
+                    }
+                }
+            })
+            .catch(function (err) { //if error
+                console.log(err)
+                $('.stip-download-btn').css("background-color", "#ff6161");
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    $('.stip-download-btn').text("Error, try again");
+                } else {
+                    $('.stip-download-btn').text("Errore, riprova");
+                }
+                setTimeout(function () {
+                    $('.stip-download-btn').css("background-color", "#399fad");
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-download-btn').text("Scaricalo ora!");
+                    } else {
+                        $('.stip-download-btn').text("Download now!");
+                    }
+                }, 1300);
+            })
+    })
+
     // validate email and company name, then enable the "download btn" to download 60 stats or paper
     $("form :input").on('keyup touchend', function () {
         if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
@@ -324,64 +380,6 @@ $(document).ready(function () {
                 $(".stip-download-btn").attr("download", "The New Essential for Brands in 2019.pdf")
                 $(".stip-download-btn").attr("href", "./src/download/The New Essential for Brands in 2019.pdf")
             }
-            let click = 0
-            $(".stip-download-btn").click(function () {
-                click = click + 1
-                if (click == 1) { // do fetch call only one time
-                    let data = {
-                        "name": $('#stip-name-download').val(),
-                        "email": $('#stip-email-download').val(),
-                        "company_name": $('#stip-companyName-download').val(),
-                        "page": "home"
-                    }
-
-                    // fetch call for send "data" information before download the files
-                    fetch('https://stipworld.com/api/papers/', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                    })
-                        .then(function (res) {
-                            console.log(res)
-                            $('.download-form-group').hide()
-                            $('#modalDownloadSubtitle').hide()
-                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) { // appned thank you message
-                                $('#modalDownloadTitle').text("You are good to go!")
-                                if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog or lead magnet page and language is en-EN
-                                    $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
-                                } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is en-EN
-                                    $('.modal-header').append("<p>Your free copy of the <b style ='font-weight: 800'>Paper on Digital Customer Service Trends and Insights</b> should automatically download.<br><br> If it doesn't, just click on the button below to download it!</p>")
-                                }
-                            } else {
-                                $('#modalPaperTitle').text("Tutto pronto!")
-                                if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { //  if location is blog or lead magnet page and language is it-IT
-                                    $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>60 Stats and Lessons per migliorare il tuo Digital Customer Service</b> si scaricherà automaticamente.<br><br> In caso di problemi, clicca qui per scaricarlo!</p>")
-                                } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is it-IT
-                                    $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>Paper su innovazione e nuovi trend del Digital Customer Service</b> si scaricherà automaticamente.<br><br> In caso di problemi, clicca qui per scaricarlo!</p>")
-                                }
-                            }
-                        })
-                        .catch(function (err) { //if error
-                            console.log(err)
-                            $('.stip-download-btn').css("background-color", "#ff6161");
-                            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                                $('.stip-download-btn').text("Error, try again");
-                            } else {
-                                $('.stip-download-btn').text("Errore, riprova");
-                            }
-                            setTimeout(function () {
-                                $('.stip-download-btn').css("background-color", "#399fad");
-                                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                                    $('.stip-download-btn').text("Scaricalo ora!");
-                                } else {
-                                    $('.stip-download-btn').text("Download now!");
-                                }
-                            }, 1300);
-                        })
-                }
-            })
         } else {
             $(".stip-download-btn").removeClass("stip-download")
             $(".stip-download-btn").addClass("stip-downloadDisable")
