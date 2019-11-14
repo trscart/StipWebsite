@@ -316,16 +316,16 @@ $(document).ready(function () {
     $("form :input").on('keyup touchend', function () {
         var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
         if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val() /*&& regName.test($('#stip-name-download').val())*/) {
-            $("#stip-download-btn").removeClass("stip-downloadDisable")
-            $("#stip-download-btn").addClass("stip-download")
+            $(".stip-download-btn").removeClass("stip-downloadDisable")
+            $(".stip-download-btn").addClass("stip-download")
             if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog, download paper
-                $("#stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
-                $("#stip-download-btn").attr("href", "./src/download/paper.pdf")
+                $(".stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
+                $(".stip-download-btn").attr("href", "./src/download/paper.pdf")
             } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home download paper
-                $("#stip-download-btn").attr("download", "paper.pdf")
-                $("#stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
+                $(".stip-download-btn").attr("download", "paper.pdf")
+                $(".stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
             }
-            $("#stip-download-btn").click(function () {
+            $(".stip-download-btn").click(function () {
                 let data = {
                     "name": $('#stip-name-download').val(),
                     "email": $('#stip-email-download').val(),
@@ -360,28 +360,28 @@ $(document).ready(function () {
                     },
                     error: function (err) { //if error
                         console.log(err)
-                        $('#stip-download-btn').css("background-color", "#ff6161");
+                        $('.stip-download-btn').css("background-color", "#ff6161");
                         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            $('#stip-download-btn').text("Error, try again");
+                            $('.stip-download-btn').text("Error, try again");
                         } else {
-                            $('#stip-download-btn').text("Errore, riprova");
+                            $('.stip-download-btn').text("Errore, riprova");
                         }
                         setTimeout(function () {
-                            $('#stip-download-btn').css("background-color", "#399fad");
+                            $('.stip-download-btn').css("background-color", "#399fad");
                             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                                $('#stip-download-btn').text("Scaricalo ora!");
+                                $('.stip-download-btn').text("Scaricalo ora!");
                             } else {
-                                $('#stip-download-btn').text("Download now!");
+                                $('.stip-download-btn').text("Download now!");
                             }
                         }, 1300);
                     }
                 });
             })
         } else {
-            $("#stip-download-btn").removeClass("stip-download")
-            $("#stip-download-btn").addClass("stip-downloadDisable")
-            $("#stip-download-btn").removeAttr("download")
-            $("#stip-download-btn").removeAttr("href")
+            $(".stip-download-btn").removeClass("stip-download")
+            $(".stip-download-btn").addClass("stip-downloadDisable")
+            $(".stip-download-btn").removeAttr("download")
+            $(".stip-download-btn").removeAttr("href")
         }
     })
 

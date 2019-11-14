@@ -340,6 +340,11 @@ $(document).ready(function () {
         language = navigator.language; // get current language
     }
 
+    if ($(location).attr('href').includes("digital-customer-service-guide")) { // only english version for lead magnet page
+        language = "en-EN";
+        sessionStorage.setItem('language', "en-EN");
+    }
+
     // change text language on load
     if ((language != "it-IT" && language != null) || (sessionStorage.getItem('language') != "it-IT" && sessionStorage.getItem('language') != null)) { //if navigator.language and "language" item is both different from it-IT
         $('a[blog]').attr("href", "https://stip.io/en/blog/") // change href for blog link
