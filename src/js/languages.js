@@ -70,8 +70,8 @@ let languages = {
         "downloadPaperBtn": "SCARICALO ORA!",
         "modalPaperTitle": "Vuoi saperne di più sul Digital Customer Service?",
         "modalPaperSubtitle": "Scarica il Paper di Stip e scopri tutto sull'innovazione dell'assistenza al cliente sui canali digitali!",
-        "modalPaperName": "Nome",
-        "modalPaperEmail": "Email aziendale*",
+        "modalPaperName": "Nome e cognome*",
+        "modalPaperEmail": "Email*",
         "modalPaperCompany": "Nome azienda*",
         "modalPaperBtn": "Scaricalo ora!",
 
@@ -102,7 +102,7 @@ let languages = {
         "download60Btn": "SCARICALO ORA!",
         "modal60Title": "Dicci di più!",
         "modal60Subtitle": "Scarica le 60 statistiche e scopri tutto quello che c'è da sapere sul digital customer care!",
-        "modal60Name": "Nome",
+        "modal60Name": "Nome e cognome*",
         "modal60Email": "Email*",
         "modal60Company": "Nome azienda*",
         "modal60Btn": "Scaricalo ora!",
@@ -157,8 +157,13 @@ let languages = {
         "whosfor1": "Customer Service & Customer Experience",
         "whosfor2": "Digital Innovation & Intelligent Automation",
         "whosfor3": "Social Media & Digital Customer Service",
-        "leadSummary": "Stip is an AI-based solution that helps companies managing their digital customer support activities. Ideal for companies with high volumes of interactions with their customers on digital channels such as: live chats, instant messaging tools, social media networks and email."
-    }, 
+        "leadSummary": "Stip is an AI-based solution that helps companies managing their digital customer support activities. Ideal for companies with high volumes of interactions with their customers on digital channels such as: live chats, instant messaging tools, social media networks and email.",
+
+        //test-ai page
+        "test-ai-btn": "invia",
+        "test-ai-input": "scrivi qui ...",
+        "test-ai-title": "Testa l'AI di Stip!"
+    },
     "en-EN": {
 
         // GENERIC
@@ -230,8 +235,8 @@ let languages = {
         "downloadPaperBtn": "DOWNLOAD NOW!",
         "modalPaperTitle": "Tell us more",
         "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
-        "modalPaperName": "Name",
-        "modalPaperEmail": "Corporate email*",
+        "modalPaperName": "Name and Surname*",
+        "modalPaperEmail": "Email*",
         "modalPaperCompany": "Company name*",
         "modalPaperBtn": "Download now!",
 
@@ -262,7 +267,7 @@ let languages = {
         "download60Btn": "DOWNLOAD NOW!",
         "modal60Title": "Tell us more!",
         "modal60Subtitle": "Get the 60 stats and discover all digital customer care insights and trends!",
-        "modal60Name": "Name",
+        "modal60Name": "Name and Surname*",
         "modal60Email": "Email*",
         "modal60Company": "Company name*",
         "modal60Btn": "Download now!",
@@ -317,7 +322,12 @@ let languages = {
         "whosfor1": "Customer Service & Customer Experience",
         "whosfor2": "Digital Innovation & Intelligent Automation",
         "whosfor3": "Social Media & Digital Customer Service",
-        "leadSummary": "Stip is an AI-based solution that helps companies managing their digital customer support activities. Ideal for companies with high volumes of interactions with their customers on digital channels such as: live chats, instant messaging tools, social media networks and email."
+        "leadSummary": "Stip is an AI-based solution that helps companies managing their digital customer support activities. Ideal for companies with high volumes of interactions with their customers on digital channels such as: live chats, instant messaging tools, social media networks and email.",
+
+        //test-ai page
+        "test-ai-btn": "send",
+        "test-ai-input": "your text here ...",
+        "test-ai-title": "Test Stip's AI here!"
     }
 }
 

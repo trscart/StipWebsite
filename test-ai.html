@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-control: max-age=31557600" content="public">
+    <link rel="icon" href="src/img/logoColor.svg">
+
+    <!-- Primary Meta Tags -->
+    <title>Stip - Social & Email Customer Care Automation</title>
+    <meta name="title" content="Stip - Social & Email Customer Care Automation">
+    <meta name="description"
+        content="Customer Satisfaction becomes reality thanks to the combination between Artificial Intelligence and human interaction">
+
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="src/style/index.css">
+
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77012119-1"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex stip-testaiContainer">
+        <div class="row flex-column justify-content-center flex-grow-1">
+            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+                <img src="src/img/logoColor.svg" class="align-self-center" style="max-width: 30%" alt="">
+                <h2 class="lang stip-h1 mb-4 text-center" key="test-ai-title"></h2>
+                <form id="stip-testai-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <textarea class="form-control stip-testai-txt placeholderLang"
+                            id="exampleFormControlTextarea1" rows="3" key="test-ai-input" placeholder="scrivi qui ..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 lang" key="test-ai-btn"
+                        id="stip-testai-send">Invia</button>
+                </form>
+            </div>
+            <div class="stip-aiResponse text-center">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/languages.min.js"></script>
+    <script src="src/js/index.min.js"></script>
+</body>
+
+</html>

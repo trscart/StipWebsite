@@ -314,13 +314,14 @@ $(document).ready(function () {
 
     // validate email and company name, then enable the "download btn" to download 60stats or paper
     $("form :input").on('keyup touchend', function () {
-        if (validateCorporateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
+        var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+        if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val() /*&& regName.test($('#stip-name-download').val())*/) {
             $("#stip-download-btn").removeClass("stip-downloadDisable")
             $("#stip-download-btn").addClass("stip-download")
-            if ($(location).attr('href').includes("blog")) { // if location is blog, download paper
+            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog, download paper
                 $("#stip-download-btn").attr("download", "60stats.pdf")
                 $("#stip-download-btn").attr("href", "./src/download/paper.pdf")
-            } else { // if location is home download paper
+            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home download paper
                 $("#stip-download-btn").attr("download", "paper.pdf")
                 $("#stip-download-btn").attr("href", "./src/download/60stats.pdf")
             }
@@ -333,7 +334,7 @@ $(document).ready(function () {
                 }
 
                 // ajax call for send "data" information before download the files
-                $.ajax({ 
+                $.ajax({
                     url: 'https://stipworld.com/api/papers/',
                     data: data,
                     type: 'POST',
@@ -642,6 +643,42 @@ $(document).ready(function () {
         });
     })
 
+    //test ai ajax call
+    $("#stip-testai-form").submit(function (e) {
+        e.preventDefault()
+        let data = {
+            "text": $('#stip-testai-txt').val(),
+        }
+        $("#stip-testai-send").text("")
+        $("#stip-testai-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
+        $.ajax({
+            url: 'https://stipworld.com/api/alertdown/',
+            data: data,
+            type: 'POST',
+            success: function (res) {
+                console.log(res)
+                res.forEach(function (element) {
+                    $('.stip-aiResponse').append("<h2 class='stip-h3'>" + element + "</h2>")
+                });
+            },
+            error: function (err) { //if error
+                console.log(err)
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    $('.stip-testai-send').text("Error, try again");
+                } else {
+                    $('.stip-testai-send').text("Errore, riprova");
+                }
+                setTimeout(function () {
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-testai-send').text("Send");
+                    } else {
+                        $('.stip-testai-send').text("Invia");
+                    }
+                }, 1300);
+            }
+        });
+    })
+
     // category dropdown
     $(".stip-categoryDropItem").click(function () {
         $("#stip-categoryDrop").html($(this).text());
@@ -721,6 +758,12 @@ $(document).ready(function () {
         'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '326854251303193');
     fbq('track', 'PageView');
+
+    //active campaign
+    (function (e, t, o, n, p, r, i) { e.visitorGlobalObjectAlias = n; e[e.visitorGlobalObjectAlias] = e[e.visitorGlobalObjectAlias] || function () { (e[e.visitorGlobalObjectAlias].q = e[e.visitorGlobalObjectAlias].q || []).push(arguments) }; e[e.visitorGlobalObjectAlias].l = (new Date).getTime(); r = t.createElement("script"); r.src = o; r.async = true; i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) })(window, document, "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js", "vgo");
+    vgo('setAccount', '475858217');
+    vgo('setTrackByDefault', true);
+    vgo('process');
     /* end analytics, facebook and cookies */
 
     if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy") && !$(location).attr('href').includes("support") && !$(location).attr('href').includes("demo")) {

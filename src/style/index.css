@@ -328,6 +328,34 @@ b {
   }
 }
 
+.stip-testaiContainer {
+  height: 100vh;
+  background: url("../img/supportBG.png") no-repeat center 100%;
+  background-size: 100%;
+}
+
+#stip-testai-send {
+  color: white;
+  background-color: #399fad;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+#stip-testai-send:hover {
+  background-color: #ff6161;
+}
+
+#stip-empty-files {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .stip-testaiContainer {
+    background: none;
+  }
+}
+
 .p-5_2 {
   padding: 2rem !important;
 }
