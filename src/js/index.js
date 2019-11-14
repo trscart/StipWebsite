@@ -321,8 +321,8 @@ $(document).ready(function () {
                 $(".stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
                 $(".stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
             } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home download paper
-                $(".stip-download-btn").attr("download", "paper.pdf")
-                $(".stip-download-btn").attr("href", "./src/download/paper.pdf")
+                $(".stip-download-btn").attr("download", "The New Essential for Brands in 2019.pdf")
+                $(".stip-download-btn").attr("href", "./src/download/The New Essential for Brands in 2019.pdf")
             }
             let click = 0
             $(".stip-download-btn").click(function () {
