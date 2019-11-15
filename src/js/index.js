@@ -659,7 +659,7 @@ $(document).ready(function () {
         $("#stip-testai-send").text("")
         $("#stip-testai-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
         $.ajax({
-            url: basePath + '/api/predictions/categories/?text=' + $('#stip-testai-txt').val(),
+            url: basePath + '/api/predictions/categories/?text=' + $('.stip-testai-txt').val(),
             type: 'GET',
             success: function (res) {
                 console.log(res)
