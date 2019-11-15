@@ -330,8 +330,6 @@ b {
 
 .stip-testaiContainer {
   height: 100vh;
-  background: url("../img/supportBG.png") no-repeat center 100%;
-  background-size: 100%;
 }
 
 #stip-testai-send {
@@ -348,12 +346,6 @@ b {
 
 #stip-empty-files {
   cursor: pointer;
-}
-
-@media (max-width: 576px) {
-  .stip-testaiContainer {
-    background: none;
-  }
 }
 
 .p-5_2 {

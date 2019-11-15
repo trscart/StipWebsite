@@ -37,22 +37,23 @@
 <body>
 
     <div class="container-fluid d-flex stip-testaiContainer">
-        <div class="row flex-column justify-content-center flex-grow-1">
-            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+        <div class="row flex-grow-1">
+            <div class="col-md-3 d-flex flex-column justify-content-center p-4">
                 <img src="src/img/logoColor.svg" class="align-self-center" style="max-width: 30%" alt="">
                 <h2 class="lang stip-h1 mb-4 text-center" key="test-ai-title"></h2>
                 <form id="stip-testai-form" enctype="multipart/form-data">
                     <div class="form-group">
-                        <textarea class="form-control stip-testai-txt placeholderLang"
-                            id="exampleFormControlTextarea1" rows="3" key="test-ai-input" placeholder="scrivi qui ..."
-                            required></textarea>
+                        <textarea class="form-control stip-testai-txt placeholderLang" id="exampleFormControlTextarea1"
+                            rows="3" key="test-ai-input" placeholder="scrivi qui ..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-light btn-block mt-4 stip-h3 lang" key="test-ai-btn"
                         id="stip-testai-send">Invia</button>
                 </form>
             </div>
-            <div class="stip-aiResponse text-center">
-                
+            <div class="col-md-6 py-5 stip-aiResponse">
+                <ul class="stip-aiResponse-list">
+                    
+                </ul>
             </div>
         </div>
     </div>

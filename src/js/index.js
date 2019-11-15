@@ -312,6 +312,27 @@ $(document).ready(function () {
 
     })
 
+    // validate email and company name, then enable the "download btn" to download 60 stats or paper
+    $("form :input").on('keyup touchend', function () {
+        if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
+            $(".stip-download-btn").removeClass("stip-downloadDisable")
+            $(".stip-download-btn").addClass("stip-download")
+            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog, download paper
+                $(".stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
+                $(".stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
+            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home download paper
+                $(".stip-download-btn").attr("download", "The New Essential for Brands in 2019.pdf")
+                $(".stip-download-btn").attr("href", "./src/download/The New Essential for Brands in 2019.pdf")
+            }
+        } else {
+            $(".stip-download-btn").removeClass("stip-download")
+            $(".stip-download-btn").addClass("stip-downloadDisable")
+            $(".stip-download-btn").removeAttr("download")
+            $(".stip-download-btn").removeAttr("href")
+        }
+    })
+
+    // download paper or 60stats
     $(".stip-download-btn").click(function () {
         let data = {
             "name": $('#stip-name-download').val(),
@@ -366,26 +387,6 @@ $(document).ready(function () {
                     }
                 }, 1300);
             })
-    })
-
-    // validate email and company name, then enable the "download btn" to download 60 stats or paper
-    $("form :input").on('keyup touchend', function () {
-        if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
-            $(".stip-download-btn").removeClass("stip-downloadDisable")
-            $(".stip-download-btn").addClass("stip-download")
-            if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog, download paper
-                $(".stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
-                $(".stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
-            } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home download paper
-                $(".stip-download-btn").attr("download", "The New Essential for Brands in 2019.pdf")
-                $(".stip-download-btn").attr("href", "./src/download/The New Essential for Brands in 2019.pdf")
-            }
-        } else {
-            $(".stip-download-btn").removeClass("stip-download")
-            $(".stip-download-btn").addClass("stip-downloadDisable")
-            $(".stip-download-btn").removeAttr("download")
-            $(".stip-download-btn").removeAttr("href")
-        }
     })
 
     // ajax call for contact request
@@ -646,36 +647,50 @@ $(document).ready(function () {
         });
     })
 
+    var url_string = "http://www.example.com/t.html?base_url=https://avvocatoflash.stipworld.com"; //window.location.href 
+    var url = new URL(url_string);
+    var basePath = url.searchParams.get("base_url");
+    console.log(basePath);
+
     //test ai ajax call
     $("#stip-testai-form").submit(function (e) {
         e.preventDefault()
-        let data = {
-            "text": $('#stip-testai-txt').val(),
-        }
+        $('.stip-prediction').remove() // delete old predictions
         $("#stip-testai-send").text("")
         $("#stip-testai-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
         $.ajax({
-            url: 'https://stipworld.com/api/alertdown/',
-            data: data,
-            type: 'POST',
+            url: basePath + '/api/predictions/categories/?text=' + $('#stip-testai-txt').val(),
+            type: 'GET',
             success: function (res) {
                 console.log(res)
-                res.forEach(function (element) {
-                    $('.stip-aiResponse').append("<h2 class='stip-h3'>" + element + "</h2>")
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    $('#stip-testai-send').text("Send");
+                } else {
+                    $('#stip-testai-send').text("Invia");
+                }
+                if(res.check_review){
+                    $('.stip-aiResponse').append("<h2 class='stip-h2 stip-prediction'>Revisione: <b style='color:#ff6161'>Manuale</b></h2>")
+                } else {
+                    $('.stip-aiResponse').append("<h2 class='stip-h2 stip-prediction'>Revisione: <b style='color:#399fad'>Automatica</b></h2>")
+                }
+                res.predictions.forEach(function (element) {
+                    if (element[1] >= 0.5) {
+                        $('.stip-aiResponse-list').append("<li class='stip-prediction'><h2 class='stip-txt'>" + element[0] + "</h2></li>")
+                    }
                 });
             },
             error: function (err) { //if error
                 console.log(err)
                 if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    $('.stip-testai-send').text("Error, try again");
+                    $('#stip-testai-send').text("Error, try again");
                 } else {
-                    $('.stip-testai-send').text("Errore, riprova");
+                    $('#stip-testai-send').text("Errore, riprova");
                 }
                 setTimeout(function () {
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('.stip-testai-send').text("Send");
+                        $('#stip-testai-send').text("Send");
                     } else {
-                        $('.stip-testai-send').text("Invia");
+                        $('#stip-testai-send').text("Invia");
                     }
                 }, 1300);
             }
@@ -769,7 +784,7 @@ $(document).ready(function () {
     vgo('process');
     /* end analytics, facebook and cookies */
 
-    if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy") && !$(location).attr('href').includes("support") && !$(location).attr('href').includes("demo")) {
+    if (!$(location).attr('href').includes("contacts") && !$(location).attr('href').includes("privacy-policy") && !$(location).attr('href').includes("support") && !$(location).attr('href').includes("demo") && !$(location).attr('href').includes("test")) {
         AOS.init({
             duration: 500,
             easing: 'ease-in-out',
