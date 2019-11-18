@@ -668,7 +668,7 @@ $(document).ready(function () {
                 } else {
                     $('#stip-testai-send').text("Invia");
                 }
-                if(res.check_review){
+                if (res.check_review) {
                     $('.stip-aiResponse').append("<h2 class='stip-h2 stip-prediction'>Revisione: <b style='color:#ff6161'>Manuale</b></h2>")
                 } else {
                     $('.stip-aiResponse').append("<h2 class='stip-h2 stip-prediction'>Revisione: <b style='color:#399fad'>Automatica</b></h2>")
