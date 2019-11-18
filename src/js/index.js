@@ -334,12 +334,20 @@ $(document).ready(function () {
 
     // download paper or 60stats
     $(".stip-download-btn").click(function () {
+        let page
+        if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+            page = "home"
+        } else {
+            page = window.location.pathname.replace('/','').replace('.html','')
+        }
         let data = {
             "name": $('#stip-name-download').val(),
             "email": $('#stip-email-download').val(),
             "company_name": $('#stip-companyName-download').val(),
-            "page": "home"
+            "page": page
         }
+
+        console.log(data)
 
         // fetch call for send "data" information before download the files
         fetch('https://stipworld.com/api/papers/', {
