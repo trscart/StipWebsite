@@ -332,13 +332,35 @@ $(document).ready(function () {
         }
     })
 
+    const toUrlEncoded = obj => Object.keys(obj).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(obj[k])).join('&'); // application/x-www-form-urlencoded encoded
     // download paper or 60stats
     $(".stip-download-btn").click(function () {
         let page
-        if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+        if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
             page = "home"
+            let activeCampaignData = { // data to send to activecampaign
+                "email": $('#stip-email-download').val(),
+                "first_name": $('#stip-name-download').val().split(' ').slice(0, -1).join(' '),
+                "last_name": $('#stip-name-download').val().split(' ').slice(-1).join(' '),
+                "customer_acct_name": $('#stip-companyName-download').val(),
+                "p[1]": [1]
+            }
+            fetch('https://stip.api-us1.com/admin/api.php?api_action=contact_add&api_key=caee5334c6676e9ae58822a1207e89c396ab0922d66f849c171126418c87310c9e24ad73', { //active campaign fetch call to add contact to a list
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: toUrlEncoded(activeCampaignData)
+            })
+                .then(function (res) {
+                    console.log(res)
+                })
+                .catch(function (err) { //if error
+                    console.log(err)
+                })
         } else {
-            page = window.location.pathname.replace('/','').replace('.html','')
+            page = window.location.pathname.replace('/', '').replace('.html', '')
         }
         let data = {
             "name": $('#stip-name-download').val(),
@@ -346,8 +368,6 @@ $(document).ready(function () {
             "company_name": $('#stip-companyName-download').val(),
             "page": page
         }
-
-        console.log(data)
 
         // fetch call for send "data" information before download the files
         fetch('https://stipworld.com/api/papers/', {
@@ -501,7 +521,7 @@ $(document).ready(function () {
             })
                 .then(function (res) {
                     if (res.status == 201) { //if status 201
-
+    
                         // append thank you message
                         let context
                         if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
@@ -512,7 +532,7 @@ $(document).ready(function () {
                         let source = document.getElementById("stip-thanks").innerHTML;
                         let template = Handlebars.compile(source);
                         $('body').append(template(context))
-
+    
                         $(".stip-closeReprompt").click(function () {
                             $(".stip-reprompt-container").css("display", "none")
                             $('#stip-email-quote').val("")
