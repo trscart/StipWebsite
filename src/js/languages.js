@@ -284,8 +284,8 @@ let languages = {
         "supportBtn": "Send",
 
         // demo
-        "demoHeroTitle1": "Request your demo",
-        "demoHeroSubtitle1": "See how Stip’s Artificial Intelligence helps improve your company’s social and digital customer service performances and provide your customers with an outstanding experience",
+        "demoHeroTitle1": "Request a Demo",
+        "demoHeroSubtitle1": "See how Stip improves your social and digital customer service performance and provides your customers an outstanding experience",
         "demoHeroTitle2": "Tell us something about your company",
         "demoHeroSubtitle2": "Let’s add some details and we will show you the first-rate features of Stip",
         "demoHeroTitle3": "Thank you!",
