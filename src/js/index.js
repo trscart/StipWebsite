@@ -678,55 +678,98 @@ $(document).ready(function () {
         });
     })
 
-    var url_string = window.location.href;
-    var url = new URL(url_string);
-    var basePath = url.searchParams.get("base_url");
-    console.log(basePath);
-
-    //test ai ajax call
-    $("#stip-testai-form").submit(function (e) {
-        e.preventDefault()
-        $('.stip-prediction').remove() // delete old predictions
-        $("#stip-testai-send").text("")
-        $("#stip-testai-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
+    //test ai
+    if ($(location).attr('href').includes("test-ai")) {
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var basePath = url.searchParams.get("base_url");
+        //var basePath = "https://postepay.stipworld.com";
+        console.log(basePath);
+        let data = {
+            "username": "root@company.it",
+            "password": "81014"
+        }
+        let token
+        //test ai authorization call
         $.ajax({
-            url: basePath + '/api/predictions/categories/?text=' + $('.stip-testai-txt').val(),
-            type: 'GET',
+            url: basePath + '/api/rest-auth/login/',
+            data: data,
+            type: 'POST',
             success: function (res) {
                 console.log(res)
-                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    $('#stip-testai-send').text("Send");
-                } else {
-                    $('#stip-testai-send').text("Invia");
-                }
-                if (res.check_review) {
-                    $('.stip-aiResponse').append("<h2 class='stip-h2 stip-prediction'>Revisione: <b style='color:#ff6161'>Manuale</b></h2>")
-                } else {
-                    $('.stip-aiResponse').append("<h2 class='stip-h2 stip-prediction'>Revisione: <b style='color:#399fad'>Automatica</b></h2>")
-                }
-                res.predictions.forEach(function (element) {
-                    if (element[1] >= 0.5) {
-                        $('.stip-aiResponse-list').append("<li class='stip-prediction'><h2 class='stip-txt'>" + element[0] + "</h2></li>")
-                    }
-                });
+                token = res.key
             },
             error: function (err) { //if error
                 console.log(err)
-                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    $('#stip-testai-send').text("Error, try again");
-                } else {
-                    $('#stip-testai-send').text("Errore, riprova");
-                }
-                setTimeout(function () {
+            }
+        });
+        //test ai ajax call
+        $("#stip-testai-form").submit(function (e) {
+            e.preventDefault()
+            $('.stip-prediction').remove() // delete old predictions
+            $('#stip-ai-form').remove() // delete old predictions
+            $("#stip-testai-send").text("")
+            $("#stip-testai-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
+
+            $.ajax({
+                url: basePath + '/api/predictions/category/?text=' + $('.stip-testai-txt').val(),
+                headers: {
+                    "Authorization": "Token " + token
+                },
+                type: 'GET',
+                success: function (res) {
+                    console.log(res)
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                         $('#stip-testai-send').text("Send");
                     } else {
                         $('#stip-testai-send').text("Invia");
                     }
-                }, 1300);
-            }
-        });
-    })
+                    $('.stip-aiResponse').append("<h2 class='stip-h2 stip-colorTxt stip-prediction'>" + res.path + "</h2>")
+
+                    // subcategories ajax call
+                    $.ajax({
+                        url: basePath + '/api/company_categories/' + res.id + '/form_fields/',
+                        headers: {
+                            "Authorization": "Token " + token
+                        },
+                        type: 'GET',
+                        success: function (res) {
+                            let data = JSON.parse(res)
+                            console.log(data)
+                            data.forEach(item => {
+                                $('.stip-aiResponse').append("<form id='stip-ai-form'><label class='stip-p'>" + item.label + "</label></form>")
+                                if(item.options != ""){
+                                    console.log("eo")
+                                    $('#stip-ai-form').append("<select class='form-control' id='stip-ai-select'></select>")
+                                    item.options.forEach(option => {
+                                        $('#stip-ai-select').append("<option>" + option + "</option>")
+                                    });
+                                }
+                            });
+                        },
+                        error: function (err) { //if error
+                            console.log(err)
+                        }
+                    });
+                },
+                error: function (err) { //if error
+                    console.log(err)
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('#stip-testai-send').text("Error, try again");
+                    } else {
+                        $('#stip-testai-send').text("Errore, riprova");
+                    }
+                    setTimeout(function () {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            $('#stip-testai-send').text("Send");
+                        } else {
+                            $('#stip-testai-send').text("Invia");
+                        }
+                    }, 1300);
+                }
+            });
+        })
+    }
 
     // category dropdown
     $(".stip-categoryDropItem").click(function () {
