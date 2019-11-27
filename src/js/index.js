@@ -675,7 +675,7 @@ $(document).ready(function () {
         });
     })
 
-    var url_string = "http://www.example.com/t.html?base_url=https://avvocatoflash.stipworld.com"; //window.location.href 
+    var url_string = window.location.href;
     var url = new URL(url_string);
     var basePath = url.searchParams.get("base_url");
     console.log(basePath);
