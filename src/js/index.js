@@ -707,7 +707,7 @@ $(document).ready(function () {
         $("#stip-testai-form").submit(function (e) {
             e.preventDefault()
             $('.stip-prediction').remove() // delete old predictions
-            $('#stip-ai-form').remove() // delete old predictions
+            $('.stip-ai-form').remove() // delete old predictions
             $("#stip-testai-send").text("")
             $("#stip-testai-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
 
@@ -737,13 +737,13 @@ $(document).ready(function () {
                             let data = JSON.parse(res)
                             console.log(data)
                             data.forEach(item => {
-                                $('.stip-aiResponse').append("<form id='stip-ai-form'><label class='stip-p'>" + item.label + "</label></form>")
-                                if(item.options != ""){
-                                    console.log("eo")
-                                    $('#stip-ai-form').append("<select class='form-control' id='stip-ai-select'></select>")
+                                if (item.component == "select" && !item.ask_finished) {
+                                    $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.label + "</label><select class='form-control' id='" + item.id + "'></select></div></form>")
                                     item.options.forEach(option => {
-                                        $('#stip-ai-select').append("<option>" + option + "</option>")
-                                    });
+                                        $('#' + item.id).append("<option>" + option + "</option>")
+                                    })
+                                } else if (!item.ask_finished) {
+                                    $('.stip-aiResponse').append("<form class='stip-ai-form'><label class='stip-p'>" + item.label + "</label></form>")
                                 }
                             });
                         },
