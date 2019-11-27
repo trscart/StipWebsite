@@ -38,6 +38,9 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
+    //append favicon in every page
+    $("head").append('<link rel="icon" href="src/img/favicon.ico">')
+
     // append option in support selects
     if ($(location).attr('href').includes("support")) {
         fetch('https://stipworld.com/api/sectionchoices/', {
