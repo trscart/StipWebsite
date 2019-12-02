@@ -736,11 +736,11 @@ $(document).ready(function () {
                         success: function (res) {
                             let data = JSON.parse(res)
                             console.log(data)
-                            data.forEach(item => {
+                            data.forEach((item, index) => {
                                 if (item.component == "select" && !item.ask_finished) {
-                                    $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.label + "</label><select class='form-control' id='" + item.id + "'></select></div></form>")
+                                    $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.label + "</label><select class='form-control' id='" + index + "'></select></div></form>")
                                     item.options.forEach(option => {
-                                        $('#' + item.id).append("<option>" + option + "</option>")
+                                        $('#' + index).append("<option>" + option + "</option>")
                                     })
                                 } else if (!item.ask_finished) {
                                     $('.stip-aiResponse').append("<form class='stip-ai-form'><label class='stip-p'>" + item.label + "</label></form>")
