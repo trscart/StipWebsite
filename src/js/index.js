@@ -738,12 +738,23 @@ $(document).ready(function () {
                             console.log(data)
                             data.forEach((item, index) => {
                                 if (item.component == "select" && !item.ask_finished) {
-                                    $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.label + "</label><select class='form-control' id='" + index + "'></select></div></form>")
-                                    item.options.forEach(option => {
-                                        $('#' + index).append("<option>" + option + "</option>")
-                                    })
+                                    if (item.text_to_require) {
+                                        $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.text_to_require + "</label><select class='form-control' id='" + index + "'></select></div></form>")
+                                        item.options.forEach(option => {
+                                            $('#' + index).append("<option>" + option + "</option>")
+                                        })
+                                    } else {
+                                        $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.label + "</label><select class='form-control' id='" + index + "'></select></div></form>")
+                                        item.options.forEach(option => {
+                                            $('#' + index).append("<option>" + option + "</option>")
+                                        })
+                                    }
                                 } else if (!item.ask_finished) {
-                                    $('.stip-aiResponse').append("<form class='stip-ai-form'><label class='stip-p'>" + item.label + "</label></form>")
+                                    if (item.text_to_require) {
+                                        $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.text_to_require + "</label><input type='text' class='form-control' placeholder='Text'></div></form>")
+                                    } else {
+                                        $('.stip-aiResponse').append("<form class='stip-ai-form'><div class='form-group'><label class='stip-p'>" + item.label + "</label><input type='text' class='form-control' placeholder='Text'></div></form>")
+                                    }
                                 }
                             });
                         },
