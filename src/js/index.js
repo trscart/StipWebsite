@@ -423,6 +423,31 @@ $(document).ready(function () {
     // ajax call for contact request
     $("#stip-contact-form").submit(function (e) {
         e.preventDefault()
+
+        // active campaign call only eng
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+            let activeCampaignData = { // data to send to activecampaign
+                "email": $('#stip-email-contact').val(),
+                "first_name": $('#stip-fullName-contact').val().split(' ').slice(0, -1).join(' '),
+                "last_name": $('#stip-fullName-contact').val().split(' ').slice(-1).join(' '),
+                "p[2]": [2]
+            }
+            fetch('https://stip.api-us1.com/admin/api.php?api_action=contact_add&api_key=caee5334c6676e9ae58822a1207e89c396ab0922d66f849c171126418c87310c9e24ad73', { //active campaign fetch call to add contact to a list
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: toUrlEncoded(activeCampaignData)
+            })
+                .then(function (res) {
+                    console.log(res)
+                })
+                .catch(function (err) { //if error
+                    console.log(err)
+                })
+        }
+
         let data = {
             "fullname": $('#stip-fullName-contact').val(),
             "phone": $('#stip-phone-contact').val(),
