@@ -163,6 +163,13 @@ $(document).ready(function () {
     $("#stip-demo-thanks").hide()
     $("#stip-otherCrm").hide()
     let idDemoRequest // id to append to the url of second form request
+    let activeCampaignDemoData = { // data to send to activecampaign
+        "email": "",
+        "first_name": "",
+        "last_name": "",
+        "customer_acct_name": "",
+        "p[3]": [3]
+    }
     $("#stip-demo-firstForm").submit(function (e) { // first form and on submit show thank you page
         e.preventDefault()
         if (validateCorporateEmail($("#stip-email-demo").val())) {
@@ -171,6 +178,14 @@ $(document).ready(function () {
                 "lastname": $('#stip-lastName-demo').val(),
                 "email": $('#stip-email-demo').val(),
                 "phone": $('#stip-phone-demo').val()
+            }
+
+            activeCampaignDemoData = { // data to send to activecampaign
+                "email": $('#stip-email-demo').val(),
+                "first_name": $('#stip-firstName-demo').val(),
+                "last_name": $('#stip-lastName-demo').val(),
+                "customer_acct_name": "",
+                "p[3]": [3]
             }
 
             // process animation
@@ -259,6 +274,32 @@ $(document).ready(function () {
             "content_num": $('.stip-contentNum-demo').val(),
             "agent_num": $('.stip-agentNum-demo').val(),
             "crm_type": crmType
+        }
+
+        activeCampaignDemoData = { // data to send to activecampaign
+            "email": $('#stip-email-demo').val(),
+            "first_name": $('#stip-firstName-demo').val(),
+            "last_name": $('#stip-lastName-demo').val(),
+            "customer_acct_name": $('#stip-companyName-demo').val(),
+            "p[3]": [3]
+        }
+
+        // active campaign call only eng
+        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+            fetch('https://stip.api-us1.com/admin/api.php?api_action=contact_add&api_key=caee5334c6676e9ae58822a1207e89c396ab0922d66f849c171126418c87310c9e24ad73', { //active campaign fetch call to add contact to a list
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: toUrlEncoded(activeCampaignDemoData)
+            })
+                .then(function (res) {
+                    console.log(res)
+                })
+                .catch(function (err) { //if error
+                    console.log(err)
+                })
         }
 
         // fetch call
