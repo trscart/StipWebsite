@@ -134,7 +134,7 @@ $(document).ready(function () {
         }
     })
 
-    // validate corporate email
+    // validate Work email address
     function validateCorporateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         var famousDomain = ["gmail.com", "outlook.com", "yahoo.com", "icloud.com", "libero.it", "me.com", "live.com", "hotmail.com", "live.it", "aol.com", "mail.com"]
@@ -233,7 +233,7 @@ $(document).ready(function () {
         else { // show border and label error on demo email input
             $("#stip-email-demo").css("border-color", "#ff6161")
             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                $(".stip-email-demo").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a corporate email</label>")
+                $(".stip-email-demo").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
             } else {
                 $(".stip-email-demo").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
             }
