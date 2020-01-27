@@ -200,7 +200,7 @@ let languages = {
 
         // home page
         "heroSubtitle": "Stip uses Artificial Intelligence to make your customer service representatives' work more efficient, reduce management time and decrease your overall customer support costs",
-        "whatTitle": "Artificial Intelligence helps Customer Care representatives and clients",
+        "whatTitle": "Stip AI empowers customer care representatives and enables delightful customer experiences",
         "whatSubtitle": "Stip applies 3 layers of AI to your Customer Care interactions, making your service team more efficient.",
         "whatCaringTitle": "Help your clients in need of support",
         "caringTitle": "Identify your customers’ requests for assistance",
