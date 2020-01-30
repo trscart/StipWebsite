@@ -116,6 +116,10 @@ let languages = {
         "flow3-subtitle": "Respond in real time to public posts, move conversations from public to private channels. Stip knows all the information that your customer care agents need to provide a response and it proactively reaches out and collects all missing information.",
         "flow4-title": "Route to the best agent (CRM)",
         "flow4-subtitle": "Send billing enquiries to your accounting department, technical issues to your help desk team, product requests to your salespeople, no matter what platform they use. We connect with any CRM system so that your team saves time without changing the way they work.",
+        "flow5-title": "Never lose control",
+        "flow5-subtitle": "Our integrated reporting system allows you to keep track of all requests: issue trends, SLAs and wait time, agent productivity",
+        "ourplatform-title": "Don’t have a CRM system? Use our integrated ticketing platform",
+        "ourplatform-subtitle": "If you don’t have an existing CRM, you can still use Stip via the integrated ticketing platform",
 
         // support
         "supportEmail": "Email*",
@@ -292,6 +296,10 @@ let languages = {
         "flow3-subtitle": "Respond in real time to public posts, move conversations from public to private channels. Stip knows all the information that your customer care agents need to provide a response and it proactively reaches out and collects all missing information.",
         "flow4-title": "Route to the best agent (CRM)",
         "flow4-subtitle": "Send billing enquiries to your accounting department, technical issues to your help desk team, product requests to your salespeople, no matter what platform they use. We connect with any CRM system so that your team saves time without changing the way they work.",
+        "flow5-title": "Never lose control",
+        "flow5-subtitle": "Our integrated reporting system allows you to keep track of all requests: issue trends, SLAs and wait time, agent productivity",
+        "ourplatform-title": "Don’t have a CRM system? Use our integrated ticketing platform",
+        "ourplatform-subtitle": "If you don’t have an existing CRM, you can still use Stip via the integrated ticketing platform",
 
         // support
         "supportEmail": "Email*",

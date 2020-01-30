@@ -371,6 +371,27 @@ b {
   padding: 5em 0;
 }
 
+.stip-platformBG {
+  background: url("../img/demoBG_1.png") no-repeat center right;
+  background-size: contain;
+}
+
+.stip-flowsection {
+  padding: 5em 10em;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .stip-flowsection {
+    padding: 2em 5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .stip-flowsection {
+    padding: 2em 2em;
+  }
+}
+
 .p-5_2 {
   padding: 2rem !important;
 }
