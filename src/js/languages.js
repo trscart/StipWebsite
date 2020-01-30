@@ -107,6 +107,16 @@ let languages = {
         "modal60Company": "Nome azienda*",
         "modal60Btn": "Scaricalo ora!",
 
+        // flow page
+        "flow1-title": "Listen to your customers wherever they are",
+        "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, chat and messaging platforms, web forums, app stores, you name it… Stip’s powerful AI understands them all.",
+        "flow2-title": "Make sense of it all",
+        "flow2-subtitle": "Never lose a single message, post, comment, emoji: Stip automatically understands your customers. Stip can decide if a message is relevant for your customer care team, can hide from your social page content that does not meet your policies and can accurately categorize every request.",
+        "flow3-title": "Engage with your customers",
+        "flow3-subtitle": "Respond in real time to public posts, move conversations from public to private channels. Stip knows all the information that your customer care agents need to provide a response and it proactively reaches out and collects all missing information.",
+        "flow4-title": "Route to the best agent (CRM)",
+        "flow4-subtitle": "Send billing enquiries to your accounting department, technical issues to your help desk team, product requests to your salespeople, no matter what platform they use. We connect with any CRM system so that your team saves time without changing the way they work.",
+
         // support
         "supportEmail": "Email*",
         "supportName": "Nome*",
@@ -272,6 +282,16 @@ let languages = {
         "modal60Email": "Email*",
         "modal60Company": "Company name*",
         "modal60Btn": "Download now!",
+
+        // flow page
+        "flow1-title": "Listen to your customers wherever they are",
+        "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, chat and messaging platforms, web forums, app stores, you name it… Stip’s powerful AI understands them all.",
+        "flow2-title": "Make sense of it all",
+        "flow2-subtitle": "Never lose a single message, post, comment, emoji: Stip automatically understands your customers. Stip can decide if a message is relevant for your customer care team, can hide from your social page content that does not meet your policies and can accurately categorize every request.",
+        "flow3-title": "Engage with your customers",
+        "flow3-subtitle": "Respond in real time to public posts, move conversations from public to private channels. Stip knows all the information that your customer care agents need to provide a response and it proactively reaches out and collects all missing information.",
+        "flow4-title": "Route to the best agent (CRM)",
+        "flow4-subtitle": "Send billing enquiries to your accounting department, technical issues to your help desk team, product requests to your salespeople, no matter what platform they use. We connect with any CRM system so that your team saves time without changing the way they work.",
 
         // support
         "supportEmail": "Email*",
