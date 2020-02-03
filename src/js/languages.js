@@ -167,8 +167,6 @@ let languages = {
         "deck-forTitle": "For Whom is Stip For?",
         "deck-forTxt": "Customer Service Organizations at B2C Brands",
         "deckName": "Name*",
-        "deckEmail": "Email*",
-        "deckPhone": "Phone",
         "deckBtn": "Download Stip Deck",
 
         // lead magnet page
@@ -362,9 +360,7 @@ let languages = {
         "deck-whyTxt4": "Marketing integration and upselling increasing falls on shoulders of customer service",
         "deck-forTitle": "For Whom is Stip For?",
         "deck-forTxt": "Customer Service Organizations at B2C Brands",
-        "deckName": "Name*",
         "deckEmail": "Email*",
-        "deckPhone": "Phone",
         "deckBtn": "Download Stip Deck",
 
         // lead magnet page
