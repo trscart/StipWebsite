@@ -390,6 +390,11 @@ b {
   .stip-flowsection {
     padding: 2em 2em;
   }
+  .stip-heroFlow {
+    background-position-x: 40% !important;
+    background-size: cover !important;
+    background-position-y: top !important;
+  }
 }
 
 #stip-deck-send {

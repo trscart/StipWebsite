@@ -48,8 +48,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link stip-h3 lang" key="nav-item1" href="./index.html"
-                        title="index">HOME</a>
+                    <a class="nav-link stip-h3 lang" key="nav-item1" href="./index.html" title="index">HOME</a>
                 </li>
                 <!--<li class="nav-item">
                     <a class="nav-link stip-h3 lang" key="nav-item2" href="./platform.html"
@@ -74,29 +73,15 @@
     </nav>
     <!-- end navbar -->
 
-    <div class="container d-flex stip-deckContainer">
-        <div class="row flex-grow-1 mt-5">
-            <div class="col-md-6 d-flex flex-column align-self-center justify-content-center pt-3">
-                <h1 class="stip-h1 stip-colorTxt text-center mb-4 lang" key="deckTitle"></h1>
-                <h2 class="stip-h2 stip-colorTxt lang" key="deck-whatTitle"></h2>
-                <p class="stip-p lang" key="deck-whatTxt"></p>
-                <h2 class="stip-h2 stip-colorTxt lang" key="deck-forTitle"></h2>
-                <p class="stip-p lang" key="deck-forTxt"></p>
-                <h2 class="stip-h2 stip-colorTxt lang" key="deck-whyTitle"></h2>
-                <ul>
-                    <li><p class="stip-p lang" key="deck-whyTxt1"></p></li>
-                    <li><p class="stip-p lang" key="deck-whyTxt2"></p></li>
-                    <li><p class="stip-p lang" key="deck-whyTxt3"></p></li>
-                    <li><p class="stip-p lang" key="deck-whyTxt4"></p></li>
-                </ul>
-            </div>
-            <div class="col-md-5 offset-md-1 d-flex flex-column align-self-center justify-content-center pb-5">
-                <img src="src/img/demoBG_1.png" class="align-self-center mb-4" style="max-width: 100%" alt="">
+    <div class="container-fluid d-flex stip-supportContainer">
+        <div class="row flex-grow-1">
+            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+                <img src="src/img/logoColor.svg" class="align-self-center mb-4" style="max-width: 30%" alt="">
                 <form id="stip-deck-form" enctype="multipart/form-data">
                     <div class="form-group">
-                        <!--<label class="stip-h3 lang" key="supportName">Nome</label>-->
-                        <input type="text" name="name" class="form-control placeholderLang" key="deckName"
-                            placeholder="Name" required id="stip-name-deck">
+                        <!--<label class="stip-h3 lang" key="supportEmail">Email</label>-->
+                        <input type="email" name="email" class="form-control placeholderLang" key="deckEmail"
+                            placeholder="Email" required id="stip-email-deck">
                     </div>
                     <a href="src/download/stip_pitch_deck.pptx" style="text-decoration: none;" download><button
                             type="button" class="btn btn-light btn-block mt-4 stip-h3 lang" key="deckBtn"
@@ -104,7 +89,6 @@
                 </form>
             </div>
         </div>
-
     </div>
 
     <!-- footer -->
