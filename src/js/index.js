@@ -744,6 +744,60 @@ $(document).ready(function () {
         });
     })
 
+    // send data and then download deck
+    $("#stip-deck-send").click(function () {
+        //$("#stip-deck-form").submit()
+        let data = {
+            "name": $('#stip-name-deck').val(),
+            "email": $('#stip-email-deck').val(),
+            "phone": $('#stip-phone-deck').val(),
+            "page": "deck"
+        }
+        console.log(data)
+        $("#stip-support-send").text("")
+        $("#stip-support-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
+        /* $.ajax({
+            url: 'https://stipworld.com/api/papers/',
+            data: data,
+            type: 'POST',
+            success: function (res) {
+                console.log(res)
+                // append thank you message
+                let context
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    context = { thanksTitle: "Thank you for filling our form!" };
+                    $("#stip-support-send").text("Send")
+                } else {
+                    context = { thanksTitle: "Grazie per aver compilato il form!" };
+                    $("#stip-support-send").text("Invia")
+                }
+                let source = document.getElementById("stip-thanks").innerHTML;
+                let template = Handlebars.compile(source);
+                $('body').append(template(context))
+
+                $(".stip-closeReprompt").click(function () {
+                    $(".stip-reprompt-container").css("display", "none")
+                    $("#stip-support-form")[0].reset()
+                })
+            },
+            error: function (err) { //if error
+                console.log(err)
+                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                    $('.stip-support-send').text("Error, try again");
+                } else {
+                    $('.stip-support-send').text("Errore, riprova");
+                }
+                setTimeout(function () {
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-support-send').text("Send");
+                    } else {
+                        $('.stip-support-send').text("Invia");
+                    }
+                }, 1300);
+            }
+        }); */
+    })
+
     //test ai
     if ($(location).attr('href').includes("test-ai")) {
         var url_string = window.location.href;

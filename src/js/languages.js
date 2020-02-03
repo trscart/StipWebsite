@@ -155,6 +155,13 @@ let languages = {
         "crmExternal": "Esterno",
         "otherCrm": "Altro ...",
 
+        // deck page
+        "deckTitle": "AI solution for Digital Customer Service",
+        "deckName": "Name*",
+        "deckEmail": "Email*",
+        "deckPhone": "Phone",
+        "deckBtn": "Download Stip Deck",
+
         // lead magnet page
         "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
         "lead-heroSubtitle": "An in-depth look at Digital Innovation and disruption of customer service as we knew it.",
@@ -334,6 +341,13 @@ let languages = {
         "crmProprietary": "Proprietary",
         "crmExternal": "External",
         "otherCrm": "Other ...",
+
+        // deck page
+        "deckTitle": "AI solution for Digital Customer Service",
+        "deckName": "Name*",
+        "deckEmail": "Email*",
+        "deckPhone": "Phone",
+        "deckBtn": "Download Stip Deck",
 
         // lead magnet page
         "lead-heroTitle": "60 can’t-miss facts and figures on Digital Customer Service evolution and best practices",
