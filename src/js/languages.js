@@ -157,6 +157,15 @@ let languages = {
 
         // deck page
         "deckTitle": "AI solution for Digital Customer Service",
+        "deck-whatTitle": "What is Stip?",
+        "deck-whatTxt": "Hybrid automation to accelerate, uplevel and digitize common customer service agent tasks",
+        "deck-whyTitle": "Why now?",
+        "deck-whyTxt1": "The rise of Social Messaging is here and Customer Service Departments need to meet the customer where they LIVE!",
+        "deck-whyTxt2": "Gartner says 74% of Customer Experience Leaders expect budgets to rise in 2020",
+        "deck-whyTxt3": "B2C brands view Customer Service as a brand engagement lever",
+        "deck-whyTxt4": "Marketing integration and upselling increasing falls on shoulders of customer service",
+        "deck-forTitle": "For Whom is Stip For?",
+        "deck-forTxt": "Customer Service Organizations at B2C Brands",
         "deckName": "Name*",
         "deckEmail": "Email*",
         "deckPhone": "Phone",
@@ -344,6 +353,8 @@ let languages = {
 
         // deck page
         "deckTitle": "AI solution for Digital Customer Service",
+        "deck-whatTitle": "What is Stip?",
+        "deck-whatTxt": "Hybrid automation to accelerate, uplevel and digitize common customer service agent tasks",
         "deckName": "Name*",
         "deckEmail": "Email*",
         "deckPhone": "Phone",

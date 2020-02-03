@@ -191,18 +191,6 @@ b {
   background-color: #ff6161;
 }
 
-#stip-deck-send {
-  color: white;
-  background-color: #399fad;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  border: 0;
-}
-
-#stip-deck-send:hover {
-  background-color: #ff6161;
-}
-
 #stip-empty-files {
   cursor: pointer;
 }
@@ -402,6 +390,22 @@ b {
   .stip-flowsection {
     padding: 2em 2em;
   }
+}
+
+#stip-deck-send {
+  color: white;
+  background-color: #399fad;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+#stip-deck-send:hover {
+  background-color: #ff6161;
+}
+
+.stip-deckContainer {
+  height: 100vh;
 }
 
 .p-5_2 {
