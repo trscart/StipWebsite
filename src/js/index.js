@@ -751,6 +751,7 @@ $(document).ready(function () {
             "name": $('#stip-name-deck').val(),
             "email": $('#stip-email-deck').val(),
             "phone": $('#stip-phone-deck').val(),
+            "company_name": "Stip",
             "page": "deck"
         }
         console.log(data)
