@@ -405,7 +405,13 @@ b {
 }
 
 .stip-deckContainer {
-  height: 100vh;
+  margin-top: 5em;
+}
+
+@media (max-width: 576px) {
+  .stip-deckContainer {
+    margin-top: 3em;
+  }
 }
 
 .p-5_2 {
