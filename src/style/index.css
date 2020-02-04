@@ -351,20 +351,11 @@ b {
 .stip-heroFlow {
   height: 100vh;
   padding: 10%;
-  /* background: url("../img/heroLead.png") no-repeat;
-    background-size: contain;
-    background-position-y: bottom;
-    background-position-x: right; */
   position: relative;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.stip-heroFlow h1 {
-  font-size: 36px;
-  font-weight: 400;
 }
 
 .stip-flow-section {
