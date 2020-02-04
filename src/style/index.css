@@ -395,26 +395,18 @@ b {
     background-size: cover !important;
     background-position-y: top !important;
   }
-  .stip-heroBG {
-    background: url("../img/flow1_sm.png") no-repeat !important;
-    background-position-x: 40% !important;
-    background-size: cover !important;
-    background-position-y: top !important;
-  }
 }
 
-#stip-deck-send {
-  color: white;
-  background-color: #399fad;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  border: 0;
-}
+/* #stip-deck-send{
+    color: white;
+    background-color: $stcolor;
+    transition: 0.2s;
+    border: 0;
 
-#stip-deck-send:hover {
-  background-color: #ff6161;
-}
-
+    &:hover{
+        background-color: $ndcolor;
+    }
+} */
 .stip-deckContainer {
   margin-top: 5em;
 }

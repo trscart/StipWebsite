@@ -744,59 +744,73 @@ $(document).ready(function () {
         });
     })
 
+    // validate email and company name, then enable the "download btn" to download 60 stats or paper
+    $("#stip-deck-form :input").on('keyup touchend', function () {
+        if (validateEmail($('#stip-email-deck').val())) {
+            $("#stip-deck-send").removeClass("stip-downloadDisable")
+            $("#stip-deck-send").addClass("stip-download")
+            $("#stip-deck-send").attr("download", "stip_pitch_deck.pdf")
+            $("#stip-deck-send").attr("href", "./src/download/stip_pitch_deck.pdf")
+        } else {
+            $("#stip-deck-send").removeClass("stip-download")
+            $("#stip-deck-send").addClass("stip-downloadDisable")
+            $("#stip-deck-send").removeAttr("download")
+            $("#stip-deck-send").removeAttr("href")
+        }
+    })
+
+
     // send data and then download deck
     $("#stip-deck-send").click(function () {
-        //$("#stip-deck-form").submit()
-        let data = {
-            "name": $('#stip-name-deck').val(),
-            "email": $('#stip-email-deck').val(),
-            "phone": $('#stip-phone-deck').val(),
-            "company_name": "Stip",
-            "page": "deck"
-        }
-        console.log(data)
-        $("#stip-deck-send").text("")
-        $("#stip-deck-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
-        $.ajax({
-            url: 'https://stipworld.com/api/papers/',
-            data: data,
-            type: 'POST',
-            success: function (res) {
-                console.log(res)
-                // append thank you message
-                let context
-                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    context = { thanksTitle: "Thank you for filling our form!" };
-                    $("#stip-deck-send").text("Download Stip Deck")
-                } else {
-                    context = { thanksTitle: "Grazie per aver compilato il form!" };
-                    $("#stip-deck-send").text("Download Stip Deck")
-                }
-                let source = document.getElementById("stip-thanks").innerHTML;
-                let template = Handlebars.compile(source);
-                $('body').append(template(context))
-
-                $(".stip-closeReprompt").click(function () {
-                    $(".stip-reprompt-container").css("display", "none")
-                    $("#stip-deck-form")[0].reset()
-                })
-            },
-            error: function (err) { //if error
-                console.log(err)
-                if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                    $('#stip-deck-send').text("Error, try again");
-                } else {
-                    $('#stip-deck-send').text("Errore, riprova");
-                }
-                setTimeout(function () {
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('#stip-deck-send').text("Download Stip Deck");
-                    } else {
-                        $('#stip-deck-send').text("Download Stip Deck");
-                    }
-                }, 1300);
+        if (validateEmail($('#stip-email-deck').val())) {
+            let data = {
+                "email": $('#stip-email-deck').val(),
+                "company_name": "Stip",
+                "page": "deck"
             }
-        });
+            $("#stip-deck-send").text("")
+            $("#stip-deck-send").append("<img style='width: 2em' src='src/img/loading.gif'>");
+            $.ajax({
+                url: 'https://stipworld.com/api/papers/',
+                data: data,
+                type: 'POST',
+                success: function (res) {
+                    console.log(res)
+                    // append thank you message
+                    let context
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        context = { thanksTitle: "Thank you for filling our form!" };
+                        $("#stip-deck-send").text("Download Stip Deck")
+                    } else {
+                        context = { thanksTitle: "Grazie per aver compilato il form!" };
+                        $("#stip-deck-send").text("Download Stip Deck")
+                    }
+                    let source = document.getElementById("stip-thanks").innerHTML;
+                    let template = Handlebars.compile(source);
+                    $('body').append(template(context))
+
+                    $(".stip-closeReprompt").click(function () {
+                        $(".stip-reprompt-container").css("display", "none")
+                        $("#stip-deck-form")[0].reset()
+                    })
+                },
+                error: function (err) { //if error
+                    console.log(err)
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('#stip-deck-send').text("Error, try again");
+                    } else {
+                        $('#stip-deck-send').text("Errore, riprova");
+                    }
+                    setTimeout(function () {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            $('#stip-deck-send').text("Download Stip Deck");
+                        } else {
+                            $('#stip-deck-send').text("Download Stip Deck");
+                        }
+                    }, 1300);
+                }
+            });
+        }
     })
 
     //test ai

@@ -75,17 +75,17 @@
 
     <div class="container-fluid d-flex stip-supportContainer">
         <div class="row flex-grow-1">
-            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+            <div class="col-md-4 offset-md-4 d-flex flex-column justify-content-center p-4">
                 <img src="src/img/logoColor.svg" class="align-self-center mb-4" style="max-width: 30%" alt="">
-                <form id="stip-deck-form" enctype="multipart/form-data">
+                <form id="stip-deck-form" class="d-flex flex-column" enctype="multipart/form-data">
                     <div class="form-group">
                         <!--<label class="stip-h3 lang" key="supportEmail">Email</label>-->
                         <input type="email" name="email" class="form-control placeholderLang" key="deckEmail"
                             placeholder="Email" required id="stip-email-deck">
                     </div>
-                    <a href="src/download/stip_pitch_deck.pdf" style="text-decoration: none;" download><button
-                            type="button" class="btn btn-light btn-block mt-4 stip-h3 lang" key="deckBtn"
-                            id="stip-deck-send">Invia</button></a>
+                    <a id="stip-deck-send"
+                        class="d-inline-block align-self-center mb-3 stip-downloadDisable lang mt-3 text-center lang"
+                        key="deckBtn" role="submit"></a>
                 </form>
             </div>
         </div>
