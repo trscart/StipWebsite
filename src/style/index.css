@@ -358,17 +358,13 @@ b {
           align-items: center;
 }
 
-.stip-flow-section {
-  padding: 5em 0;
-}
-
 .stip-platformBG {
   background: url("../img/demoBG_1.png") no-repeat center right;
   background-size: contain;
 }
 
 .stip-flowsection {
-  padding: 5em 10em;
+  padding: 2em 10em;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
