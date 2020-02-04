@@ -395,6 +395,9 @@ b {
     background-size: cover !important;
     background-position-y: top !important;
   }
+  .stip-flow1 {
+    background-image: url("../img/flow1_sm.png") !important;
+  }
 }
 
 /* #stip-deck-send{
