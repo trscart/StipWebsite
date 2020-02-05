@@ -759,9 +759,26 @@ $(document).ready(function () {
         }
     })
 
+    $("#stip-deck-send").click((function (e) {
+        e.preventDefault(); if (validateEmail($("#stip-email-deck").val())) {
+            let data = { email: $("#stip-email-deck").val(), company_name: "Stip", page: "deck" }; $("#stip-deck-send").text(""), $("#stip-deck-send").append("<img style='width: 2em' src='src/img/loading.gif'>"), $.ajax({
+                url: "https://stipworld.com/api/papers/", data: data, type: "POST", success: function (res) {
+                    var element = document.createElement('a');
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+                    element.setAttribute('href', "./src/download/stip_pitch_deck.pdf");
+                    element.setAttribute('download', "stip_pitch_deck.pdf");
+                    element.click();
+                    window.URL.revokeObjectURL(element.href);
+                    document.body.removeChild(element);
+                    let context; console.log(res), "en-EN" == sessionStorage.getItem("language") || "it-IT" != navigator.language && null == sessionStorage.getItem("language") ? (context = { thanksTitle: "Thank you for filling our form!" }, $("#stip-deck-send").text("Download Stip Deck")) : (context = { thanksTitle: "Grazie per aver compilato il form!" }, $("#stip-deck-send").text("Download Stip Deck")); let source = document.getElementById("stip-thanks").innerHTML, template = Handlebars.compile(source); $("body").append(template(context)), $(".stip-closeReprompt").click((function () { $(".stip-reprompt-container").css("display", "none"), $("#stip-deck-form")[0].reset() }))
+                }, error: function (err) { console.log(err), "en-EN" == sessionStorage.getItem("language") || "it-IT" != navigator.language && null == sessionStorage.getItem("language") ? $("#stip-deck-send").text("Error, try again") : $("#stip-deck-send").text("Errore, riprova"), setTimeout((function () { "en-EN" == sessionStorage.getItem("language") || "it-IT" != navigator.language && sessionStorage.getItem("language"), $("#stip-deck-send").text("Download Stip Deck") }), 1300) }
+            });
+        }
+    }))
 
     // send data and then download deck
-    $("#stip-deck-send").click(function () {
+    /* $("#stip-deck-send").click(function () {
         if (validateEmail($('#stip-email-deck').val())) {
             let data = {
                 "email": $('#stip-email-deck').val(),
@@ -811,7 +828,7 @@ $(document).ready(function () {
                 }
             });
         }
-    })
+    }) */
 
     //test ai
     if ($(location).attr('href').includes("test-ai")) {
