@@ -373,14 +373,17 @@ b {
   }
 }
 
-@media (max-width: 576px) {
-  .stip-flowsection {
-    padding: 2em 2em;
-  }
+@media (max-width: 1200px) {
   .stip-heroFlow {
     background-position-x: 40% !important;
     background-size: cover !important;
     background-position-y: top !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .stip-flowsection {
+    padding: 2em 2em;
   }
   .stip-flow1 {
     background-image: url("../img/flow1_sm.png") !important;
