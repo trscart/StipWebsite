@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-control: max-age=31557600" content="public">
-    <link rel="icon" href="src/img/logoColor.svg">
+    <link rel="icon" href="./src/img/logoColor.svg">
 
     <!-- Primary Meta Tags -->
     <title>Stip - Social & Email Customer Care Automation</title>
@@ -44,7 +44,7 @@
         crossorigin="anonymous"></script>
     <!-- style -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/style/index.css">
+    <link rel="stylesheet" href="./src/style/index.css">
 
     <!-- google analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77012119-1"></script>
@@ -55,7 +55,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-sm stip-nav">
         <a class="navbar-brand" href="./index.html">
-            <img alt="logo" class="logo" src="src/img/logoColor.svg" width="80" height="80">
+            <img alt="logo" class="logo" src="./src/img/logoColor.svg" width="80" height="80">
         </a>
         <button class="navbar-toggler stip-btnNav" id="navBtn" type="button" data-toggle="collapse"
             data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,9 +89,23 @@
     </nav>
     <!-- end navbar -->
 
-    <!-- heroBanner -->
+    <!-- herobanner -->
+    <div class="container-fluid d-flex flex-column stip-heroFlow"
+        style="background: url('./src/img/flow-heroBG.png') no-repeat center center; background-size: cover; background-position-y: bottom;">
+        <div class="row d-flex flex-grow-1 text-center justify-content-center align-items-end">
+            <div class="col-md-6 d-flex flex-grow-1 flex-column justify-content-center">
+                <h2 class="stip-colorTxt lang" style="font-weight: 600;" key="flow-heroTitle" id="stip-scrollDetect">
+                </h2>
+                <p class="stip-p lang" key="flow-heroSubtitle">
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- end herobanner -->
+
+    <!-- section -->
     <div class="container-fluid d-flex stip-heroFlow stip-flow1"
-        style="background: url('src/img/flow1.png') no-repeat center center; background-size: contain;">
+        style="background: url('./src/img/flow1.png') no-repeat center center; background-size: contain;">
         <div class="row">
             <div class="col-10 col-md-4 d-flex flex-grow-1 flex-column justify-content-center">
                 <h2 class="lang" key="flow1-title" id="stip-scrollDetect">Lorem ipsum dolor sit amet,
@@ -104,11 +118,11 @@
             </div>
         </div>
     </div>
-    <!-- end heroBanner -->
+    <!-- section -->
 
     <!-- section -->
     <div class="container-fluid d-flex stip-heroFlow"
-        style="background: url('src/img/flow2.png') no-repeat center center; background-size: contain;">
+        style="background: url('./src/img/flow2.png') no-repeat center center; background-size: contain;">
         <div class="row stip-flow-section" data-aos="fade">
             <div class="col-10 col-md-6 col-lg-4 offset-lg-2" style="margin-top: -5em;" data-aos="fade-right">
                 <h2 class="mb-3 lang" key="flow2-title">Lorem Ipsum</h2>
@@ -124,7 +138,7 @@
 
     <!-- section -->
     <div class="container-fluid d-flex stip-heroFlow"
-        style="background: url('src/img/flow3.png') no-repeat center center; background-size: contain;">
+        style="background: url('./src/img/flow3.png') no-repeat center center; background-size: contain;">
         <div class="row stip-flow-section" data-aos="fade">
             <div class="col-9 col-md-6 col-lg-4" data-aos="fade-right">
                 <h2 class="mb-3 lang" key="flow3-title">Lorem Ipsum</h2>
@@ -143,7 +157,7 @@
 
     <!-- section -->
     <div class="container-fluid d-flex stip-heroFlow pb-0"
-        style="background: url('src/img/flow4.png') no-repeat center center; background-size: contain;">
+        style="background: url('./src/img/flow4.png') no-repeat center center; background-size: contain;">
         <div class="row mt-5" data-aos="fade">
             <div class="col-md-6 offset-md-3 text-center" style="margin-top: 15em;" data-aos="fade-up">
                 <h2 class="mb-3 lang" key="flow4-title">Lorem Ipsum</h2>
@@ -166,7 +180,7 @@
                 </p>
             </div>
             <div class="col-md-7" data-aos="fade">
-                <img src="src/img/crmBG.png" style="max-width: 100%;" alt="">
+                <img src="./src/img/crmBG.png" style="max-width: 100%;" alt="">
             </div>
         </div>
     </div>
@@ -176,7 +190,7 @@
     <div class="container-fluid d-flex">
         <div class="row stip-flowsection">
             <div class="col-md-7 order-2 order-md-1" data-aos="fade">
-                <img src="src/img/insightBG.png" style="max-width: 100%;" alt="">
+                <img src="./src/img/insightBG.png" style="max-width: 100%;" alt="">
             </div>
             <div class="col-md-5 order-1 order-md-2 d-flex flex-column justify-content-center" data-aos="fade-left">
                 <h2 class="mb-3 lang" key="flow5-title"></h2>
@@ -187,7 +201,7 @@
     </div>
     <!-- section -->
 
-    <!-- our platform section -->
+    <!-- section -->
     <div class="container-fluid d-flex">
         <div class="row stip-flowsection">
             <div class="col-md-5 d-flex flex-column justify-content-center" data-aos="fade-left">
@@ -196,11 +210,141 @@
                 </p>
             </div>
             <div class="col-md-7" data-aos="fade">
-                <img src="src/img/demoBG_1.png" style="max-width: 100%;" alt="">
+                <img src="./src/img/demoBG_1.png" style="max-width: 100%;" alt="">
             </div>
         </div>
     </div>
-    <!-- end our platform section -->
+    <!--  section -->
+
+    <!-- features section -->
+    <div class="container-fluid d-none">
+        <div class="row stip-flowsection">
+            <div class="col-md-5 d-flex flex-column justify-content-center" data-aos="fade-left">
+                <h2 class="mb-3 lang" key="ourplatform-title"></h2>
+                <p class="stip-p lang" key="ourplatform-subtitle">
+                </p>
+            </div>
+            <div class="col-md-7" data-aos="fade">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Collapsible Group Item #1
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul>
+                                    <li><p class="stip-p">Facebook, Twitter, Instagram: public posts, comments, reactions, mentions, hash-tags</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Collapsible Group Item #2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Collapsible Group Item #3
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Collapsible Group Item #4
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Collapsible Group Item #5
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Collapsible Group Item #6
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Collapsible Group Item #7
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end features section section -->
 
     <!-- footer -->
     <footer class="container-fluid stip-footer p-md-5">
@@ -309,8 +453,8 @@
     <!-- end cookie -->
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-    <script src="src/js/languages.min.js"></script>
-    <script src="src/js/index.min.js"></script>
+    <script src="./src/js/languages.min.js"></script>
+    <script src="./src/js/index.min.js"></script>
 </body>
 
 </html>
