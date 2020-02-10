@@ -375,6 +375,7 @@ b {
   color: #303030;
   -webkit-transition: 0s;
   transition: 0s;
+  text-align: left;
 }
 
 .stip-collapse .card-header button:hover {
@@ -418,9 +419,6 @@ b {
   }
   .stip-flow1 {
     background-image: url("../img/flow1_sm.png") !important;
-  }
-  .stip-collapse .card-header h2 {
-    text-align: center;
   }
 }
 
