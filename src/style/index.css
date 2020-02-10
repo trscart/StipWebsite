@@ -367,6 +367,37 @@ b {
   padding: 2em 10em;
 }
 
+.stip-collapse .card-header {
+  background-color: transparent;
+}
+
+.stip-collapse .card-header button {
+  color: #303030;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.stip-collapse .card-header button:hover {
+  text-decoration: none;
+}
+
+.stip-collapse .card-header button:focus {
+  text-decoration: none;
+}
+
+.stip-collapse:hover {
+  border-color: #399fad;
+  border-bottom: 1px solid #399fad !important;
+}
+
+.stip-collapse:hover button {
+  color: #399fad !important;
+}
+
+.stip-collapse:hover i {
+  color: #399fad !important;
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
   .stip-flowsection {
     padding: 2em 5em;
@@ -383,10 +414,13 @@ b {
 
 @media (max-width: 576px) {
   .stip-flowsection {
-    padding: 2em 2em;
+    padding: 2em 1em;
   }
   .stip-flow1 {
     background-image: url("../img/flow1_sm.png") !important;
+  }
+  .stip-collapse .card-header h2 {
+    text-align: center;
   }
 }
 

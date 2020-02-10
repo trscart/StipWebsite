@@ -30,7 +30,9 @@
     <meta name="twitter:image" content="https://stip.io/src/img/heroBannerIllustration.png" />
 
     <!-- icon -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6df419ea78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -217,21 +219,24 @@
     <!--  section -->
 
     <!-- features section -->
-    <div class="container-fluid d-none">
+    <div class="container-fluid d-flex">
         <div class="row stip-flowsection">
             <div class="col-md-5 d-flex flex-column justify-content-center" data-aos="fade-left">
-                <h2 class="mb-3 lang" key="ourplatform-title"></h2>
-                <p class="stip-p lang" key="ourplatform-subtitle">
+                <h2 class="mb-3 lang" key="features-title"></h2>
+                <p class="stip-p lang" key="features-subtitle">
                 </p>
             </div>
             <div class="col-md-7" data-aos="fade">
                 <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingOne">
+                            <i class="material-icons-outlined">
+                                check_circle_outline
+                            </i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
+                                <button class="btn btn-link lang stip-h2" key="collapseOne-title" type="button"
+                                    data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
                                 </button>
                             </h2>
                         </div>
@@ -239,32 +244,59 @@
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul>
-                                    <li><p class="stip-p">Facebook, Twitter, Instagram: public posts, comments, reactions, mentions, hash-tags</p></li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseOne-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseOne-list2"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseOne-list3"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseOne-list4"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseOne-list5"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseOne-list6"></p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingTwo">
+                            <i class="far fa-brain" style="font-size: 21px;"></i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Collapsible Group Item #2
+                                <button class="btn btn-link collapsed stip-h2 lang" key="collapseTwo-title"
+                                    type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
+                                <ul>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseTwo-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseTwo-list2"></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingThree">
+                            <i class="far fa-bullseye-arrow" style="font-size: 21px;"></i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="btn btn-link collapsed stip-h2 lang" key="collapseThree-title"
+                                    type="button" data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
                                     Collapsible Group Item #3
                                 </button>
                             </h2>
@@ -272,71 +304,142 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
+                                <ul>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseThree-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseThree-list2"></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingFour">
+                            <i class="material-icons">
+                                timer
+                            </i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Collapsible Group Item #4
+                                <button class="btn btn-link collapsed stip-h2 lang" key="collapseFour-title"
+                                    type="button" data-toggle="collapse" data-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
+                                <ul>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFour-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFour-list2"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFour-list3"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFour-list4"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFour-list5"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFour-list6"></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingFive">
+                            <i class="material-icons-outlined">
+                                extension
+                            </i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Collapsible Group Item #5
+                                <button class="btn btn-link collapsed stip-h2 lang" key="collapseFive-title"
+                                    type="button" data-toggle="collapse" data-target="#collapseFive"
+                                    aria-expanded="false" aria-controls="collapseFive">
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
+                                <ul>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFive-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseFive-list2"></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingSix">
+                            <i class="material-icons-outlined">
+                                report_problem
+                            </i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Collapsible Group Item #6
+                                <button class="btn btn-link collapsed stip-h2 lang" key="collapseSix-title"
+                                    type="button" data-toggle="collapse" data-target="#collapseSix"
+                                    aria-expanded="false" aria-controls="collapseSix">
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
+                                <ul>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSix-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSix-list2"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSix-list3"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSix-list4"></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSeven">
+                    <div class="card stip-collapse">
+                        <div class="card-header d-flex align-items-center" id="headingSeven">
+                            <i class="material-icons-outlined">
+                                collections_bookmark
+                            </i>
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Collapsible Group Item #7
+                                <button class="btn btn-link collapsed stip-h2 lang" key="collapseSeven-title"
+                                    type="button" data-toggle="collapse" data-target="#collapseSeven"
+                                    aria-expanded="false" aria-controls="collapseSeven">
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
                             data-parent="#accordionExample">
                             <div class="card-body">
-
+                                <ul>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSeven-list1"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSeven-list2"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSeven-list3"></p>
+                                    </li>
+                                    <li>
+                                        <p class="stip-p lang" key="collapseSeven-list4"></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
