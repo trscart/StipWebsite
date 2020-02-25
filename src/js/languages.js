@@ -542,6 +542,7 @@ $(document).ready(function () {
             .catch(function (err) { //if error
                 //console.log(err)
             })
+        $("a[title='platform']").hide()
     }
 
     // change text language on click
