@@ -109,7 +109,7 @@ let languages = {
 
         // flow page
         "flow-heroTitle": "Super-power your CRM with Stip",
-        "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a personalized response to your customers",
+        "flow-heroSubtitle": "Keep using your current CRM while making your customer support team more efficient. Stip uses AI to reduce the workload on your digital customer care agents by 70%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a personalized response to your customers",
         "flow1-title": "Listen to your customers wherever they are",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, chat and messaging platforms, web forums, app stores, you name it… Stip’s powerful AI understands them all.",
         "flow2-title": "Make sense of it all",
@@ -119,7 +119,7 @@ let languages = {
         "flow4-title": "Route to the best agent",
         "flow4-subtitle": "Send billing inquiries to your accounting department, technical issues to your help desk team, product requests to your salespeople, no matter what platform they use.",
         "flow-crmTitle": "Keep using your existing CRM",
-        "flow-crmSubtitle": "Stip natively integrates with most CRMs, so that your agents do not need to change the way they work",
+        "flow-crmSubtitle": "Stip can integrate with all CRMs, proprietary and external, so that your customer service agents do not need to change the way they work",
         "flow5-title": "Never lose control",
         "flow5-subtitle": "Our integrated reporting system allows you to keep track of all requests: issue trends, SLAs and wait time, agent productivity",
         "ourplatform-title": "Don’t have a CRM system? Use our integrated ticketing platform",
@@ -342,7 +342,7 @@ let languages = {
 
         // flow page
         "flow-heroTitle": "Super-power your CRM with Stip",
-        "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a personalized response to your customers",
+        "flow-heroSubtitle": "Keep using your current CRM while making your customer support team more efficient. Stip uses AI to reduce the workload on your digital customer care agents by 70%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a personalized response to your customers",
         "flow1-title": "Listen to your customers wherever they are",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, chat and messaging platforms, web forums, app stores, you name it… Stip’s powerful AI understands them all.",
         "flow2-title": "Make sense of it all",
@@ -352,7 +352,7 @@ let languages = {
         "flow4-title": "Route to the best agent",
         "flow4-subtitle": "Send billing inquiries to your accounting department, technical issues to your help desk team, product requests to your salespeople, no matter what platform they use.",
         "flow-crmTitle": "Keep using your existing CRM",
-        "flow-crmSubtitle": "Stip natively integrates with most CRMs, so that your agents do not need to change the way they work",
+        "flow-crmSubtitle": "Stip can integrate with all CRMs, proprietary and external, so that your customer service agents do not need to change the way they work",
         "flow5-title": "Never lose control",
         "flow5-subtitle": "Our integrated reporting system allows you to keep track of all requests: issue trends, SLAs and wait time, agent productivity",
         "ourplatform-title": "Don’t have a CRM system? Use our integrated ticketing platform",
