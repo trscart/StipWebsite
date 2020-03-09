@@ -897,6 +897,32 @@ $(document).ready(function () {
         }
     })
 
+    //paper plane animation
+    var controller = new ScrollMagic.Controller();
+    let tl = gsap.timeline(); //create the timeline
+
+    var tween1 = tl.fromTo("#stip-paperplane", 1.5,
+        { left: 750, rotate: 135, y: 50 },
+        { y: -250, left: 600, rotate: 90, ease: Circ.ease }
+    ).fromTo("#stip-paperplane", 3,
+        { y: -250, left: 600, rotate: 90 },
+        { y: 0, left: 350, rotate: -25, ease: Circ.ease }
+    ).fromTo("#stip-paperplane", 2,
+        { left: 350, rotate: -25 },
+        { left: 950, rotate: -90, ease: Circ.ease }
+    ).fromTo("#stip-paperplane", 1.5,
+        { rotate: -90 },
+        { rotate: -30, ease: Circ.ease }
+    )
+
+    var scene = new ScrollMagic.Scene({ triggerElement: "#stip-flow1", offset: 200 })
+        .setClassToggle("#stip-paperplane", "show")
+        .addTo(controller);
+
+    var scene = new ScrollMagic.Scene({ triggerElement: "#stip-flow1", duration: 1000, offset: 200 })
+        .setTween(tween1)
+        .addTo(controller);
+
     // maps
     if ($(location).attr('href').includes("contacts")) {
         //en map
