@@ -898,7 +898,7 @@ $(document).ready(function () {
     })
 
     //paper plane animation
-    var controller = new ScrollMagic.Controller();
+    /* var controller = new ScrollMagic.Controller();
     let tl = gsap.timeline(); //create the timeline
 
     var tween1 = tl.fromTo("#stip-paperplane", 1.5,
@@ -917,11 +917,7 @@ $(document).ready(function () {
 
     var scene = new ScrollMagic.Scene({ triggerElement: "#stip-flow1", offset: 200 })
         .setClassToggle("#stip-paperplane", "show")
-        .addTo(controller);
-
-    var scene = new ScrollMagic.Scene({ triggerElement: "#stip-flow1", duration: 1000, offset: 200 })
-        .setTween(tween1)
-        .addTo(controller);
+        .addTo(controller); */
 
     // maps
     if ($(location).attr('href').includes("contacts")) {

@@ -91,33 +91,6 @@
     </nav>
     <!-- end navbar -->
 
-    <svg id="stip-paperplane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.39 239.17">
-        <defs>
-            <style>
-                .cls-1 {
-                    fill: #399fad;
-                }
-
-                .cls-2 {
-                    fill: #308f96;
-                }
-
-                .cls-3 {
-                    fill: #2e8587;
-                }
-            </style>
-        </defs>
-        <title>Risorsa 2</title>
-        <g id="Livello_2" data-name="Livello 2">
-            <g id="Livello_1-2" data-name="Livello 1">
-                <polygon class="cls-1" points="0 239.17 90.24 105.19 180.39 99.28 0 239.17" />
-                <polygon class="cls-1" points="0 239.17 59.64 87.23 20.99 0 0 239.17" />
-                <polygon class="cls-2" points="0 239.17 90.24 105.19 59.64 119.58 59.64 87.23 0 239.17" />
-                <polygon class="cls-3" points="0 239.17 59.64 119.58 90.24 105.19 0 239.17" />
-            </g>
-        </g>
-    </svg>
-
     <!-- herobanner -->
     <div class="container-fluid d-flex flex-column stip-heroFlow"
         style="background: url('./src/img/flow-heroBG.png') no-repeat center center; background-size: cover; background-position-y: bottom;">
@@ -133,10 +106,9 @@
     <!-- end herobanner -->
 
     <!-- section -->
-    <div class="container-fluid d-flex stip-heroFlow" id="stip-flow1" data-aos="fade"
-        style="background: url('./src/img/flow1.png') no-repeat center center; background-size: contain;">
-        <div class="row">
-            <div class="col-10 col-md-4 d-flex flex-grow-1 flex-column justify-content-center">
+    <div class="container-fluid d-flex" data-aos="fade">
+        <div class="row stip-flowsection">
+            <div class="col-md-4 d-flex flex-column justify-content-center" data-aos="fade-left">
                 <h2 class="lang" key="flow1-title" id="stip-scrollDetect">Lorem ipsum dolor sit amet,
                     consectetur
                     adipiscing elit.
@@ -145,15 +117,20 @@
                     Aenean eu ipsum vel lectus accumsan tempus a sed lacus.
                 </p>
             </div>
+            <div class="col-md-8 text-center" data-aos="fade">
+                <img src="./src/img/flow1.png" style="max-width: 100%;" alt="">
+            </div>
         </div>
     </div>
     <!-- section -->
 
     <!-- section -->
-    <div class="container-fluid d-flex stip-heroFlow" id="stip-flow2"
-        style="background: url('./src/img/flow2.png') no-repeat center center; background-size: contain;">
-        <div class="row stip-flow-section" data-aos="fade">
-            <div class="col-10 col-md-6 col-lg-4 offset-lg-2" style="margin-top: -5em;" data-aos="fade-right">
+    <div class="container-fluid d-flex" data-aos="fade">
+        <div class="row stip-flowsection">
+            <div class="col-md-8 order-2 order-md-1 text-center" data-aos="fade">
+                <img src="./src/img/flow2.png" style="max-width: 100%;" alt="">
+            </div>
+            <div class="col-md-4 order-1 order-md-2 d-flex flex-column justify-content-center" data-aos="fade-left">
                 <h2 class="mb-3 lang" key="flow2-title">Lorem Ipsum</h2>
                 <p class="stip-p lang" key="flow2-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean eu ipsum vel lectus accumsan tempus a sed lacus.Lorem ipsum dolor sit amet, consectetur
@@ -166,10 +143,9 @@
     <!-- section -->
 
     <!-- section -->
-    <div class="container-fluid d-flex stip-heroFlow" id="stip-flow3"
-        style="background: url('./src/img/flow3.png') no-repeat center center; background-size: contain;">
-        <div class="row stip-flow-section" data-aos="fade">
-            <div class="col-9 col-md-6 col-lg-4" data-aos="fade-right">
+    <div class="container-fluid d-flex" data-aos="fade">
+        <div class="row stip-flowsection">
+            <div class="col-md-4 d-flex flex-column justify-content-center" data-aos="fade-left">
                 <h2 class="mb-3 lang" key="flow3-title">Lorem Ipsum</h2>
                 <p class="stip-p lang" key="flow3-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean eu ipsum vel lectus accumsan tempus a sed lacus.Lorem ipsum dolor sit amet, consectetur
@@ -177,18 +153,20 @@
                     Aenean eu ipsum vel lectus accumsan tempus a sed lacus.
                 </p>
             </div>
-            <div class="col-md-8">
-
+            <div class="col-md-8 text-center" data-aos="fade">
+                <img src="./src/img/flow3.png" style="max-width: 60%;" alt="">
             </div>
         </div>
     </div>
     <!-- section -->
 
     <!-- section -->
-    <div class="container-fluid d-flex stip-heroFlow pb-0" id="stip-flow4"
-        style="background: url('./src/img/flow4.png') no-repeat center center; background-size: contain;">
-        <div class="row mt-5" data-aos="fade">
-            <div class="col-md-6 offset-md-3 text-center" style="margin-top: 15em;" data-aos="fade-up">
+    <div class="container-fluid d-flex" data-aos="fade">
+        <div class="row stip-flowsection">
+            <div class="col-md-4" data-aos="fade">
+                <img src="./src/img/flow4_1.png" style="max-width: 100%;" alt="">
+            </div>
+            <div class="col-md-4 text-center d-flex flex-column justify-content-center" data-aos="fade-left">
                 <h2 class="mb-3 lang" key="flow4-title">Lorem Ipsum</h2>
                 <p class="stip-p lang" key="flow4-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean eu ipsum vel lectus accumsan tempus a sed lacus.Lorem ipsum dolor sit amet, consectetur
@@ -196,11 +174,30 @@
                     Aenean eu ipsum vel lectus accumsan tempus a sed lacus.
                 </p>
             </div>
+            <div class="col-md-4" data-aos="fade">
+                <img src="./src/img/flow4_2.png" style="max-width: 100%;" alt="">
+            </div>
         </div>
     </div>
     <!-- section -->
 
-    <!-- section -->
+    <!-- section 
+    <div class="container-fluid d-flex stip-heroFlow" id="stip-flow2"
+        style="background: url('./src/img/flow2.png') no-repeat center center; background-size: contain;">
+        <div class="row stip-flow-section" data-aos="fade">
+            <div class="col-10 col-md-6 col-lg-4" style="margin-top: -5em;" data-aos="fade-right">
+                <h2 class="mb-3 lang" key="flow2-title">Lorem Ipsum</h2>
+                <p class="stip-p lang" key="flow2-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean eu ipsum vel lectus accumsan tempus a sed lacus.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                    Aenean eu ipsum vel lectus accumsan tempus a sed lacus.
+                </p>
+            </div>
+        </div>
+    </div>
+     section -->
+
+    <!-- your CRM section -->
     <div class="container-fluid d-flex">
         <div class="row stip-flowsection">
             <div class="col-md-5 d-flex flex-column justify-content-center" data-aos="fade-left">
@@ -213,9 +210,9 @@
             </div>
         </div>
     </div>
-    <!-- section -->
+    <!-- end your CRM section -->
 
-    <!-- section -->
+    <!-- our platform section -->
     <div class="container-fluid d-flex">
         <div class="row stip-flowsection">
             <div class="col-md-7 order-2 order-md-1" data-aos="fade">
@@ -228,9 +225,9 @@
             </div>
         </div>
     </div>
-    <!--  section -->
+    <!-- end our platform section -->
 
-    <!-- section -->
+    <!-- insight section -->
     <div class="container-fluid d-flex">
         <div class="row stip-flowsection">
             <div class="col-md-5 d-flex flex-column justify-content-center" data-aos="fade-left">
@@ -243,7 +240,7 @@
             </div>
         </div>
     </div>
-    <!-- section -->
+    <!-- end insight section -->
 
     <!-- features section -->
     <div class="container-fluid d-none">
