@@ -3,6 +3,10 @@
   font-family: 'Nunito', sans-serif;
 }
 
+p, h1, h2, h3 {
+  white-space: pre-line;
+}
+
 .hs-form {
   background-color: red !important;
 }

@@ -108,7 +108,7 @@ let languages = {
         "modal60Btn": "Scaricalo ora!",
 
         // flow page
-        "flow-heroTitle": "Super-power your CRM with Stip",
+        "flow-heroTitle": "Super-power your CRM \n with Stip",
         "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70% while increasing customer service teams efficiency by 200%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a fast, effective and personalized response to your customers.",
         "flow1-title": "Listen to your customers wherever they are",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, live chat and messaging platforms, web forums, app stores, you name it. Stip’s powerful AI finds and understands them all.",
@@ -341,7 +341,7 @@ let languages = {
         "modal60Btn": "Download now!",
 
         // flow page
-        "flow-heroTitle": "Super-power your CRM with Stip",
+        "flow-heroTitle": "Super-power your CRM \n with Stip",
         "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70% while increasing customer service teams efficiency by 200%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a fast, effective and personalized response to your customers.",
         "flow1-title": "Listen to your customers wherever they are",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, live chat and messaging platforms, web forums, app stores, you name it. Stip’s powerful AI finds and understands them all.",
