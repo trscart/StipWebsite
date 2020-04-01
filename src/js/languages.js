@@ -108,9 +108,9 @@ let languages = {
         "modal60Btn": "Scaricalo ora!",
 
         // flow page
-        "flow-heroTitle": "Super-power your CRM \n with Stip",
+        "flow-heroTitle": "Super-power your CRM with Stip",
         "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70% while increasing customer service teams efficiency by 200%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a fast, effective and personalized response to your customers.",
-        "flow1-title": "Listen to your customers wherever they are",
+        "flow1-title": "Listen to your customers. Everywhere",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, live chat and messaging platforms, web forums, app stores, you name it. Stip’s powerful AI finds and understands them all.",
         "flow2-title": "Make sense of it all",
         "flow2-subtitle": "Never lose a single message, post, comment, mention: Stip understands your customers automatically and in real-time. Stip is able to understand if a message is relevant for your customer care team, it can hide contents from your social pages that do not meet your policies and it can also accurately categorize every request.",
@@ -341,9 +341,9 @@ let languages = {
         "modal60Btn": "Download now!",
 
         // flow page
-        "flow-heroTitle": "Super-power your CRM \n with Stip",
+        "flow-heroTitle": "Super-power your CRM with Stip",
         "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70% while increasing customer service teams efficiency by 200%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a fast, effective and personalized response to your customers.",
-        "flow1-title": "Listen to your customers wherever they are",
+        "flow1-title": "Listen to your customers. Everywhere",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, live chat and messaging platforms, web forums, app stores, you name it. Stip’s powerful AI finds and understands them all.",
         "flow2-title": "Make sense of it all",
         "flow2-subtitle": "Never lose a single message, post, comment, mention: Stip understands your customers automatically and in real-time. Stip is able to understand if a message is relevant for your customer care team, it can hide contents from your social pages that do not meet your policies and it can also accurately categorize every request.",

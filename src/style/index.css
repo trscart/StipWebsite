@@ -269,11 +269,6 @@ b {
           align-items: center;
 }
 
-.stip-heroLead h1 {
-  font-size: 36px;
-  font-weight: 400;
-}
-
 .stip-whatscoveredBG {
   background: url("../img/whatscoveredBG.png") no-repeat;
   background-size: contain;
@@ -362,6 +357,10 @@ b {
           align-items: center;
 }
 
+.stip-heroFlowBG {
+  max-width: 100% !important;
+}
+
 #stip-paperplane {
   position: fixed;
   z-index: 2;
@@ -446,6 +445,9 @@ b {
   .stip-heroFlow {
     margin-top: 5em;
   }
+  .stip-heroFlowBG {
+    max-width: 100% !important;
+  }
   .stip-flowBG {
     max-width: 100%;
   }
@@ -485,21 +487,21 @@ b {
 
 .stip-h1 {
   font-size: 29px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .stip-h2 {
-  font-size: 21px;
-  font-weight: 400;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 .stip-h3 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 21px;
+  font-weight: 500;
 }
 
 .stip-txt {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -553,6 +555,11 @@ b {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 2em 5em 0 5em;
+}
+
+.stip-nav .stip-navItem {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .stip-btnNav {
@@ -615,9 +622,10 @@ b {
           align-items: center;
 }
 
-.stip-heroContainer h1 {
-  font-size: 32px;
-  font-weight: 400;
+.stip-heroContainer .stip-btnHero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .stip-demoRequest {
@@ -710,14 +718,6 @@ b {
 
 .stip-howWork {
   padding: 10em;
-}
-
-.stip-howWork h2 {
-  font-size: 2em;
-}
-
-.stip-howWork p {
-  font-size: 1.2em;
 }
 
 .stip-caringBG {
@@ -1128,16 +1128,16 @@ input[type=range].price:focus::-ms-fill-upper {
 
 @media (max-width: 576px) {
   .stip-h1 {
-    font-size: 18px !important;
+    font-size: 24px !important;
   }
   .stip-h2 {
-    font-size: 16px !important;
+    font-size: 21px !important;
   }
   .stip-h3 {
-    font-size: 14px !important;
+    font-size: 18px !important;
   }
   .stip-txt {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
   .stip-nav {
     padding: 0 1em !important;
@@ -1158,14 +1158,10 @@ input[type=range].price:focus::-ms-fill-upper {
   .stip-heroContainer {
     background-size: 80%;
   }
-  .stip-heroContainer h1 {
-    margin-top: -7em;
-    font-size: 32px;
+  .stip-heroContainer .stip-h1 {
+    margin-top: -5em;
   }
   .stip-btnHero {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1184,12 +1180,6 @@ input[type=range].price:focus::-ms-fill-upper {
     padding: 2em !important;
     padding-top: 20em !important;
     background-size: 85%;
-  }
-  .stip-howWork h2 {
-    font-size: 1.7em !important;
-  }
-  .stip-howWork p {
-    font-size: 0.8em !important;
   }
   #stip-email-quote {
     width: 100%;
@@ -1258,12 +1248,6 @@ input[type=range].price:focus::-ms-fill-upper {
   .stip-howWork {
     padding: 3em;
   }
-  .stip-howWork h2 {
-    font-size: 1.7em;
-  }
-  .stip-howWork p {
-    font-size: 0.7em;
-  }
   .stip-benefitContainer {
     background: url("../img/benefitBG_small.png") no-repeat center center;
     background-size: contain;
@@ -1274,26 +1258,11 @@ input[type=range].price:focus::-ms-fill-upper {
   .stip-howWork {
     padding: 5em;
   }
-  .stip-howWork h2 {
-    font-size: 2em;
-  }
-  .stip-howWork p {
-    font-size: 1em;
-  }
 }
 
 @media (min-width: 576px) and (max-width: 1200px) {
-  .stip-h1 {
-    font-size: 21px !important;
-  }
-  .stip-h2 {
-    font-size: 18px !important;
-  }
-  .stip-h3 {
-    font-size: 14px !important;
-  }
   .stip-txt {
-    font-size: 12px !important;
+    font-size: 16px !important;
   }
   .stip-btnHero button {
     font-size: 14px !important;
