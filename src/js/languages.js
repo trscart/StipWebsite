@@ -463,7 +463,22 @@ let languages = {
         //test-ai page
         "test-ai-btn": "send",
         "test-ai-input": "your text here ...",
-        "test-ai-title": "Test Stip's AI here!"
+        "test-ai-title": "Test Stip's AI here!",
+
+        //new page
+        "newpage-heroTitle": "Lorem ipsum dolor sit amet",
+        "newpage-heroTxt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, libero at faucibus rutrum, quam mi elementum tellus, quis fringilla enim velit id erat. Phasellus at luctus dui, a rhoncus nunc. Sed sit amet interdum arcu, nec maximus turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "newpage-reportInputTitle": "Lorem Ipsum dolor sit amet",
+        "newpage-reportInput1": "Lorem Ipsum",
+        "newpage-reportInput2": "Lorem Ipsum",
+        "newpage-reportBtn": "Get your report",
+        "newpage-reportTitle": "Lorem ipsum dolor sit amet",
+        "newpage-reportTxt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "newpage-resultsTxt1": "Lorem ipsum dolor sit amet",
+        "newpage-resultsTxt2": "Lorem ipsum dolor sit amet",
+        "report-calendarTitle":"Lorem ipsum dolor sit amet",
+        "report-calendarTxt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet interdum arcu, nec maximus turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "newpage-calendarBtn": "Send",
     }
 }
 

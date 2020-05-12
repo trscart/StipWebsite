@@ -476,6 +476,41 @@ b {
   }
 }
 
+.stip_report-btn {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background-color: #399fad;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 10px 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+.stip_report-btn:hover {
+  background-color: #399fad;
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.stip_report-num {
+  font-size: 46px;
+  font-weight: 600;
+  color: #399fad;
+}
+
+@media (max-width: 576px) {
+  .stip_report-container {
+    padding: 2em;
+  }
+}
+
 .p-5_2 {
   padding: 2rem !important;
 }
