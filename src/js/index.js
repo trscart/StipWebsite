@@ -80,16 +80,6 @@ $(document).ready(function () {
             })
     }
 
-    /* roi calculation
-    $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
-    $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
-    $("#volumeSlider").change(function () {
-        $(".costReduction-txt").text(-3.33 * $("#volumeSlider").val() + "€")
-    });
-    $("#priceSlider").change(function () {
-        $(".timeReduction-txt").text(0.8 * $("#priceSlider").val() + "h")
-    });*/
-
     // nav changes
     $("#navBtn").click(function () {
         if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
@@ -157,6 +147,83 @@ $(document).ready(function () {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // roi calculation
+    let teamNum
+    let ticketNum
+
+    let avarege_handle_time_nostip
+    let automation_coefficient
+    let savingTime
+    
+    let roi
+    let saving_stip
+    let fee_stip
+    let service_cost_nostip
+    let service_cost_stip
+    let avarege_handle_time_stip
+
+    $("#roi-form").change(function () {
+        teamNum = $("#roi-input1").val()
+        ticketNum = $("#roi-input2").val()
+
+        avarege_handle_time_nostip = teamNum * 140 * 60 / ticketNum
+        if(avarege_handle_time_nostip > 8){
+            automation_coefficient = 0.7
+        } else {
+            automation_coefficient = 0.6
+        }
+        savingTime = Math.round((avarege_handle_time_nostip * automation_coefficient * ticketNum) / 60)
+
+        avarege_handle_time_stip = avarege_handle_time_nostip * (1 - automation_coefficient)
+        service_cost_stip = 0.37 * ticketNum * avarege_handle_time_stip
+        service_cost_nostip = 0.37 * avarege_handle_time_nostip * ticketNum
+        fee_stip = 0.5 * ticketNum
+        saving_stip = service_cost_nostip - service_cost_stip - fee_stip
+        roi = Math.round(saving_stip / fee_stip * 100)
+
+        $("#roi-num1").text(savingTime + "h")
+        $("#roi-num2").text(roi + "%")
+    });
+
+    // report modal
+    $("#report-channel-other").hide()
+    $("#report-channel").change(function () {
+        if ($("#report-channel").val() == "Altro") {
+            $("#report-channel-other").show()
+        } else {
+            $("#report-channel-other").hide()
+        }
+    });
+    $("#report-crm-other").hide()
+    $("#report-crm").change(function () {
+        if ($("#report-crm").val() == "Altro") {
+            $("#report-crm-other").show()
+        } else {
+            $("#report-crm-other").hide()
+        }
+    });
+
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    v = canvg.Canvg.fromString(ctx, '<svg width="600" height="600"><text x="50" y="50">Hello World!</text></svg>');
+
+    $("#report-download-btn").click(function (e) {
+        e.preventDefault()
+        let roi_num1 = $("#roi-num1").text()
+        let roi_num2 = $("#roi-num2").text()
+
+        $("#report-download-form")[0].reset();
+        $('#download-report-modal').modal('hide');
+        console.log(roi_num2)
+
+        var imgData = canvas.toDataURL('image/png');
+        // Generate PDF
+        var doc = new jsPDF('p', 'pt', 'a4');
+        doc.addImage(imgData, 'PNG', 40, 40, 75, 75);
+        doc.save('test.pdf');
+    });
 
     // demo page steps and request
     $("#stip-demo-secondForm").hide()
@@ -570,65 +637,6 @@ $(document).ready(function () {
         $('body').css("overflow-y", "hidden")
     });
 
-    // ajax call for quote request
-    $(".stip-requestQuoteBtn").click(function () {
-        if ($('#stip-email-quote').val()) {
-            $('.stip-inputRequired').css("border-color", "#ced4da")
-
-            let data = {
-                "email": $('#stip-email-quote').val(),
-                "volume": $('#volumeSlider').val(),
-                "price": $('#priceSlider').val(),
-            }
-            console.log($('#stip-email-quote').val() + " " + $('#volumeSlider').val() + " " + $('#priceSlider').val())
-            /*fetch('', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(function (res) {
-                    if (res.status == 201) { //if status 201
-    
-                        // append thank you message
-                        let context
-                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
-                        } else {
-                            context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
-                        }
-                        let source = document.getElementById("stip-thanks").innerHTML;
-                        let template = Handlebars.compile(source);
-                        $('body').append(template(context))
-    
-                        $(".stip-closeReprompt").click(function () {
-                            $(".stip-reprompt-container").css("display", "none")
-                            $('#stip-email-quote').val("")
-                        })
-                    }
-                })
-                .catch(function (err) { //if error
-                    //console.log(err)
-                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                        $('.stip-requestQuoteBtn').text("Error, try again");
-                    } else {
-                        $('.stip-requestQuoteBtn').text("Errore, riprova");
-                    }
-                    setTimeout(function () {
-                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                            $('.stip-requestQuoteBtn').text("Quote request");
-                        } else {
-                            $('.stip-requestQuoteBtn').text("Richiedi preventivo");
-                        }
-                    }, 1300);
-                })*/
-
-        } else {
-            $('.stip-inputRequired').css("border-color", "#FF2828")
-        }
-    })
-
     // ajax call for email newsletter
     $("#stip-email-form").submit(function (e) {
         e.preventDefault()
@@ -896,28 +904,6 @@ $(document).ready(function () {
                 1000);
         }
     })
-
-    //paper plane animation
-    /* var controller = new ScrollMagic.Controller();
-    let tl = gsap.timeline(); //create the timeline
-
-    var tween1 = tl.fromTo("#stip-paperplane", 1.5,
-        { left: 750, rotate: 135, y: 50 },
-        { y: -250, left: 600, rotate: 90, ease: Circ.ease }
-    ).fromTo("#stip-paperplane", 3,
-        { y: -250, left: 600, rotate: 90 },
-        { y: 0, left: 350, rotate: -25, ease: Circ.ease }
-    ).fromTo("#stip-paperplane", 2,
-        { left: 350, rotate: -25 },
-        { left: 950, rotate: -90, ease: Circ.ease }
-    ).fromTo("#stip-paperplane", 1.5,
-        { rotate: -90 },
-        { rotate: -30, ease: Circ.ease }
-    )
-
-    var scene = new ScrollMagic.Scene({ triggerElement: "#stip-flow1", offset: 200 })
-        .setClassToggle("#stip-paperplane", "show")
-        .addTo(controller); */
 
     // maps
     if ($(location).attr('href').includes("contacts")) {

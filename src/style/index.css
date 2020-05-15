@@ -370,10 +370,6 @@ b {
   opacity: 0;
 }
 
-.show {
-  opacity: 1 !important;
-}
-
 .stip-platformBG {
   background: url("../img/demoBG_1.png") no-repeat center right;
   background-size: contain;
@@ -476,7 +472,7 @@ b {
   }
 }
 
-.stip_report-btn {
+.stip_roi-btn {
   width: 100%;
   font-weight: 600;
   font-size: 16px;
@@ -490,7 +486,7 @@ b {
   border: 0;
 }
 
-.stip_report-btn:hover {
+.stip_roi-btn:hover {
   background-color: #399fad;
   border: 0;
   color: white;
@@ -499,15 +495,26 @@ b {
   text-decoration: none;
 }
 
-.stip_report-num {
+.stip_roi-num {
   font-size: 46px;
   font-weight: 600;
   color: #399fad;
 }
 
+.stip_meeting-container {
+  margin-top: 8em;
+}
+
 @media (max-width: 576px) {
-  .stip_report-container {
+  .stip_meeting-container {
+    margin-top: 0;
+  }
+  .stip_roi-container {
     padding: 2em;
+  }
+  .stip_meeting-container {
+    background: none;
+    padding-top: 2em;
   }
 }
 
