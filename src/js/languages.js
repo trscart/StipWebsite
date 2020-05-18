@@ -208,6 +208,7 @@ let languages = {
         "roi-reportInput2": "Quante interazioni ricevi ogni mese su tutti i canali digitali",
         "roi-reportBtn": "scarica il report",
         "roi-reportTitle": "Vuoi sapere come Stip cambierà il tuo customer service?",
+        "roi-reportSubtitle": "Crea il business case e scopri il tuo ROI",
         "roi-resultsTxt1": "Tempo totale di lavoro dei tuoi agenti risparmiato mensilmente",
         "roi-resultsTxt2": "ROI previsto grazie a Stip",
         "roi-calendarTitle":"Vuoi vedere Stip in azione e capire come integrarlo nella tua azienda?",
@@ -216,9 +217,9 @@ let languages = {
         "roi-modal-title": "Ancora poche informazioni e il tuo report personalizzato sarà pronto",
         "report-crm-title": "Che CRM usi?",
         "report-channel-title": "Quali canali utilizzi per il digital caring?",
-        "report-name": "nome e cognome",
-        "report-email": "email aziendale",
-        "report-company": "azienda",
+        "report-name": "nome e cognome*",
+        "report-email": "email aziendale*",
+        "report-company": "azienda*",
     },
     "en-EN": {
 
@@ -429,6 +430,7 @@ let languages = {
         "roi-reportInput2": "Quante interazioni ricevi ogni mese su tutti i canali digitali",
         "roi-reportBtn": "scarica il report",
         "roi-reportTitle": "Vuoi sapere come Stip cambierà il tuo customer service?",
+        "roi-reportSubtitle": "Crea il business case e scopri il tuo ROI",
         "roi-resultsTxt1": "Tempo totale di lavoro dei tuoi agenti risparmiato mensilmente",
         "roi-resultsTxt2": "ROI previsto grazie a Stip",
         "roi-calendarTitle":"Vuoi vedere Stip in azione e capire come integrarlo nella tua azienda?",
@@ -437,9 +439,9 @@ let languages = {
         "roi-modal-title": "Ancora poche informazioni e il tuo report personalizzato sarà pronto",
         "report-crm-title": "Che CRM usi?",
         "report-channel-title": "Quali canali utilizzi per il digital caring?",
-        "report-name": "nome e cognome",
-        "report-email": "email aziendale",
-        "report-company": "azienda",
+        "report-name": "nome e cognome*",
+        "report-email": "email aziendale*",
+        "report-company": "azienda*",
     }
 }
 

@@ -155,7 +155,7 @@ $(document).ready(function () {
     let avarege_handle_time_nostip
     let automation_coefficient
     let savingTime
-    
+
     let roi
     let saving_stip
     let fee_stip
@@ -168,7 +168,7 @@ $(document).ready(function () {
         ticketNum = $("#roi-input2").val()
 
         avarege_handle_time_nostip = teamNum * 140 * 60 / ticketNum
-        if(avarege_handle_time_nostip > 8){
+        if (avarege_handle_time_nostip > 8) {
             automation_coefficient = 0.7
         } else {
             automation_coefficient = 0.6
@@ -188,10 +188,15 @@ $(document).ready(function () {
 
     // report modal
     $("#report-channel-other").hide()
+    let checkbox_channel_counter = 1
     $("#report-channel").change(function () {
-        if ($("#report-channel").val() == "Altro") {
+        console.log($("#report-channel").val())
+        $("#report-channel-other").show()
+        if (checkbox_channel_counter == 1) {
+            checkbox_channel_counter += 1
             $("#report-channel-other").show()
         } else {
+            checkbox_channel_counter = 1
             $("#report-channel-other").hide()
         }
     });
@@ -204,7 +209,16 @@ $(document).ready(function () {
         }
     });
 
-    const canvas = document.querySelector('canvas');
+    $("#meeting-btn-nav").hide()
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > $("#meeting-btn-hero").offset().top && ($(location).attr('href').includes("roi") || $(location).attr('href').includes("video-demo"))) { // meeting btn fixed top
+            $("#meeting-btn-nav").show()
+        } else if ($(window).scrollTop() < $("#meeting-btn-hero").offset().top) {
+            $("#meeting-btn-nav").hide()
+        }
+    });
+
+    /* const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
     
     v = canvg.Canvg.fromString(ctx, '<svg width="600" height="600"><text x="50" y="50">Hello World!</text></svg>');
@@ -223,7 +237,7 @@ $(document).ready(function () {
         var doc = new jsPDF('p', 'pt', 'a4');
         doc.addImage(imgData, 'PNG', 40, 40, 75, 75);
         doc.save('test.pdf');
-    });
+    }); */
 
     // demo page steps and request
     $("#stip-demo-secondForm").hide()

@@ -472,6 +472,15 @@ b {
   }
 }
 
+.stip-heroRoi {
+  padding: 10%;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .stip_roi-btn {
   width: 100%;
   font-weight: 600;
@@ -506,6 +515,9 @@ b {
 }
 
 @media (max-width: 576px) {
+  .stip-heroRoi {
+    margin-top: 5em;
+  }
   .stip_meeting-container {
     margin-top: 0;
   }
