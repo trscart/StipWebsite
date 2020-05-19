@@ -217,9 +217,9 @@ let languages = {
         "roi-modal-title": "Ancora poche informazioni e il tuo report personalizzato sarà pronto",
         "report-crm-title": "Che CRM usi?",
         "report-channel-title": "Quali canali utilizzi per il digital caring?",
-        "report-name": "nome e cognome*",
-        "report-email": "email aziendale*",
-        "report-company": "azienda*",
+        "report-name": "Nome e cognome*",
+        "report-email": "Email aziendale*",
+        "report-company": "Azienda*",
     },
     "en-EN": {
 
@@ -439,9 +439,9 @@ let languages = {
         "roi-modal-title": "Ancora poche informazioni e il tuo report personalizzato sarà pronto",
         "report-crm-title": "Che CRM usi?",
         "report-channel-title": "Quali canali utilizzi per il digital caring?",
-        "report-name": "nome e cognome*",
-        "report-email": "email aziendale*",
-        "report-company": "azienda*",
+        "report-name": "Nome e cognome*",
+        "report-email": "Email aziendale*",
+        "report-company": "Azienda*",
     }
 }
 

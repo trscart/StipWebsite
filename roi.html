@@ -122,12 +122,17 @@
                 </h2>
                 <form id="roi-form" class="mt-4">
                     <div class="form-group">
-                        <label class="lang" for="number1" key="roi-reportInput1">Lorem ipsum</label>
+                        <label class="lang" key="roi-reportInput1">Lorem ipsum</label>
                         <input type="number" placeholder="15" required class="form-control" id="roi-input1">
                     </div>
                     <div class="form-group">
-                        <label class="lang" for="number2" key="roi-reportInput2">Lorem ipsum</label>
+                        <label class="lang" key="roi-reportInput2">Lorem ipsum</label>
                         <input type="number" placeholder="10000" required class="form-control" id="roi-input2">
+                    </div>
+                    <div class="form-group" id="report-email-group">
+                        <label class="lang" key="report-email">Lorem ipsum</label>
+                        <input type="email" class="form-control placeholderLang" id="report-email" placeholder=""
+                            key="report-email" required>
                     </div>
                 </form>
             </div>
@@ -143,9 +148,11 @@
                             <p class="stip-txt lang" key="roi-resultsTxt2">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="col-12">
-                            <button type="submit" key="roi-reportBtn" class="mt-3 lang stip_roi-btn" id="stip_roi-btn"
+                            <button type="button" key="roi-calendarBtn" class="lang stip_roi-btn"
+                                id="alternative_meeting_btn"></button>
+                            <!-- <button type="submit" key="roi-reportBtn" class="mt-3 lang stip_roi-btn" id="stip_roi-btn"
                                 data-toggle="modal" data-target="#download-report-modal"
-                                style="outline: none;">Submit</button>
+                                style="outline: none;">Submit</button> -->
                         </div>
                     </div>
                 </div>

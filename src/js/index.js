@@ -209,6 +209,40 @@ $(document).ready(function () {
         }
     });
 
+    $("#alternative_meeting_btn").click(function () {
+        if (validateCorporateEmail($("#report-email").val())) {
+            let data = {
+                "team_num": $('#roi-input1').val(),
+                "tickets_num": $('#roi-input2').val(),
+                "email": $('#report-email').val()
+            }
+
+            // fetch call
+            fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(function (res) {
+                    window.location.href = "https://meetings.hubspot.com/fabrizio-aiello";
+                })
+                .catch(function (err) { //if error
+                    console.log(err)
+                })
+        }
+        else { // show border and label error on demo email input
+            $("#report-email").css("border-color", "#ff6161")
+            $(".stip-emailLabelError").remove()
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                $("#report-email-group").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
+            } else {
+                $("#report-email-group").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+            }
+        }
+    });
+
     $("#meeting-btn-nav").hide()
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#meeting-btn-hero").offset().top && ($(location).attr('href').includes("roi") || $(location).attr('href').includes("video-demo"))) { // meeting btn fixed top
