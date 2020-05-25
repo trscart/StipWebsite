@@ -209,12 +209,12 @@ $(document).ready(function () {
         }
     });
 
-    $("#alternative_meeting_btn").click(function () {
-        if (validateCorporateEmail($("#report-email").val())) {
+    $("#form_meeting_btn").click(function () {
+        if (validateCorporateEmail($("#roi-input-email").val())) {
             let data = {
                 "team_num": $('#roi-input1').val(),
                 "tickets_num": $('#roi-input2').val(),
-                "email": $('#report-email').val()
+                "email": $('#roi-input-email').val()
             }
 
             // fetch call
@@ -233,21 +233,21 @@ $(document).ready(function () {
                 })
         }
         else { // show border and label error on demo email input
-            $("#report-email").css("border-color", "#ff6161")
+            $("#roi-input-email").css("border-color", "#ff6161")
             $(".stip-emailLabelError").remove()
             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                $("#report-email-group").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
             } else {
-                $("#report-email-group").append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
             }
         }
     });
 
     $("#meeting-btn-nav").hide()
     $(window).scroll(function () {
-        if ($(window).scrollTop() > $("#meeting-btn-hero").offset().top && ($(location).attr('href').includes("roi") || $(location).attr('href').includes("video-demo"))) { // meeting btn fixed top
+        if ($(window).scrollTop() > $("#meeting-scroll-detect").offset().top && ($(location).attr('href').includes("roi") || $(location).attr('href').includes("video-demo"))) { // meeting btn fixed top
             $("#meeting-btn-nav").show()
-        } else if ($(window).scrollTop() < $("#meeting-btn-hero").offset().top) {
+        } else if ($(window).scrollTop() < $("#meeting-scroll-detect").offset().top) {
             $("#meeting-btn-nav").hide()
         }
     });

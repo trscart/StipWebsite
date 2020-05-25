@@ -218,6 +218,8 @@ let languages = {
         "report-crm-title": "Che CRM usi?",
         "report-channel-title": "Quali canali utilizzi per il digital caring?",
         "report-name": "Nome e cognome*",
+        "report-email-title": "Questo è solo l’inizio.",
+        "report-email-subtitle": "Lasciaci la tua email e ti mostreremo gli altri benefit per la tua azienda",
         "report-email": "Email aziendale*",
         "report-company": "Azienda*",
     },
@@ -440,6 +442,8 @@ let languages = {
         "report-crm-title": "Che CRM usi?",
         "report-channel-title": "Quali canali utilizzi per il digital caring?",
         "report-name": "Nome e cognome*",
+        "report-email-title": "Questo è solo l’inizio.",
+        "report-email-subtitle": "Lasciaci la tua email e ti mostreremo gli altri benefit per la tua azienda",
         "report-email": "Email aziendale*",
         "report-company": "Azienda*",
     }

@@ -116,7 +116,8 @@
                         <p class="stip-txt lang" key="roi-heroTxt3"></p>
                     </li>
                 </ul>
-                <a href="https://meetings.hubspot.com/fabrizio-aiello" class="d-none d-md-block" id="meeting-btn-hero">
+                <line id="meeting-scroll-detect"></line>
+                <a href="https://meetings.hubspot.com/fabrizio-aiello" class="d-none d-md-block">
                     <button type="submit" key="roi-calendarBtn" class="lang stip-download"
                         id="stip_calendar-btn"></button>
                 </a>
@@ -179,10 +180,16 @@
                             <p class="stip-txt lang" key="roi-resultsTxt2">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="col-12">
-                            <a href="https://meetings.hubspot.com/fabrizio-aiello">
+                            <form id="roi-email-form" class="mt-4">
+                                <div class="form-group" id="report-email-group">
+                                    <h3 class="lang stip-h3 stip-colorTxt" key="report-email-title">Lorem ipsum</h3>
+                                    <p class="lang stip-txt" key="report-email-subtitle">Lorem ipsum</p>
+                                    <input type="email" required class="placeholderLang form-control" key="report-email"
+                                        id="roi-input-email">
+                                </div>
                                 <button type="button" key="roi-calendarBtn" class="lang stip_roi-btn"
-                                    id="alternative_meeting_btn"></button>
-                            </a>
+                                    id="form_meeting_btn" style="outline: none;"></button>
+                            </form>
                             <!-- <button type="submit" key="roi-reportBtn" class="mt-3 lang stip_roi-btn" id="stip_roi-btn"
                                 data-toggle="modal" data-target="#download-report-modal"
                                 style="outline: none;">Submit</button> -->
