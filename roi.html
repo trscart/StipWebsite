@@ -143,8 +143,10 @@
                             <p class="stip-txt lang" key="roi-resultsTxt2">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="col-12">
-                            <button type="button" key="roi-calendarBtn" class="lang stip_roi-btn"
-                                id="alternative_meeting_btn"></button>
+                            <a href="https://meetings.hubspot.com/fabrizio-aiello">
+                                <button type="button" key="roi-calendarBtn" class="lang stip_roi-btn"
+                                    id="alternative_meeting_btn"></button>
+                            </a>
                             <!-- <button type="submit" key="roi-reportBtn" class="mt-3 lang stip_roi-btn" id="stip_roi-btn"
                                 data-toggle="modal" data-target="#download-report-modal"
                                 style="outline: none;">Submit</button> -->
@@ -239,7 +241,7 @@
     <!-- section -->
     <div class="container d-flex stip_roi-container mt-5 mt-md-0">
         <div class="row flex-grow-1">
-            <div class="col-md-5 d-flex flex-column justify-content-center">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h2 class="stip-h1 stip-colorTxt lang" key="roi-heroTitle" id="stip-scrollDetect">
                 </h2>
                 <h3 class="stip-h3 mt-4 lang" key="roi-heroTxt"></h3>
@@ -254,10 +256,16 @@
                         <p class="stip-txt lang" key="roi-heroTxt3"></p>
                     </li>
                 </ul>
-                <button type="button" key="roi-calendarBtn" class="lang stip_roi-btn"
-                    id="alternative_meeting_btn"></button>
+                <a href="https://meetings.hubspot.com/fabrizio-aiello" class="d-none d-md-block">
+                    <button type="submit" key="roi-calendarBtn" class="lang stip-download"
+                        id="stip_calendar-btn"></button>
+                </a>
+                <a href="https://meetings.hubspot.com/fabrizio-aiello" class="text-center d-block d-md-none">
+                    <button type="submit" key="roi-calendarBtn" class="lang stip-download"
+                        id="stip_calendar-btn"></button>
+                </a>
             </div>
-            <div class="col-md-7 d-flex justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
                 <video class="mt-5 mt-md-0" width="100%  " controls>
                     <source src="" type="video/mp4">
                 </video>
