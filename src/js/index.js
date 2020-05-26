@@ -127,7 +127,7 @@ $(document).ready(function () {
     // validate Work email address
     function validateCorporateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        var famousDomain = ["gmail.com", "outlook.com", "yahoo.com", "icloud.com", "libero.it", "me.com", "live.com", "hotmail.com", "live.it", "aol.com", "mail.com"]
+        var famousDomain = ["gmail.com", "outlook.com", "yahoo.com", "icloud.com", "libero.it", "me.com", "live.com", "hotmail.com", "hotmail.it", "live.it", "aol.com", "mail.com"]
         var check
         for (let i = 0; i < famousDomain.length; i++) {
             if (email.includes(famousDomain[i])) {
@@ -162,8 +162,10 @@ $(document).ready(function () {
     let service_cost_nostip
     let service_cost_stip
     let avarege_handle_time_stip
+    $("#roi-input1").val("15")
+    $("#roi-input2").val("10000")
 
-    $("#roi-form").change(function () {
+    $("#roi-form").keyup(function () {
         teamNum = $("#roi-input1").val()
         ticketNum = $("#roi-input2").val()
 
@@ -176,11 +178,18 @@ $(document).ready(function () {
         savingTime = Math.round((avarege_handle_time_nostip * automation_coefficient * ticketNum) / 60)
 
         avarege_handle_time_stip = avarege_handle_time_nostip * (1 - automation_coefficient)
-        service_cost_stip = 0.37 * ticketNum * avarege_handle_time_stip
-        service_cost_nostip = 0.37 * avarege_handle_time_nostip * ticketNum
+        service_cost_stip = 0.4 * ticketNum * avarege_handle_time_stip
+        service_cost_nostip = 0.4 * avarege_handle_time_nostip * ticketNum
         fee_stip = 0.5 * ticketNum
+        if ((fee_stip * 12) <= 1667) {
+            fee_stip = 1667
+        }
+        console.log(service_cost_stip)
         saving_stip = service_cost_nostip - service_cost_stip - fee_stip
         roi = Math.round(saving_stip / fee_stip * 100)
+        if (roi < 0) {
+            roi = 0
+        }
 
         $("#roi-num1").text(savingTime + "h")
         $("#roi-num2").text(roi + "%")
@@ -211,7 +220,7 @@ $(document).ready(function () {
 
     $("#roi-email-form").submit(function (e) {
         e.preventDefault()
-        if (validateCorporateEmail($("#roi-input-email").val())) {
+        if (validateEmail($("#roi-input-email").val())) {
             let data = {
                 "team_num": $('#roi-input1').val(),
                 "tickets_num": $('#roi-input2').val(),
@@ -237,24 +246,24 @@ $(document).ready(function () {
             $("#roi-input-email").css("border-color", "#ff6161")
             $(".stip-emailLabelError").remove()
             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Enter a valid email address</label>")
             } else {
-                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Inserisci un indirizzo email valido</label>")
             }
         }
     });
 
     $("#roi-input-email").keypress(function () {
-        if (validateCorporateEmail($("#roi-input-email").val())) {
+        if (validateEmail($("#roi-input-email").val())) {
             $("#roi-input-email").css("border-color", "#ced4da")
             $(".stip-emailLabelError").remove()
         } else {
             $("#roi-input-email").css("border-color", "#ff6161")
             $(".stip-emailLabelError").remove()
             if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
-                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Enter a valid email address</label>")
             } else {
-                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Inserisci un indirizzo email valido</label>")
             }
         }
     })
@@ -267,27 +276,6 @@ $(document).ready(function () {
             $("#meeting-btn-nav").hide()
         }
     });
-
-    /* const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
-    
-    v = canvg.Canvg.fromString(ctx, '<svg width="600" height="600"><text x="50" y="50">Hello World!</text></svg>');
-
-    $("#report-download-btn").click(function (e) {
-        e.preventDefault()
-        let roi_num1 = $("#roi-num1").text()
-        let roi_num2 = $("#roi-num2").text()
-
-        $("#report-download-form")[0].reset();
-        $('#download-report-modal').modal('hide');
-        console.log(roi_num2)
-
-        var imgData = canvas.toDataURL('image/png');
-        // Generate PDF
-        var doc = new jsPDF('p', 'pt', 'a4');
-        doc.addImage(imgData, 'PNG', 40, 40, 75, 75);
-        doc.save('test.pdf');
-    }); */
 
     // demo page steps and request
     $("#stip-demo-secondForm").hide()

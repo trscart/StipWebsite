@@ -481,6 +481,10 @@ b {
           align-items: center;
 }
 
+.stip_video-container {
+  padding: 0 10em 0 10em;
+}
+
 .stip_roi-btn {
   width: 100%;
   font-weight: 600;
@@ -522,6 +526,9 @@ b {
     margin-top: 0;
   }
   .stip_roi-container {
+    padding: 2em;
+  }
+  .stip_video-container {
     padding: 2em;
   }
   .stip_meeting-container {
