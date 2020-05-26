@@ -234,13 +234,13 @@ $(document).ready(function () {
         e.preventDefault()
         if (validateEmail($("#roi-input-email").val())) {
             let data = {
-                "team_num": $('#roi-input1').val(),
-                "tickets_num": $('#roi-input2').val(),
+                "operators": $('#roi-input1').val(),
+                "monthly_tickets": $('#roi-input2').val(),
                 "email": $('#roi-input-email').val()
             }
 
             // fetch call
-            fetch('', {
+            fetch('https://stipworld.com/api/info_survey/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -248,6 +248,7 @@ $(document).ready(function () {
                 body: JSON.stringify(data)
             })
                 .then(function (res) {
+                    console.log(res)
                     window.location.href = "https://meetings.hubspot.com/fabrizio-aiello";
                 })
                 .catch(function (err) { //if error
@@ -265,7 +266,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#roi-input-email").keypress(function () {
+    $("#roi-input-email").keyup(function () {
         if (validateEmail($("#roi-input-email").val())) {
             $("#roi-input-email").css("border-color", "#ced4da")
             $(".stip-emailLabelError").remove()
