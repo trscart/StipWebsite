@@ -162,12 +162,19 @@ $(document).ready(function () {
     let service_cost_nostip
     let service_cost_stip
     let avarege_handle_time_stip
-    $("#roi-input1").val("15")
-    $("#roi-input2").val("10000")
 
     $("#roi-form").keyup(function () {
-        teamNum = $("#roi-input1").val()
-        ticketNum = $("#roi-input2").val()
+        if ($("#roi-input1").val() == "" && $("#roi-input2").val() == "") {
+            $("#roi-input1").attr("placeholder", "15")
+            $("#roi-input2").attr("placeholder", "10000")
+            teamNum = 15
+            ticketNum = 10000
+        } else {
+            $("#roi-input1").attr("placeholder", "")
+            $("#roi-input2").attr("placeholder", "")
+            teamNum = $("#roi-input1").val()
+            ticketNum = $("#roi-input2").val()
+        }
 
         avarege_handle_time_nostip = teamNum * 140 * 60 / ticketNum
         if (avarege_handle_time_nostip > 8) {
@@ -184,15 +191,20 @@ $(document).ready(function () {
         if ((fee_stip * 12) <= 1667) {
             fee_stip = 1667
         }
-        console.log(service_cost_stip)
         saving_stip = service_cost_nostip - service_cost_stip - fee_stip
         roi = Math.round(saving_stip / fee_stip * 100)
         if (roi < 0) {
             roi = 0
         }
-
-        $("#roi-num1").text(savingTime + "h")
-        $("#roi-num2").text(roi + "%")
+        
+        if(Number.isNaN(roi)){
+            $("#roi-num1").text("0h")
+            $("#roi-num2").text("0%")
+        } else {
+            $("#roi-num1").text(savingTime + "h")
+            $("#roi-num2").text(roi + "%")
+        }
+        
     });
 
     // report modal
