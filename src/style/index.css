@@ -518,10 +518,21 @@ b {
   margin-top: 8em;
 }
 
+@media (max-width: 1200px) {
+  .video-roi {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 @media (max-width: 576px) {
   .stip-heroRoi {
     margin-top: 5em;
     padding: 2em;
+  }
+  .video-roi {
+    width: 100%;
+    height: 100%;
   }
   .stip_meeting-container {
     margin-top: 0;
@@ -601,7 +612,7 @@ b {
     .stip-rect {
         transform-origin: bottom;
         transform-box: fill-box;
-    } 
+    }
 }
 
 .stip-loading {
