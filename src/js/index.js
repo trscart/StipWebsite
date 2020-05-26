@@ -209,7 +209,8 @@ $(document).ready(function () {
         }
     });
 
-    $("#form_meeting_btn").click(function () {
+    $("#roi-email-form").submit(function (e) {
+        e.preventDefault()
         if (validateCorporateEmail($("#roi-input-email").val())) {
             let data = {
                 "team_num": $('#roi-input1').val(),
@@ -242,6 +243,21 @@ $(document).ready(function () {
             }
         }
     });
+
+    $("#roi-input-email").keypress(function () {
+        if (validateCorporateEmail($("#roi-input-email").val())) {
+            $("#roi-input-email").css("border-color", "#ced4da")
+            $(".stip-emailLabelError").remove()
+        } else {
+            $("#roi-input-email").css("border-color", "#ff6161")
+            $(".stip-emailLabelError").remove()
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
+            } else {
+                $("#report-email-group").append("<label class='stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+            }
+        }
+    })
 
     $("#meeting-btn-nav").hide()
     $(window).scroll(function () {
