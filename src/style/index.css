@@ -707,7 +707,7 @@ b {
   font-weight: 600;
   font-size: 16px;
   color: white;
-  background-color: #ff6161;
+  background-color: #399fad;
   border-color: transparent;
   border-radius: 50px;
   padding: 10px 20px;
@@ -783,10 +783,10 @@ b {
 }
 
 .stip-benefitRow {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 8em auto 0 auto;
   border-radius: 2.25rem;
-  padding: 3rem 4rem;
+  padding: 4rem 4rem;
 }
 
 .stip-howWork {

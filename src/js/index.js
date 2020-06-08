@@ -196,15 +196,15 @@ $(document).ready(function () {
         if (roi < 0) {
             roi = 0
         }
-        
-        if(Number.isNaN(roi)){
+
+        if (Number.isNaN(roi)) {
             $("#roi-num1").text("0h")
             $("#roi-num2").text("0%")
         } else {
             $("#roi-num1").text(savingTime + "h")
             $("#roi-num2").text(roi + "%")
         }
-        
+
     });
 
     // report modal
@@ -281,14 +281,16 @@ $(document).ready(function () {
         }
     })
 
-    $("#meeting-btn-nav").hide()
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > $("#meeting-scroll-detect").offset().top && ($(location).attr('href').includes("roi") || $(location).attr('href').includes("video-demo"))) { // meeting btn fixed top
-            $("#meeting-btn-nav").show()
-        } else if ($(window).scrollTop() < $("#meeting-scroll-detect").offset().top) {
-            $("#meeting-btn-nav").hide()
-        }
-    });
+    if ($(location).attr('href').includes("roi") || $(location).attr('href').includes("video-demo")) {
+        $("#meeting-btn-nav").hide()
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $("#meeting-scroll-detect").offset().top) { // meeting btn fixed top
+                $("#meeting-btn-nav").show()
+            } else if ($(window).scrollTop() < $("#meeting-scroll-detect").offset().top) {
+                $("#meeting-btn-nav").hide()
+            }
+        });
+    }
 
     // demo page steps and request
     $("#stip-demo-secondForm").hide()
@@ -497,8 +499,8 @@ $(document).ready(function () {
                 $(".stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
                 $(".stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
             } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home download paper
-                $(".stip-download-btn").attr("download", "The New Essential for Brands in 2019.pdf")
-                $(".stip-download-btn").attr("href", "./src/download/The New Essential for Brands in 2019.pdf")
+                $(".stip-download-btn").attr("download", "60 stats and figures about 2020 Digital Customer Service.pdf")
+                $(".stip-download-btn").attr("href", "./src/download/60 stats and figures about 2020 Digital Customer Service.pdf")
             }
         } else {
             $(".stip-download-btn").removeClass("stip-download")
@@ -563,14 +565,14 @@ $(document).ready(function () {
                     if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog or lead magnet page and language is en-EN
                         $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.</p>")
                     } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is en-EN
-                        $('.modal-header').append("<p>Your free copy of the <b style ='font-weight: 800'>Paper on Digital Customer Service Trends and Insights</b> should automatically download.</p>")
+                        $('.modal-header').append("<p>Your free copy of <b style ='font-weight: 800'>60 Stats and Lessons to boost your Digital Customer Service</b> should automatically download.</p>")
                     }
                 } else {
                     $('#modalPaperTitle').text("Tutto pronto!")
                     if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { //  if location is blog or lead magnet page and language is it-IT
                         $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>60 Stats and Lessons per migliorare il tuo Digital Customer Service</b> si scaricherà automaticamente.</p>")
                     } else if (!$(location).attr('href').includes("blog") && !$(location).attr('href').includes("digital-customer-service-guide")) { // if location is home and language is it-IT
-                        $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>Paper su innovazione e nuovi trend del Digital Customer Service</b> si scaricherà automaticamente.</p>")
+                        $('.modal-header').append("<p>La tua copia gratuita del <b style ='font-weight: 800'>60 Stats and Lessons per migliorare il tuo Digital Customer Service</b> si scaricherà automaticamente.</p>")
                     }
                 }
             })
