@@ -33,7 +33,7 @@ let languages = {
         "footerBlogMore": "Scopri tutti gli articoli",
 
         // home page
-        "heroSubtitle": "L’Intelligenza Artificiale di Stip semplifica il lavoro dei tuoi operatori rendendoli il 200% più efficienti. Stip aiuta gli agenti di customer care a ridurre le tempistiche di risoluzione dei ticket e i costi legati all’assistenza al cliente. Ma non solo: integrandosi con qualsiasi CRM, Stip consente ai tuoi agenti di non moficiare il proprio metodo di lavoro.",
+        "heroSubtitle": "L’Intelligenza Artificiale di Stip semplifica il lavoro dei tuoi operatori rendendoli il 300% più efficienti. Stip aiuta gli agenti di customer care a ridurre le tempistiche di risoluzione dei ticket e i costi legati all’assistenza al cliente. Ma non solo: integrandosi con qualsiasi CRM, Stip consente ai tuoi agenti di non moficiare il proprio metodo di lavoro.",
         "whatTitle": "Offri una Customer Experience indimenticabile",
         "whatSubtitle": "Stip applica la sua AI a 3 livelli per snellire il processo di assistenza ai clienti, rendendo il lavoro dei tuoi operatori più efficiente",
         "whatCaringTitle": "Aiuta i tuoi clienti in difficoltà, ovunque si trovino",
@@ -334,7 +334,7 @@ let languages = {
 
         // flow page
         "flow-heroTitle": "Super-power your CRM with Stip",
-        "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70% while increasing customer service teams efficiency by 200%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a fast, effective and personalized response to your customers.",
+        "flow-heroSubtitle": "Stip uses AI to reduce the workload on your digital customer care agents by 70% while increasing customer service teams efficiency by 300%. We take care of all non-value added tasks so that your staff can focus on what matters most: giving a fast, effective and personalized response to your customers.",
         "flow1-title": "Listen to your customers. Everywhere",
         "flow1-subtitle": "Your customers use a multitude of different channels and expect you to meet them where they are. Receive messages from social networks, email, live chat and messaging platforms, web forums, app stores, you name it. Stip’s powerful AI finds and understands them all.",
         "flow2-title": "Make sense of it all",
