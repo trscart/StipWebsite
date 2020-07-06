@@ -1,6 +1,10 @@
 let languages = {
     "it-IT": {
 
+        // metatag
+        "stip_meta-title": "Stip - Intelligenza Artificiale al servizio del tuo team di Customer Service",
+        "stip_meta-description": "Migliora le performance e le tempistiche di risposta dei tuoi operatori di customer care e accresci la soddisfazione dei tuoi clienti",
+
         // GENERIC
         //nav
         "nav-item1": "Home",
@@ -212,8 +216,8 @@ let languages = {
         "roi-reportSubtitle": "Crea il business case e scopri il tuo ROI",
         "roi-resultsTxt1": "Ore di lavoro risparmiate ogni mese",
         "roi-resultsTxt2": "ROI previsto",
-        "roi-calendarTitle":"Vuoi vedere Stip in azione e capire come integrarlo nella tua azienda?",
-        "roi-calendarTxt":"Fissa un meeting con noi!",
+        "roi-calendarTitle": "Vuoi vedere Stip in azione e capire come integrarlo nella tua azienda?",
+        "roi-calendarTxt": "Fissa un meeting con noi!",
         "roi-calendarBtn": "prenota un meeting",
         "roi-modal-title": "Ancora poche informazioni e il tuo report personalizzato sarà pronto",
         "report-crm-title": "Che CRM usi?",
@@ -225,6 +229,10 @@ let languages = {
         "report-company": "Azienda*",
     },
     "en-EN": {
+
+        // metatag
+        "stip_meta-title": "Stip - AI to boost your Digital Customer Support",
+        "stip_meta-description": "Make your customer service representatives' work easier and faster and increase your customer satisfaction",
 
         // GENERIC
         // nav
@@ -437,8 +445,8 @@ let languages = {
         "roi-reportSubtitle": "Crea il business case e scopri il tuo ROI",
         "roi-resultsTxt1": "Ore di lavoro risparmiate ogni mese",
         "roi-resultsTxt2": "ROI previsto",
-        "roi-calendarTitle":"Vuoi vedere Stip in azione e capire come integrarlo nella tua azienda?",
-        "roi-calendarTxt":"Fissa un meeting con noi!",
+        "roi-calendarTitle": "Vuoi vedere Stip in azione e capire come integrarlo nella tua azienda?",
+        "roi-calendarTxt": "Fissa un meeting con noi!",
         "roi-calendarBtn": "prenota un meeting",
         "roi-modal-title": "Ancora poche informazioni e il tuo report personalizzato sarà pronto",
         "report-crm-title": "Che CRM usi?",
@@ -473,6 +481,14 @@ $(document).ready(function () {
         $(".placeholderLang").each(function () {
             $(this).attr("placeholder", languages["en-EN"][$(this).attr("key")]);
         });
+        $(".meta_title-lang").each(function () {
+            $(this).attr("content", languages["en-EN"][$(this).attr("key")]);
+            console.log("ciao")
+        });
+        $(".meta_description-lang").each(function () {
+            $(this).attr("content", languages["en-EN"][$(this).attr("key")]);
+            console.log($(".meta_description-lang").attr("content"))
+        });
         $(".datacontentLang").each(function () {
             $(this).attr("data-content", languages["en-EN"][$(this).attr("key")]);
         });
@@ -503,6 +519,14 @@ $(document).ready(function () {
         });
         $(".placeholderLang").each(function () {
             $(this).attr("placeholder", languages["it-IT"][$(this).attr("key")]);
+        });
+        $(".meta_title-lang").each(function () {
+            $(this).attr("content", languages["it-IT"][$(this).attr("key")]);
+            console.log("ciao")
+        });
+        $(".meta_description-lang").each(function () {
+            $(this).attr("content", languages["it-IT"][$(this).attr("key")]);
+            console.log($(".meta_description-lang").attr("content"))
         });
         $(".datacontentLang").each(function () {
             $(this).attr("data-content", languages["it-IT"][$(this).attr("key")]);
