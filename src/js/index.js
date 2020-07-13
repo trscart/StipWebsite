@@ -38,6 +38,11 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
+    $('.counter').countUp({
+        'time': 1200,
+        'delay': 10
+    });
+
     //append favicon in every page
     $("head").append('<link rel="icon" href="src/img/favicon.ico">')
 

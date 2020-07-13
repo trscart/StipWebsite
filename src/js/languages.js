@@ -12,7 +12,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contatti",
         // hero
-        "heroTitle": "Migliora il tuo customer service digitale\n con Stip",
+        "heroTitle": "Migliora il tuo customer service digitale con Stip",
         // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
@@ -37,7 +37,7 @@ let languages = {
         "footerBlogMore": "Scopri tutti gli articoli",
 
         // home page
-        "heroSubtitle": "L’Intelligenza Artificiale al servizio del tuo team\n di customer service.",
+        "heroSubtitle": "L’Intelligenza Artificiale al servizio del tuo team di customer service",
         "heroSubtitle2": "La nostra soluzione automatica per l’individuazione e la gestione di tutte le richieste dei tuoi clienti sui canali digitali, consente di migliorare l’efficienza dei tuoi operatori di customer service del 300%, di ridurre i costi legati alle attività di customer support e di diminuire i tempi di gestione di ogni richiesta, aumentando la soddisfazione dei tuoi clienti.",
         "whatTitle": "Offri una Customer Experience indimenticabile",
         "whatSubtitle": "Stip applica la sua AI a 3 livelli per snellire il processo di assistenza ai clienti, rendendo il lavoro dei tuoi operatori più efficiente",
@@ -53,11 +53,11 @@ let languages = {
         "clientTitle": "Creato per grandi aziende",
         "benefitTitle": "I benefici dei nostri clienti",
         "benefitSubtitle": "I risultati ottenuti dai nostri clienti",
-        "benefitPerformanceTitle": "Miglioramento dell’efficienza del team di customer support",
+        "benefitPerformanceTitle": "Miglioramento dell’efficienza del\n team di customer support",
         "benefitPerformanceTxt": "Stip aumenta le performance dei tuoi operatori del 167%",
-        "benefitTimeTitle": "Diminuzione dei tempi di gestione e risoluzione dei ticket",
+        "benefitTimeTitle": "Diminuzione dei tempi di gestione\n e risoluzione dei ticket",
         "benefitTimeTxt": "Stip riduce i tempi di gestione di ogni richiesta dell’80%",
-        "benefitCostTitle": "Riduzione dei costi legati alle attività di customer service",
+        "benefitCostTitle": "Riduzione dei costi legati alle\n attività di customer service",
         "benefitCostTxt": "Stip permette una riduzione dei costi di oltre il 67%",
         "optimizeTitle": "Sfrutta al massimo le potenzialità del tuo customer service digitale",
         "optimizeSubtitle": "Senza modificare i processi interni della tua azienda",
