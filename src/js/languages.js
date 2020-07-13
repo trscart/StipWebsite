@@ -12,7 +12,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contatti",
         // hero
-        "heroTitle": "Stip potenzia il tuo customer service!",
+        "heroTitle": "Migliora il tuo customer service digitale\n con Stip",
         // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
@@ -21,8 +21,8 @@ let languages = {
         "volumeLabel": "Volume annuo",
         "priceLabel": "Tempi di gestione",
         //email section
-        "emailTitle": "Non perderti niente!",
-        "emailSubtitle": "Scrivi qui la tua mail se vuoi maggiori informazioni su Stip o per rimanere aggiornato su tutte le novità tecnologiche della piattaforma",
+        "emailTitle": "Restiamo in contatto",
+        "emailSubtitle": "Scrivi qui la tua mail per rimanere aggiornato su tutte le novità tecnologiche di Stip",
         "emailBtn": "Registrati",
         // footer
         "footerHome": "HOME",
@@ -37,47 +37,52 @@ let languages = {
         "footerBlogMore": "Scopri tutti gli articoli",
 
         // home page
-        "heroSubtitle": "L’Intelligenza Artificiale di Stip semplifica il lavoro dei tuoi operatori rendendoli il 300% più efficienti. Stip aiuta gli agenti di customer care a ridurre le tempistiche di risoluzione dei ticket e i costi legati all’assistenza al cliente. Ma non solo: integrandosi con qualsiasi CRM, Stip consente ai tuoi agenti di non moficiare il proprio metodo di lavoro.",
+        "heroSubtitle": "L’Intelligenza Artificiale al servizio del tuo team\n di customer service.",
+        "heroSubtitle2": "La nostra soluzione automatica per l’individuazione e la gestione di tutte le richieste dei tuoi clienti sui canali digitali, consente di migliorare l’efficienza dei tuoi operatori di customer service del 300%, di ridurre i costi legati alle attività di customer support e di diminuire i tempi di gestione di ogni richiesta, aumentando la soddisfazione dei tuoi clienti.",
         "whatTitle": "Offri una Customer Experience indimenticabile",
         "whatSubtitle": "Stip applica la sua AI a 3 livelli per snellire il processo di assistenza ai clienti, rendendo il lavoro dei tuoi operatori più efficiente",
-        "whatCaringTitle": "Aiuta i tuoi clienti in difficoltà, ovunque si trovino",
+        "whatCaringTitle": "Assisti i tuoi clienti in difficoltà, ovunque si trovino",
         "caringTitle": "Individua le richieste di assistenza dei tuoi clienti",
         "whatCaringTxt": "Stip monitora tutti i contenuti prodotti dagli utenti che abbiano a che fare con la tua azienda, sia all’interno che all’esterno dei canali ufficiali della compagnia. La piattaforma identifica automaticamente i contenuti che non richiedono l’intervento di un operatore, lasciando ai tuoi agenti il compito di concentrarsi unicamente sulle richieste rilevanti",
         "whatTicketTitle": "Raccogli tutte le informazioni necessarie per risolvere la richiesta",
         "ticketTitle": "Ottieni le informazioni necessarie per risolvere ogni richiesta",
         "whatTicketTxt": "Elimina le interazioni multiple fra operatore e cliente. Stip richiede in real-time tutte le informazioni necessarie ai tuoi operatori, permettendogli di evadere ogni richiesta in un’unica interazione",
-        "whatRedirectTitle": "Coinvolgi l’operatore giusto",
+        "whatRedirectTitle": "Invia il ticket al team o all’operatore più adeguato per la gestione della richiesta",
         "redirectTitle": "Crea e indirizza i tuoi ticket",
         "whatRedirectTxt": "Indirizza le segnalazioni all’operatore competente. Stip analizza il contenuto della richiesta, la tipologia di cliente e le informazioni raccolte, crea un ticket e lo assegna in automatico",
         "clientTitle": "Creato per grandi aziende",
-        "benefitTitle": "Benefici dei nostri clienti",
+        "benefitTitle": "I benefici dei nostri clienti",
         "benefitSubtitle": "I risultati ottenuti dai nostri clienti",
-        "benefitPerformanceTitle": "Incremento delle performance lavorative degli operatori",
+        "benefitPerformanceTitle": "Miglioramento dell’efficienza del team di customer support",
         "benefitPerformanceTxt": "Stip aumenta le performance dei tuoi operatori del 167%",
-        "benefitTimeTitle": "Riduzione dei tempi di risoluzione di ogni ticket",
+        "benefitTimeTitle": "Diminuzione dei tempi di gestione e risoluzione dei ticket",
         "benefitTimeTxt": "Stip riduce i tempi di gestione di ogni richiesta dell’80%",
-        "benefitCostTitle": "Diminuzione dei costi legati alle attività di customer care",
+        "benefitCostTitle": "Riduzione dei costi legati alle attività di customer service",
         "benefitCostTxt": "Stip permette una riduzione dei costi di oltre il 67%",
-        "optimizeTitle": "Sfrutta al massimo tutte le funzionalità di Stip",
+        "optimizeTitle": "Sfrutta al massimo le potenzialità del tuo customer service digitale",
+        "optimizeSubtitle": "Senza modificare i processi interni della tua azienda",
         "optimizeSetupTitle": "Set-up semplicissimo",
-        "optimizeSetupTxt": "L’implementazione di Stip richiede soltanto 1 o 2 settimane, senza necessità di coinvolgere il tuo dipartimento IT!",
+        "optimizeSetupTxt": "L’implementazione di Stip richiede soltanto 1 o 2 settimane e avrai bisogno di coinvolgere il tuo dipartimento IT per iniziare ad usarlo",
         "optimizeSocialTitle": "Social Listening",
         "optimizeSocialTxt": "Stip monitora costantemente tutti i canali social e individua tutte le menzioni della tua azienda, sia all’interno che all’esterno delle pagine ufficiali della compagnia",
         "optimizeAiTitle": "Real-time",
         "optimizeAiTxt": "Grazie alla sua AI su 3 livelli, Stip funziona in tempo reale e in maniera completamente automatica, riducendo la necessità di intervento umano",
         "optimizeMetricTitle": "Integrazione con tutti i CRM",
-        "optimizeMetricTxt": "Stip può essere integrato con qualsiasi CRM, proprietario o esterno, e con tutte le tecnologie. Non avrai bisogno di formare di nuovo i tuoi operatori!",
+        "optimizeMetricTxt": "Stip è nativamente integrato con qualsiasi CRM, proprietario o esterno. Non avrai bisogno di formare di nuovo i tuoi operatori o cambiare il loro metodo di lavoro",
         "learnMoreTitle": "Vuoi saperne di più?",
         "learnMoreSubtitle": "Il team di Stip è a tua disposizione per qualsiasi necessità. D’altronde, il customer care è il nostro forte!",
         "downloadPaperTitle": "Vuoi saperne di più sul customer service sui canali digitali?",
-        "downloadPaperSubtitle": "Scarica l’eBook di Stip e scopri come le più importanti aziende utilizzano la nostra tecnologia per offrire ai propri clienti la miglior customer experience.",
+        "downloadPaperSubtitle": "Scarica l’eBook di Stip e scopri 60 statistiche e best practice per gestire al meglio il tuo customer service su tutti i canali digitali.",
         "downloadPaperBtn": "SCARICALO ORA!",
-        "modalPaperTitle": "Vuoi saperne di più sul Digital Customer Service?",
-        "modalPaperSubtitle": "Scarica il Paper di Stip e scopri tutto sull'innovazione dell'assistenza al cliente sui canali digitali!",
+        "modalPaperTitle": "Vuoi saperne di più sul customer service sui canali digitali?",
+        "modalPaperSubtitle": "Scarica l’eBook di Stip e scopri 60 statistiche e best practice per gestire al meglio il tuo customer service su tutti i canali digitali.",
         "modalPaperName": "Nome e cognome*",
         "modalPaperEmail": "Email*",
         "modalPaperCompany": "Nome azienda*",
         "modalPaperBtn": "Scaricalo ora!",
+        "home-platform-Title": "Alla portata di tutti",
+        "home-platform-Subtitle": "Non hai un CRM? Usa la piattaforma di Stip!",
+        "home-platform-txt": "Se la tua azienda non è ancora dotata di un CRM proprietario o esterno, puoi comunque scegliere Stip e servirti della sua semplice e intuitiva integrated ticketing platform.",
 
         // contact page
         "contactTitle": "SIAMO QUI PER TE!",
@@ -307,6 +312,9 @@ let languages = {
         "modalPaperEmail": "Email*",
         "modalPaperCompany": "Company name*",
         "modalPaperBtn": "Download now!",
+        "home-platform-Title": "Don’t have a CRM system? Use our integrated ticketing platform",
+        "home-platform-Subtitle": "",
+        "home-platform-txt": "If you don’t have an existing CRM, you can still use Stip via its user-friendly integrated ticketing platform.",
 
         // contact page
         "contactTitle": "WE ARE HERE FOR YOU!",
@@ -460,6 +468,7 @@ let languages = {
 }
 
 $(".lang").text("");
+$(".lang").text().replace(/(?:\r\n|\r|\n)/g, '<br>')
 $(document).ready(function () {
     let language = null
     if (sessionStorage.getItem('language') == null) {
@@ -483,11 +492,9 @@ $(document).ready(function () {
         });
         $(".meta_title-lang").each(function () {
             $(this).attr("content", languages["en-EN"][$(this).attr("key")]);
-            console.log("ciao")
         });
         $(".meta_description-lang").each(function () {
             $(this).attr("content", languages["en-EN"][$(this).attr("key")]);
-            console.log($(".meta_description-lang").attr("content"))
         });
         $(".datacontentLang").each(function () {
             $(this).attr("data-content", languages["en-EN"][$(this).attr("key")]);
@@ -522,11 +529,9 @@ $(document).ready(function () {
         });
         $(".meta_title-lang").each(function () {
             $(this).attr("content", languages["it-IT"][$(this).attr("key")]);
-            console.log("ciao")
         });
         $(".meta_description-lang").each(function () {
             $(this).attr("content", languages["it-IT"][$(this).attr("key")]);
-            console.log($(".meta_description-lang").attr("content"))
         });
         $(".datacontentLang").each(function () {
             $(this).attr("data-content", languages["it-IT"][$(this).attr("key")]);
@@ -550,7 +555,7 @@ $(document).ready(function () {
             .catch(function (err) { //if error
                 //console.log(err)
             })
-        $("a[title='platform']").hide()
+        //$("a[title='platform']").hide()
     }
 
     // change text language on click
