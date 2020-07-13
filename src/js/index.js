@@ -38,10 +38,12 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
-    $('.counter').countUp({
-        'time': 1200,
-        'delay': 10
-    });
+    if ($(location).attr('href').includes("index") || $(location).attr('href') == "https://www.stip.io/" || $(location).attr('href') == "https://www.stip.io" || $(location).attr('href') == "http://127.0.0.1:5500/") {
+        $('.counter').countUp({
+            'time': 1200,
+            'delay': 10
+        });
+    }
 
     //append favicon in every page
     $("head").append('<link rel="icon" href="src/img/favicon.ico">')

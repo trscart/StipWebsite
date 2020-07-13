@@ -12,7 +12,7 @@ let languages = {
         "nav-item3": "Blog",
         "nav-item4": "Contatti",
         // hero
-        "heroTitle": "Migliora il tuo customer service digitale con Stip",
+        "heroTitle": "Migliora il tuo digital customer service con Stip",
         // btn
         "demoBtn": "RICHIEDI DEMO",
         "contactBtn": "CONTATTACI",
@@ -39,7 +39,7 @@ let languages = {
         // home page
         "heroSubtitle": "L’Intelligenza Artificiale al servizio del tuo team di customer service",
         "heroSubtitle2": "La nostra soluzione automatica per l’individuazione e la gestione di tutte le richieste dei tuoi clienti sui canali digitali, consente di migliorare l’efficienza dei tuoi operatori di customer service del 300%, di ridurre i costi legati alle attività di customer support e di diminuire i tempi di gestione di ogni richiesta, aumentando la soddisfazione dei tuoi clienti.",
-        "whatTitle": "Offri una Customer Experience indimenticabile",
+        "whatTitle": "Cosa puoi fare con Stip",
         "whatSubtitle": "Stip applica la sua AI a 3 livelli per snellire il processo di assistenza ai clienti, rendendo il lavoro dei tuoi operatori più efficiente",
         "whatCaringTitle": "Assisti i tuoi clienti in difficoltà, ovunque si trovino",
         "caringTitle": "Individua le richieste di assistenza dei tuoi clienti",
@@ -59,10 +59,10 @@ let languages = {
         "benefitTimeTxt": "Stip riduce i tempi di gestione di ogni richiesta dell’80%",
         "benefitCostTitle": "Riduzione dei costi legati alle\n attività di customer service",
         "benefitCostTxt": "Stip permette una riduzione dei costi di oltre il 67%",
-        "optimizeTitle": "Sfrutta al massimo le potenzialità del tuo customer service digitale",
+        "optimizeTitle": "Sfrutta al massimo le potenzialità del tuo digital customer service",
         "optimizeSubtitle": "Senza modificare i processi interni della tua azienda",
-        "optimizeSetupTitle": "Set-up semplicissimo",
-        "optimizeSetupTxt": "L’implementazione di Stip richiede soltanto 1 o 2 settimane e avrai bisogno di coinvolgere il tuo dipartimento IT per iniziare ad usarlo",
+        "optimizeSetupTitle": "Set-up in un click",
+        "optimizeSetupTxt": "L’implementazione di Stip richiede soltanto 1 o 2 settimane E NON avrai bisogno di coinvolgere il tuo dipartimento IT per iniziare ad usarlo",
         "optimizeSocialTitle": "Social Listening",
         "optimizeSocialTxt": "Stip monitora costantemente tutti i canali social e individua tutte le menzioni della tua azienda, sia all’interno che all’esterno delle pagine ufficiali della compagnia",
         "optimizeAiTitle": "Real-time",
@@ -83,6 +83,7 @@ let languages = {
         "home-platform-Title": "Alla portata di tutti",
         "home-platform-Subtitle": "Non hai un CRM? Usa la piattaforma di Stip!",
         "home-platform-txt": "Se la tua azienda non è ancora dotata di un CRM proprietario o esterno, puoi comunque scegliere Stip e servirti della sua semplice e intuitiva integrated ticketing platform.",
+        "home-roi-btn": "Calcola il tuo ROI",
 
         // contact page
         "contactTitle": "SIAMO QUI PER TE!",
@@ -133,7 +134,7 @@ let languages = {
         "flow5-subtitle": "I report di Stip ti permettono di tenere traccia di tutti i tipi di richieste: issue trends, SLAs e waiting time, produttività degli operatori, painpoint, bottleneck e molto altro.",
         "ourplatform-title": "Non hai un CRM? Usa la integrating ticketing platform di Stip!",
         "ourplatform-subtitle": "Se non hai ancora un CRM puoi comunque scegliere Stip e servirti della sua semplice e intuitiva integrated ticketing platform. Contattaci per maggiori informazioni!",
-        "flow-ctaTitle": "Migliora oggi il tuo customer service digitale!",
+        "flow-ctaTitle": "Migliora oggi il tuo digital customer service!",
 
         // support
         "supportEmail": "Email*",
@@ -315,6 +316,7 @@ let languages = {
         "home-platform-Title": "Don’t have a CRM system? Use our integrated ticketing platform",
         "home-platform-Subtitle": "",
         "home-platform-txt": "If you don’t have an existing CRM, you can still use Stip via its user-friendly integrated ticketing platform.",
+        "home-roi-btn": "Calculate your ROI",
 
         // contact page
         "contactTitle": "WE ARE HERE FOR YOU!",

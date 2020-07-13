@@ -718,6 +718,31 @@ b {
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
 }
 
+.stip-demoRequest:focus {
+  outline: none;
+}
+
+.stip-nav-demo {
+  height: 2.5em;
+  width: 10em;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background-color: #399fad;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+
+.stip-nav-demo:hover {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+}
+
+.stip-nav-demo:focus {
+  outline: none;
+}
+
 .stip-contactUs {
   height: 3em;
   width: 12em;
@@ -759,7 +784,7 @@ b {
 .stip-sectionTitle {
   padding: 0 25%;
   text-align: center;
-  margin-top: 12em;
+  margin-top: 5em;
 }
 
 .stip-sectionBody {
@@ -784,7 +809,7 @@ b {
 
 .stip-benefitRow {
   max-width: 1200px;
-  margin: 8em auto 0 auto;
+  margin: 5em auto 0 auto;
   border-radius: 2.25rem;
   padding: 4rem 4rem;
 }
@@ -1223,7 +1248,6 @@ input[type=range].price:focus::-ms-fill-upper {
   }
   .stip-sectionTitle {
     padding: 0 5% !important;
-    margin-top: 8em;
   }
   .stip-sectionBody {
     margin: 3em 0 0 0 !important;
@@ -1346,7 +1370,6 @@ input[type=range].price:focus::-ms-fill-upper {
   }
   .stip-sectionTitle {
     padding: 0 10% !important;
-    margin-top: 10em !important;
   }
   .stip-sectionBody {
     margin: 3em 5% 0 5% !important;
@@ -1370,7 +1393,7 @@ input[type=range].price:focus::-ms-fill-upper {
     margin: 3em 5% 0 5%;
   }
   .stip-benefitRow {
-    margin: 8em 15% 0 15%;
+    margin: 5em 15% 0 15%;
     padding: 2rem 1rem;
   }
 }
