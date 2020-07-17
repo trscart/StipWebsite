@@ -11,6 +11,7 @@ let languages = {
         "nav-item2": "Piattaforma",
         "nav-item3": "Blog",
         "nav-item4": "Contatti",
+        "nav-demo": "DEMO",
         // hero
         "heroTitle": "Migliora il tuo digital customer service con Stip",
         // btn
@@ -62,7 +63,7 @@ let languages = {
         "optimizeTitle": "Sfrutta al massimo le potenzialità del tuo digital customer service",
         "optimizeSubtitle": "Senza modificare i processi interni della tua azienda",
         "optimizeSetupTitle": "Set-up in un click",
-        "optimizeSetupTxt": "L’implementazione di Stip richiede soltanto 1 o 2 settimane E NON avrai bisogno di coinvolgere il tuo dipartimento IT per iniziare ad usarlo",
+        "optimizeSetupTxt": "L'implementazione di Stip è semplice e veloce: richiede 1 o 2 settimane e non richiede il coinvolgimento del tuo dipartimento IT",
         "optimizeSocialTitle": "Social Listening",
         "optimizeSocialTxt": "Stip monitora costantemente tutti i canali social e individua tutte le menzioni della tua azienda, sia all’interno che all’esterno delle pagine ufficiali della compagnia",
         "optimizeAiTitle": "Real-time",
@@ -81,9 +82,9 @@ let languages = {
         "modalPaperCompany": "Nome azienda*",
         "modalPaperBtn": "Scaricalo ora!",
         "home-platform-Title": "Alla portata di tutti",
-        "home-platform-Subtitle": "Non hai un CRM? Usa la piattaforma di Stip!",
-        "home-platform-txt": "Se la tua azienda non è ancora dotata di un CRM proprietario o esterno, puoi comunque scegliere Stip e servirti della sua semplice e intuitiva integrated ticketing platform.",
-        "home-roi-btn": "Calcola il tuo ROI",
+        "home-platform-txt": "Non hai un CRM? Puoi comunque scegliere Stip e servirti della sua semplice e intuitiva integrated ticketing platform",
+        "home-roi-btn": "CALCOLA IL TUO ROI",
+        "learn-more": "Scopri di più",
 
         // contact page
         "contactTitle": "SIAMO QUI PER TE!",
@@ -125,9 +126,9 @@ let languages = {
         "flow2-title": "Content Moderation automatica",
         "flow2-subtitle": "Stip è il tuo agente smart per tutte le attività di Content Moderation. L’IA comprende in automatico e in tempo reale se un contenuto è rilevante per la tua azienda e ne definisce la priorità di risoluzione. Può anche nascondere tutto ciò che non vuoi sia visibile sulle tue pagine ufficiali.",
         "flow3-title": "Raccogli tutte le informazioni che ti servono",
-        "flow3-subtitle": "Dopo aver risposto in automatico e in tempo reale ai contenuti pubblici rilevanti per la tua azienda, Stip richieede al cliente di spostare la conversazione in privato, nel rispetto della privacy e per una migliore risoluzione della problematica. L’IA categorizza ogni contenuto e interagisce con il cliente, richiedendo tutte le informazioni di cui i tuoi agenti hanno bisogno per risolvere al meglio ogni richiesta.",
+        "flow3-subtitle": "Dopo aver risposto in automatico e in tempo reale ai contenuti pubblici rilevanti per la tua azienda, Stip richiede al cliente di spostare la conversazione in privato, nel rispetto della privacy e per una migliore risoluzione della problematica. L’IA categorizza ogni contenuto e interagisce con il cliente, richiedendo tutte le informazioni di cui i tuoi agenti hanno bisogno per risolvere al meglio ogni richiesta.",
         "flow4-title": "Invia il ticket all’operatore giusto",
-        "flow4-subtitle": "L’IA di Stip crea automaticamente il ticket e gli assegna una categoria, includendo tutte le informazioni rilevanti raccolte in precedenza. Sempre in automatico, Stip invia il tickett al team o all’operatore incaricato della sua risoluzione. L’invio e la gestione del ticket possono avvenire all’interno del tuo CRM, rispettando i processi e le regole aziendali.",
+        "flow4-subtitle": "L’IA di Stip crea automaticamente il ticket e gli assegna una categoria, includendo tutte le informazioni rilevanti raccolte in precedenza. Sempre in automatico, Stip invia il ticket al team o all’operatore incaricato della sua risoluzione. L’invio e la gestione del ticket possono avvenire all’interno del tuo CRM, rispettando i processi e le regole aziendali.",
         "flow-crmTitle": "Continua ad usare il tuo CRM",
         "flow-crmSubtitle": "Stip si integra con tutti i CRM – proprietari o esterni – senza necessità di coinvolgere il tuo dipartimento IT per l’integrazione. Con Stip, il tuo team di customer service non dovrà modificare il proprio metodo di lavoro, imparare ad utilizzare un’altra piattaforma o rivoluzionare i processi interni di gestione delle richieste.",
         "flow5-title": "Usa Stip Analytics e migliora il tuo customer service",
@@ -246,6 +247,7 @@ let languages = {
         "nav-item2": "Platform",
         "nav-item3": "Blog",
         "nav-item4": "Contacts",
+        "nav-demo": "DEMO",
         // hero
         "heroTitle": "Boost your social media and digital customer care performance with Stip",
         // btn
@@ -314,9 +316,9 @@ let languages = {
         "modalPaperCompany": "Company name*",
         "modalPaperBtn": "Download now!",
         "home-platform-Title": "Don’t have a CRM system? Use our integrated ticketing platform",
-        "home-platform-Subtitle": "",
         "home-platform-txt": "If you don’t have an existing CRM, you can still use Stip via its user-friendly integrated ticketing platform.",
-        "home-roi-btn": "Calculate your ROI",
+        "home-roi-btn": "CALCULATE YOUR ROI",
+        "learn-more": "Read more",
 
         // contact page
         "contactTitle": "WE ARE HERE FOR YOU!",

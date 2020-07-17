@@ -722,16 +722,35 @@ b {
   outline: none;
 }
 
-.stip-nav-demo {
-  height: 2.5em;
-  width: 10em;
+.stip-roiRequest {
+  height: 3em;
   font-weight: 600;
   font-size: 16px;
   color: white;
   background-color: #399fad;
   border-color: transparent;
   border-radius: 50px;
-  padding: 5px 10px;
+  padding: 10px 20px;
+}
+
+.stip-roiRequest:hover {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) !important;
+}
+
+.stip-roiRequest:focus {
+  outline: none;
+}
+
+.stip-nav-demo {
+  height: 2.5em;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background-color: #399fad;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 5px 20px;
 }
 
 .stip-nav-demo:hover {
