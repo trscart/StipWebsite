@@ -63,7 +63,7 @@ let languages = {
         "optimizeTitle": "Sfrutta al massimo le potenzialità del tuo digital customer service",
         "optimizeSubtitle": "Senza modificare i processi interni della tua azienda",
         "optimizeSetupTitle": "Set-up in un click",
-        "optimizeSetupTxt": "L'implementazione di Stip è semplice e veloce: richiede 1 o 2 settimane e non richiede il coinvolgimento del tuo dipartimento IT",
+        "optimizeSetupTxt": "L'implementazione di Stip è semplice e veloce: richiede 1 o 2 settimane e non dovrai coinvolgere il tuo dipartimento IT",
         "optimizeSocialTitle": "Social Listening",
         "optimizeSocialTxt": "Stip monitora costantemente tutti i canali social e individua tutte le menzioni della tua azienda, sia all’interno che all’esterno delle pagine ufficiali della compagnia",
         "optimizeAiTitle": "Real-time",
