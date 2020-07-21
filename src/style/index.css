@@ -1289,6 +1289,7 @@ input[type=range].price:focus::-ms-fill-upper {
     margin: 3em 0 0 0 !important;
   }
   .stip-heroContainer {
+    height: 130vh;
     background-size: 80%;
   }
   .stip-heroContainer .stip-h1 {
