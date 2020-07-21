@@ -16,7 +16,7 @@ let languages = {
         "heroTitle": "Migliora il tuo digital customer service con Stip",
         // btn
         "demoBtn": "RICHIEDI DEMO",
-        "contactBtn": "CONTATTACI",
+        "contactBtn": "GUARDA VIDEO",
         //roi section
         "quoteBtn": "Richiedi preventivo",
         "volumeLabel": "Volume annuo",
@@ -252,7 +252,7 @@ let languages = {
         "heroTitle": "Boost your social media and digital customer care performance with Stip",
         // btn
         "demoBtn": "DEMO REQUEST",
-        "contactBtn": "CONTACT US",
+        "contactBtn": "WATCH VIDEO",
         //roi section
         "quoteBtn": "Quote request",
         "volumeLabel": "Lorem Ipsum",

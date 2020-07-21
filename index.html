@@ -106,7 +106,7 @@
                         title="contacts">CONTATTI</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                    <a href="./demo.html" class="ml-0 ml-md-2" title="demo">
+                    <a href="https://meetings.hubspot.com/fabrizio-aiello" class="ml-0 ml-md-2" title="demo">
                         <button class="stip-nav-demo lang" key="nav-demo" type="button">RICHIEDI DEMO</button>
                     </a>
                 </li>
@@ -140,13 +140,11 @@
                     operatori, automatizzando tutte le attività di customer care.
                 </p>
                 <div class="stip-btnHero mt-2">
-                    <a href="./demo.html" title="demo">
-                        <button class="stip-demoRequest lang" key="demoBtn" type="button">RICHIEDI DEMO</button>
+                    <a href="https://meetings.hubspot.com/fabrizio-aiello" target="_blank" title="demo">
+                        <button class="stip-demoRequest lang" key="demoBtn" type="button"></button>
                     </a>
-                    <a href="./contacts.html" title="contacts">
-                        <button class="stip-contactUsHero lang" key="contactBtn" type="button" data-toggle="modal"
-                            data-target="#contactModal">CONTATTACI</button>
-                    </a>
+                    <button class="stip-contactUsHero lang" key="contactBtn" type="button" data-toggle="modal"
+                        data-target="#videoModal"></button>
                 </div>
             </div>
         </div>
@@ -172,8 +170,8 @@
                     estremamente versatile e ti permette di avere la tua AI
                     personalizzata in pochissimo tempo
                 </p>
-                <a href="./platform.html#crm-section">
-                    <p class="stip-txt lang" key="learn-more">Scopri di più</p>
+                <a href="./platform.html#crm-section" class="stip_learn-more">
+                    <p class="stip-label lang" key="learn-more">Scopri di più</p>
                 </a>
             </div>
             <div class="col-md-4 d-flex flex-column align-items-center px-5 mb-5" data-aos="fade">
@@ -185,8 +183,8 @@
                 <p class="stip-txt lang" key="optimizeMetricTxt">Stip fornisce una piattaforma per gestire il tuo CRM,
                     prevede report e analisi sulla base di un set dettagliato
                     di KPIs e può integrarsi con qualsiasi CRM aziendale</p>
-                <a href="./platform.html#crm-section">
-                    <p class="stip-txt lang" key="learn-more">Scopri di più</p>
+                <a href="./platform.html#crm-section" class="stip_learn-more">
+                    <p class="stip-label lang" key="learn-more">Scopri di più</p>
                 </a>
             </div>
             <div class="col-md-4 d-flex flex-column align-items-center px-5 mb-5" data-aos="fade">
@@ -196,8 +194,8 @@
                 <h2 class="stip-h3 lang" key="home-platform-Title"></h2>
                 <p class="stip-txt lang" key="home-platform-txt">
                 </p>
-                <a href="./platform.html#stip-crm-section">
-                    <p class="stip-txt lang" key="learn-more">Scopri di più</p>
+                <a href="./platform.html#stip-crm-section" class="stip_learn-more">
+                    <p class="stip-label lang" key="learn-more">Scopri di più</p>
                 </a>
             </div>
         </div>
@@ -249,8 +247,8 @@
                     <img alt="caring illustration" src="src/img/caringIllustration.png" style="max-width: 100%;">
                 </div>
                 <h2 class="stip-h3 lang" key="whatCaringTitle">Assisti i tuoi clienti in difficoltà</h2>
-                <a href="./platform.html#caring-section">
-                    <p class="stip-txt lang" key="learn-more">Scopri di più</p>
+                <a href="./platform.html#caring-section" class="stip_learn-more">
+                    <p class="stip-label lang" key="learn-more">Scopri di più</p>
                 </a>
             </div>
             <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade">
@@ -259,8 +257,8 @@
                 </div>
                 <h2 class="stip-h3 lang" key="whatTicketTitle">Fornisci ai tuoi operatori le informazioni necessarie
                 </h2>
-                <a href="./platform.html#caring-section">
-                    <p class="stip-txt lang" key="learn-more">Scopri di più</p>
+                <a href="./platform.html#caring-section" class="stip_learn-more">
+                    <p class="stip-label lang" key="learn-more">Scopri di più</p>
                 </a>
             </div>
             <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade">
@@ -268,8 +266,8 @@
                     <img alt="redirect illustration" src="src/img/redirectIllustration.png" style="max-width: 100%;">
                 </div>
                 <h2 class="stip-h3 lang" key="whatRedirectTitle">Scegli sempre l’agente giusto</h2>
-                <a href="./platform.html#redirect-section">
-                    <p class="stip-txt lang" key="learn-more">Scopri di più</p>
+                <a href="./platform.html#redirect-section" class="stip_learn-more">
+                    <p class="stip-label lang" key="learn-more">Scopri di più</p>
                 </a>
             </div>
         </div>
@@ -442,11 +440,10 @@
                     Stip
                     o per metterti in contatto con noi.
                 </h2>
-                <form class="input-group mt-4" id="stip-email-form">
-                    <input type="email" name="email" class="form-control stip-txt" id="stip-email-newsletter"
-                        placeholder="Work email address" aria-label="Work email address"
-                        aria-describedby="button-addon2" required>
+                <form class="input-group mt-4 flex-column" id="stip-email-form">
                     <div class="input-group-append">
+                        <input type="email" name="email" class="form-control stip-txt placeholderLang" key="demoEmail" id="stip-email-newsletter"
+                        aria-describedby="button-addon2" required>
                         <button class="btn btn-outline-secondary stip-emailSectionBtn py-0 lang" key="emailBtn"
                             type="submit" id="button-addon2">Registrati</button>
                     </div>
@@ -489,15 +486,11 @@
                     necessità. D’altronde, il customer care è il nostro forte!
                 </h2>
                 <div class="mt-4 stip-footerBtn">
-                    <a href="./demo.html" class="d-inline" title="demo">
-                        <button class="d-inline-block stip-demoRequest lang" key="demoBtn" type="button">RICHIEDI
-                            DEMO</button>
+                    <a href="https://meetings.hubspot.com/fabrizio-aiello" class="d-inline" title="demo">
+                        <button class="d-inline-block stip-demoRequest lang" key="demoBtn" type="button">RICHIEDI DEMO</button>
                     </a>
-                    <a class="ml-0 ml-md-3
-                     d-inline-block" href="./contacts.html" title="contacts">
-                        <button class="m-0 stip-contactUsHero lang" key="contactBtn" type="button" data-toggle="modal"
-                            data-target="#contactModal">CONTATTACI</button>
-                    </a>
+                    <button class="ml-0 ml-md-3 stip-contactUsHero lang" key="contactBtn" type="button" data-toggle="modal"
+                        data-target="#videoModal"></button>
                 </div>
             </div>
         </div>
@@ -547,6 +540,23 @@
         </div>
     </footer>
     <!-- end footer -->
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="max-width: none;">
+            <div class="modal-content bg-transparent border-0" style="width: auto;">
+                <div class="modal-body d-flex flex-column">
+                    <button type="button" class="close align-self-end mb-3" data-dismiss="modal" aria-label="Close" style="opacity: 1;">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                    <iframe class="video-roi" width="740" height="416"
+                        src="https://www.loom.com/embed/add30d22c7fc40d5a8de83f6f6d3fda2" frameborder="0"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Video Modal -->
 
     <!-- thanks popup section -->
     <script id="stip-thanks" type="text/x-handlebars-template">

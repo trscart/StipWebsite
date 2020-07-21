@@ -578,6 +578,11 @@ b {
   font-weight: 300;
 }
 
+.stip-label {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .stip-colorTxt {
   color: #399fad;
 }
@@ -780,6 +785,10 @@ b {
   color: #ff6161;
 }
 
+.stip-contactUs:focus {
+  outline: none;
+}
+
 .stip-contactUsHero {
   height: 3em;
   width: 12em;
@@ -800,6 +809,10 @@ b {
   color: #ff6161;
 }
 
+.stip-contactUsHero:focus {
+  outline: none;
+}
+
 .stip-sectionTitle {
   padding: 0 25%;
   text-align: center;
@@ -808,6 +821,10 @@ b {
 
 .stip-sectionBody {
   margin: 3em 10% 0 10%;
+}
+
+.stip_learn-more {
+  text-decoration: underline;
 }
 
 .stip-titleNum {
