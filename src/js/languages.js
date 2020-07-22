@@ -48,7 +48,7 @@ let languages = {
         "whatTicketTitle": "Raccogli tutte le informazioni necessarie per risolvere la richiesta",
         "ticketTitle": "Ottieni le informazioni necessarie per risolvere ogni richiesta",
         "whatTicketTxt": "Elimina le interazioni multiple fra operatore e cliente. Stip richiede in real-time tutte le informazioni necessarie ai tuoi operatori, permettendogli di evadere ogni richiesta in un’unica interazione",
-        "whatRedirectTitle": "Invia il ticket al team o all’operatore più adeguato per la gestione della richiesta",
+        "whatRedirectTitle": "Invia il ticket al team o all'agente più adeguato per gestire la richiesta",
         "redirectTitle": "Crea e indirizza i tuoi ticket",
         "whatRedirectTxt": "Indirizza le segnalazioni all’operatore competente. Stip analizza il contenuto della richiesta, la tipologia di cliente e le informazioni raccolte, crea un ticket e lo assegna in automatico",
         "clientTitle": "Creato per grandi aziende",
@@ -78,7 +78,7 @@ let languages = {
         "modalPaperTitle": "Vuoi saperne di più sul customer service sui canali digitali?",
         "modalPaperSubtitle": "Scarica l’eBook di Stip e scopri 60 statistiche e best practice per gestire al meglio il tuo customer service su tutti i canali digitali.",
         "modalPaperName": "Nome e cognome*",
-        "modalPaperEmail": "Email*",
+        "modalPaperEmail": "Email aziendale*",
         "modalPaperCompany": "Nome azienda*",
         "modalPaperBtn": "Scaricalo ora!",
         "home-platform-Title": "Alla portata di tutti",
@@ -114,7 +114,7 @@ let languages = {
         "modal60Title": "Dicci di più!",
         "modal60Subtitle": "Scarica le 60 statistiche e scopri tutto quello che c'è da sapere sul digital customer care!",
         "modal60Name": "Nome e cognome*",
-        "modal60Email": "Email*",
+        "modal60Email": "Email aziendale*",
         "modal60Company": "Nome azienda*",
         "modal60Btn": "Scaricalo ora!",
 
@@ -138,7 +138,7 @@ let languages = {
         "flow-ctaTitle": "Migliora oggi il tuo digital customer service!",
 
         // support
-        "supportEmail": "Email*",
+        "supportEmail": "Email aziendale*",
         "supportName": "Nome*",
         "supportDomain": "Dominio*",
         "supportSection": "Sezione*",
@@ -182,7 +182,7 @@ let languages = {
         "deck-whyTxt4": "Marketing integration and upselling increasing falls on shoulders of customer service",
         "deck-forTitle": "For Whom is Stip For?",
         "deck-forTxt": "Customer Service Organizations at B2C Brands",
-        "deckEmail": "Email*",
+        "deckEmail": "Email aziendale*",
         "deckBtn": "Download Stip Deck",
 
         // lead magnet page
@@ -312,7 +312,7 @@ let languages = {
         "modalPaperTitle": "Tell us more",
         "modalPaperSubtitle": "Get the paper and discover all digital customer care insights and trends!",
         "modalPaperName": "Name and Surname*",
-        "modalPaperEmail": "Email*",
+        "modalPaperEmail": "Corporate email*",
         "modalPaperCompany": "Company name*",
         "modalPaperBtn": "Download now!",
         "home-platform-Title": "Don’t have a CRM system? Use our integrated ticketing platform",
@@ -328,7 +328,7 @@ let languages = {
         "contactFormTitle": "Get in touch with Stip!",
         "contactFormSend": "Send",
         "contactName": "Full name*",
-        "contactEmail": "Email*",
+        "contactEmail": "Corporate email*",
         "contactPhone": "Phone",
         "contactMessage": "Message",
 
@@ -348,7 +348,7 @@ let languages = {
         "modal60Title": "Tell us more!",
         "modal60Subtitle": "Get the 60 stats and discover all digital customer care insights and trends!",
         "modal60Name": "Name and Surname*",
-        "modal60Email": "Email*",
+        "modal60Email": "Corporate email*",
         "modal60Company": "Company name*",
         "modal60Btn": "Download now!",
 
@@ -372,7 +372,7 @@ let languages = {
         "flow-ctaTitle": "Boost your social customer service!",
 
         // support
-        "supportEmail": "Email*",
+        "supportEmail": "Corporate email*",
         "supportName": "Name*",
         "supportDomain": "Domain*",
         "supportSection": "Section*",
@@ -394,7 +394,7 @@ let languages = {
         "demoBtn3": "Send",
         "demoFName": "First name*",
         "demoLName": "Last name*",
-        "demoEmail": "Work email address*",
+        "demoEmail": "Corporate email*",
         "demoPhone": "Phone number",
         "demoCompany": "Company name*",
         "demoContentNum": "How many users-produced contents does your company receive on a monthly basis?",
@@ -416,7 +416,7 @@ let languages = {
         "deck-whyTxt4": "Marketing integration and upselling increasing falls on shoulders of customer service",
         "deck-forTitle": "For Whom is Stip For?",
         "deck-forTxt": "Customer Service Organizations at B2C Brands",
-        "deckEmail": "Email*",
+        "deckEmail": "Corporate email*",
         "deckBtn": "Download Stip Deck",
 
         // lead magnet page

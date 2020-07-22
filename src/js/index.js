@@ -239,7 +239,7 @@ $(document).ready(function () {
 
     $("#roi-email-form").submit(function (e) {
         e.preventDefault()
-        if (validateEmail($("#roi-input-email").val())) {
+        if (validateCorporateEmail($("#roi-input-email").val())) {
             let data = {
                 "operators": $('#roi-input1').val(),
                 "monthly_tickets": $('#roi-input2').val(),
@@ -274,7 +274,7 @@ $(document).ready(function () {
     });
 
     $("#roi-input-email").keyup(function () {
-        if (validateEmail($("#roi-input-email").val())) {
+        if (validateCorporateEmail($("#roi-input-email").val())) {
             $("#roi-input-email").css("border-color", "#ced4da")
             $(".stip-emailLabelError").remove()
         } else {
@@ -499,7 +499,7 @@ $(document).ready(function () {
 
     // validate email and company name, then enable the "download btn" to download 60 stats or paper
     $("form :input").on('keyup touchend', function () {
-        if (validateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
+        if (validateCorporateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
             $(".stip-download-btn").removeClass("stip-downloadDisable")
             $(".stip-download-btn").addClass("stip-download")
             if ($(location).attr('href').includes("blog") || $(location).attr('href').includes("digital-customer-service-guide")) { // if location is blog, download paper
@@ -838,7 +838,7 @@ $(document).ready(function () {
 
     // validate email and company name, then enable the "download btn" to download 60 stats or paper
     $("#stip-deck-form :input").on('keyup touchend', function () {
-        if (validateEmail($('#stip-email-deck').val())) {
+        if (validateCorporateEmail($('#stip-email-deck').val())) {
             $("#stip-deck-send").removeClass("stip-downloadDisable")
             $("#stip-deck-send").addClass("stip-download")
             $("#stip-deck-send").attr("download", "stip_pitch_deck.pdf")
@@ -853,7 +853,7 @@ $(document).ready(function () {
 
     // send data and then download deck
     $("#stip-deck-send").click((function (e) {
-        e.preventDefault(); if (validateEmail($("#stip-email-deck").val())) {
+        e.preventDefault(); if (validateCorporateEmail($("#stip-email-deck").val())) {
             let data = { email: $("#stip-email-deck").val(), company_name: "Stip", page: "deck" }; $("#stip-deck-send").text(""), $("#stip-deck-send").append("<img style='width: 2em' src='src/img/loading.gif'>"), $.ajax({
                 url: "https://stipworld.com/api/papers/", data: data, type: "POST", success: function (res) {
                     var element = document.createElement('a');
