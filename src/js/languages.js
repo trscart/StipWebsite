@@ -39,7 +39,7 @@ let languages = {
 
         // home page
         "heroSubtitle": "L’Intelligenza Artificiale al servizio del tuo team di customer service",
-        "heroSubtitle2": "La nostra soluzione automatica per l’individuazione e la gestione di tutte le richieste dei tuoi clienti sui canali digitali, consente di migliorare l’efficienza dei tuoi operatori di customer service del 300%, di ridurre i costi legati alle attività di customer support e di diminuire i tempi di gestione di ogni richiesta, aumentando la soddisfazione dei tuoi clienti.",
+        "heroSubtitle2": "La nostra soluzione automatica per l’individuazione e la gestione di tutte le richieste dei tuoi clienti sui canali digitali, consente di migliorare l’efficienza dei tuoi operatori di customer service del 300%, ridurre i costi legati alle attività di customer support e diminuire i tempi di gestione di ogni richiesta.",
         "whatTitle": "Cosa puoi fare con Stip",
         "whatSubtitle": "Stip applica la sua AI a 3 livelli per snellire il processo di assistenza ai clienti, rendendo il lavoro dei tuoi operatori più efficiente",
         "whatCaringTitle": "Assisti i tuoi clienti in difficoltà, ovunque si trovino",
