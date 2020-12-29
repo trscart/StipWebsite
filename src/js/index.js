@@ -87,6 +87,30 @@ $(document).ready(function () {
             })
     }
 
+    // contact card home
+    if($(window).width() <= 576){
+        $(".stip-contact-card-title").hide()
+    }
+    $(".stip-contact-card").click(function(){
+        $(".stip-contact-card").addClass("stip-contact-card-open")
+        $(".stip-contact-card-body").show()
+        $(".stip-contact-card-close").show()
+        $(".stip-contact-card-header").css("border-radius", "25px 25px 0 0")
+        if($(window).width() <= 576){
+            $(".stip-contact-card-title").show()
+        }
+    })
+    $(".stip-contact-card-close").click(function(e){
+        e.stopPropagation()
+        $(".stip-contact-card").removeClass("stip-contact-card-open")
+        $(".stip-contact-card-body").hide()
+        $(".stip-contact-card-close").hide()
+        $(".stip-contact-card-header").css("border-radius", "25px")
+        if($(window).width() <= 576){
+            $(".stip-contact-card-title").hide()
+        }
+    })
+
     // nav changes
     $("#navBtn").click(function () {
         if ($(window).scrollTop() == 0 && $(window).width() <= 576) {
@@ -674,8 +698,7 @@ $(document).ready(function () {
                     $('.stip-messageSend').text("Messaggio inviato");
                 }
                 setTimeout(function () {
-                    $('.stip-messageSend').css("background-color", "#f8f9fa")
-                    $('.stip-messageSend').css("color", "black")
+                    $('.stip-messageSend').css("background-color", "#399fad")
                     if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
                         $('.stip-messageSend').text("Send");
                     } else {
@@ -765,6 +788,62 @@ $(document).ready(function () {
                 $('#stip-email-form').append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
             } else {
                 $('#stip-email-form').append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
+            }
+        }
+    })
+    $("#stip-email-form-home").submit(function (e) {
+        e.preventDefault()
+        if (validateCorporateEmail($('#stip-email-newsletter-home').val())) {
+            let data = {
+                "email": $('#stip-email-newsletter-home').val(),
+            }
+            fetch('https://stipworld.com/api/companyNewsletter/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(function (res) {
+
+                    // append thank you message
+                    let context
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        context = { thanksTitle: "Thank you for filling our form!", thanksSubtitle: "We will contact you as soon as possible at the email address you indicated. Best!" };
+                    } else {
+                        context = { thanksTitle: "Grazie per aver scritto a Stip!", thanksSubtitle: "Ti contatteremo al più presto all'indirizzo email che hai indicato. Ciao!" };
+                    }
+                    let source = document.getElementById("stip-thanks").innerHTML;
+                    let template = Handlebars.compile(source);
+                    $('body').append(template(context))
+                    $('.stip-emailLabelError').remove()
+
+                    $(".stip-closeReprompt").click(function () {
+                        $(".stip-reprompt-container").css("display", "none")
+                        $("#stip-email-form-home")[0].reset()
+                    })
+                })
+                .catch(function (err) { //if error
+                    //console.log(err)
+                    if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                        $('.stip-emailSectionBtn').text("Error, try again");
+                    } else {
+                        $('.stip-emailSectionBtn').text("Errore, riprova");
+                    }
+                    setTimeout(function () {
+                        if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                            $('.stip-emailSectionBtn').text("Send");
+                        } else {
+                            $('.stip-emailSectionBtn').text("Invia");
+                        }
+                    }, 1300);
+                })
+        } else {
+            $("#stip-email-demo").css("border-color", "#ff6161")
+            if (sessionStorage.getItem('language') == "en-EN" || (navigator.language != "it-IT" && sessionStorage.getItem('language') == null)) {
+                $('#stip-email-form-home').append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Must be a Work email address</label>")
+            } else {
+                $('#stip-email-form-home').append("<label class='stip-txt stip-emailLabelError' style='color: #ff6161;'>Deve essere una email aziendale</label>")
             }
         }
     })

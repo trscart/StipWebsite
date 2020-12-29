@@ -36,6 +36,7 @@ let languages = {
         "footerPlatformCustomer": "Customer Experience",
         "footerBlog": "BLOG",
         "footerBlogMore": "Scopri tutti gli articoli",
+        "newsletterTitle": "Unisciti al gruppo",
 
         // home page
         "heroSubtitle": "L’Intelligenza Artificiale al servizio del tuo team di customer service",
@@ -85,6 +86,8 @@ let languages = {
         "home-platform-txt": "Non hai un CRM? Puoi comunque scegliere Stip e servirti della sua semplice e intuitiva integrated ticketing platform",
         "home-roi-btn": "CALCOLA IL TUO ROI",
         "learn-more": "Scopri di più",
+        "contactCard-title": "Contatta il reparto vendite",
+        "contactCard-subtitle": "Per aiutarti al meglio, dicci qualcosa di te",
 
         // contact page
         "contactTitle": "SIAMO QUI PER TE!",
@@ -272,6 +275,7 @@ let languages = {
         "footerPlatformCustomer": "Customer Experience",
         "footerBlog": "BLOG",
         "footerBlogMore": "Check out all the articles",
+        "newsletterTitle": "Enter the Fold",
 
         // home page
         "heroSubtitle": "Make your customer support team’s life easier and better",
@@ -321,6 +325,8 @@ let languages = {
         "home-platform-txt": "Don’t have an existing CRM system? Use Stip’s complete and user-friendly integrated ticketing platform!",
         "home-roi-btn": "CALCULATE YOUR ROI",
         "learn-more": "Read more",
+        "contactCard-title": "Contact our sales department",
+        "contactCard-subtitle": "To better help you, telll us a bit more about yourself",
 
         // contact page
         "contactTitle": "WE ARE HERE FOR YOU!",
