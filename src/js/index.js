@@ -38,13 +38,6 @@ anime({
 $(document).ready(function () {
     console.log("here!")
 
-    if ($(location).attr('href').includes("index") || $(location).attr('href') == "https://www.stip.io/" || $(location).attr('href') == "https://www.stip.io" || $(location).attr('href') == "http://127.0.0.1:5500/") {
-        $('.counter').countUp({
-            'time': 1200,
-            'delay': 10
-        });
-    }
-
     //append favicon in every page
     $("head").append('<link rel="icon" href="src/img/favicon.ico">')
 
@@ -88,25 +81,25 @@ $(document).ready(function () {
     }
 
     // contact card home
-    if($(window).width() <= 576){
+    if ($(window).width() <= 576) {
         $(".stip-contact-card-title").hide()
     }
-    $(".stip-contact-card").click(function(){
+    $(".stip-contact-card").click(function () {
         $(".stip-contact-card").addClass("stip-contact-card-open")
         $(".stip-contact-card-body").show()
         $(".stip-contact-card-close").show()
         $(".stip-contact-card-header").css("border-radius", "25px 25px 0 0")
-        if($(window).width() <= 576){
+        if ($(window).width() <= 576) {
             $(".stip-contact-card-title").show()
         }
     })
-    $(".stip-contact-card-close").click(function(e){
+    $(".stip-contact-card-close").click(function (e) {
         e.stopPropagation()
         $(".stip-contact-card").removeClass("stip-contact-card-open")
         $(".stip-contact-card-body").hide()
         $(".stip-contact-card-close").hide()
         $(".stip-contact-card-header").css("border-radius", "25px")
-        if($(window).width() <= 576){
+        if ($(window).width() <= 576) {
             $(".stip-contact-card-title").hide()
         }
     })
@@ -120,12 +113,18 @@ $(document).ready(function () {
     });
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0 && !$(location).attr('href').includes("blog")) { // nav-item change on scroll
-            $('.stip-nav').css("padding", "0 5em")
+            if($(location).attr('href').includes("linkedin")){
+                $('.logo').attr("src", "./src/img/logo_new.png")
+            }
+            $('.stip-nav').css("padding", "0 120px")
             $('.stip-nav').css("background-color", "white")
             $('.stip-nav').css("box-shadow", "0 0rem 1rem rgba(0,0,0,0.1)")
         }
         else if (!$(location).attr('href').includes("blog")) {
-            $('.stip-nav').css("padding", "2em 5em")
+            if($(location).attr('href').includes("linkedin")){
+                $('.logo').attr("src", "./src/img/logoWhite.svg")
+            }
+            $('.stip-nav').css("padding", "30px 120px")
             $('.stip-nav').css("background-color", "transparent")
             $('.stip-nav').css("box-shadow", "none")
         }
@@ -242,7 +241,6 @@ $(document).ready(function () {
     $("#report-channel-other").hide()
     let checkbox_channel_counter = 1
     $("#report-channel").change(function () {
-        console.log($("#report-channel").val())
         $("#report-channel-other").show()
         if (checkbox_channel_counter == 1) {
             checkbox_channel_counter += 1
@@ -522,7 +520,7 @@ $(document).ready(function () {
     })
 
     // validate email and company name, then enable the "download btn" to download 60 stats or paper
-    $("form :input").on('keyup touchend', function () {
+    $("#stip-download-form :input").on('keyup touchend', function () {
         if (validateCorporateEmail($("#stip-email-download").val()) && $("#stip-companyName-download").val()) {
             $(".stip-download-btn").removeClass("stip-downloadDisable")
             $(".stip-download-btn").addClass("stip-download")
@@ -1066,6 +1064,43 @@ $(document).ready(function () {
             },
                 1000);
         }
+    })
+
+    // cnc page
+    $("#stip_cnc-form").submit(function(e){
+        $("#stip_loading").show()
+        e.preventDefault()
+        $.ajax({
+            url: 'https://ai-demo.stipworld.com/demo/?sentence=' + $("#stip_cnc-input").val(),
+            type: 'GET',
+            success: function (res) {
+                $("#stip_loading").hide()
+                console.log(res)
+            },
+            error: function (err) { //if error
+                console.log(err)
+            }
+        });
+    })
+    $("#stip_reset-cnc").click(function(){
+        $("#stip_cnc-input").val("")
+    })
+
+    // translate page
+    $("#stip_translate-form").submit(function(e){
+        $("#stip_loading").show()
+        e.preventDefault()
+        $.ajax({
+            url: 'https://ai-demo.stipworld.com/slm?sentence=' + $("#stip_translate-input").val(),
+            type: 'GET',
+            success: function (res) {
+                $("#stip_loading").hide()
+                console.log(res)
+            },
+            error: function (err) { //if error
+                console.log(err)
+            }
+        });
     })
 
     // maps

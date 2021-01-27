@@ -597,6 +597,183 @@ b {
   }
 }
 
+.stip_btn-cnc {
+  color: white;
+  background-color: #399fad;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+  font-size: 16px;
+}
+
+.stip_btn-cnc:hover {
+  color: white;
+  background-color: #ff6161;
+}
+
+.stip-h1-linkedin {
+  font-weight: 600;
+  font-size: 36px;
+  color: #1a0f91;
+}
+
+.stip-hero-linkedin {
+  height: 100vh;
+  padding: 10%;
+  background-color: #1a0f91;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.stip-hero-linkedin h1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.stip-hero-linkedin h2 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.stip-cta-linkedin {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #ff6600;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 15px 25px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+.stip-cta-linkedin:hover {
+  background-color: #ff6600;
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.stip-section-linkedin {
+  padding: 50px 150px;
+}
+
+.stip-card-linkedin {
+  color: white;
+  border: 0;
+  background-color: #1a0f91;
+  border-radius: 1.25rem;
+}
+
+.stip-input-linkedin {
+  border: 0;
+  border-radius: 50px;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.stip-input-linkedin:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid #ff6600;
+}
+
+.stip-cta-form-linkedin {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #ff6600;
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 15px 35px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 0;
+}
+
+.stip-cta-form-linkedin:hover {
+  background-color: #ff6600;
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.stip-num-linkedin {
+  font-size: 54px;
+  font-weight: 700;
+  color: #ff6600;
+}
+
+@-webkit-keyframes growup {
+  0% {
+    font-size: 36px;
+  }
+  50% {
+    font-size: 70px;
+  }
+  100% {
+    font-size: 54px;
+  }
+}
+
+@keyframes growup {
+  0% {
+    font-size: 36px;
+  }
+  50% {
+    font-size: 70px;
+  }
+  100% {
+    font-size: 54px;
+  }
+}
+
+.growup {
+  -webkit-animation: growup 1.5s ease;
+          animation: growup 1.5s ease;
+}
+
+@media (max-width: 576px) {
+  .stip-hero-linkedin {
+    height: auto;
+    padding-top: 80px;
+  }
+  .stip-hero-linkedin h1 {
+    font-size: 32px;
+  }
+  .stip-hero-linkedin h2 {
+    font-size: 18px;
+  }
+  .stip-cta-linkedin {
+    padding: 10px 25px;
+  }
+  .stip-cta-form-linkedin {
+    padding: 10px 25px;
+  }
+  .stip-h1-linkedin {
+    font-size: 24px;
+  }
+  .stip-section-linkedin {
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+  .stip-hero-linkedin {
+    height: auto;
+    padding-top: 200px;
+  }
+}
+
 .p-5_2 {
   padding: 2rem !important;
 }
@@ -618,7 +795,7 @@ b {
 
 .stip-h3 {
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .stip-txt {
@@ -672,6 +849,7 @@ b {
     display: flex;
 }*/
 .stip-contact-card {
+  cursor: pointer;
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -681,6 +859,7 @@ b {
 }
 
 .stip-contact-card .stip-contact-card-title {
+  padding-right: 15px;
   font-size: 16px;
   font-weight: 600;
 }
@@ -710,7 +889,7 @@ b {
   z-index: 1030;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 2em 5em 0 5em;
+  padding: 30px 120px 0 120px;
 }
 
 .stip-nav .stip-navItem {
@@ -1362,7 +1541,7 @@ input[type="range"].price:focus::-ms-fill-upper {
     font-size: 14px !important;
   }
   .stip-nav {
-    padding: 0 1em !important;
+    padding: 0 25px !important;
   }
   .stip-langBtnBox {
     padding: 0.5em 0 1em 0;

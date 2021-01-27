@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-control: max-age=31557600" content="public">
+    <link rel="icon" href="src/img/logoColor.svg">
+
+    <!-- Primary Meta Tags -->
+    <title>Stip - Social & Email Customer Care Automation</title>
+    <meta class="meta_title-lang" key="stip_meta-title" name="title"
+        content="Stip - AI to boost your Digital Customer Support">
+    <meta class="meta_description-lang" key="stip_meta-description" name="description"
+        content="Make your customer service representatives' work easier and faster and increase your customer satisfaction">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="stip.io">
+    <meta property="og:type" content="stip.io">
+    <meta property="og:url" content="https://stip.io/platform.html">
+    <meta class="meta_title-lang" key="stip_meta-title" property="og:title"
+        content="Stip - AI to boost your Digital Customer Support">
+    <meta class="meta_description-lang" key="stip_meta-description" property="og:description"
+        content="Make your customer service representatives' work easier and faster and increase your customer satisfaction">
+    <meta property="og:image" content="https://stip.io/src/img/heroBannerIllustration.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Stip_Social" />
+    <meta class="meta_title-lang" key="stip_meta-title" name="twitter:title"
+        content="Stip - AI to boost your Digital Customer Support" />
+    <meta class="meta_description-lang" key="stip_meta-description" name="twitter:description"
+        content="Make your customer service representatives' work easier and faster and increase your customer satisfaction" />
+    <meta name="twitter:image" content="https://stip.io/src/img/heroBannerIllustration.png" />
+
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="src/style/index.css">
+
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77012119-1"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex stip-supportContainer">
+        <div class="row flex-grow-1">
+            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+                <img src="src/img/logoColor.svg" class="align-self-center mb-4" style="max-width: 30%" alt="">
+                <form id="stip_translate-form" class="text-center">
+                    <div class="form-group">
+                        <!--<label class="stip-h3 lang" key="supportName">Nome</label>-->
+                        <input type="text" name="name" class="form-control" placeholder="Scrivi qui la tua frase ..."
+                            required id="stip_translate-input">
+                    </div>
+                    <img id="stip_loading" src="./src/img/loading.gif" width="100" style="display: none;" alt="loading">
+                    <button type="submit" class="btn stip_btn-cnc btn-light btn-block"
+                        id="stip_send-translate">Send</button>
+                    <button type="submit" class="btn stip_btn-cnc btn-light btn-block mt-3"
+                        id="stip_reset-translate">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/languages.min.js"></script>
+    <script src="src/js/index.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
