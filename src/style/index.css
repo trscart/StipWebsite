@@ -614,13 +614,14 @@ b {
 .stip-h1-linkedin {
   font-weight: 600;
   font-size: 36px;
-  color: #1a0f91;
 }
 
 .stip-hero-linkedin {
   height: 100vh;
   padding: 10%;
   background-color: #1a0f91;
+  background: url("../img/pattern-linkedin.png") center center no-repeat;
+  background-size: cover;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -666,9 +667,10 @@ b {
 }
 
 .stip-card-linkedin {
+  background: url("../img/pattern-linkedin.png") center center no-repeat;
+  background-size: cover;
   color: white;
   border: 0;
-  background-color: #1a0f91;
   border-radius: 1.25rem;
 }
 
@@ -683,6 +685,10 @@ b {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 2px solid #ff6600;
+}
+
+#stip_email-linkedin {
+  width: 50%;
 }
 
 .stip-cta-form-linkedin {
@@ -710,7 +716,6 @@ b {
 .stip-num-linkedin {
   font-size: 54px;
   font-weight: 700;
-  color: #ff6600;
 }
 
 @-webkit-keyframes growup {
@@ -758,12 +763,16 @@ b {
   }
   .stip-cta-form-linkedin {
     padding: 10px 25px;
+    width: 100%;
   }
   .stip-h1-linkedin {
     font-size: 24px;
   }
   .stip-section-linkedin {
     padding: 50px 20px;
+  }
+  #stip_email-linkedin {
+    width: 100%;
   }
 }
 

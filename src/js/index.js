@@ -35,6 +35,14 @@ anime({
     duration: 1200
 })*/
 
+/* 
+nome
+email
+
+telefono
+nome azienda
+ruolo aziendale (campo aperto) */
+
 $(document).ready(function () {
     console.log("here!")
 
@@ -1102,6 +1110,13 @@ $(document).ready(function () {
             }
         });
     })
+
+    // linkedin campaign scroll to div
+    $(".stip-cta-linkedin").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#stip-lead-form-linkedin").offset().top
+        }, 1200);
+    });
 
     // maps
     if ($(location).attr('href').includes("contacts")) {
