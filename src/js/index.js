@@ -1,47 +1,30 @@
-/*loading animation
-if (sessionStorage.getItem('dontLoad') == null) { // do loading animation only one time 
-    $(".stip-loading").delay(3000).animate({ 'opacity': '0' }, 500)
-    setTimeout(function () { $(".stip-loading").addClass('z-index-low') }, 3500);
-    sessionStorage.setItem('dontLoad', 'true');
-} else {
-    $(".stip-loading").hide()
-}
-
-anime({
-    targets: '.stip-loadLogo',
-    scale: ["0.6", "0.65", "0.6"],
-    easing: 'easeInOutQuint',
-    loop: true,
-    duration: 1800
-});
-
-anime({
-    targets: '.stip-rect',
-    scaleY: ["1", "0.7", "1.05", "1"],
-    easing: 'easeInOutQuint',
-    loop: true,
-    delay: 300,
-    duration: 1500
-});
-
-anime({
-    targets: '.stip-spunta',
-    scale: ["1", "0.7", "1"],
-    fill: ["#399fad", "#ff6161", "#399fad"],
-    rotateY: ["0", "360"],
-    easing: 'easeInOutExpo',
-    loop: true,
-    delay: 600,
-    duration: 1200
-})*/
-
 /* 
-nome
-email
+Campi da raccogliere nella prima thankyoupage (solo email):
+- Nome Cognome
+- Telefono
+- Ruolo in azienda (campo aperto)
+- Azienda
+- quanti blablabla avete? 
+- quanti blablabla2 avete? 
 
-telefono
-nome azienda
-ruolo aziendale (campo aperto) */
+
+Campi da raccogliere nella seconda thankyoupage (secondo form):
+
+- Telefono
+- Azienda
+- Ruolo in azienda
+
+Campi obbligatori:
+Email
+Nome Cognome
+Telefono
+Azienda
+
+Facoltativi:
+ruolo
+metrica1
+metrica2
+*/
 
 $(document).ready(function () {
     console.log("here!")
@@ -1093,6 +1076,9 @@ $(document).ready(function () {
     $("#stip_reset-cnc").click(function(){
         $("#stip_cnc-input").val("")
     })
+    $("#mc-embedded-subscribe-form").submit(function(e){
+        //e.preventDefault()
+    })
 
     // translate page
     $("#stip_translate-form").submit(function(e){
@@ -1110,13 +1096,6 @@ $(document).ready(function () {
             }
         });
     })
-
-    // linkedin campaign scroll to div
-    $(".stip-cta-linkedin").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#stip-lead-form-linkedin").offset().top
-        }, 1200);
-    });
 
     // maps
     if ($(location).attr('href').includes("contacts")) {

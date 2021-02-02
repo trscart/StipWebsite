@@ -138,11 +138,16 @@
                 <h3 class="stip-txt text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
                     consectetur sapien, eget semper ipsum.
                 </h3>
-                <form class="d-flex flex-column mt-4" id="stip-contact-form-linkedin">
+                <form class="d-flex flex-column mt-4" id="mc-embedded-email-signup-form">
                     <div class="form-group d-flex flex-column align-items-center">
-                        <label for="stip_email-linkedin">Email<b style="color: #ff6600;">*</b></label>
+                        <label for="stip_name-linkedin">Nome e cognome*</label>
+                        <input type="text" name="FNAME" class="stip-input-linkedin form-control" id="stip_name-linkedin"
+                            placeholder="Scrivi qui nome e cognome">
+                    </div>
+                    <div class="form-group d-flex flex-column align-items-center">
+                        <label for="stip_email-linkedin">Email*</label>
                         <input type="email" class="stip-input-linkedin form-control" id="stip_email-linkedin"
-                            placeholder="Scrivi qui la tua email">
+                            placeholder="Scrivi qui la tua email" required>
                     </div>
                     <button type="submit"
                         class="stip-cta-form-linkedin align-self-center btn btn-primary">INVIA</button>
@@ -221,43 +226,51 @@
                         </h2>
                         <h3 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </h3>
-                        <form class="d-flex flex-column mt-4" id="stip-lead-form-linkedin">
+                        <form class="d-flex flex-column mt-4 validate"
+                            action="https://stip.us7.list-manage.com/subscribe/post?u=21f70b33471b9df27d473256b&amp;id=be1d82b34f"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                            novalidate>
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Nome completo*</b></label>
-                                        <input type="email" class="stip-input-linkedin form-control"
-                                            id="" placeholder="Scrivi qui il tuo nome">
+                                        <label for="mce-FNAME">Nome e cognome*</b></label>
+                                        <input id="mce-FNAME" name="FNAME" type="text"
+                                            class="stip-input-linkedin form-control"
+                                            placeholder="Scrivi qui nome e cognome" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Email*</label>
-                                        <input type="email" class="stip-input-linkedin form-control"
-                                            id="" placeholder="Scrivi qui la tua email">
+                                        <label for="mce-EMAIL">Email*</label>
+                                        <input type="email" name="EMAIL" class="stip-input-linkedin form-control"
+                                            id="mce-EMAIL" placeholder="Scrivi qui la tua email" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Select #1</label>
-                                        <select class="stip-input-linkedin form-control" id="" class="stip-input-linkedin form-control">
-                                            <option value="lorem ipsum" selected>Lorem Ipsum</option>
-                                            <option value="lorem ipsum">Lorem Ipsum</option>
+                                        <label for="mce-MMERGE2">Select #1</label>
+                                        <select name="MMERGE2" class="stip-input-linkedin form-control"
+                                            id="mce-MMERGE2">
+                                            <option value="no data" disabled selected>Seleziona #1</option>
+                                            <option value="Lorem Ipsum 1">Lorem Ipsum 1</option>
+                                            <option value="Lorem Ipsum 2">Lorem Ipsum 2</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Select #2</label>
-                                        <select class="stip-input-linkedin form-control" id="" class="stip-input-linkedin form-control">
-                                            <option value="lorem ipsum" selected>Lorem Ipsum</option>
-                                            <option value="lorem ipsum">Lorem Ipsum</option>
+                                        <label for="mce-MMERGE3">Select #2</label>
+                                        <select name="MMERGE3" class="stip-input-linkedin form-control"
+                                            id="mce-MMERGE3">
+                                            <option value="no data" disabled selected>Seleziona #2</option>
+                                            <option value="Lorem Ipsum 1">Lorem Ipsum 1</option>
+                                            <option value="Lorem Ipsum 2">Lorem Ipsum 2</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit"
-                                class="mt-3 stip-cta-form-linkedin align-self-center btn btn-primary">INVIA</button>
+                            <button type="submit" id="mc-embedded-subscribe" value="INVIA" name="INVIA"
+                                class="clear mt-3 stip-cta-form-linkedin align-self-center btn btn-primary">INVIA</button>
                         </form>
                     </div>
                 </div>
@@ -269,33 +282,12 @@
     <!-- footer -->
     <footer class="container-fluid stip-footer py-4 mt-0">
         <div class="row stip-footerTxt">
-            <div class="col-md-4">
+            <div class="col">
                 <p class="stip-txt">Copyright © 2020 Stip s.r.l. P.IVA/C.F. 14409831006</p>
             </div>
         </div>
     </footer>
     <!-- end footer -->
-
-    <!-- thanks popup section -->
-    <script id="stip-thanks" type="text/x-handlebars-template">
-        <div class="container-fluid text-center h-100 fixed-top stip-reprompt-container">
-            <div class="row flex-grow-1">
-                <div class="col">
-                    <div class="card stip-reprompt stip-rounded">
-                        <div class="card-body">
-                            <button type="button" class="close stip-closeReprompt" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <img alt="check illustration" src="src/img/checkIllustration.png" width="40%">
-                            <h2 class="stip-h1">{{thanksTitle}}</h2>
-                            <h2 class="stip-h3">{{thanksSubtitle}}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-    <!-- end thanks popup section -->
 
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" defer defer src="//js.hs-scripts.com/5720211.js"></script>
@@ -314,20 +306,6 @@
     <script
         src="https://www.jqueryscript.net/demo/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script>
-        let countup_done = false
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > $("#countup-detect").offset().top && !countup_done) { // meeting btn fixed top
-                countup_done = true
-                $('.counter').countUp({
-                    'time': 2000,
-                    'delay': 10
-                });
-                $(".stip-num-linkedin").addClass("growup")
-            }
-        });
-    </script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="src/js/languages.min.js"></script>
     <script src="src/js/index.min.js"></script>
     <!-- linkedin pixel -->
@@ -349,6 +327,44 @@
         <img height="1" width="1" style="display:none;" alt=""
             src="https://px.ads.linkedin.com/collect/?pid=1061852&fmt=gif" />
     </noscript>
+    <script>
+        // linkedin campaign scroll to div
+        $(".stip-cta-linkedin").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#mc-embedded-subscribe-form").offset().top
+            }, 1200);
+        });
+        let countup_done = false
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $("#countup-detect").offset().top && !countup_done) { // meeting btn fixed top
+                countup_done = true
+                $('.counter').countUp({
+                    'time': 2000,
+                    'delay': 10
+                });
+                $(".stip-num-linkedin").addClass("growup")
+            }
+        });
+        $("#mc-embedded-subscribe-form").submit(function () {
+            localStorage.setItem("stip_email", $("#mce-EMAIL").val())
+        })
+        $("#mc-embedded-email-signup-form").submit(function (e) {
+            e.preventDefault()
+
+            $.ajax({
+                url: './linkedin-mailchimp-signup.php?email=' + $("#stip_email-linkedin").val() + "&name=" + $("#stip_name-linkedin").val(),
+                type: 'GET',
+                success: function (res) {
+                    console.log(res)
+                    localStorage.setItem("stip_email", $("#stip_email-linkedin").val())
+                    window.location = 'linkedin-thankyou2.html'
+                },
+                error: function (err) { //if error
+                    console.log(err)
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

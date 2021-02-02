@@ -687,7 +687,7 @@ b {
   border: 2px solid #ff6600;
 }
 
-#stip_email-linkedin {
+#mc-embedded-email-signup-form .stip-input-linkedin {
   width: 50%;
 }
 
@@ -750,7 +750,7 @@ b {
 @media (max-width: 576px) {
   .stip-hero-linkedin {
     height: auto;
-    padding-top: 80px;
+    padding-top: 100px;
   }
   .stip-hero-linkedin h1 {
     font-size: 32px;
@@ -771,7 +771,7 @@ b {
   .stip-section-linkedin {
     padding: 50px 20px;
   }
-  #stip_email-linkedin {
+  #mc-embedded-email-signup-form .stip-input-linkedin {
     width: 100%;
   }
 }
