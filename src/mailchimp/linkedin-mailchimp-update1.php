@@ -4,7 +4,7 @@
     $apiKey = '82ae7270cb9d3d28b7a37eb861deea2a-us7';
     $listId = 'be1d82b34f';
 
-    $memberId = md5($_GET['email']);
+    $memberId = md5(strtolower($_GET['email']));
     $dataCenter = substr($apiKey,strpos($apiKey,'-')+1);
     $url = 'https://' . $dataCenter . '.api.mailchimp.com/3.0/lists/' . $listId . '/members/' . $memberId;
 
@@ -12,9 +12,7 @@
         'merge_fields'  => [
             'MMERGE4'     => $_GET['MMERGE4'],
             'MMERGE5'     => $_GET['MMERGE5'],
-            'MMERGE6'     => $_GET['MMERGE6'],
-            'MMERGE2'     => $_GET['MMERGE2'],
-            'MMERGE3'     => $_GET['MMERGE3']
+            'MMERGE6'     => $_GET['MMERGE6']
         ]
     ]);
 

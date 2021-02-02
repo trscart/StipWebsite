@@ -189,7 +189,7 @@
             e.preventDefault()
 
             $.ajax({
-                url: './linkedin-mailchimp-update2.php?email=' + localStorage.getItem("stip_email") + '&MMERGE4=' + $("#mce-MMERGE4").val() + '&MMERGE5=' + $("#mce-MMERGE5").val() + '&MMERGE6=' + $("#mce-MMERGE6").val() + '&MMERGE2=' + $("#mce-MMERGE2").val() + '&MMERGE3=' + $("#mce-MMERGE3").val(),
+                url: './src/mailchimp/linkedin-mailchimp-update2.php?email=' + localStorage.getItem("stip_email") + '&MMERGE4=' + $("#mce-MMERGE4").val() + '&MMERGE5=' + $("#mce-MMERGE5").val() + '&MMERGE6=' + $("#mce-MMERGE6").val() + '&MMERGE2=' + $("#mce-MMERGE2").val() + '&MMERGE3=' + $("#mce-MMERGE3").val(),
                 type: 'GET',
                 success: function (res) {
                     console.log(res)

@@ -352,7 +352,7 @@
             e.preventDefault()
 
             $.ajax({
-                url: './linkedin-mailchimp-signup.php?email=' + $("#stip_email-linkedin").val() + "&name=" + $("#stip_name-linkedin").val(),
+                url: './src/mailchimp/linkedin-mailchimp-signup.php?email=' + $("#stip_email-linkedin").val() + "&name=" + $("#stip_name-linkedin").val(),
                 type: 'GET',
                 success: function (res) {
                     console.log(res)
