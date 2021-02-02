@@ -1,5 +1,13 @@
 <?php
 
+  function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+  }
+
   function syncMailchimp() {
     $apiKey = '82ae7270cb9d3d28b7a37eb861deea2a-us7';
     $listId = 'be1d82b34f';
@@ -28,7 +36,7 @@
     $result = curl_exec($ch);
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-
+    debug_to_console($result);
     return $httpCode;
   }
 
