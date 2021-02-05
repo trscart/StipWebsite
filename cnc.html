@@ -52,31 +52,128 @@
 
 <body>
 
-    <div class="container-fluid d-flex stip-supportContainer">
-        <div class="row flex-grow-1">
-            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
-                <img src="src/img/logoColor.svg" class="align-self-center mb-4" style="max-width: 30%" alt="">
-                <form id="stip_cnc-form" class="text-center">
-                    <div class="form-group">
-                        <!--<label class="stip-h3 lang" key="supportName">Nome</label>-->
-                        <input type="text" name="name" class="form-control" placeholder="Scrivi qui la tua frase ..."
-                            required id="stip_cnc-input">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-sm stip-nav">
+        <a class="navbar-brand" href="./index.html">
+            <img alt="logo" class="logo" src="src/img/logo_new.png" width="80">
+        </a>
+        <div class="flex-grow-1 d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <a href="https://wa.me/+393474975970?text=Vorrei%20avere%20pi%C3%B9%20informazioni"><button
+                        type="button" title="contattaci su Whatsapp"
+                        class="btn btn-primary stip-cta-linkedin text-center">
+                        Contattaci su Whatsapp
+                    </button></a>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <div class="container stip_cnc-container">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-5">
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <h3 class="stip-h3 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                <div class="card stip_facebook-card shadow">
+                    <div class="card-header bg-white">
+                        <div class="d-flex align-items-center">
+                            <img src="./src/img/logoColor.svg" class="p-1" style="border-radius: 50%;" width="50"
+                                alt="">
+                            <div class="ml-3">
+                                <h2 class="stip-h3 mb-0">Stip S.r.l.</h2>
+                                <p class="stip-label mb-0">3h fa</p>
+                            </div>
+                        </div>
+                        <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Vestibulum eu consectetur sapien, eget semper ipsum.</p>
                     </div>
-                    <img id="stip_loading" src="./src/img/loading.gif" width="50" style="display: none;" alt="loading">
-                    <button type="submit" class="btn stip_btn-cnc btn-light btn-block"
-                        id="stip_predict-cnc">Invia</button>
-                    <!-- <button type="submit" class="btn stip_btn-cnc btn-light btn-block mt-3"
-                        id="stip_2-cnc">Train AI again</button> -->
-                    <button type="button" class="btn stip_btn-cnc btn-light btn-block mt-3"
-                        id="stip_reset-cnc">Ricomincia</button>
-                </form>
+                    <div class="card-body pb-0 stip_facebook-card-body">
+                        <div class="stip_facebook-comment-box d-flex">
+                            <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                style="border-radius: 50%;" width="40" alt="">
+                            <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-0 pt-0">
+                        <form class="d-flex flex-column" id="stip_facebook-form">
+                            <div class="form-group mb-0">
+                                <img id="stip_loading" src="./src/img/loading.gif" width="40" style="display: none;"
+                                    alt="loading">
+                                <input id="stip_facebook-input" name="comment" type="text" class="form-control"
+                                    placeholder="Scrivi un commento" required>
+                                <small class="form-text text-muted">Premi Invio per pubblicare.</small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="offset-md-1 col-md-6 mt-4 mt-md-0">
+                <h2 class="stip-h2">Lorem ipsum dolor sit amet</h2>
+                <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu consectetur
+                    sapien, eget semper ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
+                    consectetur
+                    sapien, eget semper ipsum.</p>
+                <h2 class="stip-h2">Lorem ipsum dolor sit amet</h2>
+                <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu consectetur
+                    sapien, eget semper ipsum. Lorem ipsum dolor sit amet.</p>
+                <h2 class="stip-h2">Lorem ipsum dolor sit amet</h2>
+                <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu consectetur
+                    sapien, eget semper ipsum. Lorem ipsum dolor sit amet.</p>
+                <a href="https://wa.me/+393474975970?text=Vorrei%20avere%20pi%C3%B9%20informazioni"><button
+                        type="button" title="contattaci su Whatsapp"
+                        class="d-block d-md-none btn btn-primary stip-cta-linkedin text-center">
+                        Contattaci su Whatsapp
+                    </button></a>
             </div>
         </div>
     </div>
 
+    <!-- footer -->
+    <footer class="container-fluid stip-footer py-4 mt-5 mt-md-5">
+        <div class="row stip-footerTxt">
+            <div class="col">
+                <p class="stip-txt">Copyright © 2020 Stip s.r.l. P.IVA/C.F. 14409831006</p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
     <script src="src/js/languages.min.js"></script>
     <script src="src/js/index.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $("#stip_facebook-form").submit(function (e) {
+            e.preventDefault()
+            $("#stip_loading").show()
+            /* $.ajax({
+                url: 'https://ai-demo.stipworld.com/demo/?sentence=' + $("#stip_cnc-input").val(),
+                type: 'GET',
+                success: function (res) {
+                    $("#stip_loading").hide()
+                    $(".stip_facebook-card-body").append(`
+                        <div class="stip_facebook-comment-box d-flex">
+                            <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                style="border-radius: 50%;" width="40" alt="">
+                            <p>` + $("#stip_facebook-input").val() + `</p>
+                        </div>
+                    `)
+                    $("#stip_facebook-input").val("")
+                },
+                error: function (err) { //if error
+                    console.log(err)
+                }
+            }); */
+            $("#stip_loading").hide()
+            $(".stip_facebook-card-body").append(`
+                <div class="stip_facebook-comment-box d-flex">
+                    <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                        style="border-radius: 50%;" width="40" alt="">
+                    <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
+                </div>
+            `)
+            $("#stip_facebook-input").val("")
+        })
+    </script>
 </body>
 
 </html>

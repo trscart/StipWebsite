@@ -1057,29 +1057,6 @@ $(document).ready(function () {
         }
     })
 
-    // cnc page
-    $("#stip_cnc-form").submit(function(e){
-        $("#stip_loading").show()
-        e.preventDefault()
-        $.ajax({
-            url: 'https://ai-demo.stipworld.com/demo/?sentence=' + $("#stip_cnc-input").val(),
-            type: 'GET',
-            success: function (res) {
-                $("#stip_loading").hide()
-                console.log(res)
-            },
-            error: function (err) { //if error
-                console.log(err)
-            }
-        });
-    })
-    $("#stip_reset-cnc").click(function(){
-        $("#stip_cnc-input").val("")
-    })
-    $("#mc-embedded-subscribe-form").submit(function(e){
-        //e.preventDefault()
-    })
-
     // translate page
     $("#stip_translate-form").submit(function(e){
         $("#stip_loading").show()

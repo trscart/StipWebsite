@@ -597,18 +597,43 @@ b {
   }
 }
 
-.stip_btn-cnc {
-  color: white;
-  background-color: #399fad;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  border: 0;
-  font-size: 16px;
+.stip_cnc-container {
+  height: 100vh;
 }
 
-.stip_btn-cnc:hover {
-  color: white;
-  background-color: #ff6161;
+.stip_cnc-container h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a0f91;
+}
+
+#stip_facebook-input {
+  background-color: #f0f2f5;
+  border-radius: 50px;
+  border: 0;
+}
+
+.stip_facebook-card {
+  border-radius: 10px;
+  border: 0;
+}
+
+.stip_facebook-comment-box {
+  margin-bottom: 10px;
+}
+
+.stip_facebook-comment-box p {
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .stip_cnc-container {
+    padding: 100px 25px 0 25px;
+    height: auto;
+  }
 }
 
 .stip-h1-linkedin {
