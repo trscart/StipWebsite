@@ -629,10 +629,26 @@ b {
   margin: 0;
 }
 
+.stip_caring-badge {
+  background-color: #ff6600;
+  padding: 4px 8px;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 @media (max-width: 576px) {
   .stip_cnc-container {
     padding: 100px 25px 0 25px;
     height: auto;
+  }
+  .stip_caring-badge {
+    font-size: 14px;
   }
 }
 

@@ -59,11 +59,12 @@
         </a>
         <div class="flex-grow-1 d-flex justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <a style="text-decoration: none;" href="mailto:fabrizio.aiello@stip.io"><button
-                    type="button" title="contattaci su Whatsapp"
-                    class="d-none d-md-block btn btn-primary stip-cta-linkedin text-center">
-                    CONTATTACI VIA MAIL<i class="material-icons-outlined ml-2" style="vertical-align: middle; font-size: 18px;">email</i>
-                </button></a>
+                <a style="text-decoration: none;" href="mailto:fabrizio.aiello@stip.io"><button type="button"
+                        title="contattaci su Whatsapp"
+                        class="d-none d-md-block btn btn-primary stip-cta-linkedin text-center">
+                        CONTATTACI VIA MAIL<i class="material-icons-outlined ml-2"
+                            style="vertical-align: middle; font-size: 18px;">email</i>
+                    </button></a>
                 <a href="https://wa.me/+393474975970?text=Vorrei%20avere%20pi%C3%B9%20informazioni"><button
                         type="button" title="contattaci su Whatsapp"
                         class="d-block d-md-none btn btn-primary stip-cta-linkedin text-center">
@@ -76,7 +77,7 @@
 
     <div class="container stip_cnc-container">
         <div class="row h-100 justify-content-center align-items-center">
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <h1>Lorem ipsum dolor sit amet</h1>
                 <h3 class="stip-h3 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                 <div class="card stip_facebook-card shadow">
@@ -89,14 +90,14 @@
                                 <p class="stip-label mb-0">3h fa</p>
                             </div>
                         </div>
-                        <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Vestibulum eu consectetur sapien, eget semper ipsum.</p>
+                        <p class="stip-txt" id="stip_facebook-feed-txt"></p>
                     </div>
                     <div class="card-body pb-0 stip_facebook-card-body">
                         <div class="stip_facebook-comment-box d-flex">
                             <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                 style="border-radius: 50%;" width="40" alt="">
                             <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <span class="stip_caring-badge">lorem</span>
                         </div>
                     </div>
                     <div class="card-footer bg-white border-0 pt-0">
@@ -112,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offset-md-1 col-md-6 mt-4 mt-md-0">
+            <div class="offset-md-1 col-md-5 mt-4 mt-md-0" id="stip_caring-info-section">
                 <h2 class="stip-h2">Lorem ipsum dolor sit amet</h2>
                 <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu consectetur
                     sapien, eget semper ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
@@ -147,11 +148,19 @@
     <script src="src/js/index.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        var textArray = [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu consectetur sapien, eget semper ipsum.',
+            'Lorem ipsum dolor sit amet, consectetur. Vestibulum eu consectetur sapien, eget semper ipsum.',
+            'Lorem ipsum, consectetur adipiscing elit. Vestibulum eu consectetur sapien, eget semper ipsum.'
+        ];
+        var randomNumber = Math.floor(Math.random() * textArray.length);
+        $("#stip_facebook-feed-txt").text(textArray[randomNumber])
+
         $("#stip_facebook-form").submit(function (e) {
             e.preventDefault()
-            $("#stip_loading").show()
-            /* $.ajax({
-                url: 'https://ai-demo.stipworld.com/demo/?sentence=' + $("#stip_cnc-input").val(),
+            /*$("#stip_loading").show()
+             $.ajax({
+                url: 'https://ai-demo.stipworld.com/demo/?sentence=' + $("#stip_facebook-input").val(),
                 type: 'GET',
                 success: function (res) {
                     $("#stip_loading").hide()
@@ -160,6 +169,7 @@
                             <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                 style="border-radius: 50%;" width="40" alt="">
                             <p>` + $("#stip_facebook-input").val() + `</p>
+                            <span class="stip_caring-badge">` + res.prediction_class + `</span>
                         </div>
                     `)
                     $("#stip_facebook-input").val("")
@@ -167,17 +177,28 @@
                 error: function (err) { //if error
                     console.log(err)
                 }
-            }); */
-            $("#stip_loading").hide()
+            }); 
+            $("#stip_loading").hide()*/
             $(".stip_facebook-card-body").append(`
                 <div class="stip_facebook-comment-box d-flex">
                     <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                         style="border-radius: 50%;" width="40" alt="">
                     <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
+                    <span class="stip_caring-badge">lorem</span>
                 </div>
             `)
             $("#stip_facebook-input").val("")
+            $(".stip_caring-badge").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#stip_caring-info-section").offset().top - 100
+            }, 1000);
+        });
         })
+        $(".stip_caring-badge").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#stip_caring-info-section").offset().top - 100
+            }, 1000);
+        });
     </script>
 </body>
 
