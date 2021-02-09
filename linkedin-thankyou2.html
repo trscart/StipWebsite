@@ -56,7 +56,7 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-sm stip-nav">
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="./linkedin-campaign.html">
             <img alt="logo" class="logo" src="src/img/logoWhite.svg" width="80" height="80">
         </a>
         <div class="flex-grow-1 d-flex justify-content-end" id="navbarNav">
@@ -90,10 +90,9 @@
         <div class="row align-items-center flex-grow-1">
             <div class="col-md-6 d-flex flex-column">
                 <img src="./src/img/send_confirm.png" class="d-none d-md-block align-self-center w-75" alt="send confirm">
-                <h1>Lorem ipsum dolor sit amet!
+                <h1>Perfetto! Ci siamo quasi.
                 </h1>
-                <h2 class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Vestibulum eu consectetur sapien, eget semper ipsum.
+                <h2 class="mt-3">Completa i dati per creare il Business Case e scoprire il tuo ROI
                 </h2>
             </div>
             <div class="col-md-5 offset-md-1">
@@ -112,24 +111,6 @@
                         <label for="mce-MMERGE6">Ruolo in azienda</b></label>
                         <input id="mce-MMERGE6" name="MMERGE6" type="text" class="stip-input-linkedin form-control"
                             placeholder="Il tuo ruolo">
-                    </div>
-                    <div class="form-group">
-                        <label for="mce-MMERGE2">Select #1</label>
-                        <select name="MMERGE2" class="stip-input-linkedin form-control"
-                            id="mce-MMERGE2">
-                            <option value="no data" disabled selected>Seleziona #1</option>
-                            <option value="Lorem Ipsum 1">Lorem Ipsum 1</option>
-                            <option value="Lorem Ipsum 2">Lorem Ipsum 2</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mce-MMERGE3">Select #2</label>
-                        <select name="MMERGE3" class="stip-input-linkedin form-control"
-                            id="mce-MMERGE3">
-                            <option value="no data" disabled selected>Seleziona #2</option>
-                            <option value="Lorem Ipsum 1">Lorem Ipsum 1</option>
-                            <option value="Lorem Ipsum 2">Lorem Ipsum 2</option>
-                        </select>
                     </div>
                     <button type="submit" id="mc-embedded-subscribe" value="INVIA" name="INVIA"
                         class="clear mt-3 stip-cta-form-linkedin align-self-center btn btn-primary">INVIA</button>
@@ -189,12 +170,15 @@
             e.preventDefault()
 
             $.ajax({
-                url: './src/mailchimp/linkedin-mailchimp-update2.php?email=' + localStorage.getItem("stip_email") + '&MMERGE4=' + $("#mce-MMERGE4").val() + '&MMERGE5=' + $("#mce-MMERGE5").val() + '&MMERGE6=' + $("#mce-MMERGE6").val() + '&MMERGE2=' + $("#mce-MMERGE2").val() + '&MMERGE3=' + $("#mce-MMERGE3").val(),
+                url: './src/mailchimp/linkedin-mailchimp-update2.php?email=' + localStorage.getItem("stip_email") + '&MMERGE4=' + $("#mce-MMERGE4").val() + '&MMERGE5=' + $("#mce-MMERGE5").val() + '&MMERGE6=' + $("#mce-MMERGE6").val(),
                 type: 'GET',
                 success: function (res) {
                     console.log(res)
                     $("#mc-embedded-update-form").empty()
-                    $("#mc-embedded-update-form").append("<h3 class='text-center stip-h3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>")
+                    $("#mc-embedded-update-form").append("<h3 class='text-center stip-h3'>Grazie! I tuoi dati sono stati inviati, ti contatteremo al più presto.</h3>")
+                    setTimeout(function(){
+                        //$(location).attr('href', 'http://stip.io/linkedin-campaign.html')
+                    }, 800)
                 },
                 error: function (err) { //if error
                     console.log(err)

@@ -682,6 +682,7 @@ b {
 }
 
 .stip-cta-linkedin {
+  letter-spacing: 2px;
   font-size: 14px;
   font-weight: 600;
   color: white;
@@ -733,6 +734,7 @@ b {
 }
 
 .stip-cta-form-linkedin {
+  letter-spacing: 2px;
   font-size: 14px;
   font-weight: 600;
   color: white;
