@@ -602,9 +602,15 @@ b {
 }
 
 .stip_cnc-container h1 {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 600;
+  line-height: 1.4;
   color: #1a0f91;
+}
+
+.stip_cnc-container h2 {
+  font-size: 21px;
+  font-weight: 400;
 }
 
 #stip_facebook-input {
@@ -647,8 +653,15 @@ b {
     padding: 100px 25px 0 25px;
     height: auto;
   }
+  .stip_cnc-container h1 {
+    font-size: 32px;
+  }
+  .stip_cnc-container h2 {
+    font-size: 16px;
+  }
   .stip_caring-badge {
     font-size: 14px;
+    font-weight: 400;
   }
 }
 
@@ -802,7 +815,8 @@ b {
     font-size: 18px;
   }
   .stip-cta-linkedin {
-    padding: 10px 25px;
+    padding: 10px 15px;
+    letter-spacing: 1px;
   }
   .stip-cta-form-linkedin {
     padding: 10px 25px;
