@@ -83,7 +83,9 @@
                     la tua.
                     Quanti commenti e interazioni dei tuoi clienti siete chiamati a gestire?<br>
                     L’Intelligenza Artificiale di Stip ti consente ridurre la mole di lavoro dei tuoi operatori.
-                    <b style="font-weight: 700;" >Scrivi un commento, come se fossi un qualsiasi utente, e scopri come!</b></h2>
+                    <b style="font-weight: 700;">Scrivi un commento, come se fossi un qualsiasi utente, e scopri
+                        come!</b>
+                </h2>
             </div>
             <div class="offset-md-1 col-md-6 mt-4 mt-md-0">
                 <div class="card stip_facebook-card shadow">
@@ -207,28 +209,46 @@
 
         $("#stip_facebook-form").submit(function (e) {
             e.preventDefault()
-            /*$("#stip_loading").show()
-             $.ajax({
-                url: 'https://ai-demo.stipworld.com/demo/?sentence=' + $("#stip_facebook-input").val(),
+            $("#stip_loading").show()
+            $.ajax({
+                url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
                 type: 'GET',
                 success: function (res) {
+                    console.log(res)
                     $("#stip_loading").hide()
                     $(".stip_facebook-card-body").append(`
                         <div class="stip_facebook-comment-box d-flex">
                             <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                 style="border-radius: 50%;" width="40" alt="">
                             <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
-                            <span class="stip_caring-badge">` + res.prediction_class + `</span>
+                            <span class="stip_caring-badge">` + res.label + `</span>
                         </div>
                     `)
                     $("#stip_facebook-input").val("")
+                    $(".stip_caring-badge").click(function () {
+                        $('html, body').animate({
+                            scrollTop: $("#stip_caring-animation").offset().top - 100
+                        }, 1000);
+                    });
+                    if (res.label == "caring") {
+                        $("#stip_nocaring-animation").hide()
+                        $("#stip_caring-animation").show()
+                        $('html, body').animate({
+                            scrollTop: $("#stip_caring-animation").offset().top - 100
+                        }, 1000);
+                    } else if (res.label == "no caring") {
+                        $("#stip_caring-animation").hide()
+                        $("#stip_nocaring-animation").show()
+                        $('html, body').animate({
+                            scrollTop: $("#stip_nocaring-animation").offset().top - 100
+                        }, 1000);
+                    }
                 },
                 error: function (err) { //if error
                     console.log(err)
                 }
-            }); 
-            $("#stip_loading").hide()*/
-            $(".stip_facebook-card-body").append(`
+            });
+            /* $(".stip_facebook-card-body").append(`
                 <div class="stip_facebook-comment-box d-flex">
                     <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                         style="border-radius: 50%;" width="40" alt="">
@@ -236,17 +256,7 @@
                     <span class="stip_caring-badge">lorem</span>
                 </div>
             `)
-            $("#stip_facebook-input").val("")
-            $(".stip_caring-badge").click(function () {
-                $('html, body').animate({
-                    scrollTop: $("#stip_caring-animation").offset().top - 100
-                }, 1000);
-            });
-
-            $("#stip_caring-animation").show()
-            $('html, body').animate({
-                scrollTop: $("#stip_caring-animation").offset().top - 100
-            }, 1000);
+            $("#stip_facebook-input").val("") */
         })
         $(".stip_caring-badge").click(function () {
             $('html, body').animate({
