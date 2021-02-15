@@ -261,20 +261,28 @@
                     $("#stip_loading").hide()
                     if ($("#stip_facebook-input").val().toLowerCase() == "lorem ipsum") { // frase segreta per visualizzare le company
                         $(".stip_facebook-card-body").append(`
-                            <div class="stip_facebook-comment-box d-flex">
+                            <div class="stip_facebook-comment-box d-flex" id="stip_secret-box">
                                 <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                     style="border-radius: 50%;" width="40" alt="">
-                                <p class="stip-txt">` + res.score + `</p>
                             </div>
                         `)
+                        res.company_list.forEach(el => {
+                            $("#stip_secret-box").append("<p class='stip-txt'>" + el + "</p>")
+                        });
                         $("#stip_facebook-input").val("")
                     } else {
+                        let badge_txt
+                        if(res.label == "no caring"){
+                            badge_txt = "no caring"
+                        } else {
+                            badge_txt = "caring"
+                        }
                         $(".stip_facebook-card-body").append(`
                             <div class="stip_facebook-comment-box d-flex">
                                 <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                     style="border-radius: 50%;" width="40" alt="">
                                 <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
-                                <span class="stip_caring-badge">` + res.label + `</span>
+                                <span class="stip_caring-badge">` + badge_txt + `</span>
                             </div>
                         `)
                         $("#stip_facebook-input").val("")
@@ -283,13 +291,13 @@
                                 scrollTop: $("#stip_caring-animation").offset().top - 100
                             }, 1000);
                         });
-                        if (res.label == "caring") {
+                        if (badge_txt == "caring") {
                             $("#stip_nocaring-animation").hide()
                             $("#stip_caring-animation").show()
                             $('html, body').animate({
                                 scrollTop: $("#stip_caring-animation").offset().top - 100
                             }, 1000);
-                        } else if (res.label == "no caring") {
+                        } else if (badge_txt == "no caring") {
                             $("#stip_caring-animation").hide()
                             $("#stip_nocaring-animation").show()
                             $('html, body').animate({

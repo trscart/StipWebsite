@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-control: max-age=31557600" content="public">
+    <link rel="icon" href="src/img/logoColor.svg">
+
+    <!-- Primary Meta Tags -->
+    <title>Stip - Social & Email Customer Care Automation</title>
+    <meta class="meta_title-lang" key="stip_meta-title" name="title"
+        content="Stip - AI to boost your Digital Customer Support">
+    <meta class="meta_description-lang" key="stip_meta-description" name="description"
+        content="Make your customer service representatives' work easier and faster and increase your customer satisfaction">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="stip.io">
+    <meta property="og:type" content="stip.io">
+    <meta property="og:url" content="https://stip.io/platform.html">
+    <meta class="meta_title-lang" key="stip_meta-title" property="og:title"
+        content="Stip - AI to boost your Digital Customer Support">
+    <meta class="meta_description-lang" key="stip_meta-description" property="og:description"
+        content="Make your customer service representatives' work easier and faster and increase your customer satisfaction">
+    <meta property="og:image" content="https://stip.io/src/img/heroBannerIllustration.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Stip_Social" />
+    <meta class="meta_title-lang" key="stip_meta-title" name="twitter:title"
+        content="Stip - AI to boost your Digital Customer Support" />
+    <meta class="meta_description-lang" key="stip_meta-description" name="twitter:description"
+        content="Make your customer service representatives' work easier and faster and increase your customer satisfaction" />
+    <meta name="twitter:image" content="https://stip.io/src/img/heroBannerIllustration.png" />
+
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="src/style/index.css">
+
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77012119-1"></script>
+    <style>
+        #stip_test-ovs-send {
+            background-color: #399fad;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex stip-supportContainer">
+        <div class="row flex-grow-1">
+            <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4 d-flex flex-column justify-content-center p-4">
+                <img src="src/img/logoColor.svg" class="align-self-center mb-4" style="max-width: 30%" alt="">
+                <form id="stip_test-ovs-form">
+                    <div class="form-group">
+                        <textarea class="form-control"
+                            id="stip_test-ovs-input" rows="3" key="supportDescription" placeholder="Scrivi qui ..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block mt-4 stip-h3"
+                        id="stip_test-ovs-send">Invia</button>
+                </form>
+                <div id="stip_test-ovs-results" class="mt-4">
+                    <div id="stip_test-ovs-results-category">
+
+                    </div>
+                    <div id="stip_test-ovs-results-subcategory">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/languages.min.js"></script>
+    <script src="src/js/index.min.js"></script>
+    <!-- linkedin pixel -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "1061852";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })();
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=1061852&fmt=gif" />
+    </noscript>
+
+    <script>
+        $("#stip_test-ovs-form").submit(function (e) {
+            e.preventDefault()
+            $("#stip_loading").show()
+            $.ajax({
+                url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_test-ovs-input").val(),
+                type: 'GET',
+                success: function (res) {
+                    console.log(res)
+                    $("#stip_test-ovs-results").append("<p class='stip-txt'>" + res.score + "</p>")
+                    /* $("#stip_test-ovs-results").append("<p class='stip-txt'>" + el + "</p>")
+                    res.company_list.forEach(el => {
+                        $("#stip_test-ovs-results-category").append("<p class='stip-txt'>" + el + "</p>")
+                    });
+                    res.company_list.forEach(el => {
+                        $("#stip_test-ovs-results-subcategory").append("<p class='stip-txt'>" + el + "</p>")
+                    }); */
+                },
+                error: function (err) { //if error
+                    console.log(err)
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
