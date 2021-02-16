@@ -119,7 +119,7 @@
                 success: function (res) {
                     console.log(res)
                     $("#stip_loading").hide()
-                    $("#stip_test-ovs-results").append("<p class='stip-txt'><b>CNC: </b>" + res.cnc.predicted_class + "</p>")
+                    $("#stip_test-ovs-results").append("<p class='stip-txt'><b>CNC: </b>" + res.CNC.predicted_class + "</p>")
                     $("#stip_test-ovs-results").append("<p class='stip-txt'><b>Categoria: </b>" + res.category.predicted_class + "</p>")
                     $("#stip_test-ovs-results").append("<p class='stip-txt'><b>Sottocategoria: </b>" + res.sub_category.predicted_class + "</p>")
                     /* $("#stip_test-ovs-results").append("<p class='stip-txt'>" + el + "</p>")
