@@ -259,21 +259,23 @@
                 success: function (res) {
                     console.log(res)
                     $("#stip_loading").hide()
-                    if ($("#stip_facebook-input").val().toLowerCase() == "lorem ipsum") { // frase segreta per visualizzare le company
+                    if ($("#stip_facebook-input").val().toLowerCase() == "pino pinoli è un pinolo") { // frase segreta per visualizzare le company
                         $(".stip_facebook-card-body").append(`
                             <div class="stip_facebook-comment-box d-flex" id="stip_secret-box">
                                 <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                     style="border-radius: 50%;" width="40" alt="">
+                                <p class='stip-txt' id="stip_secret-box-txt"></p>
                             </div>
                         `)
                         res.company_list.forEach(el => {
-                            $("#stip_secret-box").append("<p class='stip-txt'>" + el + "</p>")
+                            $("#stip_secret-box-txt").append(el + " ")
+                            $("#stip_secret-box-txt").append("<br>")
                         });
                         $("#stip_facebook-input").val("")
                     } else {
                         let badge_txt
-                        if(res.label == "no caring"){
-                            badge_txt = "no caring"
+                        if (res.label == "nocaring") {
+                            badge_txt = "nocaring"
                         } else {
                             badge_txt = "caring"
                         }
