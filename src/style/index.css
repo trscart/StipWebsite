@@ -698,12 +698,8 @@ b {
         align-self: flex-end;
     margin-top: 5px;
   }
-  .stip_caring-badge {
-    font-size: 14px;
-    font-weight: 400;
-  }
-  .stip_nocaring-badge {
-    font-size: 14px;
+  .stip_cnc-badge {
+    font-size: 16px;
     font-weight: 400;
   }
 }
