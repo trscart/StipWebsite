@@ -325,12 +325,12 @@
         $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
 
         $("#stip_facebook-refresh").click(function () {
-            if ($(".stip_facebook-card").height() > 600) {
+            if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "auto",
                     "padding-top": "150px"
                 })
-            } else {
+            } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "100vh",
                     "padding-top": "0px"
@@ -349,7 +349,7 @@
                     "height": "auto",
                     "padding-top": "150px"
                 })
-            } else {
+            } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "100vh",
                     "padding-top": "0px"
@@ -359,12 +359,12 @@
 
         let comments_counter = 2
         $("#stip_facebook-form").submit(function (e) {
-            if ($(".stip_facebook-card").height() > 600) {
+            if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "auto",
                     "padding-top": "150px"
                 })
-            } else {
+            } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "100vh",
                     "padding-top": "0px"
@@ -373,7 +373,7 @@
             e.preventDefault()
             $("#stip_loading").show()
             $.ajax({
-                url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
+                url: 'http://ai-demo.stipworld.com:8888/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
                 type: 'GET',
                 success: function (res) {
                     console.log(res)
