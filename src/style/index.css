@@ -618,6 +618,12 @@ b {
   font-weight: 400;
 }
 
+.stip_cnc-description {
+  background-color: #1a0f91;
+  background: url(../img/pattern-linkedin.png) center center no-repeat;
+  background-size: cover;
+}
+
 #stip_facebook-input {
   background-color: #f0f2f5;
   border-radius: 50px;
