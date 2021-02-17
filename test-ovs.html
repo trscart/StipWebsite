@@ -73,7 +73,7 @@
                         id="stip_test-ovs-send">Invia</button>
                 </form>
                 <img id="stip_loading" class="align-self-center" src="./src/img/loading.gif" width="40" style="display: none;"
-                        alt="loading">
+                    alt="loading">
                 <div id="stip_test-ovs-results" class="mt-4">
                     <div id="stip_test-ovs-results-category">
 
@@ -109,32 +109,34 @@
     </noscript>
 
     <script>
-        $("#stip_test-ovs-form").submit(function (e) {
-            e.preventDefault()
-            $("#stip_loading").show()
-            $("#stip_test-ovs-results").empty()
-            $.ajax({
-                url: 'https://ai-demo.stipworld.com/demo_ai/ovs_demo/?sentence=' + $("#stip_test-ovs-input").val(),
-                type: 'GET',
-                success: function (res) {
-                    console.log(res)
-                    $("#stip_loading").hide()
-                    $("#stip_test-ovs-results").append("<p class='stip-txt'><b>CNC: </b>" + res.CNC.predicted_class + "</p>")
-                    $("#stip_test-ovs-results").append("<p class='stip-txt'><b>Categoria: </b>" + res.category.predicted_class + "</p>")
-                    $("#stip_test-ovs-results").append("<p class='stip-txt'><b>Sottocategoria: </b>" + res.sub_category.predicted_class + "</p>")
-                    /* $("#stip_test-ovs-results").append("<p class='stip-txt'>" + el + "</p>")
-                    res.company_list.forEach(el => {
-                        $("#stip_test-ovs-results-category").append("<p class='stip-txt'>" + el + "</p>")
-                    });
-                    res.company_list.forEach(el => {
-                        $("#stip_test-ovs-results-subcategory").append("<p class='stip-txt'>" + el + "</p>")
-                    }); */
-                },
-                error: function (err) { //if error
-                    console.log(err)
-                }
-            });
-        })
+        $(document).ready(function () {
+            $("#stip_test-ovs-form").submit(function (e) {
+                e.preventDefault()
+                $("#stip_loading").show()
+                $("#stip_test-ovs-results").empty()
+                $.ajax({
+                    url: 'https://ai-demo.stipworld.com/demo_ai/ovs_demo/?sentence=' + $("#stip_test-ovs-input").val(),
+                    type: 'GET',
+                    success: function (res) {
+                        console.log(res)
+                        $("#stip_loading").hide()
+                        $("#stip_test-ovs-results").append("<p class='stip-txt'><b>CNC: </b>" + res.CNC.predicted_class + "</p>")
+                        $("#stip_test-ovs-results").append("<p class='stip-txt'><b>Categoria: </b>" + res.category.predicted_class + "</p>")
+                        $("#stip_test-ovs-results").append("<p class='stip-txt'><b>Sottocategoria: </b>" + res.sub_category.predicted_class + "</p>")
+                        /* $("#stip_test-ovs-results").append("<p class='stip-txt'>" + el + "</p>")
+                        res.company_list.forEach(el => {
+                            $("#stip_test-ovs-results-category").append("<p class='stip-txt'>" + el + "</p>")
+                        });
+                        res.company_list.forEach(el => {
+                            $("#stip_test-ovs-results-subcategory").append("<p class='stip-txt'>" + el + "</p>")
+                        }); */
+                    },
+                    error: function (err) { //if error
+                        console.log(err)
+                    }
+                });
+            })
+        });
     </script>
 </body>
 

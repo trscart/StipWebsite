@@ -649,7 +649,20 @@ b {
   margin: 0;
 }
 
-.stip_cnc-badge {
+.stip_caring-badge {
+  background-color: #ff6600;
+  padding: 4px 8px;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 25px;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stip_nocaring-badge {
   background-color: #1a0f91;
   padding: 4px 8px;
   color: white;
@@ -698,7 +711,11 @@ b {
         align-self: flex-end;
     margin-top: 5px;
   }
-  .stip_cnc-badge {
+  .stip_caring-badge {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .stip_nocaring-badge {
     font-size: 16px;
     font-weight: 400;
   }

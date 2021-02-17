@@ -118,7 +118,7 @@
                                     style="border-radius: 50%;" width="40" alt="">
                                 <p id="stip_facebook-comment-caring"></p>
                             </div>
-                            <span class="stip_cnc-badge">caring</span>
+                            <span class="stip_caring-badge">caring</span>
                         </div>
                         <div class="stip_facebook-comment-box">
                             <div class="d-flex">
@@ -126,7 +126,7 @@
                                     style="border-radius: 50%;" width="40" alt="">
                                 <p id="stip_facebook-comment-nocaring"></p>
                             </div>
-                            <span class="stip_cnc-badge">no caring</span>
+                            <span class="stip_nocaring-badge">no caring</span>
                         </div>
                         <div id="stip_facebook-card-body-append"></div>
                     </div>
@@ -206,10 +206,10 @@
                     <img src="./src/img/flusso_caring.png" class="d-none d-md-block w-100">
                     <img src="./src/img/flusso_caring_mobile.png" class="d-block d-md-none w-100">
                     <a href="https://wa.me/+393474975970?text=Vorrei%20avere%20pi%C3%B9%20informazioni"><button type="button"
-                        title="contattaci su Whatsapp"
-                        class="d-block d-md-none mt-4 btn btn-primary stip-cta-linkedin">
-                        Contattaci su Whatsapp
-                    </button></a>
+                            title="contattaci su Whatsapp"
+                            class="d-block d-md-none mt-4 btn btn-primary stip-cta-linkedin">
+                            Contattaci su Whatsapp
+                        </button></a>
                 </div>
                 <!-- <div class="col-md-4" data-aos="fade">
                     <img src="./src/img/cnc-caring1.png" class="w-100">
@@ -299,166 +299,167 @@
     <script src="src/js/index.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        $(document).ready(function () {
+            // frasi post random
+            var textArray = [
+                {
+                    "text": "Hai sentito bene, i Mega Sconti sono arrivati! Dall’1 al 10 febbraio hai tutto il tempo per scoprire le migliori offerte 🤩",
+                    "comments": {
+                        "caring": "Il prodotto arriva a casa con garanzia??",
+                        "nocaring": "Ottimo!"
+                    }
+                },
+                {
+                    "text": "Domenica 28 marzo dalle 14 alle 20 sono previsti interventi di aggiornamento dei sistemi. I canali Socier pertanto potrebbero non essere disponibili; le carte funzioneranno regolarmente. Ti suggeriamo di eseguire in anticipo le tue operazioni e ti ricordiamo che se hai necessità di bloccare le tue carte puoi farlo chiamando i numeri indicati su http://socier.io",
+                    "comments": {
+                        "caring": "Ciao Socier. Ho bloccato la carta del conto tascabile perché ci sono stati acquisti non autorizzati. Ora però sulla stessa carta ora bloccata, devono arrivare dei rimborsi Amazon. Arrivano lo stesso? O devo fare qualche richiesta particolare?",
+                        "nocaring": "Io mi trovo molto bene"
+                    }
+                },
+                {
+                    "text": "Pronto a vivere un anno intero di emozioni senza fine? Scopri la nuova gamma di automobili!",
+                    "comments": {
+                        "caring": "Su questa macchina è possibile montare il gancio di traino?",
+                        "nocaring": "Molto bella la versione sport."
+                    }
+                },
+                {
+                    "text": "Solo con la Giga di Socier, la potenza della Rete fissa e della Rete mobile si uniscono per darti la connessione a casa più affidabile di sempre. A 30€ al mese: provala, è senza vincoli.",
+                    "comments": {
+                        "caring": "Delusione totale, linea lenta, vincolo e costi installazione assurdi e anche se vuoi cambiare gestore devi aspettare 48 mesi e devi vedertela con il chatbot prima di poter parlare con un operatore, impresa assai difficile.",
+                        "nocaring": "Cambiato da adsl a fibra allo stesso prezzo. 5 giorni con telefonata dell'operatore per sincerarsi che andasse tutto bene. Velocità in download mai meno di 85. Perfetto 🥰"
+                    }
+                },
+                {
+                    "text": "Tenetevi pronti: alle 22 inizieranno i saldi online di Socier!",
+                    "comments": {
+                        "caring": "Servizio scadente e vergognoso. Attendo il ritiro di un reso da 1 mese. Etichette stampate, Mail ricevute e con date dal servizio clienti di Socier. Nessun corriere, nonostante avessi ricevuto le Mail di conferma ritiro mai presentato. Numero di telefono eliminato e contatti solo con il servizio in Chat che oggi mi dici e che sono scaduti i termini. É vergognoso e poco professionale.",
+                        "nocaring": "Ho già fatto il mio ordine! App eccellente! Sempre all’avanguardia Socier 🔝"
+                    }
+                }
+            ];
 
-        // frasi post random
-        var textArray = [
-            {
-                "text": "Hai sentito bene, i Mega Sconti sono arrivati! Dall’1 al 10 febbraio hai tutto il tempo per scoprire le migliori offerte 🤩",
-                "comments": {
-                    "caring": "Il prodotto arriva a casa con garanzia??",
-                    "nocaring": "Ottimo!"
-                }
-            },
-            {
-                "text": "Domenica 28 marzo dalle 14 alle 20 sono previsti interventi di aggiornamento dei sistemi. I canali Socier pertanto potrebbero non essere disponibili; le carte funzioneranno regolarmente. Ti suggeriamo di eseguire in anticipo le tue operazioni e ti ricordiamo che se hai necessità di bloccare le tue carte puoi farlo chiamando i numeri indicati su http://socier.io",
-                "comments": {
-                    "caring": "Ciao Socier. Ho bloccato la carta del conto tascabile perché ci sono stati acquisti non autorizzati. Ora però sulla stessa carta ora bloccata, devono arrivare dei rimborsi Amazon. Arrivano lo stesso? O devo fare qualche richiesta particolare?",
-                    "nocaring": "Io mi trovo molto bene"
-                }
-            },
-            {
-                "text": "Pronto a vivere un anno intero di emozioni senza fine? Scopri la nuova gamma di automobili!",
-                "comments": {
-                    "caring": "Su questa macchina è possibile montare il gancio di traino?",
-                    "nocaring": "Molto bella la versione sport."
-                }
-            },
-            {
-                "text": "Solo con la Giga di Socier, la potenza della Rete fissa e della Rete mobile si uniscono per darti la connessione a casa più affidabile di sempre. A 30€ al mese: provala, è senza vincoli.",
-                "comments": {
-                    "caring": "Delusione totale, linea lenta, vincolo e costi installazione assurdi e anche se vuoi cambiare gestore devi aspettare 48 mesi e devi vedertela con il chatbot prima di poter parlare con un operatore, impresa assai difficile.",
-                    "nocaring": "Cambiato da adsl a fibra allo stesso prezzo. 5 giorni con telefonata dell'operatore per sincerarsi che andasse tutto bene. Velocità in download mai meno di 85. Perfetto 🥰"
-                }
-            },
-            {
-                "text": "Tenetevi pronti: alle 22 inizieranno i saldi online di Socier!",
-                "comments": {
-                    "caring": "Servizio scadente e vergognoso. Attendo il ritiro di un reso da 1 mese. Etichette stampate, Mail ricevute e con date dal servizio clienti di Socier. Nessun corriere, nonostante avessi ricevuto le Mail di conferma ritiro mai presentato. Numero di telefono eliminato e contatti solo con il servizio in Chat che oggi mi dici e che sono scaduti i termini. É vergognoso e poco professionale.",
-                    "nocaring": "Ho già fatto il mio ordine! App eccellente! Sempre all’avanguardia Socier 🔝"
-                }
-            }
-        ];
-
-        var randomNumber = Math.floor(Math.random() * textArray.length);
-        $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
-        $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
-        $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
-
-        $("#stip_facebook-refresh").click(function () {
-            console.log($(".stip_facebook-card").height())
-            if ($(".stip_facebook-card").height() > 560 && $(window).width() > 1200) {
-                $(".stip_cnc-container").css({
-                    "height": "auto",
-                    "padding-top": "150px"
-                })
-            } else if ($(".stip_facebook-card").height() < 560 && $(window).width() > 1200) {
-                $(".stip_cnc-container").css({
-                    "height": "100vh",
-                    "padding-top": "0px"
-                })
-            }
-            $("#stip_facebook-card-body-append").empty()
-            let old_randomNumber = randomNumber
-            while (old_randomNumber == randomNumber) {
-                randomNumber = Math.floor(Math.random() * textArray.length);
-            }
+            var randomNumber = Math.floor(Math.random() * textArray.length);
             $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
             $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
             $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
-        })
 
-        setTimeout(function () {
-            if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
-                $(".stip_cnc-container").css({
-                    "height": "auto",
-                    "padding-top": "150px"
-                })
-            } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
-                $(".stip_cnc-container").css({
-                    "height": "100vh",
-                    "padding-top": "0px"
-                })
-            }
-        }, 200)
+            $("#stip_facebook-refresh").click(function () {
+                console.log($(".stip_facebook-card").height())
+                if ($(".stip_facebook-card").height() > 560 && $(window).width() > 1200) {
+                    $(".stip_cnc-container").css({
+                        "height": "auto",
+                        "padding-top": "150px"
+                    })
+                } else if ($(".stip_facebook-card").height() < 560 && $(window).width() > 1200) {
+                    $(".stip_cnc-container").css({
+                        "height": "100vh",
+                        "padding-top": "0px"
+                    })
+                }
+                $("#stip_facebook-card-body-append").empty()
+                let old_randomNumber = randomNumber
+                while (old_randomNumber == randomNumber) {
+                    randomNumber = Math.floor(Math.random() * textArray.length);
+                }
+                $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
+                $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
+                $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
+            })
 
-        let comments_counter = 2
-        $("#stip_facebook-form").submit(function (e) {
-            e.preventDefault()
-            $("#stip_loading").show()
-            $.ajax({
-                url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
-                type: 'GET',
-                success: function (res) {
-                    console.log(res)
-                    $("#stip_loading").hide()
-                    if ($("#stip_facebook-input").val().toLowerCase() == "lista società") { // frase segreta per visualizzare le company
-                        $("#stip_facebook-card-body-append").append(`
+            setTimeout(function () {
+                if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
+                    $(".stip_cnc-container").css({
+                        "height": "auto",
+                        "padding-top": "150px"
+                    })
+                } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
+                    $(".stip_cnc-container").css({
+                        "height": "100vh",
+                        "padding-top": "0px"
+                    })
+                }
+            }, 200)
+
+            let comments_counter = 2
+            $("#stip_facebook-form").submit(function (e) {
+                e.preventDefault()
+                $("#stip_loading").show()
+                $.ajax({
+                    url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
+                    type: 'GET',
+                    success: function (res) {
+                        console.log(res)
+                        $("#stip_loading").hide()
+                        if ($("#stip_facebook-input").val().toLowerCase() == "lista società") { // frase segreta per visualizzare le company
+                            $("#stip_facebook-card-body-append").append(`
                             <div class="stip_facebook-comment-box d-flex" id="stip_secret-box">
                                 <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                     style="border-radius: 50%;" width="40" alt="">
                                 <p id="stip_secret-box-txt"></p>
                             </div>
                         `)
-                        res.company_list.forEach(el => {
-                            $("#stip_secret-box-txt").append(el + ", ")
-                        });
-                        $("#stip_facebook-input").val("")
-                    } else {
-                        $(".stip_cnc-container").css({
-                            "height": "auto",
-                            "padding-top": "150px"
-                        })
-                        let badge_txt
-                        if (res.label == "nocaring") {
-                            badge_txt = "no caring"
+                            res.company_list.forEach(el => {
+                                $("#stip_secret-box-txt").append(el + ", ")
+                            });
+                            $("#stip_facebook-input").val("")
                         } else {
-                            badge_txt = "caring"
-                        }
-                        $("#stip_facebook-card-body-append").append(`
+                            $(".stip_cnc-container").css({
+                                "height": "auto",
+                                "padding-top": "150px"
+                            })
+                            let badge_txt
+                            if (res.label == "nocaring") {
+                                badge_txt = "no caring"
+                            } else {
+                                badge_txt = "caring"
+                            }
+                            $("#stip_facebook-card-body-append").append(`
                             <div class="stip_facebook-comment-box">
                                 <div class="d-flex">
                                     <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                         style="border-radius: 50%;" width="40" alt="">
                                     <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
                                 </div>
-                                <span class="stip_cnc-badge">` + badge_txt + `</span>
+                                <span class="stip_` + badge_txt.replace(/ /g, '') + `-badge">` + badge_txt + `</span>
                             </div>
                         `)
-                        $("#stip_facebook-input").val("")
-                        if (badge_txt == "caring") {
-                            $("#stip_nocaring-animation").hide()
-                            $("#stip_caring-animation").show()
-                            $('html, body').animate({
-                                scrollTop: $("#stip_caring-animation").offset().top - 100
-                            }, 1000);
-                        } else if (badge_txt == "no caring") {
-                            $("#stip_caring-animation").hide()
-                            $("#stip_nocaring-animation").show()
-                            $('html, body').animate({
-                                scrollTop: $("#stip_nocaring-animation").offset().top - 100
-                            }, 1000);
-                        }
+                            $("#stip_facebook-input").val("")
+                            if (badge_txt == "caring") {
+                                $("#stip_nocaring-animation").hide()
+                                $("#stip_caring-animation").show()
+                                $('html, body').animate({
+                                    scrollTop: $("#stip_caring-animation").offset().top - 100
+                                }, 1000);
+                            } else if (badge_txt == "no caring") {
+                                $("#stip_caring-animation").hide()
+                                $("#stip_nocaring-animation").show()
+                                $('html, body').animate({
+                                    scrollTop: $("#stip_nocaring-animation").offset().top - 100
+                                }, 1000);
+                            }
 
-                        comments_counter = comments_counter + 1
-                        $("#stip_facebook-comments-counter").text(comments_counter)
+                            comments_counter = comments_counter + 1
+                            $("#stip_facebook-comments-counter").text(comments_counter)
+                        }
+                        if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
+                            $(".stip_cnc-container").css({
+                                "height": "auto",
+                                "padding-top": "150px"
+                            })
+                        } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
+                            $(".stip_cnc-container").css({
+                                "height": "100vh",
+                                "padding-top": "0px"
+                            })
+                        }
+                    },
+                    error: function (err) { //if error
+                        console.log(err)
                     }
-                    if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
-                        $(".stip_cnc-container").css({
-                            "height": "auto",
-                            "padding-top": "150px"
-                        })
-                    } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
-                        $(".stip_cnc-container").css({
-                            "height": "100vh",
-                            "padding-top": "0px"
-                        })
-                    }
-                },
-                error: function (err) { //if error
-                    console.log(err)
-                }
-            });
-        })
+                });
+            })
+        });
     </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
