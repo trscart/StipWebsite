@@ -279,6 +279,7 @@
     <script src="src/js/index.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+
         // frasi post random
         var textArray = [
             {
@@ -331,8 +332,25 @@
             $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
         })
 
+        setTimeout(function () {
+            console.log($(".stip_facebook-card").height())
+            if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
+                $(".stip_cnc-container").css({
+                    "height": "auto",
+                    "padding-top": "150px"
+                })
+            }
+        }, 200)
+
         let comments_counter = 1
         $("#stip_facebook-form").submit(function (e) {
+            console.log($(".stip_facebook-card").height())
+            if ($(".stip_facebook-card").height() > 600) {
+                $(".stip_cnc-container").css({
+                    "height": "auto",
+                    "padding-top": "150px"
+                })
+            }
             e.preventDefault()
             $("#stip_loading").show()
             $.ajax({
