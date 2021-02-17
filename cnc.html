@@ -78,15 +78,16 @@
     <div class="container stip_cnc-container">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-5">
-                <h1>Finalmente. La prima Intelligenza Artificiale che puoi provare personalmente!</h1>
-                <h2 class="mt-4">Tutti ne parlano, ma nessuno si assume il rischio di fartela provare. Noi si!<br>
-                    <b>Gioca con la nostra Intelligenza Artificiale</b> e scopri come potrebbe migliorare il tuo
-                    business.
-                </h2>
+                <h1>E tu, l’hai mai provata?</h1>
+                <h2 class="mt-3">La nostra Intelligenza Artificiale è nelle tue mani.</h2>
+                <h3>Tutti ne parlano, ma nessuno si assume il rischio di fartela provare. Noi si.
+                    Prova l’IA di Stip e immagina come potrebbe migliorare il tuo business.
+                </h3>
+                <p class="stip-txt">Vedi questo post?
+                    è un post Facebook, di una qualsiasi azienda, proprio come la tua. Una cosa è certa: qualcuno commenterà e quasi sempre, si aspetterà una risposta. Commenta il post qui sotto come farebbe un tuo cliente e scopri cosa succede!
+                </p>
             </div>
             <div class="offset-md-1 col-md-6 mt-4 mt-md-0">
-                <h2 class="mb-3">Scrivi un commento, come se fossi un qualsiasi utente e
-                    scopri come <b>migliorare la produttività dei tuoi operatori del 300%!</b></h2>
                 <div class="card stip_facebook-card shadow">
                     <div class="card-header bg-white">
                         <div class="d-flex align-items-center">
@@ -97,7 +98,7 @@
                                 <p class="stip-label mb-0">3h fa</p>
                             </div>
                         </div>
-                        <p class="stip-txt" id="stip_facebook-feed-txt"></p>
+                        <p id="stip_facebook-feed-txt"></p>
                         <div>
                             <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e"
                                 width="20" alt="">
@@ -108,11 +109,21 @@
                         </div>
                     </div>
                     <div class="card-body pb-0 stip_facebook-card-body">
-                        <div class="stip_facebook-comment-box d-flex">
-                            <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
-                                style="border-radius: 50%;" width="40" alt="">
-                            <p class="stip-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <span class="stip_caring-badge">lorem</span>
+                        <div class="stip_facebook-comment-box">
+                            <div class="d-flex">
+                                <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                    style="border-radius: 50%;" width="40" alt="">
+                                <p id="stip_facebook-comment-caring"></p>
+                            </div>
+                            <span class="stip_caring-badge">caring</span>
+                        </div>
+                        <div class="stip_facebook-comment-box">
+                            <div class="d-flex">
+                                <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                    style="border-radius: 50%;" width="40" alt="">
+                                <p id="stip_facebook-comment-nocaring"></p>
+                            </div>
+                            <span class="stip_nocaring-badge">no caring</span>
                         </div>
                     </div>
                     <div class="card-footer bg-white border-0 pt-0">
@@ -138,44 +149,67 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="stip-txt" data-aos="fade">
-                    “Caring” sono tutti quei contenuti che abbiano <b>priorità elevata</b> per il team di customer service.
+                    L’IA di Stip individua come “caring” tutte le <b>richieste di informazioni e quelle di assistenza</b>, assegnando a questo tipo di contenuti una <b>priorità elevata</b> di gestione per il team di customer service.
 
-                    Questa funzionalità permette anche di <b>distinguere le richieste di informazioni da quelle di assistenza.</b>
-                    Entrambe sono considerate “caring” e con un’alta priorità di risoluzione. Ci sono, però, differenze nella gestione: le richieste di informazione sono gestite in maniera automatica, real-time e senza necessità di intervento umano da parte dell’IA di Stip. Le richieste di assistenza, che richiedono l’intervento di un operatore, sono gestite solo in fase iniziale, categorizzate e reindirizzate (all’interno del CRM aziendale) al team o all’agente competente.
+                    L’IA riconosce questi tipi di richieste e distingue tra richieste informazioni, che possono essere gestite direttamente e senza necessità di intervento umano, e richieste di assistenza, che hanno bisogno di essere gestite da un operatore.
 
-                    <b>Come cambia il customer service di oggi?</b>
-
-                    Il 99% delle aziende si affida oggi a una gestione manuale delle prime fasi dell’assistenza al cliente. Ogni volta che un utente scrive un contenuto indirizzato - direttamente o indirettamente - all’azienda, un operatore dovrà leggerlo, comprenderne il contenuto, definirne la priorità di risoluzione e, solo infine, gestirlo o invarlo alla persona più competente.
                 </p>
+                <ul>
+                    <li>
+                        <p>Le richieste di informazioni vengono gestite dall’IA di Stip automaticamente e in tempo reale, attraverso l’invio di FAQs e in accordo con le policy aziendali
+                        </p>
+                    </li>
+                    <li>
+                        <p>Le richieste di assistenza prevedono una gestione di primo livello da parte dell’IA di Stip, che consente all’operatore di finalizzare la gestione in una sola interazione con l’utente.
+                        </p>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-6">
                 <p class="stip-txt" data-aos="fade">
-                    Questi passaggi, che richiedono grande dispendio di tempo, risorse (economiche e di personale) ed energie, <b>non hanno alcun valore aggiunto per il cliente</b> finale.
+                    Il 99% delle aziende si affida a una gestione manuale di tutte le fasi dell’assistenza al cliente. Ogni volta che un utente scrive un contenuto indirizzato - direttamente o indirettamente - all’azienda, un operatore dovrà:
+                </p>
+                <ul>
+                    <li>
+                        <p>leggerlo e comprenderne il contenuto</p>
+                    </li>
+                    <li>
+                        <p>definirne la priorità di risoluzione</p>
+                    </li>
+                    <li>
+                        <p>gestirlo o invarlo alla persona più competente</p>
+                    </li>
+                </ul>
+                <p>
+                    Queste attività costituiscono un grande dispendio di tempo ed energia per gli operatori e un grande sforzo economico per l’azienda, pur non possedendo alcun <b>“valore aggiunto” per il cliente</b> finale.
 
-                    L’IA di Stip consente di <b>automatizzare tutta la gestione di primo livello</b> di queste richieste, lasciando agli operatori la possibilità di concentrasi soltanto sulla parte del processo “a valore aggiunto” per l’utente: una risposta rapida, personalizzata e risolutiva.
-                    Il risultato? Gli operatori sono alleggeriti di lavoro e possono gestire le richieste in modo più semplice e organizzato, la soddisfazione del cliente finale aumenta, a seguito dell’aumentata rapidità e personalizzazione e i costi per l’azienda si abbassano sostanzialmente (intorno al 67%).
+                    <b>Automatizzando la gestione di primo livello delle richieste</b>, l’IA di Stip consente agli operatori di aumentare la propria efficienza, all’azienda di risparmiare e agli utenti di ricevere un servizio più soddisfacente.
                 </p>
             </div>
         </div>
         <div class="row text-center justify-content-center mt-5">
-            <h3 class="stip-h1" data-aos="fade">L’AI che emula l’operatore (e gli semplifica il lavoro)</h3>
+            <h3 class="stip-h1" data-aos="fade">L’IA di Stip e la gestione dei contenuti “caring”</h3>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-3" data-aos="fade">
+            <div class="col-md-4" data-aos="fade">
                 <img src="./src/img/cnc-caring1.png" class="w-100">
-                <h2 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="stip-h3 text-center">Riconoscimento del tipo di contenuto e differenziazione tra richieste di informazioni e richieste di assistenza</h2>
             </div>
-            <div class="col-md-3" data-aos="fade">
+            <div class="col-md-4" data-aos="fade">
                 <img src="./src/img/cnc-caring2.png" class="w-100">
-                <h2 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="stip-h3 text-center">Gestione automatica, in tempo reale e senza necessità di intervento umano delle richieste informazioni, attraverso FAQs o secondo le policy aziendali</h2>
             </div>
-            <div class="col-md-3" data-aos="fade">
+            <div class="col-md-4" data-aos="fade">
                 <img src="./src/img/cnc-caring3.png" class="w-100">
-                <h2 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="stip-h3 text-center">Gestione di primo livello delle richieste di assistenza: raccolta delle informazioni necessarie per la risoluzione della richiesta dell’utente</h2>
             </div>
-            <div class="col-md-3" data-aos="fade">
+            <div class="col-md-4" data-aos="fade">
                 <img src="./src/img/cnc-caring4.png" class="w-100">
-                <h2 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="stip-h3 text-center">Creazione di un ticket categorizzato, comprensivo delle informazioni ricevute a seguito dell’interazione automatica con l’utente</h2>
+            </div>
+            <div class="col-md-4" data-aos="fade">
+                <img src="./src/img/cnc-caring4.png" class="w-100">
+                <h2 class="stip-h3 text-center">Indirizzamento del ticket categorizzato all’operatore o al team competente a gestirlo, all’interno del CRM aziendale</h2>
             </div>
             <a href="https://wa.me/+393474975970?text=Vorrei%20avere%20pi%C3%B9%20informazioni"><button type="button"
                     title="contattaci su Whatsapp"
@@ -192,31 +226,32 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="stip-txt" data-aos="fade">
-                    “No caring” sono tutti quei contenuti che abbiano <b>bassa (o nulla) priorità</b> per il team di customer service. Si applica a tutti i contenuti che non siano richieste di assistenza o informazioni.
+                    L’IA di Stip individua come “no caring” tutti i contenuti che abbiano bassa (o nulla) priorità di gestione per il team di customer service, non trattandosi di richieste di assistenza o di informazioni.
 
-                    I contenuti classificati come “no caring” saranno comunque visibili all’interno del CRM aziendale o della piattaforma di Stip e gestibili in maniera autonoma.
+                    I contenuti classificati dall’IA di Stip come “no caring” saranno comunque visibili all’interno del CRM aziendale (o sulla piattaforma di Stip) e potranno essere gestiti.
                 </p>
             </div>
             <div class="col-md-6">
                 <p class="stip-txt" data-aos="fade">
                     <b>Come cambia il customer service di oggi?</b>
 
-                    Una percentuale variabile tra il 60 e il 90% dei contenuti ricevuti dalle aziende è oggi costituita da contenuti “no caring”.
-                    Questo tipo di classificazione consente agli operatori di customer service di risparmiare l’80% del tempo impiegato per il loro lavoro, permettendogli di concentrarsi solo sulle attività di secondo livello, a valore aggiunto per il cliente.
+                    I contenuti “no caring” costituiscono una percentuale variabile tra il 60% e il 90% di tutti i contenuti ricevuti da un’azienda sui canali digitali.
+
+                    Questa classificazione automatica dell’IA di Stip, consente agli operatori di risparmiare il tempo impiegato nella lettura e nel riconoscimento di questi contenuti, permettendogli di concentrarsi solo sulla gestione delle richieste di assistenza e sulle attività di secondo livello, a “valore aggiunto” per il cliente.
                 </p>
             </div>
         </div>
         <div class="row text-center justify-content-center mt-5">
-            <h3 class="stip-h1" data-aos="fade">L’AI che emula l’operatore (e gli semplifica il lavoro)</h3>
+            <h3 class="stip-h1" data-aos="fade">L’IA di Stip e la gestione dei contenuti “no caring”</h3>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-4" data-aos="fade">
                 <img src="./src/img/cnc-nocaring1.png" class="w-100">
-                <h2 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="stip-h3 text-center">Riconoscimento della bassa (o nulla) priorità di gestione del contenuto (applicabile a tutti i contenuti che non siano richieste di assistenza o informazioni)</h2>
             </div>
             <div class="col-md-4" data-aos="fade">
                 <img src="./src/img/cnc-nocaring2.png" class="w-100">
-                <h2 class="stip-h3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="stip-h3 text-center">Indirizzamento automatico del contenuto all’interno del CRM aziendale o della piattaforma di Stip</h2>
             </div>
             <a href="https://wa.me/+393474975970?text=Vorrei%20avere%20pi%C3%B9%20informazioni"><button type="button"
                     title="contattaci su Whatsapp"
@@ -242,12 +277,47 @@
     <script>
         // frasi post random
         var textArray = [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu consectetur sapien, eget semper ipsum.',
-            'Lorem ipsum dolor sit amet, consectetur. Vestibulum eu consectetur sapien, eget semper ipsum.',
-            'Lorem ipsum, consectetur adipiscing elit. Vestibulum eu consectetur sapien, eget semper ipsum.'
+            {
+                "text": "Hai sentito bene, i Mega Sconti sono arrivati! Dall’1 al 10 febbraio hai tutto il tempo per scoprire le migliori offerte 🤩",
+                "comments": {
+                    "caring": "Il prodotto arriva a casa con garanzia??",
+                    "nocaring": "Ottimo!"
+                }
+            },
+            {
+                "text": "Domenica 28 marzo dalle 14 alle 20 sono previsti interventi di aggiornamento dei sistemi. I canali Stip pertanto potrebbero non essere disponibili; le carte funzioneranno regolarmente. Ti suggeriamo di eseguire in anticipo le tue operazioni e ti ricordiamo che se hai necessità di bloccare le tue carte puoi farlo chiamando i numeri indicati su http://Stip.io",
+                "comments": {
+                    "caring": "Ciao Stip. Ho bloccato la carta del conto tascabile perché ci sono stati acquisti non autorizzati. Ora però sulla stessa carta ora bloccata, devono arrivare dei rimborsi Amazon. Arrivano lo stesso? O devo fare qualche richiesta particolare?",
+                    "nocaring": "Io mi trovo molto bene"
+                }
+            },
+            {
+                "text": "Pronto a vivere un anno intero di emozioni senza fine? Scopri la nuova gamma di automobili!",
+                "comments": {
+                    "caring": "Su questa macchina è possibile montare il gancio di traino?",
+                    "nocaring": "Molto bella la versione sport."
+                }
+            },
+            {
+                "text": "Solo con la Giga™ di Stip, la potenza della Rete fissa e della Rete mobile si uniscono per darti la connessione a casa più affidabile di sempre. A 30€ al mese: provala, è senza vincoli.",
+                "comments": {
+                    "caring": "Delusione totale, linea lenta, vincolo e costi installazione assurdi e anche se vuoi cambiare gestore devi aspettare 48 mesi e devi vedertela con il chatbot prima di poter parlare con un operatore, impresa assai difficile.",
+                    "nocaring": "Cambiato da adsl a fibra allo stesso prezzo. 5 giorni con telefonata dell'operatore per sincerarsi che andasse tutto bene. Velocità in download mai meno di 85. Perfetto 🥰"
+                }
+            },
+            {
+                "text": "Tenetevi pronti: alle 22 inizieranno i saldi online di Stip!",
+                "comments": {
+                    "caring": "Servizio scadente e vergognoso. Attendo il ritiro di un reso da 1 mese. Etichette stampate, Mail ricevute e con date dal servizio clienti di Stip. Nessun corriere, nonostante avessi ricevuto le Mail di conferma ritiro mai presentato. Numero di telefono eliminato e contatti solo con il servizio in Chat che oggi mi dici e che sono scaduti i termini. É vergognoso e poco professionale.",
+                    "nocaring": "Ho già fatto il mio ordine! App eccellente! Sempre all’avanguardia Stip 🔝"
+                }
+            }
         ];
+
         var randomNumber = Math.floor(Math.random() * textArray.length);
-        $("#stip_facebook-feed-txt").text(textArray[randomNumber])
+        $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
+        $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
+        $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
 
         let comments_counter = 1
         $("#stip_facebook-form").submit(function (e) {
@@ -280,19 +350,16 @@
                             badge_txt = "caring"
                         }
                         $(".stip_facebook-card-body").append(`
-                            <div class="stip_facebook-comment-box d-flex">
-                                <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
-                                    style="border-radius: 50%;" width="40" alt="">
-                                <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
-                                <span class="stip_caring-badge">` + badge_txt + `</span>
+                            <div class="stip_facebook-comment-box">
+                                <div class="d-flex">
+                                    <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                        style="border-radius: 50%;" width="40" alt="">
+                                    <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
+                                </div>
+                                <span class="stip_` + badge_txt.replace(/ /g,'') + `-badge">` + badge_txt + `</span>
                             </div>
                         `)
                         $("#stip_facebook-input").val("")
-                        $(".stip_caring-badge").click(function () {
-                            $('html, body').animate({
-                                scrollTop: $("#stip_caring-animation").offset().top - 100
-                            }, 1000);
-                        });
                         if (badge_txt == "caring") {
                             $("#stip_nocaring-animation").hide()
                             $("#stip_caring-animation").show()

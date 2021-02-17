@@ -599,16 +599,22 @@ b {
 
 .stip_cnc-container {
   height: 100vh;
+  overflow: visible;
 }
 
 .stip_cnc-container h1 {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 600;
   line-height: 1.4;
   color: #1a0f91;
 }
 
 .stip_cnc-container h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.stip_cnc-container h3 {
   font-size: 21px;
   font-weight: 400;
 }
@@ -626,6 +632,9 @@ b {
 
 .stip_facebook-comment-box {
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .stip_facebook-comment-box p {
@@ -635,6 +644,19 @@ b {
   margin: 0;
 }
 
+.stip_nocaring-badge {
+  background-color: #1a0f91;
+  padding: 4px 8px;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 25px;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .stip_caring-badge {
   background-color: #ff6600;
   padding: 4px 8px;
@@ -642,10 +664,10 @@ b {
   -ms-flex-item-align: start;
       align-self: flex-start;
   border-radius: 25px;
-  cursor: pointer;
   margin-left: 5px;
   font-size: 16px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 @media (max-width: 576px) {
@@ -657,7 +679,18 @@ b {
     font-size: 32px;
   }
   .stip_cnc-container h2 {
-    font-size: 16px;
+    font-size: 26px;
+  }
+  .stip_facebook-comment-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .stip_facebook-comment-box span {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 5px;
   }
   .stip_caring-badge {
     font-size: 14px;
