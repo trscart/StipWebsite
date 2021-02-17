@@ -393,7 +393,7 @@
             e.preventDefault()
             $("#stip_loading").show()
             $.ajax({
-                url: 'http://ai-demo.stipworld.com:8888/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
+                url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
                 type: 'GET',
                 success: function (res) {
                     console.log(res)
