@@ -325,6 +325,17 @@
         $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
 
         $("#stip_facebook-refresh").click(function () {
+            if ($(".stip_facebook-card").height() > 600) {
+                $(".stip_cnc-container").css({
+                    "height": "auto",
+                    "padding-top": "150px"
+                })
+            } else {
+                $(".stip_cnc-container").css({
+                    "height": "100vh",
+                    "padding-top": "0px"
+                })
+            }
             $("#stip_facebook-card-body-append").empty()
             randomNumber = Math.floor(Math.random() * textArray.length);
             $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
@@ -333,22 +344,30 @@
         })
 
         setTimeout(function () {
-            console.log($(".stip_facebook-card").height())
             if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "auto",
                     "padding-top": "150px"
+                })
+            } else {
+                $(".stip_cnc-container").css({
+                    "height": "100vh",
+                    "padding-top": "0px"
                 })
             }
         }, 200)
 
         let comments_counter = 1
         $("#stip_facebook-form").submit(function (e) {
-            console.log($(".stip_facebook-card").height())
             if ($(".stip_facebook-card").height() > 600) {
                 $(".stip_cnc-container").css({
                     "height": "auto",
                     "padding-top": "150px"
+                })
+            } else {
+                $(".stip_cnc-container").css({
+                    "height": "100vh",
+                    "padding-top": "0px"
                 })
             }
             e.preventDefault()
