@@ -333,19 +333,23 @@
         $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
 
         $("#stip_facebook-refresh").click(function () {
-            if ($(".stip_facebook-card").height() > 550 && $(window).width() > 1200) {
+            console.log($(".stip_facebook-card").height())
+            if ($(".stip_facebook-card").height() > 560 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "auto",
                     "padding-top": "150px"
                 })
-            } else if ($(".stip_facebook-card").height() < 550 && $(window).width() > 1200) {
+            } else if ($(".stip_facebook-card").height() < 560 && $(window).width() > 1200) {
                 $(".stip_cnc-container").css({
                     "height": "100vh",
                     "padding-top": "0px"
                 })
             }
             $("#stip_facebook-card-body-append").empty()
-            randomNumber = Math.floor(Math.random() * textArray.length);
+            let old_randomNumber = randomNumber
+            while (old_randomNumber == randomNumber) {
+                randomNumber = Math.floor(Math.random() * textArray.length);
+            }
             $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
             $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
             $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
