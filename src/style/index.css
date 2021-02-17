@@ -670,6 +670,20 @@ b {
   white-space: nowrap;
 }
 
+#stip_facebook-refresh {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#stip_facebook-refresh:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: #1a0f91;
+}
+
 @media (max-width: 576px) {
   .stip_cnc-container {
     padding: 100px 25px 0 25px;

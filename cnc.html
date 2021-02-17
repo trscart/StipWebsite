@@ -94,9 +94,12 @@
                             <img src="./src/img/logoColor.svg" class="p-1" style="border-radius: 50%;" width="50"
                                 alt="">
                             <div class="ml-3">
-                                <h2 class="stip-h3 mb-0">Stip</h2>
+                                <h3 class="mb-0">Stip</h3>
                                 <p class="stip-label mb-0">3h fa</p>
                             </div>
+                            <span class="material-icons" id="stip_facebook-refresh">
+                                refresh
+                            </span>
                         </div>
                         <p id="stip_facebook-feed-txt"></p>
                         <div>
@@ -125,6 +128,7 @@
                             </div>
                             <span class="stip_nocaring-badge">no caring</span>
                         </div>
+                        <div id="stip_facebook-card-body-append"></div>
                     </div>
                     <div class="card-footer bg-white border-0 pt-0">
                         <form class="d-flex flex-column" id="stip_facebook-form">
@@ -319,6 +323,14 @@
         $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
         $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
 
+        $("#stip_facebook-refresh").click(function () {
+            $("#stip_facebook-card-body-append").empty()
+            randomNumber = Math.floor(Math.random() * textArray.length);
+            $("#stip_facebook-feed-txt").text(textArray[randomNumber].text)
+            $("#stip_facebook-comment-caring").text(textArray[randomNumber].comments.caring)
+            $("#stip_facebook-comment-nocaring").text(textArray[randomNumber].comments.nocaring)
+        })
+
         let comments_counter = 1
         $("#stip_facebook-form").submit(function (e) {
             e.preventDefault()
@@ -330,7 +342,7 @@
                     console.log(res)
                     $("#stip_loading").hide()
                     if ($("#stip_facebook-input").val().toLowerCase() == "pino pinoli è un pinolo") { // frase segreta per visualizzare le company
-                        $(".stip_facebook-card-body").append(`
+                        $("#stip_facebook-card-body-append").append(`
                             <div class="stip_facebook-comment-box d-flex" id="stip_secret-box">
                                 <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                     style="border-radius: 50%;" width="40" alt="">
@@ -349,14 +361,14 @@
                         } else {
                             badge_txt = "caring"
                         }
-                        $(".stip_facebook-card-body").append(`
+                        $("#stip_facebook-card-body-append").append(`
                             <div class="stip_facebook-comment-box">
                                 <div class="d-flex">
                                     <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
                                         style="border-radius: 50%;" width="40" alt="">
                                     <p class="stip-txt">` + $("#stip_facebook-input").val() + `</p>
                                 </div>
-                                <span class="stip_` + badge_txt.replace(/ /g,'') + `-badge">` + badge_txt + `</span>
+                                <span class="stip_` + badge_txt.replace(/ /g, '') + `-badge">` + badge_txt + `</span>
                             </div>
                         `)
                         $("#stip_facebook-input").val("")
