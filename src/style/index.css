@@ -70,7 +70,7 @@ body {
 }
 
 b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .stip-navs {
@@ -597,6 +597,11 @@ b {
   }
 }
 
+.stip_facebook-title {
+  font-size: 38px;
+  font-weight: 700;
+}
+
 .stip_cnc-container {
   padding-top: 150px;
 }
@@ -604,24 +609,29 @@ b {
 .stip_cnc-container h1 {
   font-size: 46px;
   font-weight: 700;
-  line-height: 1.4;
   color: #1a0f91;
 }
 
 .stip_cnc-container h2 {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .stip_cnc-container h3 {
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-.stip_cnc-description {
+.stip_cnc-container .stip_facebook-hero-txt {
+  text-align: center;
+}
+
+.stip_nocaring-description {
   background-color: #1a0f91;
-  background: url(../img/pattern-linkedin.png) center center no-repeat;
-  background-size: cover;
+}
+
+.stip_caring-description {
+  background-color: #ff6600;
 }
 
 #stip_facebook-input {
@@ -689,15 +699,34 @@ b {
   color: #1a0f91;
 }
 
+.stip_retry-show-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (max-width: 576px) {
+  .stip_facebook-title {
+    font-size: 26px;
+    font-weight: 700;
+  }
   .stip_cnc-container {
     padding: 100px 25px 0 25px;
   }
   .stip_cnc-container h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
   .stip_cnc-container h2 {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  .stip_cnc-container h3 {
+    font-size: 18px;
+  }
+  .stip_cnc-container .stip_facebook-hero-txt {
+    text-align: left;
   }
   .stip_facebook-comment-box {
     -webkit-box-orient: vertical;
@@ -717,6 +746,15 @@ b {
   .stip_nocaring-badge {
     font-size: 16px;
     font-weight: 400;
+  }
+  .stip_retry-show-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
