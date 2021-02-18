@@ -598,12 +598,12 @@ b {
 }
 
 .stip_cnc-container {
-  height: 100vh;
+  padding-top: 150px;
 }
 
 .stip_cnc-container h1 {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 46px;
+  font-weight: 700;
   line-height: 1.4;
   color: #1a0f91;
 }
@@ -692,7 +692,6 @@ b {
 @media (max-width: 576px) {
   .stip_cnc-container {
     padding: 100px 25px 0 25px;
-    height: auto;
   }
   .stip_cnc-container h1 {
     font-size: 32px;
