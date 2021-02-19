@@ -59,12 +59,7 @@ h3 {
   background-color: red !important;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
-  overflow-x: hidden;
   max-width: 1920px;
   margin: auto;
 }
