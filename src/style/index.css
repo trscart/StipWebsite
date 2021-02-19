@@ -604,6 +604,7 @@ b {
 
 .stip_cnc-container {
   padding-top: 150px;
+  height: 100%;
 }
 
 .stip_cnc-container h1 {
@@ -622,16 +623,14 @@ b {
   font-weight: 300;
 }
 
-.stip_cnc-container .stip_facebook-hero-txt {
-  text-align: center;
-}
-
 .stip_nocaring-description {
-  background-color: #1a0f91;
+  background: url("../img/social_pattern_big.png") center center no-repeat, #1a0f91;
+  background-size: cover;
 }
 
 .stip_caring-description {
-  background-color: #ff6600;
+  background: url("../img/social_pattern_big.png") center center no-repeat, #ff6600;
+  background-size: cover;
 }
 
 #stip_facebook-input {
@@ -715,6 +714,7 @@ b {
   }
   .stip_cnc-container {
     padding: 100px 25px 0 25px;
+    height: auto;
   }
   .stip_cnc-container h1 {
     font-size: 36px;
@@ -724,9 +724,6 @@ b {
   }
   .stip_cnc-container h3 {
     font-size: 18px;
-  }
-  .stip_cnc-container .stip_facebook-hero-txt {
-    text-align: left;
   }
   .stip_facebook-comment-box {
     -webkit-box-orient: vertical;
@@ -755,6 +752,14 @@ b {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .stip_nocaring-description {
+    background: url("../img/social_pattern.png") center center no-repeat, #1a0f91;
+    background-size: cover;
+  }
+  .stip_caring-description {
+    background: url("../img/social_pattern.png") center center no-repeat, #ff6600;
+    background-size: cover;
   }
 }
 
