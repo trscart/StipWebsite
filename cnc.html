@@ -81,10 +81,10 @@
             <div class="col-lg-6">
                 <h1 class="stip_facebook-hero-txt">E tu, l’hai mai provata?</h1>
                 <h2 class="stip_facebook-hero-txt">La nostra Intelligenza Artificiale è nelle tue mani
-                    Tutti ne parlano, ma nessuno si assume il rischio di fartela provare. Stip si!
+                    Tutti ne parlano, ma nessuno si assume il rischio di fartela provare. Stip sì!
                 </h2>
                 <h3 class="stip_facebook-hero-txt my-3">Vedi questo post?
-                    E’ un post Facebook, di una qualsiasi azienda, proprio come la tua. Commenta il post come farebbe un tuo cliente e scopri cosa succede!
+                    È un post Facebook, di una qualsiasi azienda, proprio come la tua. Commenta il post come farebbe un tuo cliente e scopri cosa succede!
                 </h3>
             </div>
             <div class="col-lg-6">
@@ -402,9 +402,12 @@
                         type: 'GET',
                         success: function (res) {
                             console.log(res)
-                            if (cnc_counter >= 2 && cnc_counter < 5) {
+                            if (cnc_counter >= 2 && cnc_counter <= 3) {
                                 $("#stip_cnc-counter").show()
                                 $("#stip_cnc-counter").text("Hai " + (cnc_total - cnc_counter) + " tentativi rimasti per oggi!")
+                            } else if (cnc_counter == 4) {
+                                localStorage.setItem("cnc_check", true)
+                                $("#stip_cnc-counter").text("Hai 1 tentativo rimasto per oggi!")
                             } else if (cnc_counter == 5) {
                                 localStorage.setItem("cnc_check", true)
                                 $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
