@@ -388,7 +388,7 @@
             })
 
             let cnc_counter = 0
-            let cnc_total = 100
+            let cnc_total = 5
             let comments_counter = 2
             let caring_check = true
             let nocaring_check = true
@@ -402,10 +402,10 @@
                         type: 'GET',
                         success: function (res) {
                             console.log(res)
-                            if (cnc_counter >= 95 && cnc_counter < 100) {
+                            if (cnc_counter >= 2 && cnc_counter < 5) {
                                 $("#stip_cnc-counter").show()
                                 $("#stip_cnc-counter").text("Hai " + (cnc_total - cnc_counter) + " tentativi rimasti per oggi!")
-                            } else if (cnc_counter == 100) {
+                            } else if (cnc_counter == 5) {
                                 $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
                             }
                             $("#stip_show-caring").show()
