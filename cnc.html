@@ -395,7 +395,7 @@
             $("#stip_facebook-form").submit(function (e) {
                 e.preventDefault()
                 cnc_counter++
-                if (cnc_counter <= 100) {
+                if (cnc_counter <= 5 && localStorage.getItem("cnc_check") != "true") {
                     $("#stip_loading").show()
                     $.ajax({
                         url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
@@ -406,6 +406,7 @@
                                 $("#stip_cnc-counter").show()
                                 $("#stip_cnc-counter").text("Hai " + (cnc_total - cnc_counter) + " tentativi rimasti per oggi!")
                             } else if (cnc_counter == 5) {
+                                localStorage.setItem("cnc_check", true)
                                 $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
                             }
                             $("#stip_show-caring").show()
@@ -473,6 +474,9 @@
                             console.log(err)
                         }
                     });
+                } else {
+                    $("#stip_cnc-counter").show()
+                    $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
                 }
             })
 
