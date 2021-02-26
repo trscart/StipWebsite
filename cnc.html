@@ -138,7 +138,7 @@
                                 <input id="stip_facebook-input" name="comment" type="text" class="form-control"
                                     placeholder="Scrivi un commento" required>
                                 <small class="form-text text-muted">Premi Invio per pubblicare.</small>
-                                <small style="font-size: 14px; color: red; display: none;" class="mt-3 d-block text-center" id="stip_cnc-counter"></small>
+                                <small style="font-size: 16px; color: red; display: none;" class="mt-3 d-block text-center" id="stip_cnc-counter"></small>
                             </div>
                         </form>
                     </div>
@@ -388,27 +388,27 @@
             })
 
             let cnc_counter = 0
-            let cnc_total = 5
+            let cnc_total = 100
             let comments_counter = 2
             let caring_check = true
             let nocaring_check = true
             $("#stip_facebook-form").submit(function (e) {
                 e.preventDefault()
                 cnc_counter++
-                if (cnc_counter <= 5 && localStorage.getItem("cnc_check") != "true") {
+                if (cnc_counter <= 100 && localStorage.getItem("cnc_check") != "true") {
                     $("#stip_loading").show()
                     $.ajax({
                         url: 'https://ai-demo.stipworld.com/demo_ai/demo/?sentence=' + $("#stip_facebook-input").val(),
                         type: 'GET',
                         success: function (res) {
                             console.log(res)
-                            if (cnc_counter >= 2 && cnc_counter <= 3) {
+                            if (cnc_counter >= 95 && cnc_counter <= 98) {
                                 $("#stip_cnc-counter").show()
                                 $("#stip_cnc-counter").text("Hai " + (cnc_total - cnc_counter) + " tentativi rimasti per oggi!")
-                            } else if (cnc_counter == 4) {
+                            } else if (cnc_counter == 99) {
                                 localStorage.setItem("cnc_check", true)
                                 $("#stip_cnc-counter").text("Hai 1 tentativo rimasto per oggi!")
-                            } else if (cnc_counter == 5) {
+                            } else if (cnc_counter == 100) {
                                 localStorage.setItem("cnc_check", true)
                                 $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
                             }
