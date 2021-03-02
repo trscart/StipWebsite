@@ -114,9 +114,15 @@
                 e.preventDefault()
                 $("#stip_loading").show()
                 $("#stip_test-ovs-results").empty()
+                let data_to_send = {
+                    "sentence": $("#stip_test-ovs-input").val()
+                }
                 $.ajax({
-                    url: 'https://ai-demo.stipworld.com/demo_ai/ovs_demo/?sentence=' + $("#stip_test-ovs-input").val(),
-                    type: 'GET',
+                    url: 'https://ai-demo.stipworld.com/demo_ai/ovs_demo/',
+                    type: 'POST',
+                    crossDomain: true,
+                    contentType: 'application/json',
+                    data: JSON.stringify(data_to_send),
                     success: function (res) {
                         console.log(res)
                         $("#stip_loading").hide()
