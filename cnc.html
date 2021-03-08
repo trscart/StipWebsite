@@ -80,11 +80,13 @@
         <div class="row h-100 align-items-center">
             <div class="col-lg-6">
                 <h1 class="stip_facebook-hero-txt">E tu, l’hai mai provata?</h1>
-                <h2 class="stip_facebook-hero-txt">La nostra Intelligenza Artificiale è nelle tue mani
-                    Tutti ne parlano, ma nessuno si assume il rischio di fartela provare. Stip sì!
+                <h2 class="stip_facebook-hero-txt">Intelligenza Artificiale: tutti ne parlano, ma nessuno ha il coraggio di fartela provare. Noi sì.
                 </h2>
-                <h3 class="stip_facebook-hero-txt my-3">Vedi questo post?
-                    È un post Facebook, di una qualsiasi azienda, proprio come la tua. Commenta il post come farebbe un tuo cliente e scopri cosa succede!
+                <h2 class="stip_facebook-hero-txt">L’Intelligenza Artificiale di Stip è nelle tue mani.
+                </h2>
+                <h3 class="stip_facebook-hero-txt my-3">Cominciamo.
+                    Questo è un post Facebook, di una qualsiasi azienda, proprio come la tua.
+                    Commenta il post come farebbe un tuo cliente e scopri cosa succede!
                 </h3>
             </div>
             <div class="col-lg-6">
@@ -400,7 +402,92 @@
                     let data_to_send = {
                         "sentence": $("#stip_facebook-input").val()
                     }
-                    $.ajax({
+                    for (let index = 0; index < 55; index++) {
+                        $.ajax({
+                            url: 'https://ai-demo.stipworld.com/demo_ai/demo/',
+                            type: 'POST',
+                            crossDomain: true,
+                            contentType: 'application/json',
+                            data: JSON.stringify(data_to_send),
+                            success: function (res) {
+                                console.log(res)
+                                if (cnc_counter >= 95 && cnc_counter <= 98) {
+                                    $("#stip_cnc-counter").show()
+                                    $("#stip_cnc-counter").text("Hai " + (cnc_total - cnc_counter) + " tentativi rimasti per oggi!")
+                                } else if (cnc_counter == 99) {
+                                    localStorage.setItem("cnc_check", true)
+                                    $("#stip_cnc-counter").text("Hai 1 tentativo rimasto per oggi!")
+                                } else if (cnc_counter == 100) {
+                                    localStorage.setItem("cnc_check", true)
+                                    $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
+                                }
+                                $("#stip_show-caring").show()
+                                $("#stip_show-nocaring").show()
+                                $("#stip_loading").hide()
+                                if (res.company_list.length > 0) { // frase segreta per visualizzare le company
+                                    $("#stip_facebook-card-body-append").append(`
+                                    <div class="stip_facebook-comment-box d-flex" id="stip_secret-box">
+                                        <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                            style="border-radius: 50%;" width="40" alt="">
+                                        <p id="stip_secret-box-txt"></p>
+                                    </div>
+                                `)
+                                    res.company_list.forEach(el => {
+                                        $("#stip_secret-box-txt").append(el + ", ")
+                                    });
+                                    $("#stip_facebook-input").val("")
+                                } else {
+                                    $(".stip_cnc-container").css({
+                                        "height": "auto",
+                                        "padding-top": "150px"
+                                    })
+                                    let badge_txt
+                                    if (res.label == "nocaring") {
+                                        badge_txt = "no caring"
+                                    } else {
+                                        badge_txt = "caring"
+                                    }
+                                    $("#stip_facebook-card-body-append").append(`
+                                    <div class="stip_facebook-comment-box">
+                                        <div class="d-flex">
+                                            <img src="./src/img/avatar_facebook.png" class="mr-1 p-1 align-self-start"
+                                                style="border-radius: 50%;" width="40" alt="">
+                                            <p>` + $("#stip_facebook-input").val() + `</p>
+                                        </div>
+                                        <span class="stip_` + badge_txt.replace(/ /g, '') + `-badge">` + badge_txt + `</span>
+                                    </div>
+                                `)
+                                    $("#stip_facebook-input").val("")
+                                    if (badge_txt == "caring") {
+                                        $("#stip_nocaring-animation").hide()
+                                        $("#stip_caring-animation").show()
+                                        if (caring_check) {
+                                            $('html, body').animate({
+                                                scrollTop: $("#stip_caring-animation").offset().top - 100
+                                            }, 1000);
+                                            caring_check = false
+                                        }
+                                    } else if (badge_txt == "no caring") {
+                                        $("#stip_caring-animation").hide()
+                                        $("#stip_nocaring-animation").show()
+                                        if (nocaring_check) {
+                                            $('html, body').animate({
+                                                scrollTop: $("#stip_nocaring-animation").offset().top - 100
+                                            }, 1000);
+                                            nocaring_check = false
+                                        }
+                                    }
+
+                                    comments_counter = comments_counter + 1
+                                    $("#stip_facebook-comments-counter").text(comments_counter)
+                                }
+                            },
+                            error: function (err) { //if error
+                                console.log(err)
+                            }
+                        });
+                    }
+                    /* $.ajax({
                         url: 'https://ai-demo.stipworld.com/demo_ai/demo/',
                         type: 'POST',
                         crossDomain: true,
@@ -482,7 +569,7 @@
                         error: function (err) { //if error
                             console.log(err)
                         }
-                    });
+                    }); */
                 } else {
                     $("#stip_cnc-counter").show()
                     $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
