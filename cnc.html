@@ -402,7 +402,7 @@
                     let data_to_send = {
                         "sentence": $("#stip_facebook-input").val()
                     }
-                    for (let index = 0; index < 55; index++) {
+                    /* for (let index = 0; index < 55; index++) {
                         $.ajax({
                             url: 'https://ai-demo.stipworld.com/demo_ai/demo/',
                             type: 'POST',
@@ -486,8 +486,8 @@
                                 console.log(err)
                             }
                         });
-                    }
-                    /* $.ajax({
+                    } */
+                    $.ajax({
                         url: 'https://ai-demo.stipworld.com/demo_ai/demo/',
                         type: 'POST',
                         crossDomain: true,
@@ -569,7 +569,7 @@
                         error: function (err) { //if error
                             console.log(err)
                         }
-                    }); */
+                    });
                 } else {
                     $("#stip_cnc-counter").show()
                     $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
