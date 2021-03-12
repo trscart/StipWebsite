@@ -484,6 +484,8 @@
                         },
                         error: function (err) { //if error
                             console.log(err)
+                            $("#stip_loading").hide()
+                            $("#stip_cnc-counter").text("Hai raggiunto il numero massimo di tentativi per oggi. Torna a provare l’AI di Stip domani!")
                         }
                     });
                 } else {
