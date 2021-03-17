@@ -39,6 +39,7 @@
     $result = curl_exec($ch);
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
+    debug_to_console("update1");
     debug_to_console($result);
     return $result;
   }
