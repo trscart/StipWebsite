@@ -37,7 +37,7 @@
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
     debug_to_console($result);
-    return $httpCode;
+    return $result;
   }
 
   syncMailchimp()
