@@ -269,7 +269,7 @@ $(document).ready(function () {
             })
                 .then(function (res) {
                     console.log(res)
-                    window.location.href = "https://meetings.hubspot.com/fabrizio-aiello";
+                    window.location.href = "https://stip-io.na.chilipiper.com/book/me/fabrizio-aiello?type=meeting-con-stip";
                 })
                 .catch(function (err) { //if error
                     console.log(err)
